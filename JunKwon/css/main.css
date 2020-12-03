@@ -1,0 +1,123 @@
+#project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#project .combobox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 25px;
+}
+
+#project .combobox > form {
+  display: flex;
+
+  width: 300px;
+  height: 50px;
+}
+
+#project .combobox > form > select {
+  /* ie 에서는 화살표가 계속 나옴 */
+  appearance: none;
+
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  border: 1px solid #fff;
+  border-collapse: collapse;
+
+  color: #fff;
+  background-color: skyblue;
+}
+
+/* 가운데 '|'
+.combobox-left {
+  border-right: 1px solid #fff;
+}
+
+.combobox-right {
+  border-left: 1px solid #fff;
+}
+*/
+
+#project .triangle {
+  width: 0;
+  height: 0;
+  border-left: 12.5px solid transparent;
+  border-right: 12.5px solid transparent;
+  border-top: 12.5px solid blue;
+}
+
+#project h3 {
+  margin: 30px 0;
+  font-size: 32px;
+}
+
+#project .project-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#project .project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 60px;
+  column-gap: 75px;
+
+  width: calc(100% - 90px);
+}
+
+#project .project-list > .project-content {
+  background-color: skyblue;
+
+  width: 280px;
+  height: 245px;
+}
+
+#project .project-list > .project-content > .generation {
+  background-color: grey;
+  color: #fff;
+  text-align: center;
+  line-height: 25px;
+  font-size: 12px;
+  width: 60px;
+  height: 25px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+#project .project-container > button {
+  width: 45px;
+  height: 45px;
+  margin: 0 20px;
+  border: 0;
+  background: 0;
+}
+
+#project .project-container > .button-left {
+  background-image: url(../img/왼쪽버튼.png);
+}
+
+#project .project-container > .button-right {
+  background-image: url(../img/오른쪽버튼.png);
+}
+
+#project .page {
+  display: flex;
+  justify-content: space-between;
+
+  width: 80px;
+  margin: 30px 0;
+}
+
+#project .page > .circle {
+  background-color: #b8b8b8;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
