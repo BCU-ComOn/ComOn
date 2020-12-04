@@ -1,3 +1,11 @@
+/*명예의 전당 위*/
+
+.person-img img {
+  border-radius: 30px;
+}
+
+/*명예의 전당 아래*/
+
 body {
   margin: 0px;
 }
