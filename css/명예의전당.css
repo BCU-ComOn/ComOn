@@ -4,6 +4,29 @@
   border-radius: 30px;
 }
 
+.memo-img img {
+  margin-left: 15px;
+}
+
+.twitter-img img {
+  margin-left: 30px;
+  border-radius: 30px;
+}
+
+.list-container {
+  display: flex;
+}
+
+.list {
+  margin-left: 15px;
+  width: 80px;
+  height: 20px;
+  background: #fff;
+  border-radius: 15px;
+  font-size: 12px;
+  text-align: center;
+}
+
 /*명예의 전당 아래*/
 
 body {
@@ -28,7 +51,7 @@ body {
   margin-right: 30px;
 }
 
-.lang-container {
+.lang-c {
   display: flex;
 }
 .project .lang {
