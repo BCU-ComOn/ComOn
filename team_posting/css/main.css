@@ -71,14 +71,14 @@
     font-size: 12px;
     color: #fff;
 }
-.post_user_side{
+.team_grup_side{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 220px;
     height: 40px;
 }
-.post_user_side .user_img{
+.grup_img{
     background-image: url("http://placehold.it/60x60");
     background-size: cover;
     width: 60px;
@@ -86,7 +86,7 @@
     border-radius: 100%;
     margin-right: 15px;
 }
-.user_name{
+.grup_name{
     font-size: 16px;
     color: #333;
 }
@@ -105,12 +105,37 @@
     width: 1070px;
 }
 .post_main_content{
-    width: 1070px;
+    width: 850px;
 }
 .post_main_content > p{
     word-break: break-all;
     font-size: 16px;
     margin: 10px 0;
+}
+.post_main_aside{
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    justify-content: left;
+    align-items: center;
+}
+.team_member{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.team_img{
+    width: 45px;
+    height: 45px;
+    background-image: url("http://placehold.it/45x45");
+    background-size: cover;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+.team_name{
+    font-size: 16px;
+    color: #333;
 }
 
 /* post_list */
