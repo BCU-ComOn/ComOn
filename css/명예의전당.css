@@ -91,3 +91,15 @@ body {
   margin-left: 15px;
   border-radius: 30px;
 }
+.project #gasipan {
+  margin-right: 5px;
+  margin-left: 15px;
+}
+#twitter {
+  border-radius: 30px;
+}
+
+.project-second #gasipan {
+  margin-right: 15px;
+  margin-left: 5px;
+}
