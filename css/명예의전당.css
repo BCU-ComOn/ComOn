@@ -1,3 +1,6 @@
+body {
+  margin: 0px;
+}
 /*명예의 전당 위*/
 
 .main {
@@ -98,9 +101,6 @@
 
 /*명예의 전당 아래*/
 
-body {
-  margin: 0px;
-}
 .container {
   width: 1070px;
   margin: auto;
@@ -120,9 +120,6 @@ body {
   margin-right: 30px;
 }
 
-.lang-c {
-  display: flex;
-}
 .project .lang {
   margin-right: 15px;
   width: 80px;
@@ -159,6 +156,7 @@ body {
   font-size: 16px;
 }
 .lang-container {
+  display: flex;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -202,4 +200,11 @@ body {
 .project-second #gasipan {
   margin-right: 15px;
   margin-left: 5px;
+}
+
+.img-person {
+  text-align: center;
+}
+.person-img-figure {
+  margin: 0px;
 }
