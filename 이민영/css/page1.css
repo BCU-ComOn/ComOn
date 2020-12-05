@@ -1,0 +1,10 @@
+.join{
+  width: 1070px;
+  text-align: left;
+}
+.join #title-main{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 32px;
+  text-align: center;
+}
