@@ -24,20 +24,36 @@
   align-items: center;
 }
 
-.naver-img img {
-  width: 760;
-  height: 550;
-}
-
 .main-title {
   margin-left: 15px;
   font-size: 32px;
 }
 
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.naver-list {
+  height: 550px;
+  border: solid 3px black;
+}
+
+.naver-title {
+  font-size: 50px;
+  margin-left: 40px;
+}
+
+.naver-content {
+  font-size: 18px;
+  display: flex;
+  margin-left: 40px;
+}
+
 .bast-img img {
   margin-left: 10px;
-  width: 70;
-  height: 75;
+  width: 70px;
+  height: 75px;
 }
 .person-img img {
   border-radius: 30px;
@@ -64,6 +80,20 @@
   border-radius: 15px;
   font-size: 12px;
   text-align: center;
+}
+
+.person-list-first {
+  margin-top: 40px;
+  display: flex;
+}
+
+.person-list {
+  margin-top: 20px;
+  display: flex;
+}
+
+.person-data {
+  margin-left: 15px;
 }
 
 /*명예의 전당 아래*/
