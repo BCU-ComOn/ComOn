@@ -8,3 +8,17 @@
   font-size: 32px;
   text-align: center;
 }
+.join #title-sub{
+  margin-top: 10px;
+  padding: 10px; 
+  font-size: 24px;
+  border-bottom: 1px solid black;
+}
+.join .content{
+  margin: 30px;
+}
+.join .content #box-three{
+  margin-top: -35px;
+  display: flex;
+  align-items: left;
+}
