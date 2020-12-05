@@ -107,12 +107,14 @@ body {
 .container {
   width: 1070px;
   margin: auto;
+  margin-top: 20px;
 }
 .successive-generations {
   display: flex;
   margin-bottom: 60px;
 }
-.successive-generations h3 {
+.successive-generations span {
+  font-size: 32px;
   margin-right: 10px;
 }
 .project {
