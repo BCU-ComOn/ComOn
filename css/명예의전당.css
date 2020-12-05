@@ -2,8 +2,43 @@
 
 .main {
   background-color: #309ce4;
+  width: 1110px;
+  margin: auto;
+  color: #fff;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.header-side-content {
+  font-size: 16px;
+  color: e0e0e0;
+  display: flex;
+  align-items: center;
+}
+
+.naver-img img {
+  width: 760;
+  height: 550;
+}
+
+.main-title {
+  margin-left: 15px;
+  font-size: 32px;
+}
+
+.bast-img img {
+  margin-left: 10px;
+  width: 70;
+  height: 75;
+}
 .person-img img {
   border-radius: 30px;
 }
