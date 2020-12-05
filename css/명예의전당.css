@@ -1,5 +1,9 @@
 /*명예의 전당 위*/
 
+.main {
+  background-color: #309ce4;
+}
+
 .person-img img {
   border-radius: 30px;
 }
