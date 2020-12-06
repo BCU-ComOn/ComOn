@@ -1,7 +1,15 @@
 /*명예의 전당 위*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main-background {
+  background-color: #309ce4;
+  width: 100%;
+}
 
 .main {
-  background-color: #309ce4;
   width: 1110px;
   margin: auto;
   color: #fff;
@@ -80,6 +88,10 @@
   border-radius: 15px;
   font-size: 12px;
   text-align: center;
+}
+
+.introduction {
+  overflow: scroll;
 }
 
 .person-list-first {
