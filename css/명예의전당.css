@@ -192,7 +192,6 @@ body {
 .project-teamName-second .person-img img {
   border-radius: 30px;
   margin-left: 15px;
-  border-radius: 30px;
 }
 .project #gasipan {
   margin-right: 5px;
@@ -207,9 +206,6 @@ body {
   margin-left: 5px;
 }
 
-.img-person {
-  text-align: center;
-}
 .person-img-figure {
   margin: 0px;
 }
