@@ -50,7 +50,6 @@ body {
 
 .naver-list {
   height: 550px;
-  border: solid 3px black;
 }
 
 .naver-title {
@@ -62,6 +61,7 @@ body {
   font-size: 18px;
   display: flex;
   margin-left: 40px;
+  margin-bottom: 40px;
 }
 
 .bast-img img {
@@ -71,6 +71,7 @@ body {
 }
 .person-img img {
   border-radius: 30px;
+  display: flex;
 }
 
 .memo-img img {
@@ -97,12 +98,13 @@ body {
 }
 
 .introduction {
-  overflow: scroll;
+  overflow: auto;
+  margin-left: 40px;
+  height: 330px;
 }
 
-.person-list-first {
-  margin-top: 40px;
-  display: flex;
+.introduction > figcaption {
+  margin-top: 5px;
 }
 
 .person-list {
@@ -111,9 +113,21 @@ body {
 }
 
 .person-data {
-  margin-left: 15px;
+  margin-left: 30px;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-left{
+  display: flex;
+}
+
+.footer-right{
+  display: flex;
+}
 /*명예의 전당 아래*/
 
 .container {
