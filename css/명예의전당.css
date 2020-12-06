@@ -74,29 +74,6 @@ body {
   display: flex;
 }
 
-.memo-img img {
-  margin-left: 15px;
-}
-
-.twitter-img img {
-  margin-left: 30px;
-  border-radius: 30px;
-}
-
-.list-container {
-  display: flex;
-}
-
-.list {
-  margin-left: 15px;
-  width: 80px;
-  height: 20px;
-  background: #fff;
-  border-radius: 15px;
-  font-size: 12px;
-  text-align: center;
-}
-
 .introduction {
   overflow: auto;
   margin-left: 40px;
@@ -119,14 +96,44 @@ body {
 .footer {
   display: flex;
   justify-content: space-between;
+  height: 80px;
+  font-size: 16px;
 }
 
 .footer-left{
   display: flex;
+  align-items: center;
 }
 
 .footer-right{
   display: flex;
+  align-items: center;
+}
+
+.memo-img img {
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+.twitter-img img {
+  margin-left: 30px;
+  border-radius: 30px;
+  margin-right: 5px;
+}
+
+.list-container {
+  display: flex;
+}
+
+.list {
+  margin-left: 15px;
+  width: 80px;
+  height: 20px;
+  background: #fff;
+  border-radius: 15px;
+  font-size: 12px;
+  text-align: center;
+  color: #309ce4;
 }
 /*명예의 전당 아래*/
 
@@ -190,6 +197,7 @@ body {
   display: flex;
   margin-top: 30px;
   margin-bottom: 30px;
+  color:#fff;
 }
 .project-second .lang-container {
   justify-content: flex-end;
