@@ -69,15 +69,28 @@ body {
   width: 70px;
   height: 75px;
 }
-.person-img img {
+.user-img img {
   border-radius: 30px;
   display: flex;
+  justify-content: center;
+}
+
+figcaption {
+  text-align: center;
 }
 
 .introduction {
   overflow: auto;
   margin-left: 40px;
   height: 330px;
+}
+
+.introduction::-webkit-scrollbar {
+  background-color: #309ce4;
+}
+
+.introduction::-webkit-scrollbar-thumb {
+  background-color: #fff;
 }
 
 .introduction > figcaption {
@@ -90,9 +103,13 @@ body {
 }
 
 .person-data {
-  margin-left: 30px;
+  margin-left: 45px;
+  width: 100%;
 }
 
+ul{
+  margin-top: 10px;
+}
 .footer {
   display: flex;
   justify-content: space-between;
