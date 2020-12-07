@@ -1,3 +1,13 @@
+.Profile{
+    margin: 30px;
+
+}
+
+.pro1{
+    border: 1px solid gray;
+    border-radius: 50px;
+}
+
 .cancel{
     width: 100px;
     height: 35px;
