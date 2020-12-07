@@ -23,7 +23,7 @@
 
    > ex) [YJB-1] 커뮤니티 팀화면 팀 카드 페이지 완성
 
-3. 스프린트의 내 할 일을 모두 끝내면 main으로 Pull Request 한다.
+3. 스프린트의 내 할 일을 모두 끝내면 main으로 Pull Request 하고 멘토에게 알린다.
 
 4. 멘토가 Merge 해도 좋다고하면 Merge 한다.
 
