@@ -95,3 +95,62 @@
   color: #fff;
   text-align: center;
 } /* 기수 섹션 css 끝*/
+
+.imgCManage h4 {
+  font-size: 28px;
+  text-align: center;
+}
+
+.imgCM {
+  text-align: center;
+  margin: 30px;
+}
+
+.imgCM-img {
+  display: inline-block;
+  background: url("../img/프로필 이미지.png") no-repeat;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  margin: 0 30px;
+  padding: 0;
+}
+
+.img-text {
+  font-size: 16px;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.theInformation-box {
+  width: 300px;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  text-align: left;
+  right: 235%;
+  padding: 15px 20px;
+  margin-top: 15px;
+  color: #fff;
+  background-color: #808080;
+}
+
+.theInformation-box p {
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.theInformation-box:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -25%;
+  left: 50%;
+  margin-left: -10px;
+  border-style: solid;
+  border-width: 15px 10px;
+  border-color: transparent transparent #808080;
+} /* 크루 섹션 (운영진) css 끝 */
