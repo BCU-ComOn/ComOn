@@ -53,3 +53,48 @@
     line-height: 40px;
 
 }
+
+/*아래 버튼모음*/
+#bottom-btn{
+    margin-top: 30px;
+    overflow: auto;
+}
+
+/*삭제 버튼*/
+.delete-btn{
+    border-radius: 4px;
+    background-color: tomato;
+    width: 215px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    float: left;
+    color: white;
+    
+}
+
+/*취소 버튼*/
+.cancel-btn{
+    border-radius: 4px;
+    background-color: gray;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    float: right;
+    margin-right: 15px;
+
+}
+
+/*수정반영 버튼*/
+.commit-btn{ 
+    border-radius: 4px;
+    background-color: blue;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    float: right;
+    color: white;
+
+}
