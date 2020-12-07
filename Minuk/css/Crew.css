@@ -96,7 +96,8 @@
   text-align: center;
 } /* 기수 섹션 css 끝*/
 
-.imgCManage h4 {
+.imgCManage h4,
+.imgCrew h4 {
   font-size: 28px;
   text-align: center;
 }
@@ -106,7 +107,8 @@
   margin: 30px;
 }
 
-.imgCM-img {
+.imgCM-img,
+.imgCrew-img {
   display: inline-block;
   background: url("../img/프로필 이미지.png") no-repeat;
   background-size: contain;
@@ -124,7 +126,7 @@
 
 .theInformation-box {
   width: 300px;
-  display: inline-block;
+  display: block;
   position: relative;
   font-size: 16px;
   text-align: left;
@@ -154,3 +156,22 @@
   border-width: 15px 10px;
   border-color: transparent transparent #808080;
 } /* 크루 섹션 (운영진) css 끝 */
+
+.imgCrew h4 {
+  margin-top: 65px;
+  margin-bottom: 30px;
+}
+
+.imgCrew-img {
+  margin-bottom: 61px; /* 글자 h 사이즈 21px과 이미지 사이의 40px를 합한 61로 넣었습니다.*/
+}
+
+.imgCrew {
+  width: 725px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imgCrew-table {
+  text-align: left;
+} /* 크루 섹션 (부원) css 끝 */
