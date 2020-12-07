@@ -22,3 +22,34 @@
 
 
 }
+
+/*위에 버튼모음*/
+#setting-btn {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+/*기본정보 버튼*/
+.information-btn{
+    border-radius: 4px;
+    background-color: tomato;
+    width: 360px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 20px;
+
+}
+
+
+/*팀원관리 버튼*/
+.teamMember-btn{
+    border-radius: 4px;
+    background-color: gray;
+    width: 360px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+
+}
