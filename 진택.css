@@ -1,0 +1,15 @@
+.cancel{
+    width: 100px;
+    height: 35px;
+    margin: 0px 15px 20px;
+    outline: 0;
+}
+
+.Apply{
+    width: 100px;
+    height: 35px;
+    margin: 0px 15px 20px;
+    background-color: #2E9AFE;
+    color: white;
+    outline: 0;
+}
