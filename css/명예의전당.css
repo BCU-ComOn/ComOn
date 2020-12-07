@@ -5,11 +5,11 @@ body {
   font-family: "Noto Sans KR", sans-serif;
 }
 /*명예의 전당 위*/
-* {
-  margin: 0;
-  padding: 0;
-}
 
+* {
+  margin: 0px;
+  padding: 0px;
+}
 .main-background {
   background-color: #309ce4;
   width: 100%;
@@ -225,9 +225,10 @@ ul {
 }
 .project-teamName .person-img img {
   border-radius: 30px;
+}
+.project .person-img {
   margin-right: 15px;
 }
-
 .project-teamName-second {
   display: flex;
   align-items: center;
@@ -238,6 +239,8 @@ ul {
 }
 .project-teamName-second .person-img img {
   border-radius: 30px;
+}
+.project-second .person-img {
   margin-left: 15px;
 }
 .project #gasipan {
@@ -251,8 +254,4 @@ ul {
 .project-second #gasipan {
   margin-right: 15px;
   margin-left: 5px;
-}
-
-.person-img-figure {
-  margin: 0px;
 }
