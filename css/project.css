@@ -38,10 +38,14 @@
 
 .combobox-left {
   text-align-last: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .combobox-right {
   text-align-last: center;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 #project .triangle {
@@ -78,14 +82,17 @@
 #project .project-list > .project-content {
   width: 280px;
   height: 245px;
+  border-radius: 10px;
   box-shadow: 2px 2px 2px 1px grey;
 }
 
 #project .project-list > .project-content > .project-img {
   width: 100%;
   height: 135px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   background-image: url(../img/human.png);
-  background-size: 280px 135px;
+  background-size: cover;
 }
 
 /* 기수 */
@@ -109,6 +116,8 @@
   height: 80px;
   padding: 20px 25px;
   padding-top: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 #project .project-list > .project-content > .project-explain > .team-name {
