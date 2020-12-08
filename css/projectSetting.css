@@ -160,41 +160,36 @@
 
 }
 
-
-
-
 /*이미지 ~ 텍스트*/
 .article-content{
     overflow: auto;
     margin-top: 15px;
-
 }
-
 .article-text{
     float: left;
     line-height: 100px;
 }
-
 .article-text2{
     float: left;
     line-height: 35px;
 
 }
-
 .article-text3{
     float: left;
     margin-top: 15px;
-
 }
-
 
 .article-img{
     float: right;
 }
 
+/*플러스버튼 마우스 올렸을 때*/
+.plusButton:hover{
+    cursor: pointer;
+}
+
 
 /*프로젝트명 텍스트칸*/
-
 .project-name{
     float: right;
     width: 481px;
