@@ -1,112 +1,100 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/projectSetting.css">
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="./css/projectsetting.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <link rel = "preconnect"href = "https://fonts.gstatic.com">
-    <link href = "https://fonts.googleapis.com/css2? family = Noto + Sans + KR : wght @ 100 & display = swap "rel ="stylesheet ">
+    <script type="text/javascript" src="./js/projectSetWindow.js"></script>
 </head>
 <body>
-    <div class="setting-window">
-        <section class="setting-window-content">
-            <header>
-                <nav>
-                    <ul id="setting-btn">
-                        <li>
-                            <div class="information-btn">기본정보</div>
+    <div class="setting-window-content">
+    <section id="btnSection">
+        <div>
+            <Button id="btnComp">기본정보</Button>
+            <Button id="btnContent">팀원 관리</Button>
+        </div>
+    </section>
 
-                            <!--기본정보 버튼-->
-                        </li>
-                        <li>
-                            <div class="teamMember-btn">팀원관리</div>
-
-                            <!--팀원관리 버튼-->
-                        </li>
-                    </ul>
-                </nav>
-            </header> <!--기본정보 / 팀원관리 버튼 끝-->
-
-            <div class="wrapper">
-
-                <article class="container">
-                    <div class="article-content">
-                        <span class="article-text">대표사진</span>
-                        <div class="empty-div">
-                            <div class="load-btn">불러오기</div>
-                        </div>
-                        <img class="article-img" src="http://placehold.it/250x100"/>
-                    </div> <!--대표사진-->
-
-
-                    <div class="article-content">
-                        <span class="article-text2">프로젝트 명</span>
-                        <input class="project-name" type="text" placeholder="프로젝트명">
-
-                    </div>  <!--프로젝트 명-->
-
-                    <div class="article-content">
-                        <span class="article-text2">대표 태그</span>
-                        <select class="Main-tag">
-                            <option value="WEB" selected>WEB</option>
-                            <option value="JAVA">JAVA</option>
-                            <option value="GAME">GAME</option>
-                            <option value="C#">C#</option>
-                            <option value="PYTHON">PYTHON</option>
-                        </select>
-
-                    </div> <!--대표 태그-->
-
-
-                    <div class="article-content">
-                        <span class="article-text2">태그&oplus;</span>
-                        <input class="project-name" type="text" placeholder="프로젝트명">
-
-                    </div> <!--태그-->
-
-
-                    <div class="article-content">
-                        <span class="article-text3">진행 상황</span>
-                        <div class="status-bar">
-                            <div class="develop-ready">개발 준비</div>
-                            
-                            <div class="developing">개발 중</div>
-                            <div class="test">테스트</div>
-                            <div class="develop-finish">개발 완료</div>
-                            <span class="aa">▲</span> <!--수정필요-->
-                        </div>
-                    </div> <!--진행상황 바-->
-
-
-
-                </article> <!--대표사진 ~ 진행상황-->
-
-            
-
-                <footer>
-                    <div>
-                        <ul id="bottom-btn">
-                            <li>
-                                <div class="delete-btn">프로젝트 삭제</div>
-                            </li>
-
-                            <li>
-                                <div class="commit-btn">수정반영</div>
-                            </li>
-
-                            <li>
-                                <div class="cancel-btn">취소</div>
-                            </li>
-                        </ul>
+    <div id="setting-btn">
+        <article id="wrapper">
+            <article class="container">
+                <div class="article-content">
+                    <span class="article-text">대표사진</span>
+                    <div class="empty-div">
+                        <div class="load-btn">불러오기</div>
                     </div>
-                </footer> <!--프로젝트 삭제 ~ 수정반영 버튼-->
+                    <img class="article-img" src="http://placehold.it/250x100"/>
+                </div> <!--대표사진-->
 
+
+                <div class="article-content">
+                    <span class="article-text2">프로젝트 명</span>
+                    <input class="project-name" type="text" placeholder="프로젝트명">
+
+                </div>  <!--프로젝트 명-->
+
+                <div class="article-content">
+                    <span class="article-text2">대표 태그</span>
+                    <select class="Main-tag">
+                        <option value="WEB" selected>WEB</option>
+                        <option value="JAVA">JAVA</option>
+                        <option value="GAME">GAME</option>
+                        <option value="C#">C#</option>
+                        <option value="PYTHON">PYTHON</option>
+                    </select>
+
+                </div> <!--대표 태그-->
+
+
+                <div class="article-content">
+                    <span class="article-text2">태그&oplus;</span>
+                    <input class="project-name" type="text" placeholder="프로젝트명">
+
+                </div> <!--태그-->
+
+
+                <div class="article-content">
+                    <span class="article-text3">진행 상황</span>
+                    <div class="status-bar">
+                        <div class="develop-ready">개발 준비</div>
+                        
+                        <div class="developing">개발 중</div>
+                        <div class="test">테스트</div>
+                        <div class="develop-finish">개발 완료</div>
+                        <span class="aa">▲</span> <!--수정필요-->
+                    </div>
+                </div> <!--진행상황 바-->
+
+
+
+            </article> <!--대표사진 ~ 진행상황-->
+        </article><!--참여한 프로젝트-->
+        <article id="wrapper2">
+            <div class="wrapper2-1">
+                <div class="Profile">
+                    <img src="./img/사람.jpg"width="60px"height="60px" class="pro1">
+                </div>
+                <div class="input_text">
+                    <button>1</button>
+                    <input type="text">
+                </div>
+            
+                <div class="balloon">testID /관심사 : 어쩌구,저쩌구,이렇고1</div>
+            
+                <div>
+                    <button class="cancel">취소</button>
+                    <button class="Apply">수정 반영</button>
+                </div>
             </div>
-
-        </section>
+        </article><!--작성한 글-->
     </div>
+    </div>
+
+    <footer></footer>
 </body>
 </html>
