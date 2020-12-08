@@ -5,11 +5,11 @@ body {
   font-family: "Noto Sans KR", sans-serif;
 }
 /*명예의 전당 위*/
-
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
+
 .main-background {
   background-color: #309ce4;
   width: 100%;
@@ -33,7 +33,7 @@ body {
 
 .header-side-content {
   font-size: 16px;
-  color: e0e0e0;
+  color: #e0e0e0;
   display: flex;
   align-items: center;
 }
@@ -87,6 +87,11 @@ figcaption {
 
 .introduction::-webkit-scrollbar {
   background-color: #309ce4;
+  height: 10px;
+}
+
+.introduction::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0;
 }
 
 .introduction > figcaption {
@@ -103,7 +108,7 @@ figcaption {
   width: 100%;
 }
 
-ul {
+ul{
   margin-top: 10px;
 }
 .footer {
@@ -113,12 +118,12 @@ ul {
   font-size: 16px;
 }
 
-.footer-left {
+.footer-left{
   display: flex;
   align-items: center;
 }
 
-.footer-right {
+.footer-right{
   display: flex;
   align-items: center;
 }
@@ -210,7 +215,7 @@ ul {
   display: flex;
   margin-top: 30px;
   margin-bottom: 30px;
-  color: #fff;
+  color:#fff;
 }
 .project-second .lang-container {
   justify-content: flex-end;
@@ -223,13 +228,11 @@ ul {
 .project-teamName .teamName {
   margin-right: 30px;
 }
-
 .project-teamName .person-img img {
   border-radius: 30px;
-}
-.project .person-img {
   margin-right: 15px;
 }
+
 .project-teamName-second {
   display: flex;
   align-items: center;
@@ -240,8 +243,6 @@ ul {
 }
 .project-teamName-second .person-img img {
   border-radius: 30px;
-}
-.project-second .person-img {
   margin-left: 15px;
 }
 .project #gasipan {
@@ -255,4 +256,8 @@ ul {
 .project-second #gasipan {
   margin-right: 15px;
   margin-left: 5px;
+}
+
+.person-img-figure {
+  margin: 0px;
 }
