@@ -144,7 +144,7 @@
 
 .theInformation-box {
   width: 300px;
-  display: block;
+  display: none;
   position: relative;
   font-size: 16px;
   text-align: left;
@@ -178,3 +178,12 @@
 .imgCrew-img {
   margin-bottom: 61px; /* 글자 h 사이즈 21px과 이미지 사이의 40px를 합한 61로 넣었습니다.*/
 } /* 크루 섹션 css 끝 */
+
+.imgCrew-img div:hover {
+  background-color: #ffff00;
+  opacity: 30%;
+}
+
+.imgCrew-img div:hover + span {
+  display: block;
+}
