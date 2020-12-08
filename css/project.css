@@ -17,35 +17,43 @@
 }
 
 #project .combobox > form {
-  display: flex;
   width: 300px;
   height: 50px;
+  background-color: rgb(48, 156, 228);
+  border-radius: 5px;
 }
 
 #project .combobox > form > select {
   /* ie 에서는 화살표가 계속 나옴 */
   appearance: none;
 
-  width: 50%;
+  width: 49%;
   height: 100%;
   text-align: center;
-  border: 1px solid #fff;
-  border-collapse: collapse;
+  border: none;
 
   color: #fff;
   background-color: rgb(48, 156, 228);
 }
 
-.combobox-left {
+#project .combobox > form > .combobox-left {
   text-align-last: center;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-.combobox-right {
+#project .combobox > form > .combobox-right {
   text-align-last: center;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+#project .combobox-line {
+  width: 1px;
+  height: 20px;
+  background-color: #fff;
+  position: absolute;
+  top: 50px;
 }
 
 #project .triangle {
@@ -53,7 +61,7 @@
   height: 0;
   border-left: 12.5px solid transparent;
   border-right: 12.5px solid transparent;
-  border-top: 12.5px solid rgb(48, 156, 228);
+  border-top: 12.5px solid blue;
 }
 
 /**/
