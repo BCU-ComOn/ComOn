@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel = "preconnect"href = "https://fonts.gstatic.com">
     <link href = "https://fonts.googleapis.com/css2? family = Noto + Sans + KR : wght @ 100 & display = swap "rel ="stylesheet ">
+    <script type="text/javascript" src="js/project_set_window.js"></script>
+
 </head>
 <body>
-    <div class="setting-window">
+    <div class="setting-window" id="setWindow">
         <section class="setting-window-content">
             <header>
                 <nav>
@@ -62,8 +64,6 @@
 
                     <div class="article-content">
                         <span class="article-text2">태그 <img class="plusButton" src="img/+버튼.png"></span>
-                     
-
                     </div> <!--태그-->
 
 
@@ -87,14 +87,8 @@
                             <div class="arrow3"><span>▲</span></div>
                             <div class="arrow4"><span">▲</span></div>
                         </div>
-                        
                     </div> 
-
-
-
                 </article> <!--대표사진 ~ 진행상황-->
-
-            
 
                 <footer>
                     <div>
@@ -108,7 +102,7 @@
                             </li>
 
                             <li>
-                                <div class="cancel-btn">취소</div>
+                                <div id="cancel-btn" class="cancel-btn">취소</div>
                             </li>
                         </ul>
                     </div>
