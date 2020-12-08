@@ -1,7 +1,11 @@
+@import url(https://fonts.google.com/specimen/Noto+Sans+KR);
+
 #project {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 /* 콤보박스 */
@@ -39,7 +43,6 @@
 .combobox-right {
   text-align-last: center;
 }
-
 
 #project .triangle {
   width: 0;
