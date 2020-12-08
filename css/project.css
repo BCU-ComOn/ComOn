@@ -29,25 +29,24 @@
   border-collapse: collapse;
 
   color: #fff;
-  background-color: skyblue;
+  background-color: rgb(48, 156, 228);
 }
 
-/* 가운데 '|'
 .combobox-left {
-  border-right: 1px solid #fff;
+  text-align-last: center;
 }
 
 .combobox-right {
-  border-left: 1px solid #fff;
+  text-align-last: center;
 }
-*/
+
 
 #project .triangle {
   width: 0;
   height: 0;
   border-left: 12.5px solid transparent;
   border-right: 12.5px solid transparent;
-  border-top: 12.5px solid blue;
+  border-top: 12.5px solid rgb(48, 156, 228);
 }
 
 /**/
