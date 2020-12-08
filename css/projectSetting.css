@@ -1,3 +1,10 @@
+*{
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #333333;
+}
+
+
 /*창 띄우기 설정*/
 .setting-window {
     display: block;
@@ -58,6 +65,7 @@
     height: 40px;
     text-align: center;
     line-height: 40px;
+
 
 }
 
