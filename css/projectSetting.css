@@ -43,6 +43,12 @@
 
 }
 
+/*기본정보 버튼 마우스 올렸을 때*/
+.information-btn:hover{
+    cursor: pointer;
+
+}
+
 
 /*팀원관리 버튼*/
 .teamMember-btn{
@@ -55,16 +61,23 @@
 
 }
 
+/*팀원관리 버튼 마우스 올렸을 때*/
+.teamMember-btn:hover{
+    cursor: pointer;
+
+}
+
+
 /*아래 버튼모음*/
 #bottom-btn{
-    margin-top: 30px;
     overflow: auto;
 }
+
 
 /*삭제 버튼*/
 .delete-btn{
     border-radius: 4px;
-    background-color: tomato;
+    background-color: rgb(223, 109, 97);
     width: 215px;
     height: 35px;
     text-align: center;
@@ -100,12 +113,20 @@
 
 }
 
+
+/*삭제,취소,수정반영 버튼 마우스 올렸을 때*/
+.delete-btn:hover, .cancel-btn:hover, .commit-btn:hover{
+    cursor: pointer;
+}
+
+
 /*컨테이너로 묶음*/
 .wrapper{
     width: 620px;
     margin-left: 60px;
 }
 
+/*컨테이너로 묶음*/
 .container{
     margin-top: 5px;
     overflow: auto;
@@ -119,6 +140,7 @@
     float: right;
 }
 
+/*불러오기 버튼*/
 .load-btn{
     background-color:#e0e0e0;
     border-radius: 4px;
@@ -132,39 +154,42 @@
 
 }
 
+/*불러오기 버튼 마우스 올렸을 때*/
+.load-btn:hover{
+    cursor: pointer;
 
+}
 
 /*이미지 ~ 텍스트*/
 .article-content{
     overflow: auto;
     margin-top: 15px;
 }
-
 .article-text{
     float: left;
     line-height: 100px;
 }
-
 .article-text2{
     float: left;
     line-height: 35px;
 
 }
-
 .article-text3{
     float: left;
     margin-top: 15px;
-
 }
-
 
 .article-img{
     float: right;
 }
 
+/*플러스버튼 마우스 올렸을 때*/
+.plusButton:hover{
+    cursor: pointer;
+}
+
 
 /*프로젝트명 텍스트칸*/
-
 .project-name{
     float: right;
     width: 481px;
@@ -189,13 +214,36 @@
 
 /*상태바 모음*/
 .status-bar{
-    height: 40px;
+    height: 25px;
     display: flex;
     padding-left: 50px;
-    margin-top: 10px;
-    
+    margin-top: 0px;
+}
+
+/*화살표 모음*/
+.arrow-content{
+    height: 14px;
+    display: flex;
+    padding-left: 50px;
+    margin-bottom: 30px;
+
 
 }
+
+/*각각 화살표*/
+.arrow1, .arrow2, .arrow3, .arrow4{
+    width: calc(100% / 4);
+    text-align: center;
+    font-size: 16px;
+
+}
+
+/*2~4 화살표 숨김*/
+.arrow2, .arrow3, .arrow4{
+    display: none;
+
+}
+
 
 /*개발 준비중 상태*/
 .develop-ready{
@@ -203,7 +251,7 @@
     line-height: 25px;
     color:  #ffffff;
     background-color: #E74c3c;
-    font-size: 16px;
+    font-size: 14px;
     width: calc(100% / 4);
     text-align: center;
     border-radius: 20px 0px 0px 20px;
@@ -215,7 +263,7 @@
     line-height: 25px;
     color:  #ffffff;
     background-color: #F39C12;
-    font-size: 16px;
+    font-size: 14px;
     width: calc(100% / 4);
     text-align: center;
 }
@@ -225,7 +273,7 @@
     line-height: 25px;
     color:  #ffffff;
     background-color: #27AE60;
-    font-size: 16px;
+    font-size: 14px;
     width: calc(100% / 4);
     text-align: center;
 }
@@ -235,143 +283,10 @@
     line-height: 25px;
     color:  #ffffff;
     background-color: #2980B9;
-    font-size: 16px;
+    font-size: 14px;
     width: calc(100% / 4);
     text-align: center;
     border-radius: 0px 20px 20px 0px;
     
 }
 
-/*화살표 (수정해야됨)*/
-.aa{
-
-    flex:none;
-}
-
-
-
-/******************css reset*****************/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
