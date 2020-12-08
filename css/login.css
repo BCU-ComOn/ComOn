@@ -30,7 +30,8 @@ h2 {
   height: 30px;
   margin-bottom: 30px;
 }
-#btnSub {
+
+#btnSub { 
   width: 300px;
   background: #309ce4;
   border: none;
