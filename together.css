@@ -1,0 +1,23 @@
+.together {
+    width: 700px;
+}
+.to_title {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Noto Sans KR";
+    padding-bottom: 35px;
+}
+.to_sub_title {
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+}
+.context_tite {
+    font-size: 16px;
+}
+.context {
+    font-size: 14px;
+}
+.context_fin {
+    font-size:14px;
+    padding-bottom: 35px;
+}
