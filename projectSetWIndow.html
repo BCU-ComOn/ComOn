@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="projectSetting.css">
-    <link rel="stylesheet" href="reset.css">
-
+    <link rel="stylesheet" href="css/projectSetting.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel = "preconnect"href = "https://fonts.gstatic.com">
     <link href = "https://fonts.googleapis.com/css2? family = Noto + Sans + KR : wght @ 100 & display = swap "rel ="stylesheet ">
+    <script type="text/javascript" src="js/project_set_window.js"></script>
+
 </head>
 <body>
-    <div class="setting-window">
+    <div class="setting-window" id="setWindow">
         <section class="setting-window-content">
             <header>
                 <nav>
@@ -62,29 +63,33 @@
 
 
                     <div class="article-content">
-                        <span class="article-text2">태그&oplus;</span>
-                        <input class="project-name" type="text" placeholder="프로젝트명">
-
+                        <span class="article-text2">태그 <img class="plusButton" src="img/+버튼.png"></span>
+                    
                     </div> <!--태그-->
 
 
                     <div class="article-content">
                         <span class="article-text3">진행 상황</span>
+
+
+                        <!-------진행상황 바------->
                         <div class="status-bar">
                             <div class="develop-ready">개발 준비</div>
-                            
                             <div class="developing">개발 중</div>
                             <div class="test">테스트</div>
                             <div class="develop-finish">개발 완료</div>
-                            <span class="aa">▲</span> <!--수정필요-->
                         </div>
-                    </div> <!--진행상황 바-->
 
 
-
+                        <!-------진행상황 화살표 모음------->
+                        <div class="arrow-content">
+                            <div class="arrow1"><span>▲</span></div>
+                            <div class="arrow2"><span>▲</span></div>
+                            <div class="arrow3"><span>▲</span></div>
+                            <div class="arrow4"><span">▲</span></div>
+                        </div>
+                    </div> 
                 </article> <!--대표사진 ~ 진행상황-->
-
-            
 
                 <footer>
                     <div>
@@ -98,7 +103,7 @@
                             </li>
 
                             <li>
-                                <div class="cancel-btn">취소</div>
+                                <div id="cancel-btn" class="cancel-btn">취소</div>
                             </li>
                         </ul>
                     </div>

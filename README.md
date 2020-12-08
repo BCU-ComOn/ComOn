@@ -44,5 +44,3 @@
 2. 기본 폰트는 본고딕을 사용한다. (https://fonts.google.com/specimen/Noto+Sans+KR)
 
 3. main 브랜치의 작업물을 웹에서 확인할 수 있다. (https://bcu-comon.github.io/ComOn/project.html)
-
-수정
