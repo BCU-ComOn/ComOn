@@ -12,42 +12,43 @@
 
 </head>
 <body>
+    <!--------------기본정보창 표시-------------->
     <div class="setting-window" id="setWindow">
         <section class="setting-window-content">
             <header>
                 <nav>
                     <ul id="setting-btn">
+                        <!--기본정보 버튼-->
                         <li>
                             <div class="information-btn">기본정보</div>
-
-                            <!--기본정보 버튼-->
                         </li>
+                        <!--팀원관리 버튼-->
                         <li>
                             <div class="teamMember-btn">팀원관리</div>
-
-                            <!--팀원관리 버튼-->
                         </li>
                     </ul>
                 </nav>
             </header> <!--기본정보 / 팀원관리 버튼 끝-->
 
+            
             <div class="wrapper">
-
+                <!---------컨테이너 시작---------->
                 <article class="container">
                     <div class="article-content">
                         <span class="article-text">대표사진</span>
+
+                        <!----불러오기 버튼---->
                         <div class="empty-div">
                             <div class="load-btn">불러오기</div>
                         </div>
                         <img class="article-img" src="http://placehold.it/250x100"/>
-                    </div> <!--대표사진-->
+                    </div> <!--대표사진 끝-->
 
 
                     <div class="article-content">
                         <span class="article-text2">프로젝트 명</span>
                         <input class="project-name" type="text" placeholder="프로젝트명">
-
-                    </div>  <!--프로젝트 명-->
+                    </div>  <!--프로젝트 명 끝-->
 
                     <div class="article-content">
                         <span class="article-text2">대표 태그</span>
@@ -58,19 +59,15 @@
                             <option value="C#">C#</option>
                             <option value="PYTHON">PYTHON</option>
                         </select>
-
-                    </div> <!--대표 태그-->
+                    </div> <!--대표 태그 끝-->
 
 
                     <div class="article-content">
                         <span class="article-text2">태그 <img class="plusButton" src="img/+버튼.png"></span>
-                    
                     </div> <!--태그-->
-
 
                     <div class="article-content">
                         <span class="article-text3">진행 상황</span>
-
 
                         <!-------진행상황 바------->
                         <div class="status-bar">
@@ -80,37 +77,39 @@
                             <div class="develop-finish">개발 완료</div>
                         </div>
 
-
                         <!-------진행상황 화살표 모음------->
                         <div class="arrow-content">
-                            <div class="arrow1"><span>▲</span></div>
-                            <div class="arrow2"><span>▲</span></div>
-                            <div class="arrow3"><span>▲</span></div>
-                            <div class="arrow4"><span">▲</span></div>
+                            <div class="arrow1" id="arrow1"><span>▲</span></div>
+                            <div class="arrow2" id="arrow2"><span>▲</span></div>
+                            <div class="arrow3" id="arrow3"><span>▲</span></div>
+                            <div class="arrow4" id="arrow4"><span">▲</span></div>
                         </div>
                     </div> 
-                </article> <!--대표사진 ~ 진행상황-->
+                </article> <!--대표사진 ~ 진행상황 끝-->
+
 
                 <footer>
                     <div>
+                        <!------밑에 버튼 모음------>
                         <ul id="bottom-btn">
+                            <!------프로젝트 삭제 버튼------>
                             <li>
                                 <div class="delete-btn">프로젝트 삭제</div>
                             </li>
 
+                            <!------수정반영 버튼------>
                             <li>
                                 <div class="commit-btn">수정반영</div>
                             </li>
 
+                            <!------취소 버튼------>
                             <li>
                                 <div id="cancel-btn" class="cancel-btn">취소</div>
                             </li>
                         </ul>
                     </div>
-                </footer> <!--프로젝트 삭제 ~ 수정반영 버튼-->
-
+                </footer> <!--프로젝트 삭제 ~ 수정반영 버튼 끝-->
             </div>
-
         </section>
     </div>
 </body>
