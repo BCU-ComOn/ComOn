@@ -186,4 +186,4 @@
 
 .imgCrew-img div:hover + span {
   display: block;
-}
+} /* 마우스에 따른 배경 색과 display on/off 기능 */
