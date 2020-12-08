@@ -25,7 +25,7 @@
 
 3. 스프린트의 내 할 일을 모두 끝내면 main으로 Pull Request 하고 멘토에게 알린다.
 
-4. 멘토가 Merge 해도 좋다고하면 Merge 한다.
+4. 충돌이 있으면 해결 후 Merge 한다. 없다면 바로 Merge 한다.
 
 ### 참고사항
 
@@ -44,5 +44,3 @@
 2. 기본 폰트는 본고딕을 사용한다. (https://fonts.google.com/specimen/Noto+Sans+KR)
 
 3. main 브랜치의 작업물을 웹에서 확인할 수 있다. (https://bcu-comon.github.io/ComOn/project.html)
-
-수정
