@@ -1,0 +1,80 @@
+.Profile{
+    margin: 30px;
+
+}
+
+.pro1{
+    border: 1px solid gray;
+    border-radius: 50px;
+}
+
+img{
+    margin: 0px 20px;
+}
+
+.input_text{
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 40px;
+    width: 500px;
+    margin: 30px 0px;
+}
+input{
+    height: 38px;
+    width: 450px;
+    border: none;
+    border-radius: 5px;
+    outline: 0;
+    float: right;
+}
+button{
+    height: 40px;
+    width: 40px;
+    float: left;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+.balloon {  
+    position:relative; 
+    margin: 0px 0px 30px 20px;
+    width:410px; 
+    height:50px;
+    border-radius: 10px;
+    background:gray; 
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+   }
+
+.balloon:after { 
+    border-top: 10px solid transparent; 
+    border-left: 10px solid transparent; 
+    border-right: 10px solid transparent; 
+    border-bottom: 20px solid gray; 
+    content:""; 
+    position:absolute;
+    top:0px;
+    left:-10px;  
+    transform : rotate(30deg);
+
+
+   }
+   
+.cancel{
+    width: 100px;
+    height: 35px;
+    margin: 0px 15px 20px;
+    outline: 0;
+}
+
+.Apply{
+    width: 100px;
+    height: 35px;
+    margin: 0px 15px 20px;
+    background-color: #2E9AFE;
+    color: white;
+    outline: 0;
+}
