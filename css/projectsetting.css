@@ -451,7 +451,12 @@ table {
   .Profile{
     height: 95px;
     margin: 30px;
+}
 
+.Proli{
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
 .pro1{
