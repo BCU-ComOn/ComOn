@@ -10,7 +10,7 @@ window.onload = function() {
 
     btnComp.onclick = function() {        
         console.log(myProject);
-        myProject.style.display = "flex";
+        myProject.style.display = "grid";
         myContent.style.display = "none";  
         myLove.style.display = "none"; 
     }
@@ -18,13 +18,13 @@ window.onload = function() {
     btnContent.onclick = function() {  
         console.log(myContent);
         myProject.style.display = "none"; 
-        myContent.style.display = "flex"; 
+        myContent.style.display = "grid"; 
         myLove.style.display = "none"; 
     }
 
     btnLove.onclick = function() {   
         myProject.style.display = "none"; 
         myContent.style.display = "none"; 
-        myLove.style.display = "flex"; 
+        myLove.style.display = "grid"; 
     }
 }
