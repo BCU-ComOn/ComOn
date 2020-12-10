@@ -1,0 +1,80 @@
+.history_title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.history_img {
+    width: 700px;
+    height: 250px;
+    padding-top: 25px;
+    display: flex;
+}
+
+.img_1 {
+    width: 350px;
+    height: 250px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-image: url(../img/his_img_1.jpg);
+}
+
+.img_2 {
+    width: 350px;
+    height: 250px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-image: url(../img/his_img_2.jpg);
+}
+
+.history_table {
+    width: 700px;
+
+    padding-top: 30px;
+}
+
+.his_box {
+    display: flex;
+}
+
+.middle_bar {
+    width: 700px;
+    height: 15px;
+    background-color: #666666;
+    border-radius: 15px;
+}
+
+.listed_box {
+    min-height: 90px;
+    display: flex;
+    margin
+}
+
+.text_box {
+    align-self: center;
+    line-height: 20px ;
+}
+
+.listed_bar {
+    width: 10px;
+    min-height: 90px;
+    background-color: #f89b00;
+    border-radius: 15px;
+}
+
+.listed_title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f89b00;
+    padding-left: 10px;
+}
+
+.listed_ul {
+    list-style-type: disc;
+    list-style: inside;
+}
+
+.listed_li {
+    font-size: 14px;
+    padding-left: 10px;
+}

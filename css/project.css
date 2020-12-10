@@ -1,7 +1,11 @@
+@import url(https://fonts.google.com/specimen/Noto+Sans+KR);
+
 #project {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 /* 콤보박스 */
@@ -13,34 +17,44 @@
 }
 
 #project .combobox > form {
-  display: flex;
   width: 300px;
   height: 50px;
+  background-color: rgb(48, 156, 228);
+  border-radius: 5px;
 }
 
 #project .combobox > form > select {
   /* ie 에서는 화살표가 계속 나옴 */
   appearance: none;
 
-  width: 50%;
+  width: 49%;
   height: 100%;
   text-align: center;
-  border: 1px solid #fff;
-  border-collapse: collapse;
+  border: none;
 
   color: #fff;
-  background-color: skyblue;
+  background-color: rgb(48, 156, 228);
 }
 
-/* 가운데 '|'
-.combobox-left {
-  border-right: 1px solid #fff;
+#project .combobox > form > .combobox-left {
+  text-align-last: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
-.combobox-right {
-  border-left: 1px solid #fff;
+#project .combobox > form > .combobox-right {
+  text-align-last: center;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
-*/
+
+#project .combobox-line {
+  width: 1px;
+  height: 20px;
+  background-color: #fff;
+  position: absolute;
+  top: 50px;
+}
 
 #project .triangle {
   width: 0;
@@ -76,14 +90,17 @@
 #project .project-list > .project-content {
   width: 280px;
   height: 245px;
+  border-radius: 10px;
   box-shadow: 2px 2px 2px 1px grey;
 }
 
 #project .project-list > .project-content > .project-img {
   width: 100%;
   height: 135px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   background-image: url(../img/human.png);
-  background-size: 280px 135px;
+  background-size: cover;
 }
 
 /* 기수 */
@@ -107,6 +124,8 @@
   height: 80px;
   padding: 20px 25px;
   padding-top: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 #project .project-list > .project-content > .project-explain > .team-name {
