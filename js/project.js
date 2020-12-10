@@ -20,8 +20,8 @@ function createProjectContent(pjlist) {
     projectName.className ="project-name";
     projectTitle.className = "project-title";
 
-    generation.textContent = "3기";
-    teamName.textContent = "1팀";
+    generation.textContent = "1기";
+    teamName.textContent = "1팀명";
     projectType.textContent = "C++";
     projectTitle.textContent = "어떤거 진행중";
 
@@ -37,20 +37,10 @@ function createProjectContent(pjlist) {
     projectContent.appendChild(projectImage);
     projectContent.appendChild(projectExplain);
 
-
+    pjlist.appendChild(projectContent);
 }
 
 window.onload = function() {
-    let testData = {
-        generation : "1기",
-        teamName : "1팀명",
-        projectType : "C++",
-    }
-
     let pjlist = document.getElementById("project-list");
-    let pjcon = createProjectContent();
-
-    pjlist.appendChild(pjcon);
-
-
+    createProjectContent(pjlist);
 }
