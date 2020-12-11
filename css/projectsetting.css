@@ -526,6 +526,10 @@ button{
 
 
    }
+
+.MyPagebt{
+    float: right;
+}
    
 .cancel{
     width: 100px;
