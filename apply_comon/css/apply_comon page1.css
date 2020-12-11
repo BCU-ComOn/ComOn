@@ -40,3 +40,24 @@
   height: 40px;
   margin-right: 20px;
 }
+/* 관심 분야 */
+.join .contents .content{
+  display: flex;
+  align-items: left;
+}
+
+.web-game-java-c{
+  font-size: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 80px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: rgb(252, 176, 46);
+  color: white;
+
+  text-align:center;
+  line-height: 20px;
+
+}
+
