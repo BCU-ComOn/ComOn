@@ -1,9 +1,21 @@
-.left{float: left;}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+.left{
+    float: left;
+}
 .right{
     float: right;
 }
 iframe{
     border: none;
+    height: 100%;
+    width: 700px;
+    vertical-align: middle;
+    align-items: center;
+    padding-left: 35px;
+    padding-top: 300px;
+}
+html,body{
+    height: 100%;
 }
 ul{
     text-align: center;
@@ -15,6 +27,7 @@ ul{
     padding: 35px;
 }
 .bar{
+    text-align: center;
     text-decoration: none;
     color: white;
     font-size: 22px;
@@ -23,4 +36,5 @@ ul{
 aside{
     background-color: #309ce4;
     width: 400px;
+    height: 100%;
 } 
