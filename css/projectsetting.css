@@ -455,6 +455,8 @@ table {
 
 .Proli{
     float: left;
+    position: relative;
+    right: 50px;
     margin-left: 20px;
     margin-top: 20px;
 }
@@ -462,6 +464,18 @@ table {
 .pro1{
     border: 1px solid gray;
     border-radius: 50px;
+}
+
+.pro1Minus{
+    width: 20px;
+    height: 20px;
+    border: 0;
+    background-color: #e0e0e0;
+    background-image: url("/img/마이너스버튼.png");
+    position: relative;
+    left: 60px;
+    bottom: 5px;
+    border-radius: 50%;
 }
 
 img{
@@ -499,8 +513,8 @@ button{
 
 .balloon {  
     position:relative; 
-    left: 30px;
-    top: -35px;
+    left: 10px;
+    top: 10px;
     width:410px; 
     height:50px;
     border-radius: 10px;
@@ -524,9 +538,27 @@ button{
     left:-10px;  
     transform : rotate(30deg);
 
-
    }
 
+.pro2{
+    border: 1px solid gray;
+    border-radius: 50px;
+    float: left;
+}
+.pro1Plus{
+    width: 20px;
+    height: 20px;
+    border: 0;
+    background-color: #e0e0e0;
+    background-image: url("/img/마이너스버튼.png");
+    position: relative;
+    left: -20px;
+    bottom: 5px;
+    border-radius: 50%;
+
+}
+
+/* 취소,수정 반영 버튼*/
 .MyPagebt{
     float: right;
 }
