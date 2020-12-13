@@ -3,11 +3,9 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-.center {
-}
-
 section {
     display: flex;
+    justify-content: ;
 }
 
 .profile {
@@ -235,10 +233,9 @@ textarea {
 
 .passwdbox {
     width: 470px;
-    height: 315px;
+    height: 280px;
     box-shadow: 10px 10px 10px #666666;
     z-index: 1;
-    position: absolute;
 }
 
 .title {
