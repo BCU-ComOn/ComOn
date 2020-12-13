@@ -109,10 +109,48 @@ progress::-webkit-progress-bar {
 .TeamCard-Profile {
   display: flex;
 }
-.profile-list {
-  margin-left: px;
+
+.profile-img {
+  display: block;
+  width: 60px;
+  height: 60px;
 }
 
-.profile-list > ul {
-  margin-bottom: 40px;
+.profile-list {
+  margin-left: 30px;
+  font-size: 16px;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.people1 {
+  display: flex;
+  margin-bottom: 20px;
+}
+.people1 > span {
+  text-align: center;
+}
+.people2 {
+  display: flex;
+  margin-bottom: 20px;
+}
+.people2 > span {
+  text-align: center;
+}
+.people3 {
+  display: flex;
+  margin-bottom: 20px;
+}
+.people3 > span {
+  text-align: center;
+}
+.team-part {
+  margin-left: 15px;
+  margin-block: auto;
+  padding-bottom: 15px;
+}
+.team-part > ul > li {
+  margin-left: 15px;
 }
