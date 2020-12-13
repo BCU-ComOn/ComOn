@@ -236,6 +236,7 @@ textarea {
     box-shadow: 10px 10px 10px #666666;
     z-index: 1;
     margin: 0 auto;
+    display: none;
 }
 
 .title {
