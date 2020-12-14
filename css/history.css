@@ -47,11 +47,9 @@
 .listed_box {
     min-height: 90px;
     display: flex;
-    margin
 }
 
 .text_box {
-    align-self: center;
     line-height: 20px ;
 }
 
@@ -77,4 +75,28 @@
 .listed_li {
     font-size: 14px;
     padding-left: 10px;
+}
+
+#box1 {
+    position: relative; left: 65px; top: 20px;
+}
+
+#box1 .listed_bar {
+    height: 125px;
+}
+
+#box2 {
+    position: relative; left: 260px; bottom: 20px;
+}
+
+#box2 .listed_bar {
+    height: 165px;
+}
+
+#box3 {
+    position: relative; left: 220px; top: 55px;
+}
+
+#box3 .listed_bar {
+    height: 90px;
 }
