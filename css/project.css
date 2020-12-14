@@ -234,3 +234,26 @@
 #project .page > .page-now {
   background-color: skyblue;
 }
+
+.project-explain {
+  position: relative;
+}
+
+.textStamp {
+  display: block;
+  position: absolute;
+  text-align: center;
+  right: 0;
+  bottom: 0;
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  background-color: #ff0000;
+}
+
+.textStamp p {
+  font-size: 16px;
+  margin: 0;
+  color: #fff;
+}
