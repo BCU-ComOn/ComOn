@@ -136,7 +136,7 @@ function select_left_right() {
         onegi_cpp.style.display = "none";
         onegi_game.style.display = "none";
         twogi_web.style.display = "block";
-        twogi_cpp.style.display = "blcok";
+        twogi_cpp.style.display = "block";
         twogi_game.style.display = "block";
       } else if (option_left == "all" && option_right == "web") {
         onegi_web.style.display = "block";
