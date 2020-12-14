@@ -21,7 +21,7 @@ nav {
 }
 .top {
   display: flex;
-  height: 1200px;
+  height: 1300px;
 }
 section {
   margin-left: 30px;
@@ -123,6 +123,7 @@ progress::-webkit-progress-bar {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 45px;
 }
 
 .people1 {
