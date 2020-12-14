@@ -13,6 +13,7 @@ iframe{
     align-items: center;
     padding-left: 35px;
     padding-top: 300px;
+    float: left;
 }
 html,body{
     height: 100%;
