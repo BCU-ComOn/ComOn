@@ -64,18 +64,21 @@
     padding-left: 10px;
 }
 
-.listed_ul {
-    list-style-type: disc;
-    list-style: inside;
+.listed_ul {  
     margin-top: 10px;
 }
 
 .listed_li {
     font-size: 14px;
-    padding-left: 10px;
     margin-bottom: 5px;
+    padding-left: 10px;
+    list-style-position: inside;
 }
 
+li::before {
+    content: "• ";
+
+}
 
 /* listed_box 배치 */
 .listed_box#listed_box1 {
