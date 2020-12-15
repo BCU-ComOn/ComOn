@@ -20,9 +20,9 @@
         </ul>
     </nav>
     <section>
-        <article class="input_box">
+        <div class="input_box">
             <div id="title_box">
-                <input class="titleWrite" type="text" name="title_write" size="32px" value="포스팅 제목을 입력해주세요" >
+                <input class="titleWrite" type="text" name="title_write" size="32px" maxlength="20" placeholder="포스팅 제목을 입력해주세요" >
                 <div id=right_profile>
                         <div class="profile_box">
                             <img class="profile" src="img/bg_comee_ distinction_01.jpg">
@@ -30,21 +30,25 @@
                         <p class="team">1팀명</p>
                 </div>
             </div>
-            <div>글 수정시 여기에 값을 넣어주면 됩니다.</div>
-        </aticle>
-        <article><!--box 아래부분-->
-            <div>연관 프로젝트
-                <div>없음</div>
+            <hr>
+            <input class="content_box" type="text" placeholder="글 수정시 여기에 값을 넣어주면 됩니다.">
+        </div>
+        <hr>
+        <div class="select_box"><!--box 아래부분-->
+            <div>
+                <div class="project_text">연관 프로젝트</div>
+                    <input class="in_select_box" type="number" placeholder="없음">
             </div>
-            <div>관련 목록
-                <div>선택</div>
-                    <ul>
-                        <li>#활동내역</li>
-                        <li>#정보공유</li>
-                    </ul>
+            <div>
+                <div class="project_text">관련 목록</div>
+                    <input class="in_select_box" type="number" placeholder="선택">
+                        <ul class="tag">
+                            <li>#활동내역</li>
+                            <li>#정보공유</li>
+                        </ul>
             </div>
-            <div>작성 완료</div>
-        </article>
+            <a class="bottom_writingButton" href="#">작성 완료</a>
+        </div>
     </section>
     <footer>footer / </footer>
 </body>
