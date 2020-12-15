@@ -6,6 +6,11 @@ window.onload = function() {
     let btnComp = document.getElementById("btnComp"); //기본정보
     let btnContent = document.getElementById("btnContent"); //팀원관리
 
+
+    let cancelBtn = document.getElementById("cancel-btn"); //취소버튼
+
+    let mainWindow = document.getElementById("setting-window-content"); //메인 윈도우
+
     btnComp.onclick = function() {       //기본정보 클릭
         console.log(wrapper);
         wrapper.style.display = "block";
@@ -32,4 +37,18 @@ window.onload = function() {
         btnComp.style.color = "#333333";
 
     }
+
+    cancelBtn.onclick = function(){  //취소버튼 클릭
+        mainWindow.style.display = "none";
+
+    }
+
+
+
+
+
+
+
+
+
 }
