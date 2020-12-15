@@ -100,14 +100,12 @@ section {
 .combinebtns {
   height: 20px;
   margin-bottom: 12px;
-  display: none;
 }
 
 .combinebtns2 {
   height: 20px;
   margin-top: 22px;
   margin-bottom: 12px;
-  display: none;
 }
 
 input[type="text"] {
@@ -116,6 +114,7 @@ input[type="text"] {
   padding-bottom: 5px;
   margin-bottom: 12px;
   margin-left: 30px;
+  width: 500px;
 }
 
 .message {
