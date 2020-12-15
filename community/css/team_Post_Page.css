@@ -1,224 +1,246 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 :root {
-    --max-width: 1070px;
-    font-family: 'Noto Sans KR', sans-serif;
+  --max-width: 1070px;
+  font-family: "Noto Sans KR", sans-serif;
 }
-*{
-    color: #333;
+* {
+  color: #333;
 }
 
 /* post */
-.post{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* post name */
 .post-name-content {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 1070px;
-    height: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 1070px;
+  height: 40px;
 }
-.post-name-left{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.post-name-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .post-name-content .post-list {
-    display: flex;
-    width: 100px;
-    height: 40px;
-    background-color: #e6e6e6;
-    border-radius: 15px;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    color: #838383;
-    margin-right: 15px;
+  display: flex;
+  width: 100px;
+  height: 40px;
+  background-color: #e6e6e6;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #838383;
+  margin-right: 15px;
 }
-.post-name-content .post-name{
-    font-size: 32px;
-    color: #333;
-    font-weight: bold;
-    margin-right: 20px;
+.post-name-content .post-name {
+  font-size: 32px;
+  color: #333;
+  font-weight: bold;
+  margin-right: 20px;
 }
-.post-name-content .post-edit{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 25px;
-    border-radius: 5px;
-    background-color: #309CE4;
-    font-size: 12px;
+.post-name-content .post-edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: #309ce4;
+  font-size: 12px;
 
-    color: #fff;
+  color: #fff;
 }
 .post-name-content .post-name-right {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
-.post-name-content .tags{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 20px;
-    border-radius: 15px;
-    background-color: #f89b00;
-    font-size: 12px;
-    color: #fff;
+.post-name-content .tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 20px;
+  border-radius: 15px;
+  background-color: #f89b00;
+  font-size: 12px;
+  color: #fff;
 }
-.team_grup_side{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 220px;
-    height: 40px;
+.team_grup_side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 40px;
 }
-.team_grup_side .grup_img{
-    background-image: url("http://placehold.it/60x60");
-    background-size: cover;
-    width: 60px;
-    height: 60px;
-    border-radius: 100%;
-    margin-right: 15px;
+.team_grup_side .grup_img {
+  background-image: url("http://placehold.it/60x60");
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  margin-right: 15px;
 }
-.team_grup_side .grup_name{
-    font-size: 16px;
-    color: #333;
+.team_grup_side .grup_name {
+  font-size: 16px;
+  color: #333;
 }
-.underline{
-    flex-direction: column;
-    background-color: #c3c3c3;
-    margin: 30px 0;
-    width: var(--max-width);
-    height: 2px;
+.underline {
+  flex-direction: column;
+  background-color: #c3c3c3;
+  margin: 30px 0;
+  width: var(--max-width);
+  height: 2px;
 }
 
 /* post_main */
 
-.post_main{
-    display: flex;
-    width: 1070px;
+.post_main {
+  display: flex;
+  width: 1070px;
 }
-.post_main_content{
-    width: 1070px;
+.post_main_content {
+  width: 1070px;
 }
-.post_main_content > p{
-    word-break: break-all;
-    font-size: 16px;
-    margin: 10px 0;
+.post_main_content > p {
+  word-break: break-all;
+  font-size: 16px;
+  margin: 10px 0;
 }
-.team_member{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 220px;
-    margin-bottom: 20px;
+.team_member {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  margin-bottom: 20px;
 }
-.team_member .team_img{
-    background-image: url("http://placehold.it/45x45");
-    background-size: cover;
-    width: 45px;
-    height: 45px;
-    border-radius: 100%;
-    margin-right: 10px;
+.team_member .team_img {
+  background-image: url("http://placehold.it/45x45");
+  background-size: cover;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  margin-right: 10px;
 }
-.team_member .team_name{
-    font-size: 16px;
-    color: #333;
+.team_member .team_name {
+  font-size: 16px;
+  color: #333;
 }
 
 /* post_list */
-.post_list{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.post_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.post_list > .btn{
-    width: 45px;
-    height: 45px;
+.post_list > .btn {
+  z-index: 10;
+  display: block;
+  width: 45px;
+  height: 45px;
 }
-.post_list > .btn_left{
-    background-image: url("http://placehold.it/45x45");
+.post_list > .btn_left {
+  background-image: url("http://placehold.it/45x45");
 }
-.post_list > .btn_rigth{
-    background-image: url("http://placehold.it/45x45");
+.post_list > .btn_rigth {
+  background-image: url("http://placehold.it/45x45");
 }
-.post_Slider{
-    display: flex;
-    flex-direction: row;
+.post_Slider {
+  display: flex;
+  flex-direction: row;
+  width: 958px;
+  overflow: hidden;
 }
-.post_Slider > li{
-    display: flex;
-    flex-direction: column;
-    width: 220px;
-    margin: 0 10px;
+.post_Slider > article {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  margin: 0 10px;
+  transition: all 0.8s;
 }
-.post_Slider > li:first-child{
-    margin-left: 5px;
+.post_Slider > article:first-child {
+  margin-left: 5px;
 }
-.post_Slider > li:last-child{
-    margin-right: 5px;
+.post_Slider > article:last-child {
+  margin-right: 5px;
 }
-.post_Slider > li > .top_info{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.post_Slider > article > .top_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.post_Slider > li > .top_info > .user_info{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.post_Slider > article > .top_info > .user_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.post_Slider > li > .top_info > .post_day{
-    font-size: 12px;
-    color: #9e9e9e;
+.post_Slider > article > .top_info > .post_day {
+  font-size: 12px;
+  color: #9e9e9e;
 }
-.post_Slider > li > .top_info > .user_info > .user_img{
-    width: 30px;
-    height: 30px;
-    background-image: url("http://placehold.it/30x30");
-    border-radius: 100%;
-    margin: 5px;
+.post_Slider > article > .top_info > .user_info > .user_img {
+  width: 30px;
+  height: 30px;
+  background-image: url("http://placehold.it/30x30");
+  border-radius: 100%;
+  margin: 5px;
 }
-.post_Slider > li > .top_info > .user_info > .user_name{
-    font-size: 14px;
+.post_Slider > article > .top_info > .user_info > .user_name {
+  font-size: 14px;
 }
-.post_Slider > li > .mid_img{
-    display: flex;
-    justify-content: flex-end;
-    width: 220px;
-    height: 120px;
-    background-image: url("http://placehold.it/220x120");
-    margin-bottom: 12px;
+.post_Slider > article > .mid_img {
+  display: flex;
+  justify-content: flex-end;
+  width: 220px;
+  height: 120px;
+  background-image: url("http://placehold.it/220x120");
+  margin-bottom: 12px;
 }
-.post_Slider > li > .mid_img > .post_new{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    border-radius: 100%;
-    margin: 10px;
-    background-color: #ff2b2b;
-    width: 30px;
-    height: 30px;
+.post_Slider > article > .mid_img > .post_new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 100%;
+  margin: 10px;
+  background-color: #ff2b2b;
+  width: 30px;
+  height: 30px;
 }
-.post_Slider > li > .bottom_info{
-    display: flex;
-    flex-direction: column;   
+.post_Slider > article > .bottom_info {
+  display: flex;
+  flex-direction: column;
 }
-.post_Slider > li > .bottom_info > title{
-    margin-bottom: 8px;
-    font-size: 16px;
-    word-wrap: break-word;
+.post_Slider > article > .bottom_info > title {
+  margin-bottom: 8px;
+  font-size: 16px;
+  word-wrap: break-word;
 }
-.post_Slider > li > .bottom_info > .min_content{
-    font-size: 14px;
-    word-wrap: break-word;
+.post_Slider > article > .bottom_info > .min_content {
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+.activity-none {
+  width: 0 !important;
+  opacity: 0;
+  margin: 0 !important;
+}
+
+.activity-work {
+  width: 22%;
+  opacity: 1;
+  margin-right: 4%;
+}
+
+/* footer */
+footer {
+  margin-top: 50px;
 }
