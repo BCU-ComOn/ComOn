@@ -28,7 +28,7 @@ window.onload = function() {
         myContent.style.display = "none"; 
         myLove.style.display = "grid"; 
     }
-}
+
 
     var cogwheel = document.getElementById("cogwheel");
     var passwdbox = document.getElementById("passwdbox");
@@ -56,4 +56,4 @@ window.onload = function() {
         combinebtns2.style.display = "block";
     }
 
-
+};
