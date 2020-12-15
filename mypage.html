@@ -12,16 +12,15 @@
     </head>
     <body>
         <header></header>
-
+        
         <section>
             <div class="profile">
-                <div class="picture">
-                </div>
+                <div class="picture"></div>
                 <div class="info">
                     <span>testID</span><br>
                     <div class="container">
                 <div class="name">홍길동</div>
-                <button class="cogwheel"></button>
+                <button class="cogwheel" id="cogwheel"></button>
                 </div>
                 <p class="role">운영진 or 부원</span>
                 </div>
@@ -31,16 +30,16 @@
                 <input type="button" class="modifybtn" value="수정 반영">
                 <div class="container">
                 <div class="field">
-                <div class="favoritefield">
+                <div class="favoritefield" id="favoritefield">
                     관심 분야
-                </div><button class="plusbtn1"></button>
+                </div><button class="plusbtn1" id="plusbtn1"></button>
                 </div>
-                <div class="combinebtns">
+                <div class="combinebtns" id="combinebtns">
                 <div class="interest1">WEB</div>
                 <button class="minusbtn1"></button>
                 </div>
 
-                <div class="combinebtns">
+                <div class="combinebtns" id="combinebtns">
                 <div class="interest2">GAME</div>
                 <button class="minusbtn2"></button>
                 </div>
@@ -50,19 +49,19 @@
                 <div class="language">
                 <div class="favoritelanguage">
                     관심 언어
-                </div><button class="plusbtn2"></button>
+                </div><button class="plusbtn2" id="plusbtn2"></button>
                 </div>
-                <div class="combinebtns2">
+                <div class="combinebtns2" id="combinebtns2">
                 <div class="interestlang1">JAVA</div>
                 <button class="minusbtn1"></button>
                 </div>
 
-                <div class="combinebtns2">
+                <div class="combinebtns2" id="combinebtns2">
                 <div class="interestlang2">PHYTHON</div>
                 <button class="minusbtn2"></button>
                 </div>
 
-                <div class="combinebtns2">
+                <div class="combinebtns2" id="combinebtns2">
                 <div class="interestlang3">C#</div>
                 <button class="minusbtn2"></button>
                 </div>
@@ -117,6 +116,23 @@
                 </section>
             </article><!--좋아요 누른 글-->
         </div>
+
+        <form>
+            <div class="passwdbox" id="passwdbox">
+            <bold><div class="title">비밀번호 변경</div></bold>
+            <div class="text">
+                <label for="currentpasswd">현재 비밀번호</label>
+                <input type="text" placeholder="내용을 입력해주세요"><br>
+                <label for="changepasswd">변경 비밀번호</label>
+                <input type="text" placeholder="내용을 입력해주세요" class="passwdbox2"><br>
+                <label for="passwdcheck">비밀번호 확인</label>
+                <input type="text" placeholder="내용을 입력해주세요">
+            </div>
+            <div class="btns">
+            <input type="button" class="resetbtn" id="resetbtn" value="취소">
+            <input type="button" class="reflectbtn" id="reflectbtn" value="반영">
+            </div>
+            </div>
 
         <footer></footer>
     </body>
