@@ -6,6 +6,10 @@
     margin-bottom: 30px;
 }
 
+.Activity_Process ul {
+    list-style: none;
+}
+
 .Activity_Process li strong {
     display: block;
     font-size: 18px;
@@ -35,7 +39,6 @@
 }
 
 .Activity_Process .leftbox #orangebox {
-    margin-top:20px;
     margin-bottom: 20px;
     font-size: 16px;
     text-align: center;
