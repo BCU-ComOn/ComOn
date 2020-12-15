@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+h3 {
+    font-size: 35px;
+    font-family: "Noto Sans KR";
+}
+.mean {
+    width: 700px;
+    font-family: "Noto Sans KR";
+}
+.me_title {
+    font-size: 36px;
+    font-family: "Noto Sans KR";
+    padding-bottom : 35px;
+    font-weight: bold;
+}
+.context{
+    font-size: 16px;
+    font-family: "Noto Sans KR";
+}

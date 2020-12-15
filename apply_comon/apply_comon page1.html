@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지1</title>
+    <link rel="stylesheet" href="css/apply_comon reset.css">
+    <link rel="stylesheet" href="css/apply_comon common.css">
+    <link rel="stylesheet" href="css/apply_comon page1.css">
+    <link rel="stylesheet" href="css/apply_comon page2.css">
+    <script type="text/javascript" src="js/apply_comon page1.js"></script>
+    <script type="text/javascript" src="js/apply_comon page2.js"></script>
+</head>
+<body>
+    <section class = "join"><!--다른 프로젝트와 코드가 겹치지 않도록 하기 위함.-->
+        <h1 class = "title">동아리 지원하기</h1>
+        <!-- 기본 정보 -->
+        <h3 class = "small-title">기본 정보</h3>
+        <div class = "contents">
+            <form class = "input">
+                <div>
+                    <div class="input-label">
+                        <label for="text">이름</label>
+                    </div>
+                    <div>
+                        <input type="text" class="input-wordbox" placeholder="내용을 입력해주세요"/>
+                    </div>
+                </div>
+                <div>
+                    <div class="input-label">
+                        <label for="text">학번</label>
+                    </div>
+                    <div>
+                        <input type="text" class="input-wordbox" placeholder="내용을 입력해주세요"/>
+                    </div>
+                </div>
+                <div>
+                    <div class="input-label">
+                        <label for="text">학년</label>
+                    </div>
+                    <div>
+                        <select name="grade" class="input-dropdown">
+                            <option value="1 grade">1학년</option>
+                            <option value="2 grade">2학년</option>
+                            <option value="3 grade">3학년</option>
+                            <option value="4 grade">4학년</option>
+                        </select>
+                    </div>
+
+                </div>
+            </form>
+            <!--연락처-->
+            <div class="input-label">
+                <label for="text">연락처</label>
+            </div>
+            <div>
+                <input type="text" class="input-wordbox" placeholder="내용을 입력해주세요"/>
+            </div>
+
+            <!--관심분야-->
+            <div>
+                <div class="input-label">
+                    <label for="text">관심 분야</label>
+                </div>
+                <div class = "content">
+                    <div>
+                        <select name="interest part" class="input-dropdown">
+                            <option value="Web">Web</option>
+                            <option value="Game">Game</option>
+                        </select>
+                    </div>
+                    <div class = "web-game-java-c">
+                        <p>WEB</p>
+                    </div>
+                    <div class = "web-game-java-c">
+                        <p>GAME</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--관심언어-->
+            <div>
+                <div class="input-label">
+                    <label for="text">관심 언어</label>
+                </div>
+                <div class = "content">
+                    <div>
+                        <select naame="grade" class="input-dropdown">
+                            <option value="Java">Java</option>
+                            <option value="C#">C#</option>
+                        </select>
+                    </div>
+                    <div class = "web-game-java-c">
+                        <p>JAVA</p>
+                    </div>
+                    <div class = "web-game-java-c">
+                        <p>C#</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

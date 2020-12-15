@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/project.css" />
+    <script src="js/project.js"></script>
+  </head>
+  <body>
+    <section id="project">
+
+      <!-- 전체|전체 콤보박스-->
+      <div class="combobox">
+        <form>
+          <select class="combobox-left">
+            <option value="all" selected>전체</option>
+            <option value="first">1기</option>
+            <option value="second">2기</option>
+          </select>
+          <select class="combobox-right">
+            <option value="all" selected>전체</option>
+            <option value="web">WEB</option>
+            <option value="cpp">C++</option>
+            <option value="game">GAME</option>
+          </select>
+        </form>
+        <div class="combobox-line"></div>
+        <div class="triangle"></div>
+      </div>
+      <h3>함께한 프로젝트</h3>
+
+      <!-- 버튼 - 내용 - 버튼 -->
+      <article class="project-container">
+        <button class="button-left"></button>
+        
+        <div id="project-list">
+          <div class="project-content">
+            <div class="project-img">
+              <div class="generation">1기</div>
+            </div>
+            <div class="project-explain">
+              <div class="team-type">
+                <span class="team-name">1팀명</span>
+                <div class="project-type">WEB</div>
+              </div>
+              <div class="project-name">
+                <span class="project-title">어떤거 진행중</span>
+                <progress value="60" max="100"></progress>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-img">
+              <div class="generation">1기</div>
+            </div>
+            <div class="project-explain">
+              <div class="team-type">
+                <span class="team-name">2팀명</span>
+                <div class="project-type">C++</div>
+              </div>
+              <div class="project-name">
+                <span class="project-title">어떤거 진행중</span>
+                <progress value="30" max="100"></progress>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-img">
+              <div class="generation">1기</div>
+            </div>
+            <div class="project-explain">
+              <div class="team-type">
+                <span class="team-name">3팀명</span>
+                <div class="project-type">GAME</div>
+              </div>
+              <div class="project-name">
+                <span class="project-title">어떤거 진행중</span>
+                <progress value="80" max="100"></progress>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-img">
+              <div class="generation">2기</div>
+            </div>
+            <div class="project-explain">
+              <div class="team-type">
+                <span class="team-name">1팀명</span>
+                <div class="project-type">WEB</div>
+              </div>
+              <div class="project-name">
+                <span class="project-title">어떤거 진행중</span>
+                <progress value="10" max="100"></progress>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-img">
+              <div class="generation">2기</div>
+            </div>
+            <div class="project-explain">
+              <div class="team-type">
+                <span class="team-name">2팀명</span>
+                <div class="project-type">C++</div>
+              </div>
+              <div class="project-name">
+                <span class="project-title">어떤거 진행중</span>
+                <progress value="50" max="100"></progress>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-img">
+              <div class="generation">2기</div>
+            </div>
+            <div class="project-explain">
+              <div class="team-type">
+                <span class="team-name">3팀명</span>
+                <div class="project-type">GAME</div>                
+              </div>
+              <div class="project-name">
+                <span class="project-title">어떤거 진행중</span>
+                <progress value="100" max="100"></progress>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="button-right"></button>
+      </article>
+
+      <!-- 페이지 표시 -->
+      <div class="page">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle page-now"></div>
+        <div class="circle"></div>
+      </div>
+    </section>
+  </body>
+</html>
