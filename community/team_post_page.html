@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/team_Post_Page.css">
-    <link rel="stylesheet" href="/css/HeaderCss.css">
-    <link rel="stylesheet" href="/css/community_menu.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/team_Post_Page.css">
+    <link rel="stylesheet" href="../css/HeaderCss.css">
+    <link rel="stylesheet" href="css/community_menu.css">
 </head>
 <body>
     <header class="mainPage-Header">
@@ -71,8 +71,8 @@
                 <li><a class="writingButton" href="#">글쓰기</a></li>
             </ul>
         </nav>
-        <section> <!-- Individual Post Page Section Start -->
-            <article class="post-name-content"> <!-- Post Name Start -->
+        <div> <!-- Individual Post Page Section Start -->
+            <div class="post-name-content"> <!-- Post Name Start -->
                 
                 <div class="post-name-left">
                     <div class="post-list">&lt; 목록</div>
@@ -87,11 +87,11 @@
                         <span class="grup_name">1팀명</span>
                     </aside>
                 </div>
-            </article> <!-- Post Name Endd -->
+            </div> <!-- Post Name Endd -->
             
             <div class="underline"></div>
             
-            <article class="post_main"> <!-- Post Content Start -->
+            <div class="post_main"> <!-- Post Content Start -->
                 <div class="post_main_content">
                     <img src="http://placehold.it/850x400" alt="">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas vel veniam, perferendis pariatur consequatur, hic iusto saepe rerum est, reprehenderit non repellendus. Veniam, voluptate eum molestias mollitia facilis libero necessitatibus?</p>
@@ -116,84 +116,27 @@
                         <span class="team_name">4팀원</span>
                     </div>
                 </aside>
-            </article> <!-- Post Content End -->
+            </div> <!-- Post Content End -->
             
-            <div class="underline"></div>
+            
+        </div> <!-- Individual Post Page Section End -->
 
-            <article class="post_list">
-                <div class="btn_left btn"></div>
-                <ul class="post_Slider">
-                    <li class="activity-work">
-                        <div class="top_info">
-                            <span class="post_day">2020.10.15</span>
-                            <div class="user_info">
-                                <div class="user_img"></div>
-                                <span class="user_name">홍길동</span>
-                            </div>
-                        </div>
-                        <div class="mid_img">
-                            <div class="post_new">N</div>
-                        </div>
-                        <div class="bottom_info">
-                            <div class="title">Lorem, ipsum dolor.</div>
-                            <div class="min_content">Lorem ipsum dolor sit amet consectetur.</div>
-                        </div>
-                    </li>
-                    <li class="activity-work">
-                        <div class="top_info">
-                            <span class="post_day">2020.10.15</span>
-                            <div class="user_info">
-                                <div class="user_img"></div>
-                                <span class="user_name">홍길동</span>
-                            </div>
-                        </div>
-                        <div class="mid_img">
-                        </div>
-                        <div class="bottom_info">
-                            <div class="title">Lorem, ipsum dolor.</div>
-                            <div class="min_content">Lorem ipsum dolor sit amet consectetur.</div>
-                        </div>
-                    </li>
-                    <li class="activity-work">
-                        <div class="top_info">
-                            <span class="post_day">2020.10.15</span>
-                            <div class="user_info">
-                                <div class="user_img"></div>
-                                <span class="user_name">홍길동</span>
-                            </div>
-                        </div>
-                        <div class="mid_img">
-                        </div>
-                        <div class="bottom_info">
-                            <div class="title">Lorem, ipsum dolor.</div>
-                            <div class="min_content">Lorem ipsum dolor sit amet consectetur.</div>
-                        </div>
-                    </li>
-                    <li class="activity-work">
-                        <div class="top_info">
-                            <span class="post_day">2020.10.15</span>
-                            <div class="user_info">
-                                <div class="user_img"></div>
-                                <span class="user_name">홍길동</span>
-                            </div>
-                        </div>
-                        <div class="mid_img">
-                        </div>
-                        <div class="bottom_info">
-                            <div class="title">Lorem, ipsum dolor.</div>
-                            <div class="min_content">Lorem ipsum dolor sit amet consectetur.</div>
-                        </div>
-                    </li>
-                </ul>
-                <div class="btn_rigth btn"></div>
-            </article> <!-- Post list Start -->
-        </section> <!-- Individual Post Page Section End -->
-        
+        <div class="underline"></div>
+
+        <div class="post_list">
+            <div class="btn_left btn" id="btnActivityPrev"></div>
+            <section class="post_Slider" id="activitySlider">
+                
+            </section>
+            <div class="btn_rigth btn" id="btnActivityNext"></div>
+            
+        </div> <!-- Post list Start -->
     </div>
     
 
     <footer> <!-- Footer -->
-
+        푸터좀 주세요,,,,
     </footer>
+    <script src="js/team_post_main.js"></script>
 </body>
 </html>
