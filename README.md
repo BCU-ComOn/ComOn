@@ -5,7 +5,13 @@
 ### 디렉터리 구조
 
 - /
-  > 최상위 폴더. html 파일을 이곳에 위치
+  > 최상위 폴더
+- /subfolder
+  - /subfolder/css
+  - /subfolder/js
+  - /subfolder/img
+  - /subfolder/index.html
+    > intro, apply, comee, comwith, community, comeest, mypage 등 폴더로 묶어 관리
 - /css
   > css 폴더
 - /img

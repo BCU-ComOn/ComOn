@@ -1,9 +1,11 @@
+/* 타이틀 */
 .history_title {
     font-size: 32px;
     font-weight: bold;
     text-align: left;
 }
 
+/* 이미지 */
 .history_img {
     width: 700px;
     height: 250px;
@@ -26,10 +28,9 @@
     background-repeat: no-repeat;
     background-image: url(../img/his_img_2.jpg);
 }
-
+/* 연혁 */
 .history_table {
     width: 700px;
-
     padding-top: 30px;
 }
 
@@ -47,12 +48,6 @@
 .listed_box {
     min-height: 90px;
     display: flex;
-    margin
-}
-
-.text_box {
-    align-self: center;
-    line-height: 20px ;
 }
 
 .listed_bar {
@@ -69,12 +64,53 @@
     padding-left: 10px;
 }
 
-.listed_ul {
-    list-style-type: disc;
-    list-style: inside;
+.listed_ul {  
+    margin-top: 10px;
 }
 
 .listed_li {
     font-size: 14px;
+    margin-bottom: 5px;
     padding-left: 10px;
+    list-style-position: inside;
 }
+
+li::before {
+    content: "• ";
+
+}
+
+/* listed_box 배치 */
+.listed_box#listed_box1 {
+    position: relative; left: 50px; top: 20px;
+}
+
+#listed_box1 .listed_bar {
+    height: 125px;
+}
+
+.listed_box#listed_box2 {
+    position: relative; left: 250px; bottom: 20px;
+}
+
+#listed_box2 .listed_bar {
+    height: 165px;
+}
+
+.listed_box#listed_box3 {
+    position: relative; left: 220px; top: 55px;
+}
+
+#listed_box3 .listed_bar {
+    height: 90px;
+}
+
+/* 줄간격 조절 */
+#his_box1 .text_box {
+    margin-top: 10px;
+}
+
+#his_box2 .text_box {
+    margin-top: 30px;
+}
+
