@@ -55,8 +55,6 @@ window.onload = function() {
         content_list.appendChild(cont_div);
     }
 
-    ////////////////////////
-
     var cogwheel = document.getElementById("cogwheel");
     var passwdbox = document.getElementById("passwdbox");
     var favoritefield = document.getElementById("favoritefield");
@@ -67,8 +65,10 @@ window.onload = function() {
     var plusbtn1 = document.getElementById("plusbtn1");
     var plusbtn2 = document.getElementById("plusbtn2");
     
-    btnComp.onclick = function() {   
-        myProject.style.display = "block";
+
+    btnComp.onclick = function() {        
+        console.log(myProject);
+        myProject.style.display = "grid";
         myContent.style.display = "none";  
         myLove.style.display = "none"; 
     }
@@ -91,6 +91,14 @@ window.onload = function() {
     resetbtn.onclick = function() {
         passwdbox.style.display = "none";
     }
+
+    cogwheel.onclick = function() {
+        passwdbox.style.display = "block";
+    }
+    resetbtn.onclick = function() {
+        passwdbox.style.display = "none";
+    }
+  
     reflectbtn.onclick = function() {
         passwdbox.style.display = "none";
     }

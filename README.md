@@ -5,7 +5,13 @@
 ### 디렉터리 구조
 
 - /
-  > 최상위 폴더. html 파일을 이곳에 위치
+  > 최상위 폴더
+- /subfolder
+  - /subfolder/css
+  - /subfolder/js
+  - /subfolder/img
+  - /subfolder/index.html
+    > intro, apply, comee, comwith, community, comeest, mypage 등 폴더로 묶어 관리
 - /css
   > css 폴더
 - /img
@@ -23,7 +29,7 @@
 
    > ex) [YJB-1] 커뮤니티 팀화면 팀 카드 페이지 완성
 
-3. 스프린트의 내 할 일을 모두 끝내면 main으로 Pull Request 하고 멘토에게 알린다.
+3. 스프린트의 내 할 일을 모두 끝내면 main으로 Pull Request 한다.
 
 4. 충돌이 있으면 해결 후 Merge 한다. 없다면 바로 Merge 한다.
 
