@@ -60,6 +60,10 @@
   line-height: 20px;
 }
 
+.advice {
+  text-align: center;
+  font-size: 16px;
+}
 
 .bluebutton {
   margin: 0px auto;
@@ -79,4 +83,8 @@
   height: 250px;
   font-size: 14px;
   padding: 10px;
+}
+
+.s {
+  margin: 30px;
 }
