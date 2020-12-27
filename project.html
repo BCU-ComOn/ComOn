@@ -9,16 +9,16 @@
   </head>
   <body>
     <section id="project">
-
       <!-- 전체|전체 콤보박스-->
       <div class="combobox">
         <form>
-          <select class="combobox-left">
+          <select class="combobox-left" id="select_left">
             <option value="all" selected>전체</option>
             <option value="first">1기</option>
             <option value="second">2기</option>
           </select>
-          <select class="combobox-right">
+
+          <select class="combobox-right" id="select_right">
             <option value="all" selected>전체</option>
             <option value="web">WEB</option>
             <option value="cpp">C++</option>
@@ -33,31 +33,31 @@
       <!-- 버튼 - 내용 - 버튼 -->
       <article class="project-container">
         <button class="button-left"></button>
-        
         <div id="project-list">
-          <div class="project-content">
+          <div class="project-content" id="onegi_web">
             <div class="project-img">
               <div class="generation">1기</div>
             </div>
             <div class="project-explain">
               <div class="team-type">
                 <span class="team-name">1팀명</span>
-                <div class="project-type">WEB</div>
+                <div class="project-type" id="web">WEB</div>
               </div>
+
               <div class="project-name">
                 <span class="project-title">어떤거 진행중</span>
                 <progress value="60" max="100"></progress>
               </div>
             </div>
           </div>
-          <div class="project-content">
+          <div class="project-content" id="onegi_cpp">
             <div class="project-img">
               <div class="generation">1기</div>
             </div>
             <div class="project-explain">
               <div class="team-type">
                 <span class="team-name">2팀명</span>
-                <div class="project-type">C++</div>
+                <div class="project-type" id="cpp">C++</div>
               </div>
               <div class="project-name">
                 <span class="project-title">어떤거 진행중</span>
@@ -65,14 +65,14 @@
               </div>
             </div>
           </div>
-          <div class="project-content">
+          <div class="project-content" id="onegi_game">
             <div class="project-img">
               <div class="generation">1기</div>
             </div>
             <div class="project-explain">
               <div class="team-type">
                 <span class="team-name">3팀명</span>
-                <div class="project-type">GAME</div>
+                <div class="project-type" id="game">GAME</div>
               </div>
               <div class="project-name">
                 <span class="project-title">어떤거 진행중</span>
@@ -80,14 +80,15 @@
               </div>
             </div>
           </div>
-          <div class="project-content">
+
+          <div class="project-content" id="twogi_web">
             <div class="project-img">
               <div class="generation">2기</div>
             </div>
             <div class="project-explain">
               <div class="team-type">
                 <span class="team-name">1팀명</span>
-                <div class="project-type">WEB</div>
+                <div class="project-type" id="web">WEB</div>
               </div>
               <div class="project-name">
                 <span class="project-title">어떤거 진행중</span>
@@ -95,14 +96,14 @@
               </div>
             </div>
           </div>
-          <div class="project-content">
+          <div class="project-content" id="twogi_cpp">
             <div class="project-img">
               <div class="generation">2기</div>
             </div>
             <div class="project-explain">
               <div class="team-type">
                 <span class="team-name">2팀명</span>
-                <div class="project-type">C++</div>
+                <div class="project-type" id="cpp">C++</div>
               </div>
               <div class="project-name">
                 <span class="project-title">어떤거 진행중</span>
@@ -110,14 +111,14 @@
               </div>
             </div>
           </div>
-          <div class="project-content">
+          <div class="project-content" id="twogi_game">
             <div class="project-img">
               <div class="generation">2기</div>
             </div>
             <div class="project-explain">
               <div class="team-type">
                 <span class="team-name">3팀명</span>
-                <div class="project-type">GAME</div>                
+                <div class="project-type" id="game">GAME</div>
               </div>
               <div class="project-name">
                 <span class="project-title">어떤거 진행중</span>
@@ -126,6 +127,7 @@
             </div>
           </div>
         </div>
+
         <button class="button-right"></button>
       </article>
 
