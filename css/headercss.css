@@ -38,6 +38,7 @@ a {
 }
 
 #mainNav li a {
+    display: flex;
     font-size: 20px;
     color: #ffffff;
 }
@@ -48,22 +49,6 @@ a {
 }
 
 #mainNav li a:last-child {
-    display: none;
-}
-
-#mainNav li:last-child a {
-    display: flex;
-}
-
-#mainNav li:nth-child(4) a:last-child {
-    display: none;
-}
-
-#mainNav li:nth-child(4) a{
-    display: flex;
-}
-
-#mainNav li:last-child a:last-child {
     display: none;
 }
 
@@ -95,3 +80,4 @@ a {
     margin-left: 10px;
     width: 85px;
 }
+
