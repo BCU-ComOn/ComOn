@@ -136,6 +136,7 @@ section {
     left: 95px;
     bottom: 32px;
     border-radius: 50%;
+    display: block;
 }
 
 .minusbtn2 {
@@ -148,6 +149,7 @@ section {
     left: 75px;
     bottom: 32px;
     border-radius: 50%;
+    display: block;
 }
 
 .field {

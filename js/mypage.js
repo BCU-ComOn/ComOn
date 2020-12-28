@@ -8,6 +8,8 @@ window.onload = function() {
     var combinebtns2 = document.getElementById("combinebtns2");
     var plusbtn1 = document.getElementById("plusbtn1");
     var plusbtn2 = document.getElementById("plusbtn2");
+    var minusbtn1 = document.getElementById("minusbtn1");
+    var minusbtn2 = document.getElementById("minusbtn2");
 
     cogwheel.onclick = function() {
         passwdbox.style.display = "block";
@@ -24,5 +26,7 @@ window.onload = function() {
     plusbtn2.onclick = function() {
         combinebtns2.style.display = "block";
     }
-
+    minusbtn1.onclick = function() {
+        combinebtns.style.display = "none";
+    }
 };
