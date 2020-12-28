@@ -246,8 +246,8 @@ ul {
 .article-text2{
     float: left;
     line-height: 35px;
-}
 
+}
 .article-text3{
     float: left;
     margin-top: 15px;
@@ -257,63 +257,11 @@ ul {
     float: right;
 }
 
-/*플러스 버튼*/
-.plusButton{
-    position: relative;
-    top:3px;
-}
-
 /*플러스버튼 마우스 올렸을 때*/
 .plusButton:hover{
     cursor: pointer;
 }
 
-/*태그 모양*/
-.project-type {
-    float: left;
-    background-color: orange;
-    color: #fff;
-    font-size: 12px;
-    text-align: center;
-    line-height: 20px;
-    width: 80px;
-    height: 20px;
-    border-radius: 10px;
-    margin-top: 7px;
-    margin-left: 62px;
-  }
-
-  .project-type2 {
-    float: left;
-    background-color: orange;
-    color: #fff;
-    font-size: 12px;
-    text-align: center;
-    line-height: 20px;
-    width: 80px;
-    height: 20px;
-    border-radius: 10px;
-    margin-top: 7px;
-    margin-left: -10px;
-
-  }
-
-/*태그 모음*/
-.tags{
-    display: inline-block;
-}
-
-/*태그에 있는 마이너스 버튼*/
-.tagMinus{
-    position: relative;
-    left: -25px;
-}
-
-/*태그에 마이너스 버튼 마우스 올림*/
-.tagMinus:hover{
-    cursor: pointer;
-
-}
 
 /*프로젝트명 텍스트칸*/
 .project-name{
