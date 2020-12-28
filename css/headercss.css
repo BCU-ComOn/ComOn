@@ -1,7 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 a {
     text-decoration: none;
     outline: 0;
+}
+
+body {
+    font-family: 'Noto Sans KR';
 }
 
 .mainPage-Header {
@@ -13,6 +18,7 @@ a {
 }
 
 .MainHeader {
+    font-family: 'Fredoka One';
     justify-content: center;
     align-items: center;
     width: 140px;
@@ -82,3 +88,29 @@ a {
     width: 85px;
 }
 
+.mainPage-footer {
+    margin-top: 50px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    background-color: #e0e0e0;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.footer-list {
+    margin: 20px 0px;
+    line-height: 18px;
+    text-align: center;
+    list-style: none;
+}
+
+.email-contact {
+    width: 60px;
+    height: 25px;
+    background-color: #309ce4;
+    color: #ffffff;
+    border: #309ce4;
+    border-radius: 4px;
+}

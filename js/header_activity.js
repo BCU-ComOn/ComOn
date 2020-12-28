@@ -10,13 +10,6 @@ window.onload = function() {
             mouseoutNav(this);
         }
     }
-    
-    let Nav_login = mainNav_items.getElementsByTagName('a');
-    mainNav_login[0].onclick = function() {
-        mouseClickNav(this);
-    }
-    mainNav_login[1].onclick = function() {
-    }
 }
 function mouseoverNav(parent) {
     let noneChild = parent.getElementsByTagName('a')[0];
@@ -29,14 +22,6 @@ function mouseoverNav(parent) {
 function mouseoutNav(parent) {
     let displayChild = parent.getElementsByTagName('a')[0];
     let noneChild = parent.getElementsByTagName('a')[1];
-
-    noneChild.style.display = 'none';
-    displayChild.style.display = 'flex';
-}
-
-function mouseClickNav(parent) {
-    let noneChild = parent.getElementsByTagName('a')[0];
-    let displayChild = parent.getElementsByTagName('a')[1];
 
     noneChild.style.display = 'none';
     displayChild.style.display = 'flex';
