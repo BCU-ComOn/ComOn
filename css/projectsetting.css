@@ -370,9 +370,18 @@ ul {
       margin-left: 50px ;
 
   }
+  /* (-) 프로필 */
   .Profile{
     height: 95px;
     margin: 30px;
+}
+
+#Proli{
+    float: right;
+    position: relative;
+    right: 50px;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 .Proli{
@@ -386,6 +395,7 @@ ul {
 .pro1{
     border: 1px solid gray;
     border-radius: 50px;
+    border : none;
 }
 
 .pro1Minus{
@@ -398,12 +408,26 @@ ul {
     left: 60px;
     bottom: 5px;
     border-radius: 50%;
+    outline: 0;
+}
+
+.pro1Minus img{
+    position: relative;
+    right: 5px;
 }
 
 img{
     margin: 0px 20px;
 }
 
+.Profile h3{
+    float: center;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+/* 중간 검색창 */
 .input_text{
     border: 1px solid gray;
     border-radius: 5px;
@@ -428,6 +452,7 @@ button{
     
 }
 
+/* 말풍선 */
 .balloonli{
     height: 100px;
     margin: 0px 0px 5px 0px;
@@ -442,12 +467,16 @@ button{
     border-radius: 10px;
     background:gray; 
     font-size: 14px;
-    color: white;
     text-align: center;
     display: inline-block;
-    list-style-type : circle
+    list-style-type : none;
     
    }
+
+.balloon h3{
+    font-size: 14px;
+    color: white;
+}
 
 .balloon:after { 
     border-top: 10px solid transparent; 
@@ -462,9 +491,25 @@ button{
 
    }
 
+/* 프로필 (+) 버튼 */
+
+.pro1Plus img{
+    position: relative;
+    right: 6px;
+}
+
+/* 프로필 밑 이름 */
+.balloonli h3{
+    font-size: 16px;
+    padding-top: 20px;
+    padding-left: 5px;
+}
+
+/* 하단 배치 프로필 */
 .pro2{
     border: 1px solid gray;
     border-radius: 50px;
+    border : none;
     float: left;
 }
 .pro1Plus{
@@ -477,6 +522,7 @@ button{
     left: -20px;
     bottom: 5px;
     border-radius: 50%;
+    outline: 0;
 
 }
 
@@ -485,7 +531,7 @@ button{
     float: right;
 }
    
-.cancel{
+#cancel{
     width: 100px;
     height: 35px;
     margin: 0px 15px 20px;
