@@ -13,6 +13,12 @@ nav {
   padding-bottom: 45px;
   font-size: 18px;
 }
+.search {
+  background-color: #309ce4;
+  display: flex;
+  align-items: stretch;
+  width: 270px;
+}
 #topMenu {
   width: 1070px;
   height: 100px;
@@ -31,16 +37,17 @@ nav {
   text-align: center;
 }
 
-#topMenu .topMenuNoticeBoard {
+/*#topMenu .topMenuNoticeBoard {
   text-decoration: none;
   color: rgb(51, 51, 51);
-  background-color: rgb(255, 255, 255); /*게시판 다른 색이면 바꾸기*/
-  display: block;
+  background-color: #309ce4; /*게시판 다른 색이면 바꾸기*/
+/*  display: block;
   width: 230px;
   height: 100px;
   font-size: 32px;
   font-weight: bold;
-}
+  padding-top: 0px;
+}*/
 #topMenu .menuLink {
   text-decoration: none;
   color: rgb(48, 156, 228);
@@ -64,16 +71,9 @@ nav {
   background-color: rgb(248, 155, 0);
   border-radius: 0.2rem;
 }
-
-.search {
-  background-color: #309ce4;
-  display: flex;
-  align-items: stretch;
-  width: 270px;
-}
 .top {
   display: flex;
-  height: 1300px;
+  height: 1350px;
 }
 section {
   margin-left: 30px;
@@ -206,4 +206,84 @@ progress::-webkit-progress-bar {
 }
 .team-part > ul > li {
   margin-left: 15px;
+}
+.post_list {
+  align-items: center;
+  justify-content: center;
+  margin-top: 45px;
+}
+
+.post_Slider {
+  display: flex;
+  flex-direction: row;
+}
+.post_Slider > li {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  margin: 0 35px;
+}
+.post_Slider > li:first-child {
+  margin-left: 5px;
+}
+.post_Slider > li:last-child {
+  margin-right: 5px;
+}
+.post_Slider > li > .top_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post_Slider > li > .top_info > .user_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.post_Slider > li > .top_info > .post_day {
+  font-size: 12px;
+  color: #9e9e9e;
+}
+.post_Slider > li > .top_info > .user_info > .user_img {
+  width: 30px;
+  height: 30px;
+  background-image: url("http://placehold.it/30x30");
+  border-radius: 100%;
+  margin: 5px;
+}
+.post_Slider > li > .mid_img > .post_new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 100%;
+  margin: 10px;
+  background-color: #ff2b2b;
+  width: 30px;
+  height: 30px;
+}
+.post_Slider > li > .top_info > .user_info > .user_name {
+  font-size: 14px;
+}
+.post_Slider > li > .mid_img {
+  display: flex;
+  justify-content: flex-end;
+  width: 250px;
+  height: 163px;
+  background-image: url("http://placehold.it/250x163");
+  margin-bottom: 15px;
+}
+
+.post_Slider > li > .bottom_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.post_Slider > li > .bottom_info > .min_content {
+  font-size: 14px;
+  word-wrap: break-word;
+  margin-top: 10px;
+  width: 250px;
+}
+.title {
+  width: 250px;
 }
