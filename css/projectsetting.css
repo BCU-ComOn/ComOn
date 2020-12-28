@@ -370,9 +370,18 @@ ul {
       margin-left: 50px ;
 
   }
+  /* (-) 프로필 */
   .Profile{
     height: 95px;
     margin: 30px;
+}
+
+#Proli{
+    float: right;
+    position: relative;
+    right: 50px;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 .Proli{
@@ -400,10 +409,16 @@ ul {
     border-radius: 50%;
 }
 
+.pro1Minus img{
+    position: relative;
+    right: 5px;
+}
+
 img{
     margin: 0px 20px;
 }
 
+/* 중간 검색창 */
 .input_text{
     border: 1px solid gray;
     border-radius: 5px;
@@ -428,6 +443,7 @@ button{
     
 }
 
+/* 말풍선 */
 .balloonli{
     height: 100px;
     margin: 0px 0px 5px 0px;
@@ -462,6 +478,7 @@ button{
 
    }
 
+/* 하단 배치 프로필 */
 .pro2{
     border: 1px solid gray;
     border-radius: 50px;
@@ -485,7 +502,7 @@ button{
     float: right;
 }
    
-.cancel{
+#cancel{
     width: 100px;
     height: 35px;
     margin: 0px 15px 20px;
