@@ -63,7 +63,7 @@ window.onload = function() {
         let project_type = document.createElement("div");
         project_type.classList.add("project-type");
         let tagMinus = document.createElement("img");
-        tagMinus.src = "/img/minusbtn.png";
+        tagMinus.src = "../img/minusbtn.png";
         tagMinus.classList.add("tagMinus");
     
         article_content.appendChild(tagsContainer);
