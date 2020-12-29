@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
+
+.history_title .listed_title {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
 .article_box {
     padding: 75px 50px 75px 50px;
 }
