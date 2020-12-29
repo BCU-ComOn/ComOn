@@ -70,29 +70,25 @@ window.onload = function() {
         mainWindow.style.display = "none";
 
     }
-
-
+ 
+    /* 프로필 (+)(-) */
     var Profcount = 5;
 
     ProMinus1.onclick = function(){  // 프로필 (-) 버튼 클릭
         Proli1.style.display = "none";
         Profcount -= 1;
-        alert(Profcount);
     }
     ProMinus2.onclick = function(){  
         Proli2.style.display = "none";
         Profcount -= 1;
-        alert(Profcount);
     }
     ProMinus3.onclick = function(){  
         Proli3.style.display = "none";
         Profcount -= 1;
-        alert(Profcount);
     }
     ProMinus4.onclick = function(){  
         Proli4.style.display = "none";
         Profcount -= 1;
-        alert(Profcount);
     }
 
     ProPlus6.onclick = function(){  // 프로필 (+) 버튼 클릭
