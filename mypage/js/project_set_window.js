@@ -5,64 +5,53 @@ window.onload = function() {
 
     let btnComp = document.getElementById("btnComp"); //기본정보
     let btnContent = document.getElementById("btnContent"); //팀원관리
-
-
     let cancelBtn = document.getElementById("cancel-btn"); //취소버튼
-
     let mainWindow = document.getElementById("setting-window-content"); //메인 윈도우
-
     let cancelBtn2 = document.getElementById("cancel"); //취소버튼
+    let delete_btn = document.getElementById("delete-btn"); //프로젝트 삭제 버튼
+    let commit_btn = document.getElementById("commit-btn"); //수정반영 버튼
     
     /*기본 정보*/
 
     let plusButton = document.getElementById("plusButton");
-    
-
     let develop_ready = document.getElementById("develop-ready");
     let developing = document.getElementById("developing");
     let test = document.getElementById("test");
     let develop_finish = document.getElementById("develop-finish");
     
-
-    develop_ready.onclick = function(){
-
+/*준비중 클릭시 화살표*/
+    develop_ready.onclick = function(){ 
         arrow1.style.visibility = "visible";
         arrow2.style.visibility = "hidden";
         arrow3.style.visibility = "hidden";
         arrow4.style.visibility = "hidden";
-
-
     }
-
+/*개발중 클릭시 화살표*/
     developing.onclick = function(){
 
         arrow1.style.visibility = "hidden";
         arrow2.style.visibility = "visible";
         arrow3.style.visibility = "hidden";
         arrow4.style.visibility = "hidden";
-
     }
-
+/*테스트 클릭시 화살표*/
     test.onclick = function(){
         arrow1.style.visibility = "hidden";
         arrow2.style.visibility = "hidden";
         arrow3.style.visibility = "visible";
         arrow4.style.visibility = "hidden";
-
     }
-
+/*완료 클릭시 화살표*/
     develop_finish.onclick = function(){
         arrow1.style.visibility = "hidden";
         arrow2.style.visibility = "hidden";
         arrow3.style.visibility = "hidden";
         arrow4.style.visibility = "visible";
-      
-
     }
 
 
 
-
+/*태그 플러스 마이너스 버튼 누르면 작동*/
     plusButton.onclick = function(){
         let article_content = document.getElementById("article-content");
         article_content.classList.add("article-content");
@@ -147,6 +136,16 @@ window.onload = function() {
     }
 
     cancelBtn2.onclick = function(){  //취소버튼 클릭
+        mainWindow.style.display = "none";
+
+    }
+
+    delete_btn.onclick = function(){  //프로젝트 삭제 클릭
+        mainWindow.style.display = "none";
+
+    }
+
+    commit_btn.onclick = function(){  //수정반영 클릭
         mainWindow.style.display = "none";
 
     }
