@@ -54,3 +54,14 @@
 select::-ms-expand {
   display: none; /*IE 10, 11의 네이티브 화살표 숨기기*/
 }
+
+/* 사이드바 팀 모음 */
+.community-sidebar-team {
+  text-align: center;
+  margin: 45px;
+  color: #fff;
+}
+
+.community-sidebar-team > ul > li {
+  margin-top: 45px;
+}
