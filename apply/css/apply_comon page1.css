@@ -1,52 +1,52 @@
 /* 기본 정보 아래 밑줄 */
-.join{
+.join {
   width: 1070px;
 }
 /* 동아리 지원하기 제목 */
-.join .title{
+.join .title {
   font-size: 32px;
   margin-top: 30px;
   margin-bottom: 40px;
   text-align: center;
 }
 /* 기본 정보 작은 제목*/
-.join .small-title{
+.join .small-title {
   font-size: 24px;
   padding: 15px;
   border-bottom: 0.5px solid black; /* 기본 정보 아래 선 */
 }
-.join .contents{
+.join .contents {
   margin: 30px;
 }
-.join .contents .input{
+.join .contents .input {
   margin-top: -20px;
-  display: flex;/* 수평 */
+  display: flex; /* 수평 */
   align-items: left;
 }
-.join .input-label{
-  margin-top : 20px;
-  margin-bottom : 10px;
-  font-size : 16px;
+.join .input-label {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 /* wordbox: 내용을 입력해주세요 */
-.input-wordbox{
+.input-wordbox {
   width: 300px;
   height: 40px;
   margin-right: 20px;
 }
 /* dropdown */
-.input-dropdown{
-  width: 150px; 
+.input-dropdown {
+  width: 150px;
   height: 40px;
   margin-right: 20px;
 }
 /* 관심 분야 */
-.join .contents .content{
+.join .contents .content {
   display: flex;
   align-items: left;
 }
-
-.web-game-java-c{
+/*orange box*/
+.interest {
   font-size: 10px;
   margin-top: 10px;
   margin-right: 10px;
@@ -56,8 +56,35 @@
   background-color: rgb(252, 176, 46);
   color: white;
 
-  text-align:center;
+  text-align: center;
   line-height: 20px;
-
 }
 
+.advice {
+  text-align: center;
+  font-size: 16px;
+}
+
+.bluebutton {
+  margin: 0px auto;
+  align-items: center;
+  width: 300px;
+  height: 120px;
+  color: #fff;
+  background-color: rgb(48, 156, 228);
+  font-size: 40px;
+  text-align: center;
+  line-height: 120px;
+}
+
+/* Message (하고 싶은 말) */
+.input-message {
+  width: 1000px;
+  height: 250px;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.s {
+  margin: 30px;
+}

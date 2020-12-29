@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
 .left{
     float: left;
+    height: 600px;
+    padding-top: 200px;
 }
 .right{
     float: right;
@@ -12,7 +14,7 @@ iframe{
     vertical-align: middle;
     align-items: center;
     padding-left: 35px;
-    padding-top: 300px;
+    padding-top: 30px;
     float: left;
 }
 html,body{
@@ -26,6 +28,9 @@ ul{
 .as{
     list-style: none;
     padding: 35px;
+}
+.as:hover {
+    font-weight: bolder;
 }
 .bar{
     text-align: center;

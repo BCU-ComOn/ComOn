@@ -1,294 +1,295 @@
-*{
-    font-size: 16px;
-    font-family: 'Noto Sans KR', sans-serif;
+* {
+  font-size: 16px;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 section {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .profile {
-    width: 315px;
-    height: 300px;
-    align-items: center;
-    /*height: 156px;*/
-    display:flex;
+  width: 315px;
+  height: 300px;
+  align-items: center;
+  /*height: 156px;*/
+  display: flex;
 }
 
 .picture {
-    width:150px;
-    height:150px;   
-    border-radius:50%;
-    background-image:url('/img/profile.jpg');
-    background-color:  #309ce4;
-    object-fit: cover;
-    background-size: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: url("/img/profile.jpg");
+  background-color: #309ce4;
+  object-fit: cover;
+  background-size: cover;
 }
 
 .info {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .role {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 .name {
-    margin-top: 5px;
-    font-size: 20px;
+  margin-top: 5px;
+  font-size: 20px;
 }
 
 .modifybtn {
-    background-color: #309ce4;
-    width: 100px;
-    border: 0;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 16px;
-    height: 40px;
-    float: right;
+  background-color: #309ce4;
+  width: 100px;
+  border: 0;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  height: 40px;
+  float: right;
 }
 
 .plusbtn1 {
-    width: 20px;
-    height: 20px;
-    border: 0;
-    background-color: #e0e0e0;
-    background-image: url('/img/plusbtn.png');
-    margin-left: 10px;
-    display: flex;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background-color: #e0e0e0;
+  background-image: url("/img/plusbtn.png");
+  margin-left: 10px;
+  display: flex;
 }
 
 .plusbtn2 {
-    width: 20px;
-    height: 20px;
-    border: 0;
-    background-color: #e0e0e0;
-    background-image: url('/img/plusbtn.png');
-    margin-left: 10px;
-    display: flex;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background-color: #e0e0e0;
+  background-image: url("/img/plusbtn.png");
+  margin-left: 10px;
+  display: flex;
 }
 
 .cogwheel {
-    width: 25px;
-    height: 25px;
-    border: 0;
-    background-size:cover;
-    background-image: url('/img/cogwheel.jpg');
-    margin-top: 8px;
-    margin-left: 5px;
+  width: 25px;
+  height: 25px;
+  border: 0;
+  background-size: cover;
+  background-image: url("/img/cogwheel.jpg");
+  margin-top: 8px;
+  margin-left: 5px;
 }
 
 .rside {
-    height: 210px;
-    padding-bottom: 20px;
-    background-color: #e0e0e0;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-right: 20px;
+  height: 210px;
+  padding-bottom: 20px;
+  background-color: #e0e0e0;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
 }
 
-.combinebtns{
-    height: 0px;
-    display: none;
+.combinebtns2 {
+  height: 20px;
+  margin-top: 16px;
+  margin-bottom: 12px;
+  display: none;
 }
 
-.combinebtns2{
-    height: 20px;
-    margin-top: 16px;
-    margin-bottom: 12px;
-    display: none;
-}
-
-.profile3 > input[type="text"]{
-    padding-left: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-bottom: 12px;
-    margin-left: 30px;
-    width: 500px;
+.profile3 > input[type="text"] {
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 12px;
+  margin-left: 30px;
+  width: 500px;
 }
 
 .message {
-    display: flex;
+  display: flex;
 }
 
 .interest1 {
-    background-color: #f89b00;
-    border-radius: 10px;
-    width: 80px;
-    height: 20px;
-    text-align: center;
-    color: #fff;
-    line-height:20px;
-    margin-left: 35px;
-    font-size: 12px;
+  background-color: #f89b00;
+  border-radius: 10px;
+  width: 80px;
+  height: 20px;
+  text-align: center;
+  color: #fff;
+  line-height: 20px;
+  margin-left: 35px;
+  font-size: 12px;
 }
 
 .minusbtn1 {
-    width: 20px;
-    height: 20px;
-    border: 0;
-    background-color: #e0e0e0;
-    background-image: url('/img/minusbtn.png');
-    position: relative;
-    left: 95px;
-    bottom: 32px;
-    border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background-color: #e0e0e0;
+  background-image: url("/img/minusbtn.png");
+  position: relative;
+  left: 95px;
+  bottom: 32px;
+  border-radius: 50%;
+  display: block;
 }
 
 .minusbtn2 {
-    width: 20px;
-    height: 20px;
-    border: 0;
-    background-color: #e0e0e0;
-    background-image: url('/img/minusbtn.png');
-    position: relative;
-    left: 75px;
-    bottom: 32px;
-    border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background-color: #e0e0e0;
+  background-image: url("/img/minusbtn.png");
+  position: relative;
+  left: 75px;
+  bottom: 32px;
+  border-radius: 50%;
+  display: block;
+}
+
+.combinebtns {
+  height: 0px;
 }
 
 .field {
-    display: flex;
+  display: flex;
 }
 
 .language {
-    display: flex;
-    margin-top: 15px;
+  display: flex;
+  margin-top: 15px;
 }
 
 .interest2 {
-    background-color: #f89b00;
-    border-radius: 10px;
-    width: 80px;
-    height: 20px;
-    text-align: center;
-    color: #fff;
-    line-height:20px;
-    margin-left: 15px;
-    font-size: 12px;
+  background-color: #f89b00;
+  border-radius: 10px;
+  width: 80px;
+  height: 20px;
+  text-align: center;
+  color: #fff;
+  line-height: 20px;
+  margin-left: 15px;
+  font-size: 12px;
 }
 
 .interestlang1 {
-    background-color: #f89b00;
-    border-radius: 10px;
-    width: 80px;
-    height: 20px;
-    text-align: center;
-    color: #fff;
-    line-height:20px;
-    margin-left: 35px;
-    font-size: 12px;
+  background-color: #f89b00;
+  border-radius: 10px;
+  width: 80px;
+  height: 20px;
+  text-align: center;
+  color: #fff;
+  line-height: 20px;
+  margin-left: 35px;
+  font-size: 12px;
 }
 
 .interestlang2 {
-    background-color: #f89b00;
-    border-radius: 10px;
-    width: 80px;
-    height: 20px;
-    text-align: center;
-    color: #fff;
-    line-height:20px;
-    margin-left: 15px;
-    font-size: 12px;
+  background-color: #f89b00;
+  border-radius: 10px;
+  width: 80px;
+  height: 20px;
+  text-align: center;
+  color: #fff;
+  line-height: 20px;
+  margin-left: 15px;
+  font-size: 12px;
 }
 
 .interestlang3 {
-    background-color: #f89b00;
-    border-radius: 10px;
-    width: 80px;
-    height: 20px;
-    text-align: center;
-    color: #fff;
-    line-height:20px;
-    margin-left: 15px;
-    font-size: 12px;
+  background-color: #f89b00;
+  border-radius: 10px;
+  width: 80px;
+  height: 20px;
+  text-align: center;
+  color: #fff;
+  line-height: 20px;
+  margin-left: 15px;
+  font-size: 12px;
 }
 
 textarea {
-    width: 500px;
-    margin-left: 35px;
-    padding-left: 15px;
-    padding-top: 5px;
-    resize: none;
+  width: 500px;
+  margin-left: 35px;
+  padding-left: 15px;
+  padding-top: 5px;
+  resize: none;
 }
 
 .container {
-    display: flex;
+  display: flex;
 }
 
 .textbox {
-    width: 500px;
+  width: 500px;
 }
 
 .triangle {
-    margin-top: 112.5px;
-    width: 0px;
-    height: 0px;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 10px solid #e0e0e0;    
+  margin-top: 112.5px;
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #e0e0e0;
 }
 
 .passwdbox {
-    width: 470px;
-    height: 280px;
-    box-shadow: 10px 10px 10px #666666;
-    z-index: 1;
-    margin: 0 auto;
-    display: none;
+  width: 470px;
+  height: 280px;
+  box-shadow: 10px 10px 10px #666666;
+  z-index: 1;
+  margin: 0 auto;
+  display: none;
 }
 
 .title {
-    font-size: 26px;
-    margin-left: 15px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+  font-size: 26px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .text {
-    margin-left: 15px;
-    margin-right: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
-.btns{
-    display: flex;
-    margin-bottom: 20px;
-    margin-top: 15px;
-    margin-right: 8px;
-    border-radius: 0.5rem;
-    float: right;
+.btns {
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-right: 8px;
+  border-radius: 0.5rem;
+  float: right;
 }
 
 .resetbtn {
-    width: 100px;
-    height: 35px;
-    background-color: #e0e0e0;
-    border: none;
-    outline: none
+  width: 100px;
+  height: 35px;
+  background-color: #e0e0e0;
+  border: none;
+  outline: none;
 }
 
 .reflectbtn {
-    margin-left: 15px;
-    margin-right: 15px;
-    width: 100px;
-    height: 35px;
-    background-color: #309ce4;
-    border: none;
-    outline: none;
-    color: #ffffff ;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 100px;
+  height: 35px;
+  background-color: #309ce4;
+  border: none;
+  outline: none;
+  color: #ffffff;
 }
 
-.text > input[type=text]{
-    margin-left: 15px;
-    padding-left: 15px;
-    width: 300px;
-    height: 40px;
+.text > input[type="text"] {
+  margin-left: 15px;
+  padding-left: 15px;
+  width: 300px;
+  height: 40px;
 }
 
 .passwdbox2 {
-    margin-top: 12px;
-    margin-bottom: 12px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
