@@ -13,6 +13,92 @@ window.onload = function() {
 
     let cancelBtn2 = document.getElementById("cancel"); //취소버튼
     
+    /*기본 정보*/
+
+    let plusButton = document.getElementById("plusButton");
+    
+
+    let develop_ready = document.getElementById("develop-ready");
+    let developing = document.getElementById("developing");
+    let test = document.getElementById("test");
+    let develop_finish = document.getElementById("develop-finish");
+    
+
+    develop_ready.onclick = function(){
+
+        arrow1.style.visibility = "visible";
+        arrow2.style.visibility = "hidden";
+        arrow3.style.visibility = "hidden";
+        arrow4.style.visibility = "hidden";
+
+
+    }
+
+    developing.onclick = function(){
+
+        arrow1.style.visibility = "hidden";
+        arrow2.style.visibility = "visible";
+        arrow3.style.visibility = "hidden";
+        arrow4.style.visibility = "hidden";
+
+    }
+
+    test.onclick = function(){
+        arrow1.style.visibility = "hidden";
+        arrow2.style.visibility = "hidden";
+        arrow3.style.visibility = "visible";
+        arrow4.style.visibility = "hidden";
+
+    }
+
+    develop_finish.onclick = function(){
+        arrow1.style.visibility = "hidden";
+        arrow2.style.visibility = "hidden";
+        arrow3.style.visibility = "hidden";
+        arrow4.style.visibility = "visible";
+      
+
+    }
+
+
+
+
+    plusButton.onclick = function(){
+        let article_content = document.getElementById("article-content");
+        article_content.classList.add("article-content");
+    
+        let tagsContainer = document.getElementById("tagsContainer");
+        tagsContainer.classList.add("tagsContainer");
+        let tags = document.createElement("div");
+        tags.classList.add("tags");
+        let project_type = document.createElement("div");
+        project_type.classList.add("project-type");
+        let tagMinus = document.createElement("img");
+        tagMinus.src = "/img/minusbtn.png";
+        tagMinus.classList.add("tagMinus");
+    
+        article_content.appendChild(tagsContainer);
+        tagsContainer.appendChild(tags);
+        tags.appendChild(project_type);
+        tags.appendChild(tagMinus);
+    
+        project_type.textContent = "JAVA";  
+
+        tagMinus.onclick = function(){
+            tags.style.display = "none";
+        }
+            
+    }
+        
+    
+    
+
+
+    
+
+
+
+
     /* 팀원 관리 */
     let ProMinus1 = document.getElementById("Min-1"); // 팀원관리 (-) 버튼
     let ProMinus2 = document.getElementById("Min-2");
