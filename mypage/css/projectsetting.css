@@ -451,6 +451,25 @@ ul {
     border : none;
 }
 
+/* 왕관 */
+.pro1Top{
+    width: 20px;
+    height: 20px;
+    border: 0;
+    background-color: #e0e0e0;
+    background-image: url("/img/마이너스버튼.png");
+    position: relative;
+    left: 40px;
+    bottom: 12px;
+    border-radius: 50%;
+    outline: 0;
+}
+
+.pro1Top img{
+    position: relative;
+    right: 5px;
+}
+
 .pro1Minus{
     width: 20px;
     height: 20px;
@@ -506,7 +525,7 @@ button{
 }
 
 /* 말풍선 */
-.balloonli{
+.balloonPro li{
     height: 100px;
     margin: 0px 0px 5px 0px;
 }
@@ -552,7 +571,7 @@ button{
 }
 
 /* 프로필 밑 이름 */
-.balloonli h3{
+.balloonPro h3{
     font-size: 16px;
     padding-top: 20px;
     padding-left: 5px;
