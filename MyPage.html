@@ -26,22 +26,15 @@
             </div>
             <div class="triangle"></div>
             <div class="rside">
-                <input type="button" class="modifybtn" value="수정 반영">
-                <div class="container">
-                <div class="field">
-                <div class="favoritefield" id="favoritefield">
-                    관심 분야
-                </div><button class="plusbtn1" id="plusbtn1"></button>
-                </div>
-                <div class="combinebtns" id="combinebtns">
-                <div class="interest1">WEB</div>
-                <button class="minusbtn1" id="minusbtn1"></button>
-                </div>
-
-                <div class="combinebtns" id="combinebtns">
-                <div class="interest2">GAME</div>
-                <button class="minusbtn2" id="minusbtn2"></button>
-                </div>
+                <input type="button" class="modifybtn" value="수정 반영" id="modifybtn">
+                <div class="container" id="field_container">
+                    <div class="field">
+                        <div class="favoritefield" id="favoritefield">
+                            관심 분야
+                        </div>
+                        <button class="plusbtn1" id="plusbtn1"></button>
+                    </div>
+                    
                 </div>
 
                 <div class="container">
@@ -67,11 +60,11 @@
                 </div>
                 <div class="profile3">
                     프로필 이동주
-                    <input type="text" placeholder="깃허브 그런 거 씀" class="textbox">
+                    <input type="text" placeholder="깃허브 그런 거 씀" class="textbox" id="url">
                 </div>
                 <div class="message">
                     전하는 메세지
-                    <textarea name="content2" rows="3" placeholder="내용을 입력해주세요"></textarea>
+                    <textarea name="content2" rows="3" placeholder="내용을 입력해주세요" id="message"></textarea>
                 </div>
             </div>
         </div>
