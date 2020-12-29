@@ -57,8 +57,9 @@ window.onload = function() {
     let myLoveContent = {title: "제목1", created_at: "날짜1", name: "이름1", cont: "내용1"};
     let myLoveContent1 = {title: "제목2", created_at: "날짜2", name: "이름2", cont: "내용2"};
     let myLoveContent2 = {title: "제목3", created_at: "날짜3", name: "이름3", cont: "내용3"};
+    let myLoveContent3 = {title: "제목4", created_at: "날짜4", name: "이름4", cont: "내용4"};
 
-    let myLoveContents = [myLoveContent, myLoveContent1, myLoveContent2];
+    let myLoveContents = [myLoveContent, myLoveContent1, myLoveContent2, myLoveContent3];
 
     for(var i = 0; i < myLoveContents.length; i++) {
         let cont_div = document.createElement("div");
