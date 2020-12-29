@@ -18,13 +18,19 @@ window.onload = function() {
     let ProMinus2 = document.getElementById("Min-2");
     let ProMinus3 = document.getElementById("Min-3");
     let ProMinus4 = document.getElementById("Min-4");
-    let ProMinus5 = document.getElementById("Min-5");
+    let ProPlus6 = document.getElementById("ProPlus-6");
+    let ProPlus7 = document.getElementById("ProPlus-7");
+    let ProPlus8 = document.getElementById("ProPlus-8");
+    let ProPlus9 = document.getElementById("ProPlus-9");
     
     let Proli1 = document.getElementById("Proli-1"); // 팀원관리 프로필
     let Proli2 = document.getElementById("Proli-2");
     let Proli3 = document.getElementById("Proli-3");
     let Proli4 = document.getElementById("Proli-4");
-    let Proli5 = document.getElementById("Proli-5");
+    let Proli6 = document.getElementById("Proli-6");
+    let Proli7 = document.getElementById("Proli-7");
+    let Proli8 = document.getElementById("Proli-8");
+    let Proli9 = document.getElementById("Proli-9");
 
 
 
@@ -66,23 +72,65 @@ window.onload = function() {
     }
 
 
+    var Profcount = 5;
 
     ProMinus1.onclick = function(){  // 프로필 (-) 버튼 클릭
         Proli1.style.display = "none";
+        Profcount -= 1;
+        alert(Profcount);
     }
     ProMinus2.onclick = function(){  
         Proli2.style.display = "none";
+        Profcount -= 1;
+        alert(Profcount);
     }
     ProMinus3.onclick = function(){  
         Proli3.style.display = "none";
+        Profcount -= 1;
+        alert(Profcount);
     }
     ProMinus4.onclick = function(){  
         Proli4.style.display = "none";
-    }
-    ProMinus5.onclick = function(){  
-        Proli5.style.display = "none";
+        Profcount -= 1;
+        alert(Profcount);
     }
 
+    ProPlus6.onclick = function(){  // 프로필 (+) 버튼 클릭
+        if ( Profcount < 5 ){
+        Proli6.style.display = "none";
+        Profcount += 1;
+        }
+        else{
+            alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
+        }
+    }
+    ProPlus7.onclick = function(){  
+        if ( Profcount < 5 ){
+            Proli6.style.display = "none";
+            Profcount += 1;
+            }
+            else{
+                alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
+            }
+    }
+    ProPlus8.onclick = function(){  
+        if ( Profcount < 5 ){
+            Proli6.style.display = "none";
+            Profcount += 1;
+            }
+            else{
+                alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
+            }
+    }
+    ProPlus9.onclick = function(){  
+        if ( Profcount < 5 ){
+            Proli6.style.display = "none";
+            Profcount += 1;
+            }
+            else{
+                alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
+            }
+    }
 
 
 
