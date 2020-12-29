@@ -102,7 +102,7 @@ window.onload = function() {
     }
     ProPlus7.onclick = function(){  
         if ( Profcount < 5 ){
-            Proli6.style.display = "none";
+            Proli7.style.display = "none";
             Profcount += 1;
             }
             else{
@@ -111,7 +111,7 @@ window.onload = function() {
     }
     ProPlus8.onclick = function(){  
         if ( Profcount < 5 ){
-            Proli6.style.display = "none";
+            Proli8.style.display = "none";
             Profcount += 1;
             }
             else{
@@ -120,7 +120,7 @@ window.onload = function() {
     }
     ProPlus9.onclick = function(){  
         if ( Profcount < 5 ){
-            Proli6.style.display = "none";
+            Proli9.style.display = "none";
             Profcount += 1;
             }
             else{
