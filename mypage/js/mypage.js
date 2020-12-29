@@ -99,59 +99,146 @@ window.onload = function() {
         content_list.appendChild(cont_div);
     
 
-    var cogwheel = document.getElementById("cogwheel");
-    var passwdbox = document.getElementById("passwdbox");
-    var favoritefield = document.getElementById("favoritefield");
-    var resetbtn = document.getElementById("resetbtn");
-    var reflectbtn = document.getElementById("reflectbtn");
-    var combinebtns = document.getElementById("combinebtns");
-    var combinebtns2 = document.getElementById("combinebtns2");
-    var plusbtn1 = document.getElementById("plusbtn1");
-    var plusbtn2 = document.getElementById("plusbtn2");
+        btnComp.onclick = function() {        
+            console.log(myProject);
+            myProject.style.display = "grid";
+            myContent.style.display = "none";  
+            myLove.style.display = "none"; 
+        }
+        
+        btnContent.onclick = function() {  
+            myProject.style.display = "none"; 
+            myContent.style.display = "block"; 
+            myLove.style.display = "none"; 
+        }
     
-
-    btnComp.onclick = function() {        
-        console.log(myProject);
-        myProject.style.display = "grid";
-        myContent.style.display = "none";  
-        myLove.style.display = "none"; 
+        btnLove.onclick = function() {   
+            myProject.style.display = "none"; 
+            myContent.style.display = "none"; 
+            myLove.style.display = "block"; 
+        }
     }
+
+        var cogwheel = document.getElementById("cogwheel");
+        var passwdbox = document.getElementById("passwdbox");
+        var favoritefield = document.getElementById("favoritefield");
+        var resetbtn = document.getElementById("resetbtn");
+        var reflectbtn = document.getElementById("reflectbtn");
+        var combinebtns = document.getElementById("combinebtns");
+        var combinebtns2 = document.getElementById("combinebtns2");
+        var plusbtn1 = document.getElementById("plusbtn1");
+        var plusbtn2 = document.getElementById("plusbtn2");
+        var minusbtn1 = document.getElementsByClassName("minusbtn1");
+        var minusbtn2 = document.getElementById("minusbtn2");
+        var modifybtn = document.getElementById("modifybtn");
+
+        
+        let field_tag1 = {interest: 'Game'};
+        let interest_list = [field_tag1 ];
+
+        plusbtn1.onclick = function() {
+            //함수 안쓸거면 이거 써~&^^
+            let interest_field_box = document.createElement("div");
+            interest_field_box.classList.add("combinebtns");
+            
+            // <div class="interest1"></div>
+            let interest_field_content = document.createElement("div");
+            interest_field_content.classList.add("interest1");
+
+            // <button class="minusbtn1"></button>
+            let minusbtn1 = document.createElement("button");
+            minusbtn1.classList.add("minusbtn1");
+            minusbtn1.onclick = function() {
+                let minusbtn = this;
+                parent = this.parentNode;
+                grandparent = parent.parentNode;
+                grandparent.removeChild(parent);
+            }
+            
+            interest_field_box.appendChild(interest_field_content);
+            interest_field_box.appendChild(minusbtn1);
+
+            interest_field_content.textContent = field_tag1.interest;
+            
+            let combinebtns = document.getElementById("field_container");
+            combinebtns.appendChild(interest_field_box);
+            //여기까지 
+
+            /*add_field_tag(field_tag1);*/
+        }
+
+        // f(field_tag) = field_tag의 interst 값 대로 태그를 만들어 표시;
+        function add_field_tag(field_tag1) {
+            //함수 쓰려면 주석 지우기
+            
+            /*let interest_field_box = document.createElement("div");
+            interest_field_box.classList.add("combinebtns");
+            
+            // <div class="interest1"></div>
+            let interest_field_content = document.createElement("div");
+            interest_field_content.classList.add("interest1");
+
+            // <button class="minusbtn1"></button>
+            let minusbtn1 = document.createElement("button");
+            minusbtn1.classList.add("minusbtn1");
+            minusbtn1.onclick = function() {
+                let minusbtn = this;
+                parent = this.parentNode;
+                grandparent = parent.parentNode;
+                grandparent.removeChild(parent);
+            }
+            
+            interest_field_box.appendChild(interest_field_content);
+            interest_field_box.appendChild(minusbtn1);
+
+            interest_field_content.textContent = field_tag1.interest;
+            
+            let combinebtns = document.getElementById("field_container");
+            console.log(field_container);
+            combinebtns.appendChild(interest_field_box);*/
+        }
+
+        // '태그를 추가'
+        // interest_list[0]
+        // interest_list[1]
+        // interest_list[2]
+        for(let i=0; i<interest_list.length; i++) {
+            add_field_tag(interest_list[i]);
+        }
+
+        cogwheel.onclick = function() {
+            passwdbox.style.display = "block";
+        }
+
+        resetbtn.onclick = function() {
+            passwdbox.style.display = "none";
+        }
     
-    btnContent.onclick = function() {  
-        myProject.style.display = "none"; 
-        myContent.style.display = "block"; 
-        myLove.style.display = "none"; 
-    }
+        reflectbtn.onclick = function() {
+            passwdbox.style.display = "none";
+        }
 
-    btnLove.onclick = function() {   
-        myProject.style.display = "none"; 
-        myContent.style.display = "none"; 
-        myLove.style.display = "block"; 
-    }
+        plusbtn2.onclick = function() {
+            // combinebtns2.style.display = "block";
+            
+            combinebtns2.style.display = "block";
+            let field_tag = {interest: 'java'};
+            add_field_tag(field_tag);
+        }
 
-    cogwheel.onclick = function() {
-        passwdbox.style.display = "block";
-    }
-    resetbtn.onclick = function() {
-        passwdbox.style.display = "none";
-    }
+        modifybtn.onclick = function() {
+            let profile = {
+                interest_field: [],
+                interest_language: [],
+                url: '',
+                message: ''
+            } 
 
-    cogwheel.onclick = function() {
-        passwdbox.style.display = "block";
-    }
-    resetbtn.onclick = function() {
-        passwdbox.style.display = "none";
-    }
-  
-    reflectbtn.onclick = function() {
-        passwdbox.style.display = "none";
-    }
-    plusbtn1.onclick = function() {
-        combinebtns.style.display = "block";
-    }
-    plusbtn2.onclick = function() {
-        combinebtns2.style.display = "block";
-    }
+            profile.url = document.getElementById('url').value;
+            profile.message = document.getElementById('message').value;
 
-};
+            console.log("프로필 주소는 " + profile.url);
+            console.log("전하는 메시지는 " + profile.message)
+        };
+        
 }

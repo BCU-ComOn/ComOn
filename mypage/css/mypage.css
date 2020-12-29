@@ -94,7 +94,7 @@ section {
 
 .combinebtns {
   height: 0px;
-  display: none;
+  /* display: none; */
 }
 
 .combinebtns2 {
