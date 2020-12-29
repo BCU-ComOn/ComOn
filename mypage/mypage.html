@@ -7,7 +7,8 @@
         <link rel="stylesheet" href="css/MyPage.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
-        <script src="js/mypage.js" type="text/javascript"></script>
+
+        <script type="text/javascript" src="js/mypage.js"></script>
     </head>
     <body>
         <header></header>
@@ -69,6 +70,33 @@
             </div>
         </div>
         </section>
+
+        <section id="btnSection">
+            <div>
+                <Button id="btnComp">참여한 프로젝트</Button>
+                <Button id="btnContent">작성한 글</Button>
+                <Button id="btnLove">좋아요 누른 글</Button>
+            </div>
+        </section>
+    
+        <div>
+            <article id="myProject">
+                <section>
+                    <h3>참여한 프로젝트</h3>
+                </section>
+            </article><!--참여한 프로젝트-->
+    
+            <article id="myContent">
+                <div class="content-list"></div>
+            </article><!--작성한 글-->
+    
+            <article id="myLove">
+                <section>
+                    <h3>좋아요 누른 글</h3>
+                </section>
+            </article><!--좋아요 누른 글-->
+        </div>
+
         <form>
             <div class="passwdbox" id="passwdbox">
             <bold><div class="title">비밀번호 변경</div></bold>
@@ -85,6 +113,7 @@
             <input type="button" class="reflectbtn" id="reflectbtn" value="반영">
             </div>
             </div>
+
         <footer></footer>
     </body>
     </html>
