@@ -4,51 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .header {
+            height:100px;
+            width: 1100px;
+            background-color: rgba(51, 202, 109, 0.322);
+        }
+
+        .footer {
+            height: 150px;
+            width: 1100px;
+            background-color:rgba(51, 202, 30, 0.322)
+        }
+
+        .container {
+            width: 1100px;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        .community-main-sidebar {
+            background: #309ce4;
+            width: 270px;
+            height: 1400px;
+        }
+    </style>
 </head>
-<body>
-    <div class = "community-container">
-        <div class = "community-header">header</div>
-        <div class = "community-menubar">menubar</div>
+    <body>
+        <div class = "container">
+            <div class = "header">header</div>
 
-            <div class = "community-main">
-                <div class = "community-main-sidebar">
-                    <div class = "community-sidebar-search">
-                        <input type = "text" class = "community-sidebar-searchbar">
-                        <button type = "button" class ="community-sidebar-searchbutton"></button>
-                    </div>
-
-                    <br>
-                    
-                    <select class = "community-sidebar-year" name = "community-year">
-                        <option selected>2020</option>
-                        <option>2021</option>
-                    </select>
-
-                    <div class = "community-sidebar-team">
-                        <ul>
-                            <li>1 팀명</li>
-                            <li>2 팀명</li>
-                            <li>3 팀명</li>
-                            <li>4 팀명</li>
-                        </ul>
-                    </div>
-                </div>
-
-                    <div class = "community-main-content">
-                        <div class = "two-slider">
-                            <div class = "two-slider-profile"></div>
-                            <div class = "two-slider-contents"></div>
+                <div class = "community-main">
+                    <div class = "community-main-sidebar">
+                        <div class = "community-sidebar-search">
+                            <input type = "text" class = "community-sidebar-searchbar">
+                            <button type = "button" class ="community-sidebar-searchbutton"></button>
                         </div>
 
-                        <div class = "three-slider">
-                            <div class = "three-slider-profile"></div>
-                            <div class = "three-slider-contents"></div>
-                        </div>
+                        <br>
+                        
+                        <select class = "community-sidebar-year" name = "community-year">
+                            <option selected>2020</option>
+                            <option>2021</option>
+                        </select>
 
-                        <div class = "first-contents"></div>
-                        <div class = "second-contents"></div>
+                        <div class = "community-sidebar-team">
+                            <ul>
+                                <li>1 팀명</li>
+                                <li>2 팀명</li>
+                                <li>3 팀명</li>
+                                <li>4 팀명</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                        <div class = "community-main-content">
+                            <div class = "two-slider">
+                                <div class = "two-slider-profile"></div>
+                                <div class = "two-slider-contents"></div>
+                            </div>
+
+                            <div class = "three-slider">
+                                <div class = "three-slider-profile"></div>
+                                <div class = "three-slider-contents"></div>
+                            </div>
+
+                            <div class = "first-contents"></div>
+                            <div class = "second-contents"></div>
+                    </div>
                 </div>
-            </div>
-    </div>
-</body>
-</html>
+            <div class = "footer">footer</div>
+        </div>
+    </body>
+    </html>
