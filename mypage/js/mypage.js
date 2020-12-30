@@ -202,7 +202,7 @@ window.onload = function() {
         // interest_list[0]
         // interest_list[1]
         // interest_list[2]
-        for(let i=0; i<interest_list.length; i++) {
+        for(let i=0; i<interest_list.length; i++){
             add_field_tag(interest_list[i]);
         }
 
@@ -219,10 +219,8 @@ window.onload = function() {
         }
 
         plusbtn2.onclick = function() {
-            // combinebtns2.style.display = "block";
-            
             combinebtns2.style.display = "block";
-            let field_tag = {interest: 'java'};
+            let field_tag = {interest: 'Java'};
             add_field_tag(field_tag);
         }
 
