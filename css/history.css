@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
 
 .history-title .listed-title {
@@ -94,4 +95,110 @@ li::before {
 /* div #box1 {
     position: absolute;
     position: relative; top:20px;
+=======
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
+
+.history_title .listed_title {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.article_box {
+    padding: 75px 50px 75px 50px;
+    width: 700px;
+}
+
+/* 타이틀 */
+.history_title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* 이미지 */
+.history_img {
+    width: 700px;
+    height: 250px;
+    padding-top: 25px;
+    display: flex;
+}
+
+.img_1 {
+    width: 350px;
+    height: 250px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-image: url(../img/his_img_1.jpg);
+}
+
+.img_2 {
+    width: 350px;
+    height: 250px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-image: url(../img/his_img_2.jpg);
+}
+/* 연혁 */
+.history_table {
+    width: 700px;
+    padding-top: 30px;
+}
+
+.his_box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.middle_bar {
+    width: 700px;
+    height: 15px;
+    background-color: #666666;
+    border-radius: 15px;
+}
+
+.text_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.listed_box {
+    min-height: 90px;
+    display: flex;
+}
+
+.listed_bar {
+    width: 10px;
+    min-height: 90px;
+    background-color: #f89b00;
+    border-radius: 15px;
+    padding: 20px 0px 20px 0px;
+}
+
+.listed_title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f89b00;
+    padding-left: 10px;
+}
+
+.listed_ul {  
+    margin-top: 10px;
+}
+
+.listed_li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    list-style-position: inside;
+    list-style-type: none;
+}
+
+li::before {
+    content: "• ";
+}
+
+/* div #box1 {
+    position: absolute;
+    position: relative; top:20px;
+>>>>>>> 2cdf427bdf2c40719eceb2416b9edb076349420a
 } */

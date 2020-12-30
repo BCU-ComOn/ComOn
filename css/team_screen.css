@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+header {
+  height: 100px;
+  background-color: #309ce4;
+}
+nav {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  font-size: 18px;
+}
+.search {
+  background-color: #309ce4;
+  display: flex;
+  align-items: stretch;
+  width: 270px;
+}
+#topMenu {
+  width: 1070px;
+  height: 100px;
+  margin: 0 auto;
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+#topMenu ul li {
+  list-style: none;
+  color: rgb(48, 156, 228);
+  float: left;
+  line-height: 100px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/*#topMenu .topMenuNoticeBoard {
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+  background-color: #309ce4; /*게시판 다른 색이면 바꾸기*/
+/*  display: block;
+  width: 230px;
+  height: 100px;
+  font-size: 32px;
+  font-weight: bold;
+  padding-top: 0px;
+}*/
+#topMenu .menuLink {
+  text-decoration: none;
+  color: rgb(48, 156, 228);
+  display: block;
+  width: 180px;
+  font-size: 18px;
+  font-weight: bold;
+}
+#topMenu .writingButton {
+  display: block;
+  text-decoration: none;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  width: 100px;
+  height: 45px;
+  line-height: 45px;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgb(248, 155, 0);
+  border-radius: 0.2rem;
+}
+.top {
+  display: flex;
+  height: 1350px;
+}
+section {
+  margin-left: 30px;
+}
+#TeamCardSection {
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+  height: 470px;
+  box-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.2);
+}
+.team-picture {
+  background: url(../img/TeamCard.png) no-repeat center;
+  width: 540px;
+  height: 260px;
+}
+.team-year {
+  background-color: gray;
+  width: 60px;
+  height: 26px;
+  font-size: 12px;
+  margin: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-information {
+  width: 540px;
+  height: 210px;
+}
+.team-header {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+.team-name {
+  font-size: 22px;
+  display: flex;
+  margin-left: 50px;
+}
+.tag-line {
+  display: flex;
+  margin-left: 200px;
+}
+.tag-line > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #f89b00;
+  color: white;
+  width: 80px;
+  height: 20px;
+  border-radius: 10px;
+  margin: 0px 10px;
+}
+.team-introduce {
+  margin-left: 50px;
+}
+
+.progress-bar {
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+progress {
+  margin-top: 10px;
+  width: 430px;
+  height: 20px;
+  border: 0;
+}
+progress::-webkit-progress-value {
+  background: rgb(22, 194, 137);
+  border: 0 rgb(211, 211, 211);
+  border-radius: 10px;
+
+  width: 300pt;
+  height: 20px;
+}
+progress::-webkit-progress-bar {
+  border-radius: 10px;
+  background: rgb(179, 179, 179);
+}
+
+.TeamCard-Profile {
+  display: flex;
+}
+
+.profile-img {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+.profile-list {
+  margin-left: 30px;
+  font-size: 16px;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 45px;
+}
+
+.people1 {
+  display: flex;
+  margin-bottom: 20px;
+}
+.people1 > span {
+  text-align: center;
+}
+.people2 {
+  display: flex;
+  margin-bottom: 20px;
+}
+.people2 > span {
+  text-align: center;
+}
+.people3 {
+  display: flex;
+  margin-bottom: 20px;
+}
+.people3 > span {
+  text-align: center;
+}
+.team-part {
+  margin-left: 15px;
+  margin-block: auto;
+  padding-bottom: 15px;
+}
+.team-part > ul > li {
+  margin-left: 15px;
+}
+.post_list {
+  align-items: center;
+  justify-content: center;
+  margin-top: 45px;
+}
+
+.post_Slider {
+  display: flex;
+  flex-direction: row;
+}
+.post_Slider > li {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  margin: 0 35px;
+}
+.post_Slider > li:first-child {
+  margin-left: 5px;
+}
+.post_Slider > li:last-child {
+  margin-right: 5px;
+}
+.post_Slider > li > .top_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post_Slider > li > .top_info > .user_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.post_Slider > li > .top_info > .post_day {
+  font-size: 12px;
+  color: #9e9e9e;
+}
+.post_Slider > li > .top_info > .user_info > .user_img {
+  width: 30px;
+  height: 30px;
+  background-image: url("http://placehold.it/30x30");
+  border-radius: 100%;
+  margin: 5px;
+}
+.post_Slider > li > .mid_img > .post_new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 100%;
+  margin: 10px;
+  background-color: #ff2b2b;
+  width: 30px;
+  height: 30px;
+}
+.post_Slider > li > .top_info > .user_info > .user_name {
+  font-size: 14px;
+}
+.post_Slider > li > .mid_img {
+  display: flex;
+  justify-content: flex-end;
+  width: 250px;
+  height: 163px;
+  background-image: url("http://placehold.it/250x163");
+  margin-bottom: 15px;
+}
+
+.post_Slider > li > .bottom_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.post_Slider > li > .bottom_info > .min_content {
+  font-size: 14px;
+  word-wrap: break-word;
+  margin-top: 10px;
+  width: 250px;
+}
+.title {
+  width: 250px;
+}

@@ -87,6 +87,7 @@ figcaption {
 
 .introduction::-webkit-scrollbar {
   background-color: #309ce4;
+  height: 10px;
 }
 
 .introduction::-webkit-scrollbar-thumb {
@@ -107,7 +108,7 @@ figcaption {
   width: 100%;
 }
 
-ul{
+ul {
   margin-top: 10px;
 }
 .footer {
@@ -117,12 +118,12 @@ ul{
   font-size: 16px;
 }
 
-.footer-left{
+.footer-left {
   display: flex;
   align-items: center;
 }
 
-.footer-right{
+.footer-right {
   display: flex;
   align-items: center;
 }
@@ -214,7 +215,7 @@ ul{
   display: flex;
   margin-top: 30px;
   margin-bottom: 30px;
-  color:#fff;
+  color: #fff;
 }
 .project-second .lang-container {
   justify-content: flex-end;
@@ -229,6 +230,8 @@ ul{
 }
 .project-teamName .person-img img {
   border-radius: 30px;
+}
+.project .person-img {
   margin-right: 15px;
 }
 
@@ -242,6 +245,8 @@ ul{
 }
 .project-teamName-second .person-img img {
   border-radius: 30px;
+}
+.project-second .person-img {
   margin-left: 15px;
 }
 .project #gasipan {
