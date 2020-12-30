@@ -11,7 +11,7 @@
     <script type="text/javascript" src="js/apply_comon page1.js"></script>
     <script type="text/javascript" src="js/apply_comon page2.js"></script>
 </head>
-<body>
+<body onLoad="Timer();">
     <section class="thank-page">
         <h1 class="english">Thank You!</h1>
         <div class="word">
@@ -20,9 +20,10 @@
                 편집은 불가하니 잘못 쓴 내용이 있을 경우 새로 작성해주시기 바랍니다.
             </p>
         </div>
-        <p class="the-end">
+        <p id="choonDiv" class="the-end">
             10초 후 메인 페이지로 이동합니다...
         </p>
+        <script>countdown();</script>
     </section>
 </body>
 </html>
