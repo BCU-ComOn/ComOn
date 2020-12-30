@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+.mainPage-Header {
+    display: flex;
+    height: 100px;
+    background-color: #309ce4;
+    justify-content: center;
+    align-items: center;
+}
+
+.MainHeader {
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 3px 3px 3px black;
+}
+
+#mainNav {
+    display: flex;
+    height: 100px;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+#mainNav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    margin: 0px 15px;
+}
+
+#mainNav li a {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+#mainNav li:last-child a {
+    font-size: 18px;
+    text-shadow: 2px 2px 3px black;
+}
+
+#mainNav li a:last-child {
+    display: none;
+}
+
+#mainNav li:last-child a {
+    display: flex;
+}
+
+#mainNav li:nth-child(4) a:last-child {
+    display: none;
+}
+
+#mainNav li:nth-child(4) a{
+    display: flex;
+}
+
+#mainNav li:last-child a:last-child {
+    display: none;
+}
+
+#mainNav li:nth-child(4) img {
+    width: 40px;
+    height: 40px;
+}
+
+#mainNav li:nth-child(5) img {
+    width: 45px;
+    height: 45px;
+}
+
+#mainNav span {
+    display: flex;
+}
+
+.comeest-text {
+    margin: auto 0;
+    width: 100px;
+}
+
+.comeest-text span {
+    justify-content: center;
+}
+
+.profile-text {
+    margin: auto 0;
+    margin-left: 10px;
+    width: 85px;
+}
