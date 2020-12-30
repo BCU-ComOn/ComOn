@@ -238,6 +238,7 @@ ul {
 .article-content{
     overflow: auto;
     margin-top: 15px;
+
 }
 .article-text{
     float: left;
@@ -280,27 +281,21 @@ ul {
     height: 20px;
     border-radius: 10px;
     margin-top: 7px;
-    margin-left: 62px;
-  }
-
-  .project-type2 {
-    float: left;
-    background-color: orange;
-    color: #fff;
-    font-size: 12px;
-    text-align: center;
-    line-height: 20px;
-    width: 80px;
-    height: 20px;
-    border-radius: 10px;
-    margin-top: 7px;
-    margin-left: -10px;
 
   }
+
+
 
 /*태그 모음*/
 .tags{
     display: inline-block;
+}
+
+/*태그 컨테이너*/
+.tagsContainer{
+    padding-left: 62px;
+    margin-left: 62px;
+    justify-content: center;
 }
 
 /*태그에 있는 마이너스 버튼*/
@@ -365,10 +360,14 @@ ul {
 
 }
 
+.arrow1{
+    visibility: visible;
+}
+
 /*2~4 화살표 숨김*/
 .arrow2, .arrow3, .arrow4{
-    display: none;
-
+    
+    visibility: hidden;
 }
 
 
@@ -417,14 +416,18 @@ ul {
     
 }
 
+.develop-ready:hover, .developing:hover, .test:hover, .develop-finish:hover{
+    cursor: pointer;
+}
+
 
   /* wrapper2 */
-  .wrapper2-1{
+.wrapper2-1{
       margin-left: 50px ;
 
   }
   /* (-) 프로필 */
-  .Profile{
+.Profile{
     height: 95px;
     margin: 30px;
 }
