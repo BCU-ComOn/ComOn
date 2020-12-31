@@ -67,9 +67,6 @@ class Project {
   };
 }
 
-let circle = document.getElementsByClassName("circle");
-let circleNow = document.getElementsByClassName("circle page-now");
-
 window.onload = function () {
   db = [
     {
@@ -181,10 +178,16 @@ window.onload = function () {
   projectList = new Array();
   pageNow = 0;
   pageAll = db.length % 6 == 0 ? (db.length / 6) - 1 : parseInt(db.length / 6);
+  let projectSection = document.getElementById("project");
+  let page = document.createElement("div");
+  page.className = "page";
+  projectSection.appendChild(page);
 
   for (let i = 0; i <= pageAll; i++) {
     projectList.push(new Array());
-    console.log(projectList[i]);
+    let circle = document.createElement("div");
+    circle.className = "circle";
+    page.appendChild(circle);
   }
 
     index = 0;
@@ -220,6 +223,10 @@ window.onload = function () {
             document.getElementById("project-list").appendChild(newList[i].getElement());
         }
     };
+
+    for (let i = 0; i < pageAll; i++){
+      
+    }
 
     //각 버튼에 맞는 이벤트, 콤보박스에서 항목을 바꾼 후에 버튼을 누르면 초기 상태로 바뀜
 
