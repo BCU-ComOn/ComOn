@@ -139,37 +139,37 @@ window.onload = function() {
         let field_tag2 = {interest_language: 'Java'};
         let interest_list2 = [field_tag2 ];
 
-        plusbtn1.onclick = function() {
-            //함수 안쓸거면 이거 써~&^^
-            let interest_field_box = document.createElement("div");
-            interest_field_box.classList.add("combinebtns");
-            
-            // <div class="interest1"></div>
-            let interest_field_content = document.createElement("div");
-            interest_field_content.classList.add("interest1");
-
-            // <button class="minusbtn1"></button>
-            let minusbtn1 = document.createElement("button");
-            minusbtn1.classList.add("minusbtn1");
-            minusbtn1.onclick = function() {
-                let minusbtn = this;
-                parent = this.parentNode;
-                grandparent = parent.parentNode;
-                grandparent.removeChild(parent);
-            }
-            
-            interest_field_box.appendChild(interest_field_content);
-            interest_field_box.appendChild(minusbtn1);
-
-            interest_field_content.textContent = field_tag1.interest;
-            
-            let combinebtns = document.getElementById("field_container");
-            combinebtns.appendChild(interest_field_box);
-            //여기까지 
-
-            /*add_field_tag(field_tag1);*/
-        }
-
+                plusbtn1.onclick = function() {
+                    //함수 안쓸거면 이거 써~&^^
+                    let interest_field_box = document.createElement("div");
+                    interest_field_box.classList.add("combinebtns");
+                    
+                    // <div class="interest1"></div>
+                    let interest_field_content = document.createElement("div");
+                    interest_field_content.classList.add("interest1");
+        
+                    // <button class="minusbtn1"></button>
+                    let minusbtn1 = document.createElement("button");
+                    minusbtn1.classList.add("minusbtn1");
+                    minusbtn1.onclick = function() {
+                        let minusbtn = this;
+                        parent = this.parentNode;
+                        grandparent = parent.parentNode;
+                        grandparent.removeChild(parent);
+                    }
+                    
+                    interest_field_box.appendChild(interest_field_content);
+                    interest_field_box.appendChild(minusbtn1);
+        
+                    interest_field_content.textContent = field_tag1.interest;
+                    
+                    let combinebtns = document.getElementById("field_container");
+                    combinebtns.appendChild(interest_field_box);
+                    //여기까지 
+                    
+                    /*add_field_tag(field_tag1);*/
+                }
+        
         plusbtn2.onclick = function() {
             //함수 안쓸거면 이거 써~&^^
             let interest_language_box = document.createElement("div");
@@ -200,6 +200,14 @@ window.onload = function() {
 
             /*add_field_tag(field_tag1);*/
         }
+        
+        let role = document.getElementsByClassName('role')[0];
+        let manager = '운영진';
+        role.textContent = manager;
+
+        // let role = document.getElementsByClassName('role')[0];
+        // let manager = getFromServer();
+        // role.textContent = manager;
 
         // f(field_tag) = field_tag의 interst 값 대로 태그를 만들어 표시;
         function add_field_tag(field_tag1) {
@@ -232,13 +240,10 @@ window.onload = function() {
             combinebtns.appendChild(interest_field_box);*/
         }
 
-        // '태그를 추가'
+        '태그를 추가'
         // interest_list[0]
         // interest_list[1]
         // interest_list[2]
-        for(let i=0; i<2; i++){
-            add_field_tag(interest_list[i]);
-        }
 
         cogwheel.onclick = function() {
             passwdbox.style.display = "block";
@@ -263,7 +268,7 @@ window.onload = function() {
             profile.message = document.getElementById('message').value;
 
             console.log("프로필 주소는 " + profile.url);
-            console.log("전하는 메시지는 " + profile.message)
+            console.log("전하는 메시지는 " + profile.message);
         };
         
 }
