@@ -125,3 +125,10 @@ select::-ms-expand {
   margin-top: 650px;
   padding-top: 55px;
 }
+
+.second-contents {
+  position: absolute;
+  margin-left: 300px;
+  margin-top: 980px;
+  padding-top: 45px;
+}
