@@ -10,6 +10,7 @@ body {
 header {
   height: 100px;
   background-color: #309ce4;
+  weight: 1110px;
 }
 nav {
   font-size: 18px;
@@ -179,7 +180,9 @@ progress::-webkit-progress-bar {
   justify-content: center;
   margin-top: 45px;
 }
-
+.team-part > ul {
+  margin-left: 10px;
+}
 .people1 {
   display: flex;
   margin-bottom: 20px;
