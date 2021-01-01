@@ -188,6 +188,9 @@ window.onload = function () {
     let circle = document.createElement("div");
     circle.className = "circle";
     page.appendChild(circle);
+    
+    
+    circle.classList.toggle("page-now");
   }
 
     index = 0;
