@@ -10,12 +10,12 @@
   <body>
     <header>header입니다.</header>
     <div class="top">
-      <div class="search">게시판</div>
+      
       <div class="main-content">
-
+        <div class="column">
         <nav id="topMenu">
           <ul>
-             
+            <li><a class="topMenuNoticeBoard" href="#"><h2>게시판</h2></a></li>
               <li><a class="menuLink" href="#"><h3>활동내역</h3></li></a>
               <li><a class="menuLink" href="#"><h3>정보공유</h3></li></a>
               <li><a class="menuLink" href="#"><h3>포트폴리오</h3></li></a>
@@ -23,10 +23,14 @@
               <li><a class="writingButton" href="#"><h3>작성 완료</h3></a></li>
           </ul>
       </nav>
-      <sec>
+      </div>
+      <div class="column">
+      <section class="main-all">
+        <div class="post">ddd</div>
+        <div class="mainbody">
         <!-- 팀 카드 -->
         <div class="TeamCard-Profile">
-          <section id="TeamCardSection">
+          <section class="section" id="TeamCardSection">
             <div class="team-picture">
               <div class="team-year">2기</div>
             </div>
@@ -57,7 +61,7 @@
           <div class="profile-list">
             <div class="people1">
               <span>
-                <img class="profile-img" src="img/profile-igm.png" />
+                <img class="profile-img" src="./img/profile.png" />
                 홍길동
               </span>
               <div class="team-part">
@@ -70,7 +74,7 @@
 
             <div class="people2">
               <span>
-                <img class="profile-img" src="img/profile-igm.png" />
+                <img class="profile-img" src="./img/profile.png" />
                 홍길동</span
               >
               <div class="team-part">
@@ -85,7 +89,7 @@
               <span>
                 <img
                   class="profile-img"
-                  src="img/profile-igm.png"
+                  src="./img/profile.png"
                 />홍길동</span
               >
               <div class="team-part">
@@ -97,7 +101,7 @@
             </div>
           </div>
         </div>
-        <section>
+        <section class="section">
           <!-- Post list Start -->
           <div class="post_list">
             <ul class="post_Slider">
@@ -217,9 +221,11 @@
               </ul>
             </div>
           </div>
-        </section>
+        
         <!-- Post list End -->
       </div>
+    </section>
+    </div>
     </div>
   </body>
 </html>
