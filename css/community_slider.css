@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 25px;
+  margin-top: 25px;
 }
 .post_list > .btn {
   z-index: 10;
