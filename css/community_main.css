@@ -118,3 +118,10 @@ select::-ms-expand {
   margin-right: 60px;
   color: #9e9e9e;
 }
+
+.first-contents {
+  position: absolute;
+  margin-left: 300px;
+  margin-top: 650px;
+  padding-top: 55px;
+}
