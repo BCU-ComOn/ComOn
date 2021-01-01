@@ -59,13 +59,18 @@ select::-ms-expand {
 .community-sidebar-team {
   text-align: center;
   margin: 45px;
-  color: #fff;
 }
 
 .community-sidebar-team > ul > li {
   margin-top: 45px;
 }
 
+.community-sidebar-team > ul > li > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 슬라이더 */
 .two-slider {
   position: absolute;
   margin-left: 300px;
@@ -118,6 +123,8 @@ select::-ms-expand {
   margin-right: 60px;
   color: #9e9e9e;
 }
+
+/* 게시글 */
 
 .first-contents {
   position: absolute;
