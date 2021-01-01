@@ -31,6 +31,7 @@ class Project {
     let projectName = document.createElement("div");
     let projectTitle = document.createElement("span");
     let progressBar = document.createElement("progress");
+    let completeBox = document.createElement("div");
 
     projectContent.className = "project-content";
     projectImage.className = "project-img";
@@ -42,6 +43,7 @@ class Project {
     projectType.className = "project-type";
     projectName.className = "project-name";
     projectTitle.className = "project-title";
+    completeBox.className = "complete-box";
 
     generation.textContent = this.generation;
     teamName.textContent = this.teamName;
@@ -50,6 +52,16 @@ class Project {
     progressBar.max = 100;
     console.log(this.progressBar);
     progressBar.value = parseInt(this.progressBar);
+    completeBox.textContent = "complete";
+    
+    projectType.appendChild(completeBox);
+
+    if (progressBar.value == 100) {
+      completeBox.style.display = 'block';
+    }
+    else {
+      completeBox.style.display = 'none';
+    }
 
     teamType.appendChild(teamName);
     teamType.appendChild(projectType);

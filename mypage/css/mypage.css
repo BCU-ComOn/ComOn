@@ -80,7 +80,7 @@ section {
 }
 
 .rside {
-  height: 250px;
+  height: 210px;
   background-color: #e0e0e0;
   padding-left: 20px;
   padding-top: 20px;
@@ -101,7 +101,6 @@ section {
   height: 20px;
   margin-top: 22px;
   margin-bottom: 12px;
-  display: none;
 }
 
 .profile3 > input[type="text"] {
@@ -148,7 +147,7 @@ section {
   background-color: #e0e0e0;
   background-image: url("/img/minusbtn.png");
   position: relative;
-  left: 75px;
+  left: 95px;
   bottom: 32px;
   border-radius: 50%;
 }
@@ -239,9 +238,16 @@ textarea {
   width: 470px;
   height: 280px;
   box-shadow: 10px 10px 10px #666666;
-  z-index: 1;
-  margin: 0 auto;
+  position: absolute;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
   display: none;
+  position: fixed;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 9999px,
+    rgba(0, 0, 0, 0.5) 2px 2px 3px 3px;
 }
 
 .title {
@@ -285,6 +291,13 @@ textarea {
 }
 
 .text > input[type="text"] {
+  margin-left: 15px;
+  padding-left: 15px;
+  width: 300px;
+  height: 40px;
+}
+
+.text > input[type="password"] {
   margin-left: 15px;
   padding-left: 15px;
   width: 300px;

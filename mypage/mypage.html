@@ -22,7 +22,7 @@
                 <div class="name">홍길동</div>
                 <button class="cogwheel" id="cogwheel"></button>
                 </div>
-                <p class="role">운영진 or 부원</span>
+                <p class="role">운영진 or 부원</p>
                 </div>
             </div>
             <div class="triangle"></div>
@@ -37,25 +37,16 @@
                     </div>
                 </div>
 
-                <div class="container">
-                <div class="language">
-                <div class="favoritelanguage">관심 언어</div>
+                <div class="container" id="container">
+                <div class="language" id="language">
+                <div class="favoritelanguage" id="favoritelanguage">관심 언어</div>
                 <button class="plusbtn2" id="plusbtn2"></button>
                 </div>
-                    <div class="combinebtns2" id="combinebtns2">
+                    <!-- <div class="combinebtns2" id="combinebtns2">
                     <div class="interestlang1">JAVA</div>
-                    <button class="minusbtn1" id="minusbtn1"></button>
-                </div>
+                    <button class="minusbtn2" id="minusbtn2"></button>
+                    </div> -->
 
-                <div class="combinebtns2" id="combinebtns2">
-                <div class="interestlang2">PHYTHON</div>
-                <button class="minusbtn2" id="minusbtn2"></button>
-                </div>
-
-                <div class="combinebtns2" id="combinebtns2">
-                <div class="interestlang3">C#</div>
-                <button class="minusbtn2" id="minusbtn2"></button>
-                </div>
                 </div>
                 <div class="profile3">
                     프로필 이동주
@@ -98,11 +89,11 @@
             <bold><div class="title">비밀번호 변경</div></bold>
             <div class="text">
                 <label for="currentpasswd">현재 비밀번호</label>
-                <input type="text" placeholder="내용을 입력해주세요"><br>
+                <input type="password" id="currentpasswd" placeholder="내용을 입력해주세요"><br>
                 <label for="changepasswd">변경 비밀번호</label>
-                <input type="text" placeholder="내용을 입력해주세요" class="passwdbox2"><br>
+                <input type="password" id="changepasswd" placeholder="내용을 입력해주세요" class="passwdbox2"><br>
                 <label for="passwdcheck">비밀번호 확인</label>
-                <input type="text" placeholder="내용을 입력해주세요">
+                <input type="password" id="passwdcheck" placeholder="내용을 입력해주세요">
             </div>
             <div class="btns">
             <input type="button" class="resetbtn" id="resetbtn" value="취소">

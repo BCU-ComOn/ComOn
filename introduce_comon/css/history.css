@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
+
+.history-title .listed-title {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.article-box {
+    padding: 75px 50px 75px 50px;
+    width: 700px;
+}
+
+/* 타이틀 */
+.history-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* 이미지 */
+.history-img {
+    width: 700px;
+    height: 250px;
+    padding-top: 25px;
+    display: flex;
+}
+
+.img {
+    width: 350px;
+    height: 250px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+/* 연혁 */
+.history-table {
+    width: 700px;
+    padding-top: 30px;
+}
+
+.his-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.middle-bar {
+    width: 700px;
+    height: 15px;
+    background-color: #666666;
+    border-radius: 15px;
+}
+
+.text-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.listed-box {
+    min-height: 90px;
+    display: flex;
+}
+
+.listed-bar {
+    width: 10px;
+    min-height: 90px;
+    background-color: #f89b00;
+    border-radius: 15px;
+    padding: 20px 0px 20px 0px;
+}
+
+.listed-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f89b00;
+    padding-left: 10px;
+}
+
+.listed-ul {  
+    margin-top: 10px;
+}
+
+.listed-li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    list-style-position: inside;
+    list-style-type: none;
+}
+
+li::before {
+    content: "• ";
+}
+
+/* div #box1 {
+    position: absolute;
+    position: relative; top:20px;
+} */

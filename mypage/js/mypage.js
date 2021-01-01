@@ -136,36 +136,97 @@ window.onload = function() {
         let field_tag1 = {interest: 'Game'};
         let interest_list = [field_tag1 ];
 
-        plusbtn1.onclick = function() {
+        let field_tag2 = {interest_language: 'Java'};
+        let interest_list2 = [field_tag2 ];
+
+                plusbtn1.onclick = function() {
+                    //함수 안쓸거면 이거 써~&^^
+                    if(document.getElementById("field_container").childElementCount > 3){
+                        return;
+                    }
+                    let interest_field_box = document.createElement("div");
+                    interest_field_box.classList.add("combinebtns");
+                    
+                    // <div class="interest1"></div>
+                    let interest_field_content = document.createElement("div");
+                    interest_field_content.classList.add("interest1");
+        
+                    // <button class="minusbtn1"></button>
+                    let minusbtn1 = document.createElement("button");
+                    minusbtn1.classList.add("minusbtn1");
+                    minusbtn1.onclick = function() {
+                        let minusbtn = this;
+                        parent = this.parentNode;
+                        grandparent = parent.parentNode;
+                        grandparent.removeChild(parent);
+                    }
+                    
+                    interest_field_box.appendChild(interest_field_content);
+                    interest_field_box.appendChild(minusbtn1);
+        
+                    interest_field_content.textContent = field_tag1.interest;
+                    
+                    let combinebtns = document.getElementById("field_container");
+                    combinebtns.appendChild(interest_field_box);
+                    //여기까지 
+                    
+                    /*add_field_tag(field_tag1);*/
+                }
+        
+        plusbtn2.onclick = function() {
             //함수 안쓸거면 이거 써~&^^
-            let interest_field_box = document.createElement("div");
-            interest_field_box.classList.add("combinebtns");
+            if(document.getElementById("container").childElementCount > 3){
+                return;
+            }
+            let interest_language_box = document.createElement("div");
+            interest_language_box.classList.add("combinebtns2");
             
             // <div class="interest1"></div>
-            let interest_field_content = document.createElement("div");
-            interest_field_content.classList.add("interest1");
+            let interest_language_content = document.createElement("div");
+            interest_language_content.classList.add("interestlang1");
 
             // <button class="minusbtn1"></button>
-            let minusbtn1 = document.createElement("button");
-            minusbtn1.classList.add("minusbtn1");
-            minusbtn1.onclick = function() {
+            let minusbtn2 = document.createElement("button");
+            minusbtn2.classList.add("minusbtn2");
+            minusbtn2.onclick = function() {
                 let minusbtn = this;
                 parent = this.parentNode;
                 grandparent = parent.parentNode;
                 grandparent.removeChild(parent);
             }
             
-            interest_field_box.appendChild(interest_field_content);
-            interest_field_box.appendChild(minusbtn1);
+            interest_language_box.appendChild(interest_language_content);
+            interest_language_box.appendChild(minusbtn2);
 
-            interest_field_content.textContent = field_tag1.interest;
+            interest_language_content.textContent = field_tag2.interest_language;
             
-            let combinebtns = document.getElementById("field_container");
-            combinebtns.appendChild(interest_field_box);
+            let combinebtns2 = document.getElementById("container");
+            combinebtns2.appendChild(interest_language_box);
             //여기까지 
 
             /*add_field_tag(field_tag1);*/
         }
+        
+        let currentpasswd = document.getElementById('currentpasswd').value
+        let changepasswd = document.getElementById('changepasswd').value
+        let passwdcheck = document.getElementById('passwdcheck').value
+
+        reflectbtn.onclick = function() {
+            if(changepasswd.value == passwdcheck.value) {
+                currentpasswd.value = changepasswd.value
+                passwdbox.style.display = "none";
+            } else {
+                alert("비밀번호가 일치하지 않습니다.")
+            }
+        }
+
+        let role = document.getElementsByClassName('role')[0];
+        let manager = '운영진';
+        role.textContent = manager;
+
+        // let role = document.getElementsByClassName('role')[0];
+        // let manager = getFromServer();
+        // role.textContent = manager;
 
         // f(field_tag) = field_tag의 interst 값 대로 태그를 만들어 표시;
         function add_field_tag(field_tag1) {
@@ -198,13 +259,10 @@ window.onload = function() {
             combinebtns.appendChild(interest_field_box);*/
         }
 
-        // '태그를 추가'
+        '태그를 추가'
         // interest_list[0]
         // interest_list[1]
         // interest_list[2]
-        for(let i=0; i<interest_list.length; i++) {
-            add_field_tag(interest_list[i]);
-        }
 
         cogwheel.onclick = function() {
             passwdbox.style.display = "block";
@@ -213,19 +271,6 @@ window.onload = function() {
         resetbtn.onclick = function() {
             passwdbox.style.display = "none";
         }
-    
-        reflectbtn.onclick = function() {
-            passwdbox.style.display = "none";
-        }
-
-        plusbtn2.onclick = function() {
-            // combinebtns2.style.display = "block";
-            
-            combinebtns2.style.display = "block";
-            let field_tag = {interest: 'java'};
-            add_field_tag(field_tag);
-        }
-
         modifybtn.onclick = function() {
             let profile = {
                 interest_field: [],
@@ -238,7 +283,7 @@ window.onload = function() {
             profile.message = document.getElementById('message').value;
 
             console.log("프로필 주소는 " + profile.url);
-            console.log("전하는 메시지는 " + profile.message)
+            console.log("전하는 메시지는 " + profile.message);
         };
         
 }
