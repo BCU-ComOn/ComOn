@@ -101,7 +101,6 @@ section {
   height: 20px;
   margin-top: 22px;
   margin-bottom: 12px;
-  display: none;
 }
 
 .profile3 > input[type="text"] {
@@ -148,7 +147,7 @@ section {
   background-color: #e0e0e0;
   background-image: url("/img/minusbtn.png");
   position: relative;
-  left: 75px;
+  left: 95px;
   bottom: 32px;
   border-radius: 50%;
 }
