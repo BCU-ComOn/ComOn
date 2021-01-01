@@ -136,6 +136,9 @@ window.onload = function() {
         let field_tag1 = {interest: 'Game'};
         let interest_list = [field_tag1 ];
 
+        let field_tag2 = {interest_language: 'Java'};
+        let interest_list2 = [field_tag2 ];
+
         plusbtn1.onclick = function() {
             //함수 안쓸거면 이거 써~&^^
             let interest_field_box = document.createElement("div");
@@ -162,6 +165,37 @@ window.onload = function() {
             
             let combinebtns = document.getElementById("field_container");
             combinebtns.appendChild(interest_field_box);
+            //여기까지 
+
+            /*add_field_tag(field_tag1);*/
+        }
+
+        plusbtn2.onclick = function() {
+            //함수 안쓸거면 이거 써~&^^
+            let interest_language_box = document.createElement("div");
+            interest_language_box.classList.add("combinebtns2");
+            
+            // <div class="interest1"></div>
+            let interest_language_content = document.createElement("div");
+            interest_language_content.classList.add("interestlang1");
+
+            // <button class="minusbtn1"></button>
+            let minusbtn2 = document.createElement("button");
+            minusbtn2.classList.add("minusbtn2");
+            minusbtn2.onclick = function() {
+                let minusbtn = this;
+                parent = this.parentNode;
+                grandparent = parent.parentNode;
+                grandparent.removeChild(parent);
+            }
+            
+            interest_language_box.appendChild(interest_language_content);
+            interest_language_box.appendChild(minusbtn2);
+
+            interest_language_content.textContent = field_tag2.interest_language;
+            
+            let combinebtns2 = document.getElementById("container");
+            combinebtns2.appendChild(interest_language_box);
             //여기까지 
 
             /*add_field_tag(field_tag1);*/
@@ -202,7 +236,7 @@ window.onload = function() {
         // interest_list[0]
         // interest_list[1]
         // interest_list[2]
-        for(let i=0; i<interest_list.length; i++){
+        for(let i=0; i<2; i++){
             add_field_tag(interest_list[i]);
         }
 
@@ -217,13 +251,6 @@ window.onload = function() {
         reflectbtn.onclick = function() {
             passwdbox.style.display = "none";
         }
-
-        plusbtn2.onclick = function() {
-            combinebtns2.style.display = "block";
-            let field_tag = {interest: 'Java'};
-            add_field_tag(field_tag);
-        }
-
         modifybtn.onclick = function() {
             let profile = {
                 interest_field: [],
