@@ -207,6 +207,19 @@ window.onload = function() {
             /*add_field_tag(field_tag1);*/
         }
         
+        let currentpasswd = document.getElementById('currentpasswd').value
+        let changepasswd = document.getElementById('changepasswd').value
+        let passwdcheck = document.getElementById('passwdcheck').value
+
+        reflectbtn.onclick = function() {
+            if(changepasswd.value == passwdcheck.value) {
+                currentpasswd.value = changepasswd.value
+                passwdbox.style.display = "none";
+            } else {
+                alert("비밀번호가 일치하지 않습니다.")
+            }
+        }
+
         let role = document.getElementsByClassName('role')[0];
         let manager = '운영진';
         role.textContent = manager;
@@ -256,10 +269,6 @@ window.onload = function() {
         }
 
         resetbtn.onclick = function() {
-            passwdbox.style.display = "none";
-        }
-    
-        reflectbtn.onclick = function() {
             passwdbox.style.display = "none";
         }
         modifybtn.onclick = function() {
