@@ -121,6 +121,7 @@
 
 /* 프로젝트 내용(제목, 분류, 진행도 등) */
 #project #project-list > .project-content > .project-explain {
+  position: relative;
   background-color: #f5f5f5;
   width: 230;
   height: 80px;
@@ -128,6 +129,20 @@
   padding-top: 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+/* Complete Stamp */
+.complete-box {
+  position: absolute;
+  right: 0;
+  bottom: 20%;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 0, 0);
+  transform: rotate(-35deg);
 }
 
 #project #project-list > .project-content > .project-explain > .team-type {
