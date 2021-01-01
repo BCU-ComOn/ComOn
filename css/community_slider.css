@@ -134,15 +134,17 @@ footer {
 .post_list2 .post_Slider {
   display: flex;
   flex-direction: row;
-  width: 730px;
+  width: 740px;
   overflow: hidden;
 }
 .post_list2 .post_Slider > article {
   display: flex;
   flex-direction: column;
-  width: 350px;
-  margin: 0 10px;
+  width: 340px;
+  margin: 0 5px;
   transition: all 0.8s;
+  margin-right: 15px;
+  margin-left: 13px;
 }
 .post_list2 .post_Slider > article:first-child {
   margin-left: 15px;

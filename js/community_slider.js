@@ -69,28 +69,6 @@ window.onload = () => {
         post_text: "철환하였는가? 밥을 위하여서 옷을 위하여서 미인을 구하기 위하여서 그리하였는가? 아니다 그들은 커다란",
         new: false,
       },
-      {
-        post_day: "2020-00-00",
-        post_maker: {
-          user_name: "홍길동",
-          user_img: "../img/smallprofile.png",
-        },
-        post_img: "http://placehold.it/220x120",
-        post_title: "있는 때까지 방황하여도 보이는 것은",
-        post_text: "철환하였는가? 밥을 위하여서 옷을 위하여서 미인을 구하기 위하여서 그리하였는가? 아니다 그들은 커다란",
-        new: false,
-      },
-      {
-        post_day: "2020-00-00",
-        post_maker: {
-          user_name: "홍길동",
-          user_img: "../img/smallprofile.png",
-        },
-        post_img: "http://placehold.it/220x120",
-        post_title: "있는 때까지 방황하여도 보이는 것은",
-        post_text: "철환하였는가? 밥을 위하여서 옷을 위하여서 미인을 구하기 위하여서 그리하였는가? 아니다 그들은 커다란",
-        new: false,
-      },
     ],
     slider2: [
       {
