@@ -141,6 +141,9 @@ window.onload = function() {
 
                 plusbtn1.onclick = function() {
                     //함수 안쓸거면 이거 써~&^^
+                    if(document.getElementById("field_container").childElementCount > 3){
+                        return;
+                    }
                     let interest_field_box = document.createElement("div");
                     interest_field_box.classList.add("combinebtns");
                     
@@ -172,6 +175,9 @@ window.onload = function() {
         
         plusbtn2.onclick = function() {
             //함수 안쓸거면 이거 써~&^^
+            if(document.getElementById("container").childElementCount > 3){
+                return;
+            }
             let interest_language_box = document.createElement("div");
             interest_language_box.classList.add("combinebtns2");
             
