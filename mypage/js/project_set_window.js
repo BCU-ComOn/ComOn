@@ -88,24 +88,6 @@ window.onload = function() {
 
 
 
-    /* 팀원 관리 */
-    let ProMinus1 = document.getElementById("Min-1"); // 팀원관리 (-) 버튼
-    let ProMinus2 = document.getElementById("Min-2");
-    let ProMinus3 = document.getElementById("Min-3");
-    let ProMinus4 = document.getElementById("Min-4");
-    let ProPlus6 = document.getElementById("ProPlus-6");
-    let ProPlus7 = document.getElementById("ProPlus-7");
-    let ProPlus8 = document.getElementById("ProPlus-8");
-    let ProPlus9 = document.getElementById("ProPlus-9");
-    
-    let Proli1 = document.getElementById("Proli-1"); // 팀원관리 프로필
-    let Proli2 = document.getElementById("Proli-2");
-    let Proli3 = document.getElementById("Proli-3");
-    let Proli4 = document.getElementById("Proli-4");
-    let Proli6 = document.getElementById("Proli-6");
-    let Proli7 = document.getElementById("Proli-7");
-    let Proli8 = document.getElementById("Proli-8");
-    let Proli9 = document.getElementById("Proli-9");
 
 
 
@@ -158,63 +140,6 @@ window.onload = function() {
         mainWindow.style.display = "none";
 
     }
-
-
-
-    ProMinus1.onclick = function(){  // 프로필 (-) 버튼 클릭
-        Proli1.style.display = "none";
-        Profcount -= 1;
-        document.getElementById('test100').innerHTML = '<li id="Proli-1"><img src="../img/profile-igm.png"width="60px"height="60px" class="pro2"><button class="pro1Plus"><img src="../img/plusbtn.png" alt="" id="ProPlus-1"></button><div class="balloon"><div id="ProComent1"></div></div><div id="ProNAME1"></div></li>'
-    }
-    ProMinus2.onclick = function(){  
-        Proli2.style.display = "none";
-        Profcount -= 1;
-    }
-    ProMinus3.onclick = function(){  
-        Proli3.style.display = "none";
-        Profcount -= 1;
-    }
-    ProMinus4.onclick = function(){  
-        Proli4.style.display = "none";
-        Profcount -= 1;
-    }
-
-    ProPlus6.onclick = function(){  // 프로필 (+) 버튼 클릭
-        if ( Profcount < 5 ){
-        Proli6.style.display = "none";
-        Profcount += 1;
-        }
-        else{
-            alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
-        }
-    }
-    ProPlus7.onclick = function(){  
-        if ( Profcount < 5 ){
-            Proli7.style.display = "none";
-            Profcount += 1;
-            }
-            else{
-                alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
-            }
-    }
-    ProPlus8.onclick = function(){  
-        if ( Profcount < 5 ){
-            Proli8.style.display = "none";
-            Profcount += 1;
-            }
-            else{
-                alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
-            }
-    }
-    ProPlus9.onclick = function(){  
-        if ( Profcount < 5 ){
-            Proli9.style.display = "none";
-            Profcount += 1;
-            }
-            else{
-                alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
-            }
-    }
     
     var ProNAME = ['홍길동1','홍길동2','홍길동3','홍길동4','홍길동5','홍길동6','홍길동7','홍길동8','홍길동9','홍길동10'];
     var ProComent = ['코멘트1','코멘트2','코멘트3','코멘트4','코멘트5','코멘트6','코멘트7','코멘트8','코멘트9','코멘트10'];
@@ -222,14 +147,7 @@ window.onload = function() {
 
 
 
-    for(var i=6;i<10;i++){
-        document.getElementById('ProNAME'+i+'').innerHTML = '<h3>'+ProNAME[i-1]+'</h3>'
-        document.getElementById('ProComent'+i+'').innerHTML = '<h3>'+ProComent[i-1]+'</h3>'
-    }
 
-    for(var i=1;i<6;i++){
-        document.getElementById('ProUNAME'+i+'').innerHTML = '<h3>'+ProNAME[i-1]+'</h3>'
-    }
 
     function MKProD(num){
         var str = '<li id="Proli-'+num+'">'
@@ -251,8 +169,35 @@ window.onload = function() {
         return str;
     }
     
+
+
     
 
+    var ProUnum=0;
+
+    for(var i=1;i<5;i++){
+        document.getElementById('Proli-'+i).innerHTML = '<div id = Proli-'+i+'><img src="../img/profile-igm.png"width="60px"height="60px" class="pro1"><button class="pro1Minus"><img src="../img/minusbtn.png" alt="" id=Min-'+i+'></button><h3>'+ProNAME[i-1]+'</h3></div>'
+    }
+
+    for(var i=6;i<10;i++){
+        document.getElementById('testT'+i).innerHTML = '<li id="Proli-'+i+'"><img src="../img/profile-igm.png"width="60px"height="60px" class="pro2"><button class="pro1Plus"><img src="../img/plusbtn.png" alt="" id="ProPlus-'+i+'"></button><div class="balloon"><h3>'+ProComent[i-1]+'</h3></div><h3>'+ProNAME[i-1]+'</h3></li>'
+    }
+
+    let ProPlus6 = document.getElementById("ProPlus-6");
+    let Proli6 = document.getElementById("Proli-6");
+
+    ProPlus6.onclick = function(){  // 프로필 (+) 버튼 클릭
+        if ( Profcount < 5 ){
+        Proli6.style.display = "none";
+        Profcount += 1;
+        }
+        else{
+            alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
+        }
+    }
+
+
+   
 
 
 }
