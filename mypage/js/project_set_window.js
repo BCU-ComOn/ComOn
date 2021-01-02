@@ -164,6 +164,7 @@ window.onload = function() {
     ProMinus1.onclick = function(){  // 프로필 (-) 버튼 클릭
         Proli1.style.display = "none";
         Profcount -= 1;
+        document.getElementById('test100').innerHTML = '<li id="Proli-1"><img src="../img/profile-igm.png"width="60px"height="60px" class="pro2"><button class="pro1Plus"><img src="../img/plusbtn.png" alt="" id="ProPlus-1"></button><div class="balloon"><div id="ProComent1"></div></div><div id="ProNAME1"></div></li>'
     }
     ProMinus2.onclick = function(){  
         Proli2.style.display = "none";
@@ -230,10 +231,27 @@ window.onload = function() {
         document.getElementById('ProUNAME'+i+'').innerHTML = '<h3>'+ProNAME[i-1]+'</h3>'
     }
 
+    function MKProD(num){
+        var str = '<li id="Proli-'+num+'">'
+        str += '<img src="../img/profile-igm.png"width="60px"height="60px" class="pro2">'
+        str += '<button class="pro1Plus"><img src="../img/plusbtn.png" alt="" id="ProPlus-'+num+'"></button>'
+        str += '<div class="balloon"><div id="ProComent'+num+'"></div></div>'
+        str += '<div id="ProNAME'+num+'"></div>'
+        str += '</li>'
+        return str;
+    }
 
-
-
-
+    function MKProU(num){
+        var str = '<li id="Proli">'
+        str += '<div id = Proli-1>'
+        str += '<img src="../img/profile-igm.png"width="60px"height="60px" class="pro1">'
+        str += '<button class="pro1Minus"><img src="../img/minusbtn.png" alt="" id=Min-1></button>'
+        str += '<div id="ProUNAME1"></div></div>'
+        str += '</li>'
+        return str;
+    }
+    
+    
 
 
 
