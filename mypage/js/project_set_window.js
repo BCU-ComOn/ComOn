@@ -214,6 +214,23 @@ window.onload = function() {
                 alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
             }
     }
+    
+    var ProNAME = ['홍길동1','홍길동2','홍길동3','홍길동4','홍길동5','홍길동6','홍길동7','홍길동8','홍길동9','홍길동10'];
+    var ProComent = ['코멘트1','코멘트2','코멘트3','코멘트4','코멘트5','코멘트6','코멘트7','코멘트8','코멘트9','코멘트10'];
+
+
+
+
+    for(var i=6;i<10;i++){
+        document.getElementById('ProNAME'+i+'').innerHTML = '<h3>'+ProNAME[i-1]+'</h3>'
+        document.getElementById('ProComent'+i+'').innerHTML = '<h3>'+ProComent[i-1]+'</h3>'
+    }
+
+    for(var i=1;i<6;i++){
+        document.getElementById('ProUNAME'+i+'').innerHTML = '<h3>'+ProNAME[i-1]+'</h3>'
+    }
+
+
 
 
 
