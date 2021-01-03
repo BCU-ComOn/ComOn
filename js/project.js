@@ -6,6 +6,9 @@ function removeAllElement(targetId) {
 }
 
 function setPage(pageNow) {
+  for(let i =0; i<document.getElementsByClassName("page")[0].childNodes.length; i++){
+    document.getElementsByClassName("page")[0].children[i].classList.remove("page-now");
+  }
   document.getElementsByClassName("page")[0].children[pageNow].classList.toggle("page-now");
 }
 
