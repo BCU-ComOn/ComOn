@@ -79,12 +79,11 @@
 }
 
 #project #project-list {
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   row-gap: 60px;
   column-gap: 75px;
-
+  height: 30%;
   width: calc(100% - 90px);
 }
 
@@ -264,4 +263,19 @@
 /* 현재 페이지 */
 #project .page > .page-now {
   background-color: skyblue;
+}
+
+/*슬라이딩*/
+.project_slider {
+  display: flex;
+  flex-direction: row;
+  width: 730px;
+  overflow: hidden;
+}
+.project_slider > .project-content {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  margin: 0 10px;
+  transition: all 0.8s;
 }

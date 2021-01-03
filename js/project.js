@@ -9,7 +9,7 @@ function setPage(pageNow) {
   for(let i = 0; i < document.getElementsByClassName("page")[0].childNodes.length; i++) {
     document.getElementsByClassName("page")[0].children[i].classList.remove("page-now");
   } 
-  document.getElementsByClassName("page")[0].children[pageNow].classList.toggle("page-now");
+  document.getElementsByClassName("page")[0].children[pageNow].classList.add("page-now");
 }
 
 class Project {
@@ -80,7 +80,8 @@ class Project {
 
     projectContent.appendChild(projectImage);
     projectContent.appendChild(projectExplain);
-
+    // projectContent.style.transform = "translateX(670%)"
+    projectContent.style.transform = "translateX(470%)"
     return projectContent;
   };
 }
@@ -224,8 +225,9 @@ window.onload = function () {
         }
     }
 
-    for (let i = 0; i < projectList[pageNow].length; i++) {
-      document.getElementById("project-list").appendChild(projectList[pageNow][i].getElement());
+    for (let i = 0; i < db.length; i++) {
+      item = new Project(db[i].generation, db[i].teamName, db[i].projectType, db[i].imageName, db[i].pjTitle, db[i].progressBar);
+      document.getElementById("project-list").appendChild(item.getElement());
     }
 
     setPage(pageNow);
