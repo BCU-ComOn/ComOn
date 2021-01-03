@@ -89,14 +89,18 @@
   /* width: calc(100% - 90px); */
 }
 
-#project #project-list > .project-content {
+/* .pjpage {
+  width: calc(100% - 90px);
+} */
+
+.project-content {
   width: 280px;
   height: 245px;
   border-radius: 10px;
   box-shadow: 2px 2px 10px 1px grey;
 }
 
-#project #project-list > .project-content > .project-img {
+.project-img {
   width: 100%;
   height: 135px;
   border-top-left-radius: 10px;
@@ -107,7 +111,7 @@
 }
 
 /* 기수 */
-#project #project-list > .project-content > .project-img > .generation {
+.project-img > .generation {
   display: inline-block;
   background-color: grey;
   color: #fff;
@@ -121,7 +125,7 @@
 }
 
 /* 프로젝트 내용(제목, 분류, 진행도 등) */
-#project #project-list > .project-content > .project-explain {
+.project-explain {
   position: relative;
   background-color: #f5f5f5;
   width: 230;
@@ -146,23 +150,17 @@
   transform: rotate(-35deg);
 }
 
-#project #project-list > .project-content > .project-explain > .team-type {
+.project-explain > .team-type {
   width: 220px;
 }
 
-#project
-  #project-list
-  > .project-content
-  > .project-explain
+.project-explain
   > .team-type
   > .team-name {
   font-size: 16px;
 }
 
-#project
-  #project-list
-  > .project-content
-  > .project-explain
+.project-explain
   > .team-type
   > .project-type {
   display: inline-block;
@@ -177,26 +175,20 @@
   border-radius: 10px;
 }
 
-#project #project-list > .project-content > .project-explain > .project-name {
+.project-explain > .project-name {
   width: 220px;
   margin-top: 20px;
 }
 
 /* 진행도 시작 */
-#project
-  #project-list
-  > .project-content
-  > .project-explain
+.project-explain
   > .project-name
   > .project-title {
   color: rgb(168, 168, 168);
   font-size: 12px;
 }
 
-#project
-  #project-list
-  > .project-content
-  > .project-explain
+.project-explain
   > .project-name
   > progress {
   width: 220px;
@@ -205,10 +197,7 @@
   border-radius: 5px;
 }
 
-#project
-  #project-list
-  > .project-content
-  > .project-explain
+.project-explain
   > .project-name
   > progress::-webkit-progress-bar {
   width: 220px;
@@ -217,10 +206,7 @@
   border-radius: 5px;
 }
 
-#project
-  #project-list
-  > .project-content
-  > .project-explain
+.project-explain
   > .project-name
   > progress::-webkit-progress-value {
   width: 220px;
@@ -277,10 +263,10 @@
   /* width: calc(100% - 90px); */
   overflow: hidden;
 }
-.project_slider > .project-content {
+.project_slider > .pjpage> .project-content {
   display: flex;
   flex-direction: column;
-  width: 220px;
+  /* width: 220px; */
   margin: 30px 37.5px;
   transition: all 0.8s;
 }
