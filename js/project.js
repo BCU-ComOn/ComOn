@@ -81,7 +81,7 @@ class Project {
     projectContent.appendChild(projectImage);
     projectContent.appendChild(projectExplain);
     // projectContent.style.transform = "translateX(670%)"
-    projectContent.style.transform = "translateX(100%)"
+    //projectContent.style.transform = "translateX(100%)"
     return projectContent;
   };
 }
@@ -210,6 +210,8 @@ window.onload = function () {
     
     
     circle.classList.toggle("page-now");
+
+    let pjpage = document.createElement("div");
   }
 
     index = 0;
@@ -225,10 +227,10 @@ window.onload = function () {
         }
     }
 
-    for (let i = 0; i < db.length; i++) {
-      item = new Project(db[i].generation, db[i].teamName, db[i].projectType, db[i].imageName, db[i].pjTitle, db[i].progressBar);
-      document.getElementById("project-list").appendChild(item.getElement());
-    }
+    // for (let i = 0; i < db.length; i++) {
+    //   item = new Project(db[i].generation, db[i].teamName, db[i].projectType, db[i].imageName, db[i].pjTitle, db[i].progressBar);
+    //   document.getElementById("project-list").appendChild(item.getElement());
+    // }
 
     setPage(pageNow);
 
