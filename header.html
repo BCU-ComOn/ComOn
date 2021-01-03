@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/headercss.css">
     <link rel="stylesheet" href="css/reset.css">
-    <script type="text/javascript" src="js/header_Activity.js"></script>
+    <script type="text/javascript" src="js/header_activity.js"></script>
 </head>
 <body>
     <header class="mainPage-Header">
@@ -27,40 +27,42 @@
                     <a href="">Community</a>
                     <a href="">게시판</a>
                 </li>
-                <li>
+                <li> 
                     <a href="">
-                        <div class="comeest-text">
-                            <span>Comeest</span>
-                        </div>
-                        <div>
-                            <img src="img/comeest_basic.png" alt="트로피">
-                        </div>
+                        <span>Comeest</span>
+                        <img src="img/comeest_basic.png" alt="트로피">
                     </a>
                     <a href="">
-                        <div class="comeest-text">
-                            <span>명예의 전당</span>
-                        </div>
-                        <div>
-                            <img src="img/comeest_basic.png" alt="트로피">
-                        </div>
+                        <span>명예의전당</span>
+                        <img src="img/comeest_basic.png" alt="트로피">
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <div>
-                            <img src="img/profile-igm.png" alt="유저" id="header-user">
-                        </div>
-                        <div class="profile-text">
-                            <span>Login</span>
-                        </div>
+                    <a href="#" class="login-user" onclick="clickLogin(this); return false;">
+                        <img src="img/profile-igm.png" alt="유저" id="header-user">
+                        <span class="profile-text">Login</span>
                     </a>
-                    <a href="">홍길동</a>
+                    <div class="comoff">
+                        <span id="comoff-font">Com;Off</span>
+                    </div>
+                    <a href="#" class="profile-user" onclick="clickUser(this); return false;">
+                        <img src="img/profile-igm.png" alt="유저" id="header-user">
+                        <span class="profile-text">홍길동</span>
+                    </a>
                 </li>
             </ul>
         </nav>
     </header>
-    <footer>
-
+    <footer class="mainPage-footer">
+        <span class="footer-font">부천대학교 컴퓨터소프트웨어과 전공동아리</span>
+        <ul class="footer-list">
+            <li>@2020-2020 Com;On</li>
+            <li>부천대학교 소사캠퍼스 공학강의동 5층</li>
+            <li>Developed By Comee</li>
+        </ul>
+        <a href="mailto:test@test.com">
+            <input type="button" value="contact" class="email-contact">
+        </a>
     </footer>
 </body>
 </html>
