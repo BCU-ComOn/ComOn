@@ -58,3 +58,7 @@ select::-ms-expand {
 .community-sidebar-team > ul > li {
   margin-top: 45px;
 }
+.community-sidebar-team > ul > li > a {
+    color: #fff;
+    text-decoration: none;
+  }
