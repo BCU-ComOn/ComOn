@@ -203,7 +203,10 @@ window.onload = function () {
   projectSection.appendChild(page);
 
   for (let i = 0; i <= pageAll; i++) {
-    projectList.push(new Array());
+    let pjpage = document.createElement("div");
+    pjpage.className = "pjpage";
+
+    projectList.push(pjpage);
     let circle = document.createElement("div");
     circle.className = "circle";
     page.appendChild(circle);
@@ -211,7 +214,6 @@ window.onload = function () {
     
     circle.classList.toggle("page-now");
 
-    let pjpage = document.createElement("div");
   }
 
     index = 0;
