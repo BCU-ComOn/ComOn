@@ -81,7 +81,7 @@ class Project {
     projectContent.appendChild(projectImage);
     projectContent.appendChild(projectExplain);
     // projectContent.style.transform = "translateX(670%)"
-    projectContent.style.transform = "translateX(470%)"
+    projectContent.style.transform = "translateX(100%)"
     return projectContent;
   };
 }
@@ -249,9 +249,9 @@ window.onload = function () {
         }
     };
 
-    for (let i = 0; i < pageAll; i++){
+    // for (let i = 0; i < pageAll; i++){
       
-    }
+    // }
 
     //각 버튼에 맞는 이벤트, 콤보박스에서 항목을 바꾼 후에 버튼을 누르면 초기 상태로 바뀜
 

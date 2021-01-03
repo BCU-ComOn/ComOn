@@ -79,10 +79,12 @@
 }
 
 #project #project-list {
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  /* grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   row-gap: 60px;
-  column-gap: 75px;
+  column-gap: 75px; */
+  /* width: 994.64px; */
   height: 30%;
   width: calc(100% - 90px);
 }
