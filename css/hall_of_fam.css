@@ -128,7 +128,7 @@ ul {
   align-items: center;
 }
 
-.memo-img img {
+.memo-img{
   margin-left: 15px;
   margin-right: 5px;
 }
@@ -253,8 +253,10 @@ ul {
   margin-right: 5px;
   margin-left: 15px;
 }
-#twitter {
-  border-radius: 30px;
+.github-img{
+  margin-left: 30px;
+  margin-right: 5px;
+  /* margin-top: 500px; */
 }
 
 .project-second #gasipan {

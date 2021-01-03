@@ -5,6 +5,10 @@ function removeAllElement(targetId) {
   }
 }
 
+function setPage(pageNow) {
+  document.getElementsByClassName("page")[0].children[pageNow].classList.toggle("page-now");
+}
+
 class Project {
   generation;
   teamName;
@@ -188,17 +192,26 @@ window.onload = function () {
   ];
 
   projectList = new Array();
-  pageNow = 1;
-  pageAll = db.length % 6 == 0 ? db.length / 6 : 1 + parseInt(db.length / 6);
+  pageNow = 0;
+  pageAll = db.length % 6 == 0 ? (db.length / 6) - 1 : parseInt(db.length / 6);
+  let projectSection = document.getElementById("project");
+  let page = document.createElement("div");
+  page.className = "page";
+  projectSection.appendChild(page);
 
-  for (let i = 0; i < pageAll; i++) {
+  for (let i = 0; i <= pageAll; i++) {
     projectList.push(new Array());
-    console.log(projectList[i]);
+    let circle = document.createElement("div");
+    circle.className = "circle";
+    page.appendChild(circle);
+    
+    
+    circle.classList.toggle("page-now");
   }
 
     index = 0;
 
-    for (let i = 0; i < pageAll; i++) {
+    for (let i = 0; i <= pageAll; i++) {
         num = 0;
 
         for (let j = 6 * i - 6; j <= 6 * i - 1; j++) {
@@ -212,6 +225,8 @@ window.onload = function () {
     for (let i = 0; i < projectList[pageNow].length; i++) {
       document.getElementById("project-list").appendChild(projectList[pageNow][i].getElement());
     }
+
+    setPage(pageNow);
 
     //왼쪽 콤보박스에 맞는 이벤트, 해당하는 모든 항목이 한 페이지에 나타남
     document.getElementById("select_generation").onchange = function () {
@@ -230,26 +245,35 @@ window.onload = function () {
         }
     };
 
+    for (let i = 0; i < pageAll; i++){
+      
+    }
+
     //각 버튼에 맞는 이벤트, 콤보박스에서 항목을 바꾼 후에 버튼을 누르면 초기 상태로 바뀜
+
+    //오른쪽 버튼
     document.getElementById("right_btn").onclick = function () {
         removeAllElement("project-list");
         pageNow++;
         if (pageNow > pageAll) {
-            pageNow = 1;
+            pageNow = 0;
         }
-        for (let i = 0; i < projectList[pageNow-1].length; i++) {
-            document.getElementById("project-list").appendChild(projectList[pageNow-1][i].getElement());
+        for (let i = 0; i < projectList[pageNow].length; i++) {
+            document.getElementById("project-list").appendChild(projectList[pageNow][i].getElement());
         }
+        setPage(pageNow);
     };
 
+    //왼쪽 버튼
     document.getElementById("left_btn").onclick = function () {
         removeAllElement("project-list");
         pageNow--;
-        if (pageNow < 1) {
+        if (pageNow < 0) {
             pageNow = pageAll;
         }
-        for (let i = 0; i < projectList[pageNow - 1].length; i++) {
-            document.getElementById("project-list").appendChild(projectList[pageNow-1][i].getElement());
+        for (let i = 0; i < projectList[pageNow].length; i++) {
+            document.getElementById("project-list").appendChild(projectList[pageNow][i].getElement());
         }
+        setPage(pageNow);
     };
 };
