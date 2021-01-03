@@ -5,6 +5,10 @@ function removeAllElement(targetId) {
   }
 }
 
+function setPage(pageNow) {
+  document.getElementsByClassName("page")[0].children[pageNow].classList.toggle("page-now");
+}
+
 class Project {
   generation;
   teamName;
@@ -210,6 +214,8 @@ window.onload = function () {
       document.getElementById("project-list").appendChild(projectList[pageNow][i].getElement());
     }
 
+    setPage(pageNow);
+
     //왼쪽 콤보박스에 맞는 이벤트, 해당하는 모든 항목이 한 페이지에 나타남
     document.getElementById("select_generation").onchange = function () {
         newList = [];
@@ -243,6 +249,7 @@ window.onload = function () {
         for (let i = 0; i < projectList[pageNow].length; i++) {
             document.getElementById("project-list").appendChild(projectList[pageNow][i].getElement());
         }
+        setPage(pageNow);
     };
 
     //왼쪽 버튼
@@ -255,5 +262,6 @@ window.onload = function () {
         for (let i = 0; i < projectList[pageNow].length; i++) {
             document.getElementById("project-list").appendChild(projectList[pageNow][i].getElement());
         }
+        setPage(pageNow);
     };
 };
