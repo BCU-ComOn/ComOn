@@ -12,7 +12,14 @@ class Project {
   imageName = "../img/";
   pjTitle;
   progressBar;
-  constructor(generation, teamName, projectType, imageName, pjTitle, progressBar) {
+  constructor(
+    generation,
+    teamName,
+    projectType,
+    imageName,
+    pjTitle,
+    progressBar
+  ) {
     this.generation = generation;
     this.teamName = teamName;
     this.projectType = projectType;
@@ -176,68 +183,84 @@ window.onload = function () {
   ];
 
   projectList = new Array();
-  pageNow = 1;
-  pageAll = db.length % 6 == 0 ? db.length / 6 : 1 + parseInt(db.length / 6);
+  pageNow = 0;
+  pageAll = db.length % 6 == 0 ? db.length / 6 - 1 : parseInt(db.length / 6);
 
-  for (let i = 0; i < pageAll; i++) {
+  for (let i = 0; i <= pageAll; i++) {
     projectList.push(new Array());
-    console.log(projectList[i]);
   }
 
-    index = 0;
+  index = 0;
 
-    for (let i = 0; i < pageAll; i++) {
-        num = 0;
+  for (let i = 0; i <= pageAll; i++) {
+    num = 0;
 
-        for (let j = 6 * i - 6; j <= 6 * i - 1; j++) {
-            if(db.length <= index) {break;}
-            projectList[i][num] = new Project(db[index].generation, db[index].teamName, db[index].projectType, db[index].imageName, db[index].pjTitle, db[index].progressBar);
-            num += 1;
-            index += 1;
-        }
+    for (let j = 6 * i - 6; j <= 6 * i - 1; j++) {
+      if (db.length <= index) {
+        break;
+      }
+      projectList[i][num] = new Project(
+        db[index].generation,
+        db[index].teamName,
+        db[index].projectType,
+        db[index].imageName,
+        db[index].pjTitle,
+        db[index].progressBar
+      );
+      num += 1;
+      index += 1;
     }
+  }
 
+  for (let i = 0; i < projectList[pageNow].length; i++) {
+    document
+      .getElementById("project-list")
+      .appendChild(projectList[pageNow][i].getElement());
+  }
+
+  //왼쪽 콤보박스에 맞는 이벤트, 해당하는 모든 항목이 한 페이지에 나타남
+  document.getElementById("select_generation").onchange = function () {
+    newList = [];
+    removeAllElement("project-list");
+    select = document.getElementById("select_generation");
+    for (i of projectList) {
+      if (select.options[select.selectedIndex].value == "전체") {
+        newList.push(i);
+      } else if (i.generation == select.options[select.selectedIndex].value) {
+        newList.push(i);
+      }
+    }
+    for (let i = 0; i < newList.length; i++) {
+      document
+        .getElementById("project-list")
+        .appendChild(newList[i].getElement());
+    }
+  };
+
+  //각 버튼에 맞는 이벤트, 콤보박스에서 항목을 바꾼 후에 버튼을 누르면 초기 상태로 바뀜
+  document.getElementById("right_btn").onclick = function () {
+    removeAllElement("project-list");
+    pageNow++;
+    if (pageNow > pageAll) {
+      pageNow = 0;
+    }
     for (let i = 0; i < projectList[pageNow].length; i++) {
-      document.getElementById("project-list").appendChild(projectList[pageNow][i].getElement());
+      document
+        .getElementById("project-list")
+        .appendChild(projectList[pageNow][i].getElement());
     }
+  };
 
-    //왼쪽 콤보박스에 맞는 이벤트, 해당하는 모든 항목이 한 페이지에 나타남
-    document.getElementById("select_generation").onchange = function () {
-        newList = [];
-        removeAllElement("project-list");
-        select = document.getElementById("select_generation");
-        for (i of projectList) {
-            if (select.options[select.selectedIndex].value == "전체") {
-                newList.push(i);
-            } else if (i.generation == select.options[select.selectedIndex].value) {
-                newList.push(i);
-            }
-        }
-        for (let i = 0; i < newList.length; i++) {
-            document.getElementById("project-list").appendChild(newList[i].getElement());
-        }
-    };
-
-    //각 버튼에 맞는 이벤트, 콤보박스에서 항목을 바꾼 후에 버튼을 누르면 초기 상태로 바뀜
-    document.getElementById("right_btn").onclick = function () {
-        removeAllElement("project-list");
-        pageNow++;
-        if (pageNow > pageAll) {
-            pageNow = 1;
-        }
-        for (let i = 0; i < projectList[pageNow-1].length; i++) {
-            document.getElementById("project-list").appendChild(projectList[pageNow-1][i].getElement());
-        }
-    };
-
-    document.getElementById("left_btn").onclick = function () {
-        removeAllElement("project-list");
-        pageNow--;
-        if (pageNow < 1) {
-            pageNow = pageAll;
-        }
-        for (let i = 0; i < projectList[pageNow - 1].length; i++) {
-            document.getElementById("project-list").appendChild(projectList[pageNow-1][i].getElement());
-        }
-    };
+  document.getElementById("left_btn").onclick = function () {
+    removeAllElement("project-list");
+    pageNow--;
+    if (pageNow < 0) {
+      pageNow = pageAll;
+    }
+    for (let i = 0; i < projectList[pageNow].length; i++) {
+      document
+        .getElementById("project-list")
+        .appendChild(projectList[pageNow][i].getElement());
+    }
+  };
 };
