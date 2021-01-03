@@ -86,7 +86,7 @@
   column-gap: 75px; */
   /* width: 994.64px; */
   height: 30%;
-  width: calc(100% - 90px);
+  /* width: calc(100% - 90px); */
 }
 
 #project #project-list > .project-content {
@@ -271,13 +271,15 @@
 .project_slider {
   display: flex;
   flex-direction: row;
-  width: 730px;
+  flex-wrap: wrap;
+  width: 994.64px;
+  /* width: calc(100% - 90px); */
   overflow: hidden;
 }
 .project_slider > .project-content {
   display: flex;
   flex-direction: column;
   width: 220px;
-  margin: 0 10px;
+  margin: 30px 37.5px;
   transition: all 0.8s;
 }
