@@ -6,6 +6,9 @@ function removeAllElement(targetId) {
 }
 
 function setPage(pageNow) {
+  for(let i = 0; i < document.getElementsByClassName("page")[0].childNodes.length; i++) {
+    document.getElementsByClassName("page")[0].children[i].classList.remove("page-now");
+  } 
   document.getElementsByClassName("page")[0].children[pageNow].classList.toggle("page-now");
 }
 
@@ -54,7 +57,6 @@ class Project {
     projectType.textContent = this.projectType;
     projectTitle.textContent = this.pjTitle;
     progressBar.max = 100;
-    console.log(this.progressBar);
     progressBar.value = parseInt(this.progressBar);
     completeBox.textContent = "complete";
     
