@@ -159,10 +159,14 @@ window.onload = function() {
     }
 
     let ProMinus1 = document.getElementById("Min-1"); // 팀원관리 (-) 버튼
-    let ProPlus1 = document.getElementById("ProPlus-1");
+
     let Proli1 = document.getElementById("Proli-1"); // 팀원관리 프로필
+    let ProMinus2 = document.getElementById("Min-2"); // 팀원관리 (-) 버튼
+
+    let Proli2 = document.getElementById("Proli-2"); // 팀원관리 프로필
     let ProPlus6 = document.getElementById("ProPlus-6");
     let Proli6 = document.getElementById("testT6");
+    let ProPlus7 = document.getElementById("ProPlus-7");
     let Proli7 = document.getElementById("Proli-7");
 
     ProMinus1.onclick = function(){  // 프로필 (-) 버튼 클릭
@@ -182,26 +186,38 @@ window.onload = function() {
                 }
             }   
         }
-    ProPlus6.onclick = function(){  // 프로필 (+) 버튼 클릭
-        if ( Profcount < 5 ){
-        Proli6.style.display = "none";
-        Profcount += 1;
-        document.getElementById('Proli-6').innerHTML = '<div id = Proli-6><img src="../img/profile-igm.png"width="60px"height="60px" class="pro1"><button class="pro1Minus"><img src="../img/minusbtn.png" alt="" id=Min-6></button><h3>'+ProNAME[5]+'</h3></div>'
-        }
-        else{
-            alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
-        }
-    }
-    ProPlus7.onclick = function(){  // 프로필 (+) 버튼 클릭
-        if ( Profcount < 5 ){
-        Proli7.style.display = "none";
-        Profcount += 1;
-        }
-        else{
-            alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
-        }
-    }
 
+    ProMinus2.onclick = function(){  // 프로필 (-) 버튼 클릭
+            Proli2.style.display = "none";
+            Profcount -= 1;
+            document.getElementById('testT2').innerHTML = '<li id="Proli-2"><img src="../img/profile-igm.png"width="60px"height="60px" class="pro2"><button class="pro1Plus"><img src="../img/plusbtn.png" alt="" id="ProPlus-2"></button><div class="balloon"><h3>'+ProComent[1]+'</h3></div><h3>'+ProNAME[1]+'</h3></li>'
+            let ProPlus2 = document.getElementById("ProPlus-2");
+            ProPlus2.onclick = function(){  // 프로필 (+) 버튼 클릭
+                if ( Profcount < 5 ){
+                    
+                    Profcount += 1;
+                    document.getElementById('testT2').innerHTML = ''
+                    Proli2.style.display = "";
+                    }
+                    else{
+                        alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
+                    }
+                }   
+        }
+
+
+        var hidPro = Proli-1;
+    ProPlus6.onclick = function(){  // 프로필 (+) 버튼 클릭
+            if ( Profcount < 5 ){
+                Profcount += 1;
+                document.getElementById('testT6').innerHTML = ''
+                hidPro.style.display = "";
+                document.getElementById(hidPro).innerHTML = '<div id = Proli-6><img src="../img/profile-igm.png"width="60px"height="60px" class="pro1"><button class="pro6Minus"><img src="../img/minusbtn.png" alt="" id=Min-6></button><h3>'+ProNAME[5]+'</h3></div>'
+                }
+                else{
+                    alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
+                }
+            }   
 
    
 
