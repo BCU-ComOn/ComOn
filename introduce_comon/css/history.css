@@ -7,6 +7,7 @@
 .article-box {
     padding: 75px 50px 75px 50px;
     width: 700px;
+    height: auto;
 }
 
 /* 타이틀 */
@@ -14,32 +15,33 @@
     font-size: 32px;
     font-weight: bold;
     text-align: left;
+    margin-bottom: 25px;
 }
 
 /* 이미지 */
 .history-img {
     width: 700px;
     height: 250px;
-    padding-top: 25px;
+    margin-bottom: 30px;
     display: flex;
 }
 
 .img {
-    width: 350px;
-    height: 250px;
+    width: 50%;
+    height: 100%;
     background-position: 50%;
     background-repeat: no-repeat;
 }
 
 /* 연혁 */
 .history-table {
-    width: 700px;
-    padding-top: 30px;
+    margin-bottom: 10px;
 }
 
 .his-box {
     display: flex;
     justify-content: space-around;
+    
 }
 
 .middle-bar {
@@ -52,11 +54,19 @@
 .text-box{
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
+/* .history-top > .listed-box > .text-box {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.history-bottom > .listed-box > .text-box {
+    margin-top: 30px;
+    margin-bottom: 5px;
+} */
+
 .listed-box {
-    min-height: 90px;
     display: flex;
 }
 
@@ -65,24 +75,20 @@
     min-height: 90px;
     background-color: #f89b00;
     border-radius: 15px;
-    padding: 20px 0px 20px 0px;
 }
 
 .listed-title {
     font-size: 18px;
     font-weight: bold;
     color: #f89b00;
-    padding-left: 10px;
-}
-
-.listed-ul {  
-    margin-top: 10px;
+    margin-left: 10px;
+    padding-bottom: 10px;
 }
 
 .listed-li {
     font-size: 14px;
-    margin-bottom: 5px;
-    padding-left: 10px;
+    padding-bottom: 5px;
+    margin-left: 10px;
     list-style-position: inside;
     list-style-type: none;
 }
@@ -91,7 +97,46 @@ li::before {
     content: "• ";
 }
 
-/* div #box1 {
+.history-top > .listed-box {
+    position: relative; 
+}
+
+.history-top > .listed-box > .listed-bar .text {
+    position: absolute; 
+}
+
+.history-bottom > .listed-box {
+    position: relative; 
+}
+
+.history-bottom > .listed-box > .listed-bar .text-box {
     position: absolute;
-    position: relative; top:20px;
-} */
+}
+
+/*  스크롤바  */
+.table-scroll:hover {
+    overflow-x:scroll;
+    overflow-y:hidden;
+    width: 600px;
+    white-space: nowrap;
+}
+
+.table-scroll::-webkit-scrollbar {
+    height: 15px;
+    width: 100px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+    background-color: #309ce4;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    box-shadow: inset 0px 0px 5px #300ce4;
+}
+
+.table-scroll::-webkit-scrollbar-track {
+    background-color: #D8CEF6;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+}
+
