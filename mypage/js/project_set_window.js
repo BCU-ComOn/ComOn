@@ -362,9 +362,11 @@ window.onload = function() {
         let input = document.getElementById("input");
         let ProBT = document.getElementById("ProBT");
 
+
+
         ProBT.onclick = function(){
             var ProSr = input.value
-
+            
             TESTBOX6.style.display = "none";
             TESTBOX7.style.display = "none";
             TESTBOX8.style.display = "none";
@@ -374,76 +376,55 @@ window.onload = function() {
                 case ProNAME[0]:
                     if(ProCdi1=='DOWN'){
                         let TESTBOX1 = document.getElementById("testT1");
-                        prompt("1번");
                         TESTBOX1.style.display = "";
-                    }
-                    else{
-                        prompt("실패"+ProCdi1);
                     }
                     break
                 case ProNAME[1]:
                         if(ProCdi2=='DOWN'){
                             let TESTBOX2 = document.getElementById("testT2");
-                            prompt("2번");
                             TESTBOX2.style.display = "";
-                        }
-                        else{
-                            prompt("실패"+ProCdi2);
                         }
                         break
                 case ProNAME[2]:
                         if(ProCdi3=='DOWN'){
                             let TESTBOX3 = document.getElementById("testT3");
-                            prompt("3번");
                             TESTBOX3.style.display = "";
-                        }
-                        else{
-                            prompt("실패"+ProCdi3);
                         }
                         break
                 case ProNAME[3]:
                     if(ProCdi4=='DOWN'){
                         let TESTBOX4 = document.getElementById("testT4");
-                        prompt("4번");
                         TESTBOX4.style.display = "";
-                    }
-                    else{
-                        prompt("실패"+ProCdi4);
                     }
                     break                
                 case ProNAME[5]:
                     if(ProCdi6=='DOWN'){
-                        prompt("6번");
                         TESTBOX6.style.display = "";
-                    }
-                    else{
-                        prompt("실패"+ProCdi6);
                     }
                     break
                 case ProNAME[6]:
                     if(ProCdi7=='DOWN'){
-                        prompt("7번");
                         TESTBOX7.style.display = "";
                     }
                     break
                 case ProNAME[7]:
                     if(ProCdi8=='DOWN'){
-                        prompt("8번");
                         TESTBOX8.style.display = "";
                     }
                     break
                 case ProNAME[8]:
                     if(ProCdi9=='DOWN'){
-                        prompt("9번");
                         TESTBOX9.style.display = "";
                     }
                     break
+                case 'ㅁ','a':
+                    prompt("테스트");
+                    TESTBOX1.style.display="";
                 default:
                     TESTBOX6.style.display = "";
                     TESTBOX7.style.display = "";
                     TESTBOX8.style.display = "";
                     TESTBOX9.style.display = ""; 
-                    prompt(ProCdi3)
                     break
             }
         }
