@@ -179,6 +179,11 @@ window.onload = function() {
     let ProPlus9 = document.getElementById("ProPlus-9");
     let TESTBOX9 = document.getElementById("testT9")
  
+    var ProCdi1 = 'UP';
+    var ProCdi2 = 'UP';
+    var ProCdi3 = 'UP';
+    var ProCdi4 = 'UP';
+
     var ProCdi6 = 'DOWN';
     var ProCdi7 = 'DOWN';
     var ProCdi8 = 'DOWN';
@@ -188,12 +193,13 @@ window.onload = function() {
     ProMinus1.onclick = function(){  // 프로필 (-) 버튼 클릭
         Proli1.style.display = "none";
         Profcount -= 1;
+        ProCdi1 = 'DOWN'
         document.getElementById('testT1').innerHTML = '<li id="Proli-1"><img src="../img/profile-igm.png"width="60px"height="60px" class="pro2"><button class="pro1Plus"><img src="../img/plusbtn.png" alt="" id="ProPlus-1"></button><div class="balloon"><h3>'+ProComent[0]+'</h3></div><h3>'+ProNAME[0]+'</h3></li>'
         let ProPlus1 = document.getElementById("ProPlus-1");
         ProPlus1.onclick = function(){  // 프로필 (+) 버튼 클릭
             if ( Profcount < 5 ){
-                TNUM = 2;
                 Profcount += 1;
+                ProCdi1 = 'UP'
                 document.getElementById('testT1').innerHTML = ''
                 Proli1.style.display = "";
                 }
@@ -207,12 +213,14 @@ window.onload = function() {
     ProMinus2.onclick = function(){  // 프로필 (-) 버튼 클릭
             Proli2.style.display = "none";
             Profcount -= 1;
+            ProCdi2 = 'DOWN'
             document.getElementById('testT2').innerHTML = '<li id="Proli-2"><img src="../img/profile-igm.png"width="60px"height="60px" class="pro2"><button class="pro1Plus"><img src="../img/plusbtn.png" alt="" id="ProPlus-2"></button><div class="balloon"><h3>'+ProComent[1]+'</h3></div><h3>'+ProNAME[1]+'</h3></li>'
             let ProPlus2 = document.getElementById("ProPlus-2");
             ProPlus2.onclick = function(){  // 프로필 (+) 버튼 클릭
                 if ( Profcount < 5 ){
                     
                     Profcount += 1;
+                    ProCdi2 = 'UP'
                     document.getElementById('testT2').innerHTML = ''
                     Proli2.style.display = "";
                     }
@@ -225,12 +233,14 @@ window.onload = function() {
     ProMinus3.onclick = function(){  // 프로필 (-) 버튼 클릭
             Proli3.style.display = "none";
             Profcount -= 1;
+            ProCdi3 ='DOWN'
             document.getElementById('testT3').innerHTML = '<li id="Proli-3"><img src="../img/profile-igm.png"width="60px"height="60px" class="pro2"><button class="pro1Plus"><img src="../img/plusbtn.png" alt="" id="ProPlus-3"></button><div class="balloon"><h3>'+ProComent[2]+'</h3></div><h3>'+ProNAME[2]+'</h3></li>'
             let ProPlus3 = document.getElementById("ProPlus-3");
             ProPlus3.onclick = function(){  // 프로필 (+) 버튼 클릭
                 if ( Profcount < 5 ){
                     
                     Profcount += 1;
+                    ProCdi3 = 'UP'
                     document.getElementById('testT3').innerHTML = ''
                     Proli3.style.display = "";
                     }
@@ -243,12 +253,14 @@ window.onload = function() {
     ProMinus4.onclick = function(){  // 프로필 (-) 버튼 클릭
             Proli4.style.display = "none";
             Profcount -= 1;
+            ProCdi4 = 'DOWN'
             document.getElementById('testT4').innerHTML = '<li id="Proli-4"><img src="../img/profile-igm.png"width="60px"height="60px" class="pro2"><button class="pro1Plus"><img src="../img/plusbtn.png" alt="" id="ProPlus-4"></button><div class="balloon"><h3>'+ProComent[3]+'</h3></div><h3>'+ProNAME[3]+'</h3></li>'
             let ProPlus4 = document.getElementById("ProPlus-4");
             ProPlus4.onclick = function(){  // 프로필 (+) 버튼 클릭
                 if ( Profcount < 5 ){
                     
                     Profcount += 1;
+                    ProCdi4 = 'UP'
                     document.getElementById('testT4').innerHTML = ''
                     Proli4.style.display = "";
                     }
@@ -360,9 +372,45 @@ window.onload = function() {
 
             switch(ProSr){
                 case ProNAME[0]:
-                    prompt("1번");
-                    TESTBOX1.style.display = "";
+                    if(ProCdi1=='DOWN'){
+                        let TESTBOX1 = document.getElementById("testT1");
+                        prompt("1번");
+                        TESTBOX1.style.display = "";
+                    }
+                    else{
+                        prompt("실패"+ProCdi1);
+                    }
                     break
+                case ProNAME[1]:
+                        if(ProCdi2=='DOWN'){
+                            let TESTBOX2 = document.getElementById("testT2");
+                            prompt("2번");
+                            TESTBOX2.style.display = "";
+                        }
+                        else{
+                            prompt("실패"+ProCdi2);
+                        }
+                        break
+                case ProNAME[2]:
+                        if(ProCdi3=='DOWN'){
+                            let TESTBOX3 = document.getElementById("testT3");
+                            prompt("3번");
+                            TESTBOX3.style.display = "";
+                        }
+                        else{
+                            prompt("실패"+ProCdi3);
+                        }
+                        break
+                case ProNAME[3]:
+                    if(ProCdi4=='DOWN'){
+                        let TESTBOX4 = document.getElementById("testT4");
+                        prompt("4번");
+                        TESTBOX4.style.display = "";
+                    }
+                    else{
+                        prompt("실패"+ProCdi4);
+                    }
+                    break                
                 case ProNAME[5]:
                     if(ProCdi6=='DOWN'){
                         prompt("6번");
@@ -395,7 +443,7 @@ window.onload = function() {
                     TESTBOX7.style.display = "";
                     TESTBOX8.style.display = "";
                     TESTBOX9.style.display = ""; 
-                    prompt(ProCdi9)
+                    prompt(ProCdi3)
                     break
             }
         }
