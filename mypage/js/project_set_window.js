@@ -170,6 +170,15 @@ window.onload = function() {
     let ProMinus4 = document.getElementById("Min-4");
     let Proli4 = document.getElementById("Proli-4"); 
 
+
+    let TESTBOX1 = document.getElementById("testT1");
+    let TESTBOX2 = document.getElementById("testT2");
+    let TESTBOX3 = document.getElementById("testT3");
+    let TESTBOX4 = document.getElementById("testT4");
+                    
+
+     
+                       
     let ProPlus6 = document.getElementById("ProPlus-6");
     let TESTBOX6 = document.getElementById("testT6")
     let ProPlus7 = document.getElementById("ProPlus-7");
@@ -367,6 +376,10 @@ window.onload = function() {
         ProBT.onclick = function(){
             var ProSr = input.value
             
+            TESTBOX1.style.display = "none";
+            TESTBOX2.style.display = "none";
+            TESTBOX3.style.display = "none";
+            TESTBOX4.style.display = "none";
             TESTBOX6.style.display = "none";
             TESTBOX7.style.display = "none";
             TESTBOX8.style.display = "none";
@@ -375,25 +388,21 @@ window.onload = function() {
             switch(ProSr){
                 case ProNAME[0]:
                     if(ProCdi1=='DOWN'){
-                        let TESTBOX1 = document.getElementById("testT1");
                         TESTBOX1.style.display = "";
                     }
                     break
                 case ProNAME[1]:
                         if(ProCdi2=='DOWN'){
-                            let TESTBOX2 = document.getElementById("testT2");
                             TESTBOX2.style.display = "";
                         }
                         break
                 case ProNAME[2]:
                         if(ProCdi3=='DOWN'){
-                            let TESTBOX3 = document.getElementById("testT3");
                             TESTBOX3.style.display = "";
                         }
                         break
                 case ProNAME[3]:
                     if(ProCdi4=='DOWN'){
-                        let TESTBOX4 = document.getElementById("testT4");
                         TESTBOX4.style.display = "";
                     }
                     break                
@@ -421,6 +430,10 @@ window.onload = function() {
                     prompt("테스트");
                     TESTBOX1.style.display="";
                 default:
+                    TESTBOX1.style.display = "";
+                    TESTBOX2.style.display = "";
+                    TESTBOX3.style.display = "";
+                    TESTBOX4.style.display = "";
                     TESTBOX6.style.display = "";
                     TESTBOX7.style.display = "";
                     TESTBOX8.style.display = "";
