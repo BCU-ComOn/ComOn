@@ -202,32 +202,56 @@ window.onload = function () {
   page.className = "page";
   projectSection.appendChild(page);
 
+
+  projectPage = document.getElementById("project-list");
+  projectElement = new Array();
+
   for (let i = 0; i <= pageAll; i++) {
     let pjpage = document.createElement("div");
     pjpage.className = "pjpage";
+    projectPage.appendChild(pjpage);
+    
+    projectList.push(new Array());
 
-    projectList.push(pjpage);
+    //<div class="circle"></div>
     let circle = document.createElement("div");
     circle.className = "circle";
     page.appendChild(circle);
-    
-    
-    circle.classList.toggle("page-now");
-
+    circle.classList.add("page-now");
   }
 
     index = 0;
-
     for (let i = 0; i <= pageAll; i++) {
         num = 0;
-
         for (let j = 6 * i - 6; j <= 6 * i - 1; j++) {
             if(db.length <= index) {break;}
-            projectList[i][num] = new Project(db[index].generation, db[index].teamName, db[index].projectType, db[index].imageName, db[index].pjTitle, db[index].progressBar);
+            projectList[i][num] = new Project(db[index].generation, db[index].teamName, db[index].projectType, db[index].imageName, db[index].projectTitle, db[index].progressBar);
+            projectElement.push(projectList[i][num].getElement());
             num += 1;
             index += 1;
         }
     }
+
+
+    for(let i = 0; i <= pageAll; i++){
+      for(let j = 0; j < projectList[i].length; j++){
+        projectPage.children[i].appendChild(projectElement[j + 6 * i]);
+      }
+    }
+
+
+
+
+    // for(let i = 0 ; i < db.length; i++){
+    //   projectPage.children[pageNow].appendChild(projectElement[i])
+    // }
+
+
+    // for(let i = 0; i < projectList[pageNow].length; i++){
+    //   projectPage.children[pageNow].appendChild(projectElement[i + 6 * pageNow]);
+    // }
+
+
 
     // for (let i = 0; i < db.length; i++) {
     //   item = new Project(db[i].generation, db[i].teamName, db[i].projectType, db[i].imageName, db[i].pjTitle, db[i].progressBar);
@@ -258,6 +282,8 @@ window.onload = function () {
     // }
 
     //각 버튼에 맞는 이벤트, 콤보박스에서 항목을 바꾼 후에 버튼을 누르면 초기 상태로 바뀜
+
+
 
     //오른쪽 버튼
     document.getElementById("right_btn").onclick = function () {
