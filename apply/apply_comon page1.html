@@ -17,7 +17,7 @@
         <!-- 기본 정보 -->
         <h3 class = "small-title">기본 정보</h3>
         <div class = "contents">
-            <form class = "input">
+            <form class = "input">   
                 <div>
                     <div class="input-label">
                         <label for="text">이름</label>
@@ -39,7 +39,7 @@
                         <label for="text">학년</label>
                     </div>
                     <div>
-                        <select name="grade" class="input-dropdown">
+                        <select id="test" name="grade" class="input-dropdown">
                             <option value="1 grade">1학년</option>
                             <option value="2 grade">2학년</option>
                             <option value="3 grade">3학년</option>
@@ -63,17 +63,16 @@
                     <label for="text">관심 분야</label>
                 </div>
                 <div class = "content">
-                    <div>
-                        <select name="interest part" class="input-dropdown">
-                            <option value="Web">Web</option>
-                            <option value="Game">Game</option>
-                        </select>
-                    </div>
-                    <div class = "interest">
-                        <p>WEB</p>
-                    </div>
-                    <div class = "interest">
-                        <p>GAME</p>
+                    <select name="interest part" class="input-dropdown" onchange="handleOnChange(this)">
+                        <option value="Dropdown">Dropdown</option>
+                        <option value="Web">Web</option>
+                        <option value="Game">Game</option>
+                        <option value="test-1">test-1</option>
+                        <option value="test-2">test-2</option>
+                        <option value="test-3">test-3</option>
+                    </select>
+                    <div class = "interest" style="display:none;"></div>
+                    <div id = "interest">
                     </div>
                 </div>
             </div>
@@ -84,17 +83,17 @@
                     <label for="text">관심 언어</label>
                 </div>
                 <div class = "content">
-                    <div>
-                        <select naame="grade" class="input-dropdown">
-                            <option value="Java">Java</option>
-                            <option value="C#">C#</option>
-                        </select>
-                    </div>
-                    <div class = "interest">
-                        <p>JAVA</p>
-                    </div>
-                    <div class = "interest">
-                        <p>C#</p>
+                    <select name="interest part" class="input-dropdown" onchange="handleOnChange(this)">
+                        <option value="Dropdown">Dropdown</option>
+                        <option value="Web">Java</option>
+                        <option value="Game">C#</option>
+                        <option value="test-1">test-1</option>
+                        <option value="test-2">test-2</option>
+                        <option value="test-3">test-3</option>
+                        
+                    </select>
+                    <div class = "interest" style="display:none;"></div>
+                    <div id = "interest">
                     </div>
                 </div>
             </div>
@@ -112,9 +111,9 @@
             <br>
             <p class ="advice">지원 내용을 다시 한번 확인 하고 지원하세요!</span>
         </div>
-        <div id="comeon">
+        <div>
             <div class = "s">
-                <div class = "bluebutton">
+                <div id="comeon"class = "bluebutton">
                     Come On
                 </div>
             </div>
