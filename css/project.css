@@ -14,6 +14,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 25px;
+  position: relative;
 }
 
 #project .combobox > form {
@@ -53,7 +54,7 @@
   height: 20px;
   background-color: #fff;
   position: absolute;
-  top: 50px;
+  top: 15px;
 }
 
 #project .triangle {
@@ -64,7 +65,6 @@
   border-top: 12.5px solid blue;
 }
 
-/**/
 #project h3 {
   margin: 30px 0;
   font-size: 32px;
@@ -78,7 +78,14 @@
   align-items: center;
 }
 
-.pjpage {
+#project #project-list {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  width: 1010px;
+}
+
+#project .pjpage {
   display: grid;
   grid-template-columns: repeat(3, 280px);
   grid-template-rows: repeat(2, 260px);
@@ -88,21 +95,27 @@
   transition: all 0.4s;
 }
 
-#project-list {
+/*슬라이딩*/
+#project #project-list .project_slider {
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  width: 1010px;
 }
 
-.project-content {
+#project .pjpage > .project-content {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.8s;
+  text-decoration: none;
+  color: #000;
+
   width: 280px;
   height: 245px;
   border-radius: 10px;
   box-shadow: 2px 2px 7px 1px grey;
 }
 
-.project-img {
+#project .pjpage > .project-content > .project-img {
   width: 100%;
   height: 135px;
   border-top-left-radius: 10px;
@@ -113,7 +126,7 @@
 }
 
 /* 기수 */
-.project-img > .generation {
+#project .pjpage > .project-content > .project-img > .generation {
   display: inline-block;
   background-color: grey;
   color: #fff;
@@ -127,7 +140,7 @@
 }
 
 /* 프로젝트 내용(제목, 분류, 진행도 등) */
-.project-explain {
+#project .pjpage > .project-content > .project-explain {
   position: relative;
   background-color: #f5f5f5;
   width: 230;
@@ -152,17 +165,17 @@
   transform: rotate(-35deg);
 }
 
-.project-explain > .team-type {
+#project .pjpage > .project-content > .project-explain > .team-type {
   width: 220px;
 }
 
-.project-explain
+#project .pjpage > .project-content > .project-explain
   > .team-type
   > .team-name {
   font-size: 16px;
 }
 
-.project-explain
+#project .pjpage > .project-content > .project-explain
   > .team-type
   > .project-type {
   display: inline-block;
@@ -177,20 +190,20 @@
   border-radius: 10px;
 }
 
-.project-explain > .project-name {
+#project .pjpage > .project-content > .project-explain > .project-name {
   width: 220px;
   margin-top: 20px;
 }
 
 /* 진행도 시작 */
-.project-explain
+#project .pjpage > .project-content > .project-explain
   > .project-name
   > .project-title {
   color: rgb(168, 168, 168);
   font-size: 12px;
 }
 
-.project-explain
+#project .pjpage > .project-content > .project-explain
   > .project-name
   > progress {
   width: 220px;
@@ -199,7 +212,7 @@
   border-radius: 5px;
 }
 
-.project-explain
+#project .pjpage > .project-content > .project-explain
   > .project-name
   > progress::-webkit-progress-bar {
   width: 220px;
@@ -208,7 +221,7 @@
   border-radius: 5px;
 }
 
-.project-explain
+#project .pjpage > .project-content > .project-explain
   > .project-name
   > progress::-webkit-progress-value {
   width: 220px;
@@ -253,18 +266,4 @@
 /* 현재 페이지 */
 #project .page > .page-now {
   background-color: skyblue;
-}
-
-/*슬라이딩*/
-.project_slider {
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-}
-.project_slider > .pjpage> .project-content {
-  display: flex;
-  flex-direction: column;
-  transition: all 0.8s;
-  text-decoration: none;
-  color: #000;
 }

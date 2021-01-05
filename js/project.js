@@ -33,14 +33,16 @@ class Project {
   imageName = "../img/";
   pjTitle;
   progressBar;
+  link;
 
-  constructor(generation, teamName, projectType, imageName, pjTitle, progressBar) {
+  constructor(generation, teamName, projectType, imageName, pjTitle, progressBar, link) {
     this.generation = generation;
     this.teamName = teamName;
     this.projectType = projectType;
     this.imageName += imageName;
     this.pjTitle = pjTitle;
     this.progressBar = progressBar;
+    this.link = link;
   }
 
   getElement = function () {
@@ -57,7 +59,7 @@ class Project {
     let completeBox = document.createElement("div");
 
     projectContent.className = "project-content";
-    projectContent.href = "";
+    projectContent.href = this.link;
     projectImage.className = "project-img";
     projectImage.style.backgroundImage = "url('" + this.imageName + "')";
     generation.className = "generation";
@@ -110,6 +112,7 @@ window.onload = function () {
       imageName: "사람.jpg",
       projectTitle: "어떤거 진행중",
       progressBar: 10,
+      link: ""
     },
     {
       generation: "2기",
@@ -118,6 +121,7 @@ window.onload = function () {
       imageName: "human.png",
       projectTitle: "어떤거 진행중",
       progressBar: 60,
+      link: ""
     },
     {
       generation: "2기",
@@ -126,6 +130,7 @@ window.onload = function () {
       imageName: "human.png",
       projectTitle: "어떤거 진행중",
       progressBar: 90,
+      link: ""
     },
     {
       generation: "1기",
@@ -134,6 +139,7 @@ window.onload = function () {
       imageName: "human.png",
       projectTitle: "어떤거 진행중",
       progressBar: 40,
+      link: ""
     },
     {
       generation: "1기",
@@ -142,6 +148,7 @@ window.onload = function () {
       imageName: "human.png",
       projectTitle: "어떤거 진행중",
       progressBar: 100,
+      link: ""
     },
     {
       generation: "1기",
@@ -150,6 +157,7 @@ window.onload = function () {
       imageName: "human.png",
       projectTitle: "어떤거 진행중",
       progressBar: 100,
+      link: ""
     },
     {
       generation: "1기",
@@ -158,6 +166,7 @@ window.onload = function () {
       imageName: "human.png",
       projectTitle: "어떤거 진행중",
       progressBar: 10,
+      link: ""
     },
     {
       generation: "2기",
@@ -166,6 +175,7 @@ window.onload = function () {
       imageName: "human.png",
       projectTitle: "어떤거 진행중",
       progressBar: 60,
+      link: ""
     },
     {
       generation: "2기",
@@ -174,6 +184,7 @@ window.onload = function () {
       imageName: "human.png",
       projectTitle: "어떤거 진행중",
       progressBar: 90,
+      link: ""
     },
     {
       generation: "1기",
@@ -182,6 +193,7 @@ window.onload = function () {
       imageName: "human.png",
       projectTitle: "어떤거 진행중",
       progressBar: 40,
+      link: ""
     },
     {
       generation: "1기",
@@ -190,6 +202,7 @@ window.onload = function () {
       imageName: "human.png",
       projectTitle: "어떤거 진행중",
       progressBar: 100,
+      link: ""
     },
     {
       generation: "1기",
@@ -198,6 +211,7 @@ window.onload = function () {
       imageName: "human.png",
       projectTitle: "어떤거 진행중",
       progressBar: 40,
+      link: ""
     },
     {
       generation: "1기",
@@ -206,7 +220,8 @@ window.onload = function () {
       imageName: "human.png",
       projectTitle: "어떤거 진행중",
       progressBar: 100,
-    },
+      link: ""
+    }
   ];
 
   //<div id="project"></div>
@@ -238,11 +253,12 @@ window.onload = function () {
     projectList.push(new Array());
 
     //<div class="circle"></div>
+    //7페이지까지 동그라미, 이후부터 타원으로 눌림
     let circle = document.createElement("div");
     circle.className = "circle";
     page.appendChild(circle);
-    setPage(pageNow);
   }
+  setPage(pageNow);
 
   index = 0;
   for (let i = 0; i <= pageAll; i++) {
@@ -259,7 +275,8 @@ window.onload = function () {
         db[index].projectType,
         db[index].imageName,
         db[index].projectTitle,
-        db[index].progressBar
+        db[index].progressBar,
+        db[index].link
       );
       projectElement.push(projectList[i][num].getElement());
       num += 1;
@@ -324,9 +341,8 @@ window.onload = function () {
       pageNow = pageAll;
     }
 
-    //오류 있음
     for(let i = 0; i <= pageAll; i++){
-      projectPage.children[i].style.transform = "translateX(" + 102 * pageNow + "%)";
+      projectPage.children[i].style.transform = "translateX(-" + 102 * pageNow + "%)";
     }
     setPage(pageNow);
   };
