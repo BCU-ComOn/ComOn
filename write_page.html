@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/write_main.css">
+    <script type="text/javascript" src="js/write_main.js"></script>
     <title>글쓰기</title>
 </head>
 <body><!--시맨틱 태그를 이용해 나누기-->
@@ -20,35 +21,50 @@
         </ul>
     </nav>
     <section>
-        <div class="input_box">
-            <div id="title_box">
-                <input class="titleWrite" type="text" name="title_write" size="32px" maxlength="20" placeholder="포스팅 제목을 입력해주세요" >
-                <div id=right_profile>
-                        <div class="profile_box">
-                            <img class="profile" src="img/bg_comee_ distinction_01.jpg">
-                        </div>
+        <form>
+            <div class="input_box">
+                <div id="title_box">
+                    <input class="titleWrite" type="text" name="title_write" size="32px" maxlength="20" placeholder="포스팅 제목을 입력해주세요" >
+                    <div class="profile_team">
+                        <img class="profile" src="img/profile.png">
                         <p class="team">1팀명</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <textarea class="content_box" type="text" placeholder="글 수정시 여기에 값을 넣어주면 됩니다."></textarea>
+            <hr>
+            <div class="select_box"><!--box 아래부분-->
+                <div>
+                    <div class="project_text">연관 프로젝트</div>
+                    <div class="tag_arrayal">
+                    <select class="in_select_box"  name="rel_project" id="rel_project" onchange="selectTag('rel_project', 'rel_project_plus')">
+                        <option value="ex" selected hidden>없음</option>
+                        <option value="project1">프로젝트1</option>
+                        <option value="project2">프로젝트2</option>
+                        <option value="project3">프로젝트3</option>
+                    </select>
+                    <ul class="list_tag" id="rel_project_plus">
+                    </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="project_text">관련 목록</div>
+                    <div class="tag_arrayal">
+                        <select class="in_select_box" name="rel_list" id="rel_list" onchange="selectTag('rel_list', 'rel_list_plus')">
+                            <option value="ex" selected hidden>선택</option>
+                            <option value="list1">활동내역</option>
+                            <option value="list2">정보공유</option>
+                            <option value="list3">포트폴리오</option>
+                            <option value="list4">오류잡기</option>
+                        </select>
+                        <ul class="list_tag" id="rel_list_plus">
+                        </ul>
+                    </div>
+                    <a class="bottom_writingButton" href="#">작성 완료</a>
                 </div>
             </div>
-            <hr>
-            <input class="content_box" type="text" placeholder="글 수정시 여기에 값을 넣어주면 됩니다.">
-        </div>
-        <hr>
-        <div class="select_box"><!--box 아래부분-->
-            <div>
-                <div class="project_text">연관 프로젝트</div>
-                    <input class="in_select_box" type="number" placeholder="없음">
-            </div>
-            <div>
-                <div class="project_text">관련 목록</div>
-                    <input class="in_select_box" type="number" placeholder="선택">
-                        <ul class="tag">
-                            <li>#활동내역</li>
-                            <li>#정보공유</li>
-                        </ul>
-            </div>
-            <a class="bottom_writingButton" href="#">작성 완료</a>
-        </div>
+        </form>
     </section>
     <footer>footer / </footer>
 </body>
