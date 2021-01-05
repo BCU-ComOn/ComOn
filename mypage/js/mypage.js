@@ -20,13 +20,15 @@ function removeAllElement(targetId) {
     imageName = "../img/";
     pjTitle;
     progressBar;
-    constructor(generation, teamName, projectType, imageName, pjTitle, progressBar) {
+    isMaster;
+    constructor(generation, teamName, projectType, imageName, pjTitle, progressBar, isMaster) {
       this.generation = generation;
       this.teamName = teamName;
       this.projectType = projectType;
       this.imageName += imageName;
       this.pjTitle = pjTitle;
       this.progressBar = progressBar;
+      this.isMaster = isMaster;
     }
 
 
@@ -41,10 +43,11 @@ function removeAllElement(targetId) {
       let projectName = document.createElement("div");
       let projectTitle = document.createElement("span");
       let progressBar = document.createElement("progress");
+      let isMaster = document.createElement("isMas");
       let completeBox = document.createElement("div");
       let settingwheel = document.createElement("img");
       settingwheel.src = "../img/settingwheel.png";
-
+      
     
       projectContent.className = "project-content";
       projectImage.className = "project-img";
@@ -59,16 +62,31 @@ function removeAllElement(targetId) {
       completeBox.className = "complete-box";
       settingwheel.className = "settingwheel";
 
+
       generation.textContent = this.generation;
       teamName.textContent = this.teamName;
       projectType.textContent = this.projectType;
       projectTitle.textContent = this.pjTitle;
       progressBar.max = 100;
       progressBar.value = parseInt(this.progressBar);
+
+      isMaster.max = 1;
+      isMaster.value = parseInt(this.isMaster);
+
       completeBox.textContent = "complete";
       
       projectType.appendChild(completeBox);
   
+
+      if (isMaster.value == 1) {
+        settingwheel.style.display = 'block';
+      }
+      else {
+        settingwheel.style.display = 'none';
+      }
+
+
+
       if (progressBar.value == 100) {
         completeBox.style.display = 'block';
       }
@@ -80,6 +98,7 @@ function removeAllElement(targetId) {
       teamType.appendChild(projectType);
       projectName.appendChild(projectTitle);
       projectName.appendChild(progressBar);
+      projectImage.appendChild(isMaster);
   
       projectImage.appendChild(generation);
       projectExplain.appendChild(teamType);
@@ -395,6 +414,7 @@ window.onload = function() {
               imageName: "사람.jpg",
               projectTitle: "어떤거 진행중",
               progressBar: 10,
+              isMaster: 1,
             },
             {
               generation: "2기",
@@ -403,6 +423,7 @@ window.onload = function() {
               imageName: "human.png",
               projectTitle: "어떤거 진행중",
               progressBar: 60,
+              isMaster: 1,
             },
             {
               generation: "2기",
@@ -411,6 +432,7 @@ window.onload = function() {
               imageName: "human.png",
               projectTitle: "어떤거 진행중",
               progressBar: 90,
+              isMaster: 0,
             },
             {
               generation: "1기",
@@ -419,6 +441,7 @@ window.onload = function() {
               imageName: "human.png",
               projectTitle: "어떤거 진행중",
               progressBar: 40,
+              isMaster: 0,
             },
             {
               generation: "1기",
@@ -427,6 +450,7 @@ window.onload = function() {
               imageName: "human.png",
               projectTitle: "어떤거 진행중",
               progressBar: 100,
+              isMaster: 0,
             },
             {
               generation: "1기",
@@ -435,6 +459,7 @@ window.onload = function() {
               imageName: "human.png",
               projectTitle: "어떤거 진행중",
               progressBar: 100,
+              isMaster: 0,
             },
             {
               generation: "1기",
@@ -443,6 +468,7 @@ window.onload = function() {
               imageName: "human.png",
               projectTitle: "어떤거 진행중",
               progressBar: 10,
+              isMaster: 0,
             },
             {
               generation: "2기",
@@ -451,6 +477,7 @@ window.onload = function() {
               imageName: "human.png",
               projectTitle: "어떤거 진행중",
               progressBar: 60,
+              isMaster: 0,
             },
             {
               generation: "2기",
@@ -459,6 +486,7 @@ window.onload = function() {
               imageName: "human.png",
               projectTitle: "어떤거 진행중",
               progressBar: 90,
+              isMaster: 0,
             },
             {
               generation: "1기",
@@ -467,6 +495,7 @@ window.onload = function() {
               imageName: "human.png",
               projectTitle: "어떤거 진행중",
               progressBar: 40,
+              isMaster: 0,
             },
             {
               generation: "1기",
@@ -475,6 +504,7 @@ window.onload = function() {
               imageName: "human.png",
               projectTitle: "어떤거 진행중",
               progressBar: 100,
+              isMaster: 0,
             },
             {
               generation: "1기",
@@ -483,6 +513,7 @@ window.onload = function() {
               imageName: "human.png",
               projectTitle: "어떤거 진행중",
               progressBar: 40,
+              isMaster: 0,
             },
             {
               generation: "1기",
@@ -491,6 +522,7 @@ window.onload = function() {
               imageName: "human.png",
               projectTitle: "어떤거 진행중",
               progressBar: 100,
+              isMaster: 0,
             },
           ];
         
@@ -519,7 +551,7 @@ window.onload = function() {
         
                 for (let j = 6 * i - 6; j <= 6 * i - 1; j++) {
                     if(db.length <= index) {break;}
-                    projectList[i][num] = new Project(db[index].generation, db[index].teamName, db[index].projectType, db[index].imageName, db[index].pjTitle, db[index].progressBar);
+                    projectList[i][num] = new Project(db[index].generation, db[index].teamName, db[index].projectType, db[index].imageName, db[index].pjTitle, db[index].progressBar, db[index].isMaster);
                     num += 1;
                     index += 1;
                 }
