@@ -528,11 +528,10 @@ window.onload = function() {
         
           projectList = new Array();
           pageNow = 0;
-          pageAll = db.length % 6 == 0 ? (db.length / 6) - 1 : parseInt(db.length / 6);
-          let projectSection = document.getElementById("project");
+          pageAll = 0;
           let page = document.createElement("div");
           page.className = "page";
-          projectSection.appendChild(page);
+          
         
           for (let i = 0; i <= pageAll; i++) {
             projectList.push(new Array());
@@ -549,7 +548,7 @@ window.onload = function() {
             for (let i = 0; i <= pageAll; i++) {
                 num = 0;
         
-                for (let j = 6 * i - 6; j <= 6 * i - 1; j++) {
+                for (let j = db.length * i - db.length; j <= db.length * i - 1; j++) {
                     if(db.length <= index) {break;}
                     projectList[i][num] = new Project(db[index].generation, db[index].teamName, db[index].projectType, db[index].imageName, db[index].pjTitle, db[index].progressBar, db[index].isMaster);
                     num += 1;
@@ -582,12 +581,6 @@ window.onload = function() {
         
             for (let i = 0; i < pageAll; i++){
               
-            }
-
-            let settingwheel = document.getElementsByClassName("settingwheel");
-            settingwheel.onclick = function(){  //취소버튼 클릭
-                window.open('../','new','left=50, top=50, width=800, height=600')
-        
             }
 
 }
