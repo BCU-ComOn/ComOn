@@ -313,31 +313,45 @@ window.onload = function () {
 
   //오른쪽 버튼
   document.getElementById("right_btn").onclick = function () {
-    removeAllElement("project-list");
+    //removeAllElement("project-list");
     pageNow++;
     if (pageNow > pageAll) {
       pageNow = 0;
     }
-    for (let i = 0; i < projectList[pageNow].length; i++) {
-      document
-        .getElementById("project-list")
-        .appendChild(projectList[pageNow][i].getElement());
+
+    for(let i = 0; i <= pageAll; i++){
+      projectPage.children[i].style.transform = "translateX(-" + 102 * pageNow + "%)";
     }
+
+
+    // for (let i = 0; i < projectList[pageNow].length; i++) {
+    //   document
+    //     .getElementById("project-list")
+    //     .appendChild(projectList[pageNow][i].getElement());
+    // }
     setPage(pageNow);
   };
 
   //왼쪽 버튼
   document.getElementById("left_btn").onclick = function () {
-    removeAllElement("project-list");
+    //removeAllElement("project-list");
     pageNow--;
     if (pageNow < 0) {
       pageNow = pageAll;
     }
-    for (let i = 0; i < projectList[pageNow].length; i++) {
-      document
-        .getElementById("project-list")
-        .appendChild(projectList[pageNow][i].getElement());
+
+
+    //오류 있음
+    for(let i = 0; i <= pageAll; i++){
+      projectPage.children[i].style.transform = "translateX(" + 102 * pageNow + "%)";
     }
+
+
+    // for (let i = 0; i < projectList[pageNow].length; i++) {
+    //   document
+    //     .getElementById("project-list")
+    //     .appendChild(projectList[pageNow][i].getElement());
+    // }
     setPage(pageNow);
   };
 };
