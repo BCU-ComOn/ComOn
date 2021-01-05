@@ -2,7 +2,6 @@
 
 body {
   width: 1070px;
-  height: 100px;
   margin: 0 auto;
   font-family: "Noto Sans KR", sans-serif;
   text-align: center;
@@ -14,9 +13,11 @@ body {
   list-style: none;
   color: rgb(48, 156, 228);
   float: left;
+  height: 100px;
   line-height: 100px;
   vertical-align: middle;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 #topMenu .topMenuNoticeBoard {
@@ -57,7 +58,6 @@ body {
   margin: 0 auto;
   text-align: left;
 }
-
 input:focus {
   outline: none;
 }
@@ -67,35 +67,34 @@ input:focus {
 .titleWrite {
   font-size: 32px;
   border: none;
-  margin: 10px;
+  margin-left: 10px;
   color: black;
 }
-
-#right_profile {
+.profile_team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 40px;
   float: right;
-  margin-right: 120px;
+}
+.profile {
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  margin-right: 15px;
 }
 .team {
   font-size: 16px;
-  font-weight: bold;
-}
-.profile_box {
-  width: 60px;
-  height: 60px;
-  border-radius: 70%;
-  overflow: hidden;
-}
-.profile {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  float: right;
+  color: #333;
 }
 .content_box {
   width: 1000px;
   height: 600px;
 }
 hr {
+  width: 1020px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -103,10 +102,12 @@ hr {
 .select_box {
   text-align: left;
   justify-content: left;
-  align-items: left;
   width: 1020px;
   height: 300px;
   margin: 0 auto;
+}
+.tag_arrayal {
+  display: flex;
 }
 .project_text {
   font-size: 16px;
@@ -114,18 +115,26 @@ hr {
 }
 .in_select_box {
   margin-bottom: 30px;
+  margin-right: 5px;
   width: 150px;
   height: 40px;
 }
-.tag {
-  display: inline;
+.list_tag li {
+  display: inline-block;
+  width: 80px;
+  height: 20px;
+  line-height: 20px;
+  background-color: rgb(248, 155, 0);
+  font-size: 12px;
+  margin-left: 15px;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 2rem;
+  color: rgb(255, 255, 255);
 }
 .bottom_writingButton {
-  display: block;
   text-decoration: none;
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
   width: 100px;
   height: 45px;
   line-height: 45px;
