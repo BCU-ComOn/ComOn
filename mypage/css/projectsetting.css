@@ -422,13 +422,14 @@ ul {
 
 
   /* wrapper2 */
-.wrapper2-1{
-      margin-left: 50px ;
 
-  }
+.wrapper2-1{
+    margin-left: 50px ;
+}
   /* (-) 프로필 */
 .Profile{
     height: 95px;
+    width: 500px;
     margin: 30px;
 }
 
@@ -497,7 +498,7 @@ ul {
     height: 20px;
     border: 0;
     background-color: #e0e0e0;
-    background-image: url("/img/마이너스버튼.png");
+    background-image: url("/mypage/Cr.png");
     position: relative;
     left: 40px;
     bottom: 12px;
@@ -641,6 +642,8 @@ button{
 /* 취소,수정 반영 버튼*/
 .MyPagebt{
     float: right;
+    position: relative;
+    right: 45px;
 }
    
 #cancel{
@@ -650,7 +653,7 @@ button{
     outline: 0;
 }
 
-.Apply{
+#Apply{
     width: 100px;
     height: 35px;
     margin: 0px 15px 20px;
