@@ -325,9 +325,9 @@ window.onload = function() {
         Proli.appendChild(balloon);
         Proli.appendChild(ProDNAME);
 
-        let Profile = document.getElementById("Profile");
+        let ProfileD = document.getElementById("ProfileD");
 
-        Profile.appendChild(Proli);
+        ProfileD.appendChild(Proli);
 
     }
 
@@ -336,9 +336,7 @@ window.onload = function() {
         ProUdiv.className = "ProUdiv"
         let PrUImg = document.createElement("img");
         PrUImg.className = "PrUImg"
-        PrUImg.src = "../img/profile-igm.png "
-        PrUImg.width = "60px"
-        PrUImg.height = "60px"
+        PrUImg.src = "../img/profile-igm.png"
         let PrUBT = document.createElement("button");
         PrUBT.className = "PrUBT"
         let ProMiImg = document.createElement("img");
@@ -362,9 +360,9 @@ window.onload = function() {
         PrUBT.appendChild(ProMiImg);
         ProUdiv.appendChild(ProUNAME);
 
-        let ProfileD = document.getElementById("ProfileD");
+        let Profile = document.getElementById("Profile");
 
-        ProfileD.appendChild(ProUdiv);
+        Profile.appendChild(ProUdiv);
     }
 
     function removeElement(targetId){

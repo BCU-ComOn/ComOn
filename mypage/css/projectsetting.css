@@ -427,24 +427,7 @@ ul {
     margin-left: 50px ;
 }
 
-  /* (-) 프로필 */
 
-.ProDImg{
-    width: 60px;
-    height: 60px;
-}
-
-.Proli{
-    margin: 30px;
-}
-
-.ProDBT{
-    width: 22px;
-    height: 22px;
-    border: 1px solid gray;
-    border-radius: 60px;
-    border : none;
-}
 /* 프로필 (+) 버튼 */
 
 .ProPlImg{
@@ -462,8 +445,8 @@ ul {
 .balloon {  
     position:relative; 
     left: 10px;
-    top: 10px;
-    width:390px; 
+    top: 0px;
+    width:410px; 
     height:50px;
     border-radius: 10px;
     background:gray; 
@@ -496,6 +479,16 @@ ul {
 
 /* 위 프로필 */
 
+.ProUdiv{
+    display: inline-block;
+    padding-top: 40px;
+    padding-right: 20px;
+}
+
+.PrUImg{
+    width: 60px;
+    height: 60px;    
+}
 .PrUBT{
     width: 20px;
     height: 20px;
@@ -508,6 +501,13 @@ ul {
 
 }
 
+.ProUNAME{
+    float: center;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
 .ProMiImg{
     width: 20px;
     height: 20px;
@@ -515,60 +515,50 @@ ul {
     right: 5px;
 }
 
+/* 아래 프로필 */
 
+.ProDImg{
+    width: 60px;
+    height: 60px;
+    padding-right: 25px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 왕관 */
-.pro1Top{
-    width: 20px;
-    height: 20px;
-    border: 0;
-    background-color: #e0e0e0;
-    background-image: url("/mypage/Cr.png");
+.Proli{
     position: relative;
-    left: 40px;
-    bottom: 12px;
-    border-radius: 50%;
-    outline: 0;
+    right: 20px;
+    margin: 30px;
 }
 
-.pro1Top img{
+.ProDBT{
+    width: 22px;
+    height: 22px;
+    border: 1px solid gray;
+    border-radius: 60px;
+    border : none;
     position: relative;
-    right: 5px;
+    left: 60px;
+    bottom: 5px;
 }
 
-
-img{
-    margin: 0px 20px;
-}
-
-.Profile h3{
+.ProDNAME{
     float: center;
     font-size: 16px;
     padding-top: 5px;
     padding-left: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 중간 검색창 */
 .input_text{
@@ -597,39 +587,9 @@ button{
 
 
 
-/* 프로필 밑 이름 */
-.balloonPro h3{
-    font-size: 16px;
-    padding-top: 20px;
-    padding-left: 5px;
-}
-
-/* 하단 배치 프로필 */
-.pro2{
-    border: 1px solid gray;
-    border-radius: 50px;
-    border : none;
-    float: left;
-}
-.pro1Plus{
-    width: 20px;
-    height: 20px;
-    border: 0;
-    background-color: #e0e0e0;
-    background-image: url("/img/마이너스버튼.png");
-    position: relative;
-    left: -20px;
-    bottom: 5px;
-    border-radius: 50%;
-    outline: 0;
-
-}
-
 /* 취소,수정 반영 버튼*/
 .MyPagebt{
     float: right;
-    position: relative;
-    right: 45px;
 }
    
 #cancel{
