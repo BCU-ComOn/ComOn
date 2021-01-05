@@ -422,14 +422,19 @@ ul {
 
 
   /* wrapper2 */
-.wrapper2-1{
-      margin-left: 50px ;
 
-  }
+.wrapper2-1{
+    margin-left: 50px ;
+}
   /* (-) 프로필 */
 .Profile{
     height: 95px;
+    width: 500px;
     margin: 30px;
+}
+
+.ProfileT{
+    float: left;
 }
 
 #ProliT{
@@ -444,8 +449,39 @@ ul {
     float: left;
     position: relative;
     right: 50px;
-    margin-left: 20px;
     margin-top: 20px;
+}
+
+#Proli-1 div{
+    margin-left: 20px;
+}
+
+#Proli-2 div{
+    margin-left: 20px;
+}
+
+#Proli-3 div{
+    margin-left: 20px;
+}
+
+#Proli-4 div{
+    margin-left: 20px;
+}
+
+#Proli-6 div{
+    margin-left: 20px;
+}
+
+#Proli-7 div{
+    margin-left: 20px;
+}
+
+#Proli-8 div{
+    margin-left: 20px;
+}
+
+#Proli-9 div{
+    margin-left: 20px;
 }
 
 
@@ -462,7 +498,7 @@ ul {
     height: 20px;
     border: 0;
     background-color: #e0e0e0;
-    background-image: url("/img/마이너스버튼.png");
+    background-image: url("/mypage/Cr.png");
     position: relative;
     left: 40px;
     bottom: 12px;
@@ -539,7 +575,7 @@ button{
     position:relative; 
     left: 10px;
     top: 10px;
-    width:410px; 
+    width:390px; 
     height:50px;
     border-radius: 10px;
     background:gray; 
@@ -606,6 +642,8 @@ button{
 /* 취소,수정 반영 버튼*/
 .MyPagebt{
     float: right;
+    position: relative;
+    right: 45px;
 }
    
 #cancel{
@@ -615,7 +653,7 @@ button{
     outline: 0;
 }
 
-.Apply{
+#Apply{
     width: 100px;
     height: 35px;
     margin: 0px 15px 20px;

@@ -10,7 +10,8 @@ window.onload = function() {
     let cancelBtn2 = document.getElementById("cancel"); //취소버튼
     let delete_btn = document.getElementById("delete-btn"); //프로젝트 삭제 버튼
     let commit_btn = document.getElementById("commit-btn"); //수정반영 버튼
-    
+    let commit_btn2 = document.getElementById("Apply");
+
     /*기본 정보*/
 
     let plusButton = document.getElementById("plusButton");
@@ -91,6 +92,8 @@ window.onload = function() {
 
 
 
+
+
     btnComp.onclick = function() {       //기본정보 클릭
         console.log(wrapper);
         wrapper.style.display = "block";
@@ -127,9 +130,6 @@ window.onload = function() {
         mainWindow.style.display = "none";
 
     }
- 
-    /* 프로필 (+)(-) */
-    var Profcount = 5;
 
     delete_btn.onclick = function(){  //프로젝트 삭제 클릭
         mainWindow.style.display = "none";
@@ -140,13 +140,21 @@ window.onload = function() {
         mainWindow.style.display = "none";
 
     }
+
+    commit_btn2.onclick = function(){  //수정반영 클릭
+        mainWindow.style.display = "none";
+
+    }
+
+    /* 프로필 (+)(-) */
+    var Profcount = 5;
     
     var ProNAME = ['홍길동1','홍길동2','홍길동3','홍길동4','홍길동5','홍길동6','홍길동7','홍길동8','홍길동9','홍길동10'];
     var ProComent = ['코멘트1','코멘트2','코멘트3','코멘트4','코멘트5','코멘트6','코멘트7','코멘트8','코멘트9','코멘트10'];
     
 
 
-    document.getElementById('Proli-top').innerHTML = '<div id = Proli-top><img src="../img/profile-igm.png"width="60px"height="60px" class="pro1"><button class="pro1Top"><img src="../img/minusbtn.png" alt="" id=Min-top></button><h3>'+ProNAME[4]+'</h3></div>'
+    document.getElementById('Proli-top').innerHTML = '<div id = Proli-top><img src="../img/profile-igm.png"width="60px"height="60px" class="pro1"><button class="pro1Top"><img src="/mypage/Cr.png" alt="" width="25" height="20" id=Min-top></button><h3>'+ProNAME[4]+'</h3></div>'
 
 
     
@@ -176,8 +184,6 @@ window.onload = function() {
     let TESTBOX3 = document.getElementById("testT3");
     let TESTBOX4 = document.getElementById("testT4");
                     
-
-     
                        
     let ProPlus6 = document.getElementById("ProPlus-6");
     let TESTBOX6 = document.getElementById("testT6")
