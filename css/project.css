@@ -86,18 +86,12 @@
   column-gap: 75px;
   margin: 0 10px;
   transition: all 0.4s;
-  /* transform: translateX(-102%); */
-  /* height: 30%;
-  width: calc(100% - 90px); */
 }
 
 #project-list {
-  /* width: 1100px;
-  height: 550px; */
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  /* width: calc(100% - 90px); */
   width: 1010px;
 }
 
@@ -265,16 +259,12 @@
 .project_slider {
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
-  /* width: 1100px; */
-  /* height: 550px; */
-  /* width: calc(100% - 90px); */
   overflow: hidden;
 }
 .project_slider > .pjpage> .project-content {
   display: flex;
   flex-direction: column;
-  /* width: 220px; */
-  /* margin: 30px 37.5px; */
   transition: all 0.8s;
+  text-decoration: none;
+  color: #000;
 }
