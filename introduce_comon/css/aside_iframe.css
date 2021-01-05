@@ -29,9 +29,6 @@ ul{
     list-style: none;
     padding: 35px;
 }
-.as:hover {
-    font-weight: bold;
-}
 .bar{
     text-align: center;
     text-decoration: none;

@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/aside_iframe.css">
+    <script src="js/aside_iframe.js" type="text/javascript"></script>
     <title>aside</title>
 </head>
 <body>
     <aside class="left">
         <ul>
-            <li class="as"><a href="mean.html" class="bar" target="display_area">우리는</a></li>
-            <li class="as"><a href="together.html" class="bar" target="display_area">함께 하며</a></li>
-            <li class="as"><a href="introduction_activity.html" class="bar" target="display_area">이런 활동</a></li>
-            <li class="as"><a href="history.html" class="bar" target="display_area">해왔다</a></li>
+            <li class="as"><a href="mean.html" class="bar" id="first" onclick="clickfirst()" onmouseover ="overfirst()" target="display_area">우리는</a></li>
+            <li class="as"><a href="together.html" class="bar" id="second"onclick="clicksecond()" onmouseover ="oversecond()" target="display_area">함께 하며</a></li>
+            <li class="as"><a href="introduction_activity.html" class="bar" id="third" onclick="clickthird()" onmouseover ="overthird()" target="display_area">이런 활동</a></li>
+            <li class="as"><a href="history.html" class="bar" id="fourth" onclick="clickfourth()" onmouseover ="overfourth()" target="display_area">해왔다</a></li>
         </ul>
     </aside>
     <iframe name="display_area" src="mean.html"></iframe>
