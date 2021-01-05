@@ -59,6 +59,18 @@ select::-ms-expand {
   margin-top: 45px;
 }
 .community-sidebar-team > ul > li > a {
-    color: #fff;
-    text-decoration: none;
-  }
+  color: #fff;
+  text-decoration: none;
+}
+A:link {
+  text-decoration: none;
+  color: white;
+}
+A:visited {
+  text-decoration: none;
+  color: white;
+}
+A:hover {
+  text-decoration: none;
+  color: white;
+}
