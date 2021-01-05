@@ -27,7 +27,6 @@ body {
   display: block;
   width: 230px;
   font-size: 32px;
-  font-weight: bold;
 }
 #topMenu .menuLink {
   text-decoration: none;
@@ -35,20 +34,17 @@ body {
   display: block;
   width: 180px;
   font-size: 18px;
-  font-weight: bold;
 }
 #topMenu .writingButton {
   display: block;
   text-decoration: none;
   margin-top: 30px;
   margin-bottom: 30px;
-  margin-left: 20px;
   width: 100px;
   height: 45px;
   line-height: 45px;
   color: rgb(255, 255, 255);
   font-size: 18px;
-  font-weight: bold;
   background-color: rgb(248, 155, 0);
   border-radius: 0.2rem;
 }
@@ -103,7 +99,6 @@ hr {
   text-align: left;
   justify-content: left;
   width: 1020px;
-  height: 300px;
   margin: 0 auto;
 }
 .tag_arrayal {
@@ -140,8 +135,11 @@ hr {
   line-height: 45px;
   color: rgb(255, 255, 255);
   font-size: 18px;
-  font-weight: bold;
   background-color: rgb(248, 155, 0);
   border-radius: 0.2rem;
+  display: block;
   float: right;
+  position: relative;
+  bottom: 70px;
+  right: 20px;
 }
