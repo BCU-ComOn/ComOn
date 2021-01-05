@@ -426,71 +426,118 @@ ul {
 .wrapper2-1{
     margin-left: 50px ;
 }
+
   /* (-) 프로필 */
-.Profile{
-    height: 95px;
-    width: 500px;
+
+.ProDImg{
+    width: 60px;
+    height: 60px;
+}
+
+.Proli{
     margin: 30px;
 }
 
-.ProfileT{
-    float: left;
-}
-
-#ProliT{
-    float: right;
-    position: relative;
-    right: 50px;
-    margin-left: 20px;
-    margin-top: 20px;
-}
-
-#Proli{
-    float: left;
-    position: relative;
-    right: 50px;
-    margin-top: 20px;
-}
-
-#Proli-1 div{
-    margin-left: 20px;
-}
-
-#Proli-2 div{
-    margin-left: 20px;
-}
-
-#Proli-3 div{
-    margin-left: 20px;
-}
-
-#Proli-4 div{
-    margin-left: 20px;
-}
-
-#Proli-6 div{
-    margin-left: 20px;
-}
-
-#Proli-7 div{
-    margin-left: 20px;
-}
-
-#Proli-8 div{
-    margin-left: 20px;
-}
-
-#Proli-9 div{
-    margin-left: 20px;
-}
-
-
-
-.pro1{
+.ProDBT{
+    width: 22px;
+    height: 22px;
     border: 1px solid gray;
-    border-radius: 50px;
+    border-radius: 60px;
     border : none;
 }
+/* 프로필 (+) 버튼 */
+
+.ProPlImg{
+    position: relative;
+    right: 5px;
+
+}
+
+/* 말풍선 */
+.balloonPro li{
+    height: 100px;
+    margin: 0px 0px 5px 0px;
+}
+
+.balloon {  
+    position:relative; 
+    left: 10px;
+    top: 10px;
+    width:390px; 
+    height:50px;
+    border-radius: 10px;
+    background:gray; 
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    list-style-type : none;
+    
+   }
+
+.balloon:after { 
+    border-top: 10px solid transparent; 
+    border-left: 10px solid transparent; 
+    border-right: 10px solid transparent; 
+    border-bottom: 20px solid gray; 
+    content:""; 
+    position:absolute;
+    top:0px;
+    left:-10px;  
+    transform : rotate(30deg);
+
+   }
+
+.ProDCm{
+    font-size: 14px;
+    color: white;
+}
+
+
+
+/* 위 프로필 */
+
+.PrUBT{
+    width: 20px;
+    height: 20px;
+    border: 0;
+    position: relative;
+    left: 60px;
+    bottom: 5px;
+    border-radius: 50%;
+    outline: 0;
+
+}
+
+.ProMiImg{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 왕관 */
 .pro1Top{
@@ -511,23 +558,6 @@ ul {
     right: 5px;
 }
 
-.pro1Minus{
-    width: 20px;
-    height: 20px;
-    border: 0;
-    background-color: #e0e0e0;
-    background-image: url("/img/마이너스버튼.png");
-    position: relative;
-    left: 60px;
-    bottom: 5px;
-    border-radius: 50%;
-    outline: 0;
-}
-
-.pro1Minus img{
-    position: relative;
-    right: 5px;
-}
 
 img{
     margin: 0px 20px;
@@ -565,51 +595,7 @@ button{
     
 }
 
-/* 말풍선 */
-.balloonPro li{
-    height: 100px;
-    margin: 0px 0px 5px 0px;
-}
 
-.balloon {  
-    position:relative; 
-    left: 10px;
-    top: 10px;
-    width:390px; 
-    height:50px;
-    border-radius: 10px;
-    background:gray; 
-    font-size: 14px;
-    text-align: center;
-    display: inline-block;
-    list-style-type : none;
-    
-   }
-
-.balloon h3{
-    font-size: 14px;
-    color: white;
-}
-
-.balloon:after { 
-    border-top: 10px solid transparent; 
-    border-left: 10px solid transparent; 
-    border-right: 10px solid transparent; 
-    border-bottom: 20px solid gray; 
-    content:""; 
-    position:absolute;
-    top:0px;
-    left:-10px;  
-    transform : rotate(30deg);
-
-   }
-
-/* 프로필 (+) 버튼 */
-
-.pro1Plus img{
-    position: relative;
-    right: 6px;
-}
 
 /* 프로필 밑 이름 */
 .balloonPro h3{

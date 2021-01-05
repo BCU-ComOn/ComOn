@@ -146,310 +146,246 @@ window.onload = function() {
 
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /* 프로필 (+)(-) */
     var Profcount = 5;
     
-    var ProNAME = ['홍길동1','홍길동2','홍길동3','홍길동4','홍길동5','홍길동6','홍길동7','홍길동8','홍길동9','홍길동10'];
-    var ProComent = ['코멘트1','코멘트2','코멘트3','코멘트4','코멘트5','코멘트6','코멘트7','코멘트8','코멘트9','코멘트10'];
-    
-
-
-    document.getElementById('Proli-top').innerHTML = '<div id = Proli-top><img src="../img/profile-igm.png"width="60px"height="60px" class="pro1"><button class="pro1Top"><img src="/mypage/Cr.png" alt="" width="25" height="20" id=Min-top></button><h3>'+ProNAME[4]+'</h3></div>'
-
-
-    
-    // 위 프로필 (-)
-    for(var i=1;i<5;i++){
-        document.getElementById('Proli-'+i).innerHTML = '<div id = Proli-'+i+'><img src="../img/profile-igm.png"width="60px"height="60px" class="pro1"><button class="pro1Minus"><img src="../img/minusbtn.png" alt="" id=Min-'+i+'></button><h3>'+ProNAME[i-1]+'</h3></div>'
-    }
-
-
-   // 아래 프로필 (+)
-    for(var i=6;i<10;i++){
-        document.getElementById('testT'+i).innerHTML = '<li id="Proli-'+i+'"><img src="../img/profile-igm.png"width="60px"height="60px" class="pro2"><button class="pro1Plus"><img src="../img/plusbtn.png" alt="" id="ProPlus-'+i+'"></button><div class="balloon"><h3>'+ProComent[i-1]+'</h3></div><h3>'+ProNAME[i-1]+'</h3></li>'
-    }
-
-    let ProMinus1 = document.getElementById("Min-1"); // 팀원관리 (-) 버튼
-    let Proli1 = document.getElementById("Proli-1"); // 팀원관리 프로필
-    let ProMinus2 = document.getElementById("Min-2");
-    let Proli2 = document.getElementById("Proli-2"); 
-    let ProMinus3 = document.getElementById("Min-3");
-    let Proli3 = document.getElementById("Proli-3"); 
-    let ProMinus4 = document.getElementById("Min-4");
-    let Proli4 = document.getElementById("Proli-4"); 
-
-
-    let TESTBOX1 = document.getElementById("testT1");
-    let TESTBOX2 = document.getElementById("testT2");
-    let TESTBOX3 = document.getElementById("testT3");
-    let TESTBOX4 = document.getElementById("testT4");
-                    
-                       
-    let ProPlus6 = document.getElementById("ProPlus-6");
-    let TESTBOX6 = document.getElementById("testT6")
-    let ProPlus7 = document.getElementById("ProPlus-7");
-    let TESTBOX7 = document.getElementById("testT7")
-    let ProPlus8 = document.getElementById("ProPlus-8");
-    let TESTBOX8 = document.getElementById("testT8")
-    let ProPlus9 = document.getElementById("ProPlus-9");
-    let TESTBOX9 = document.getElementById("testT9")
- 
-    var ProCdi1 = 'UP';
-    var ProCdi2 = 'UP';
-    var ProCdi3 = 'UP';
-    var ProCdi4 = 'UP';
-
-    var ProCdi6 = 'DOWN';
-    var ProCdi7 = 'DOWN';
-    var ProCdi8 = 'DOWN';
-    var ProCdi9 = 'DOWN';
-
-
-    ProMinus1.onclick = function(){  // 프로필 (-) 버튼 클릭
-        Proli1.style.display = "none";
-        Profcount -= 1;
-        ProCdi1 = 'DOWN'
-        document.getElementById('testT1').innerHTML = '<li id="Proli-1"><img src="../img/profile-igm.png"width="60px"height="60px" class="pro2"><button class="pro1Plus"><img src="../img/plusbtn.png" alt="" id="ProPlus-1"></button><div class="balloon"><h3>'+ProComent[0]+'</h3></div><h3>'+ProNAME[0]+'</h3></li>'
-        let ProPlus1 = document.getElementById("ProPlus-1");
-        ProPlus1.onclick = function(){  // 프로필 (+) 버튼 클릭
-            if ( Profcount < 5 ){
-                Profcount += 1;
-                ProCdi1 = 'UP'
-                document.getElementById('testT1').innerHTML = ''
-                Proli1.style.display = "";
-                }
-                else{
-                    alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
-                }
-            }
-            let TESTBOX1 = document.getElementById("testT1")   
-        }
-
-    ProMinus2.onclick = function(){  // 프로필 (-) 버튼 클릭
-            Proli2.style.display = "none";
-            Profcount -= 1;
-            ProCdi2 = 'DOWN'
-            document.getElementById('testT2').innerHTML = '<li id="Proli-2"><img src="../img/profile-igm.png"width="60px"height="60px" class="pro2"><button class="pro1Plus"><img src="../img/plusbtn.png" alt="" id="ProPlus-2"></button><div class="balloon"><h3>'+ProComent[1]+'</h3></div><h3>'+ProNAME[1]+'</h3></li>'
-            let ProPlus2 = document.getElementById("ProPlus-2");
-            ProPlus2.onclick = function(){  // 프로필 (+) 버튼 클릭
-                if ( Profcount < 5 ){
-                    
-                    Profcount += 1;
-                    ProCdi2 = 'UP'
-                    document.getElementById('testT2').innerHTML = ''
-                    Proli2.style.display = "";
-                    }
-                    else{
-                        alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
-                    }
-                }   
-        }
-
-    ProMinus3.onclick = function(){  // 프로필 (-) 버튼 클릭
-            Proli3.style.display = "none";
-            Profcount -= 1;
-            ProCdi3 ='DOWN'
-            document.getElementById('testT3').innerHTML = '<li id="Proli-3"><img src="../img/profile-igm.png"width="60px"height="60px" class="pro2"><button class="pro1Plus"><img src="../img/plusbtn.png" alt="" id="ProPlus-3"></button><div class="balloon"><h3>'+ProComent[2]+'</h3></div><h3>'+ProNAME[2]+'</h3></li>'
-            let ProPlus3 = document.getElementById("ProPlus-3");
-            ProPlus3.onclick = function(){  // 프로필 (+) 버튼 클릭
-                if ( Profcount < 5 ){
-                    
-                    Profcount += 1;
-                    ProCdi3 = 'UP'
-                    document.getElementById('testT3').innerHTML = ''
-                    Proli3.style.display = "";
-                    }
-                    else{
-                        alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
-                    }
-                }   
-        }
-
-    ProMinus4.onclick = function(){  // 프로필 (-) 버튼 클릭
-            Proli4.style.display = "none";
-            Profcount -= 1;
-            ProCdi4 = 'DOWN'
-            document.getElementById('testT4').innerHTML = '<li id="Proli-4"><img src="../img/profile-igm.png"width="60px"height="60px" class="pro2"><button class="pro1Plus"><img src="../img/plusbtn.png" alt="" id="ProPlus-4"></button><div class="balloon"><h3>'+ProComent[3]+'</h3></div><h3>'+ProNAME[3]+'</h3></li>'
-            let ProPlus4 = document.getElementById("ProPlus-4");
-            ProPlus4.onclick = function(){  // 프로필 (+) 버튼 클릭
-                if ( Profcount < 5 ){
-                    
-                    Profcount += 1;
-                    ProCdi4 = 'UP'
-                    document.getElementById('testT4').innerHTML = ''
-                    Proli4.style.display = "";
-                    }
-                    else{
-                        alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
-                    }
-                }   
-        }
-
-    ProPlus6.onclick = function(){  // 프로필 (+) 버튼 클릭
-            if ( Profcount < 5 ){
-                Profcount += 1;
-                ProCdi6 = 'UP'
-                TESTBOX6.style.display = "none";
-                document.getElementById('Proli-6').innerHTML = '<div id = Proli-6><img src="../img/profile-igm.png"width="60px"height="60px" class="pro1"><button class="pro1Minus"><img src="../img/minusbtn.png" alt="" id=Min-6></button><h3>'+ProNAME[5]+'</h3></div>'
-                }
-                else{
-                    alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
-                }
-                let ProMinus6 = document.getElementById("Min-6");
-                ProMinus6.onclick = function(){  // 프로필 (-) 버튼 클릭
-                    ProCdi6 = 'DOWN'
-                    document.getElementById('Proli-6').innerHTML = ''
-                    TESTBOX6.style.display = "";
-                    Profcount -= 1;
-            }
-            
-
-        }   
-
-    ProPlus7.onclick = function(){  // 프로필 (+) 버튼 클릭
-            if ( Profcount < 5 ){
-                Profcount += 1;
-                ProCdi7 = 'UP'
-                TESTBOX7.style.display = "none";
-                document.getElementById('Proli-7').innerHTML = '<div id = Proli-7><img src="../img/profile-igm.png"width="60px"height="60px" class="pro1"><button class="pro1Minus"><img src="../img/minusbtn.png" alt="" id=Min-7></button><h3>'+ProNAME[6]+'</h3></div>'
-                }
-                else{
-                    alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
-                }
-                let ProMinus7 = document.getElementById("Min-7");
-                ProMinus7.onclick = function(){  // 프로필 (-) 버튼 클릭
-                    ProCdi7 = 'DOWN'
-                    document.getElementById('Proli-7').innerHTML = ''
-                    TESTBOX7.style.display = "";
-                    Profcount -= 1;
-            }
-            
-
-        }   
-
-    ProPlus8.onclick = function(){  // 프로필 (+) 버튼 클릭
-            if ( Profcount < 5 ){
-                Profcount += 1;
-                ProCdi8 = 'UP'
-                TESTBOX8.style.display = "none";
-                document.getElementById('Proli-8').innerHTML = '<div id = Proli-8><img src="../img/profile-igm.png"width="60px"height="60px" class="pro1"><button class="pro1Minus"><img src="../img/minusbtn.png" alt="" id=Min-8></button><h3>'+ProNAME[7]+'</h3></div>'
-                }
-                else{
-                    alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
-                }
-                let ProMinus8 = document.getElementById("Min-8");
-                ProMinus8.onclick = function(){  // 프로필 (-) 버튼 클릭
-                    ProCdi8 = 'DOWN'
-                    document.getElementById('Proli-8').innerHTML = ''
-                    TESTBOX8.style.display = "";
-                    Profcount -= 1;
-            }
-            
-
-        }   
-
-    ProPlus9.onclick = function(){  // 프로필 (+) 버튼 클릭
-            if ( Profcount < 5 ){
-                Profcount += 1;
-                ProCdi9 = 'UP'
-                TESTBOX9.style.display = "none";
-                document.getElementById('Proli-9').innerHTML = '<div id = Proli-9><img src="../img/profile-igm.png"width="60px"height="60px" class="pro1"><button class="pro1Minus"><img src="../img/minusbtn.png" alt="" id=Min-9></button><h3>'+ProNAME[8]+'</h3></div>'
-                }
-                else{
-                    alert("상단에 고정되어 있는 인원수가 너무 많습니다 .\n\n 최대 인원 5명 ");
-                }
-                let ProMinus9 = document.getElementById("Min-9");
-                ProMinus9.onclick = function(){  // 프로필 (-) 버튼 클릭
-                    ProCdi9 = 'DOWN'
-                    document.getElementById('Proli-9').innerHTML = ''
-                    TESTBOX9.style.display = "";
-                    Profcount -= 1;
-            }
-            
-
-        }   
-
-
+    var users =[
+        {
+            userId:'A',
+            username: "홍길동1",
+            userComent: "코멘트11",
+            userMaster: false,
+        },
+        {
+            userId:'B',
+          username: '홍길동2',
+          userComent: '코멘트22',
+          userMaster: false,
         
+        },
+        {
+            userId:'C',
+            username: '홍길동3',
+            userComent: '코멘트33',
+            userMaster: false,
+          
+        },
+        {
+            userId:'D',
+            username: '홍길동4',
+            userComent: '코멘트44',
+            userMaster: false,
+          
+        },
+        {
+            userId:'E',
+            username: '홍길동5',
+            userComent: '코멘트55',
+            userMaster: true,
+          
+        },
+        {
+            userId:'F',
+            username: '홍길동66',
+            userComent: '코멘트66',
+            userMaster: false,
+          
+        },
+        {
+            userId:'G',
+            username: '홍길동77',
+            userComent: '코멘트77',
+            userMaster: false,
+          
+          },
+        {
+            userId:'H',
+          username: '홍길동88',
+          userComent: '코멘트88',
+          userMaster: false,
+        
+        },
+        {
+            userId:'I',
+            username: '홍길동99',
+            userComent: '코멘트99',
+            userMaster: false,
+          
+          },
+    ];
+    
+    var teamuser =[
+        {
+            username: "홍길동1",
+            userComent: "코멘트11",
+            userMaster: false,
+        },
+        {
+          username: '홍길동2',
+          userComent: '코멘트22',
+          userMaster: false,
+        
+        },
+        {
+            username: '홍길동3',
+            userComent: '코멘트33',
+            userMaster: false,
+          
+        },
+        {
+            username: '홍길동4',
+            userComent: '코멘트44',
+            userMaster: false,
+          
+        },
+        {
+            username: '홍길동5',
+            userComent: '코멘트55',
+            userMaster: true,
+          
+        },
+    ];
+    
+    var Sruser =[
+        {
+            username: "홍길동1",
+            userComent: "코멘트11",
+            userMaster: false,
+        },
+        {
+          username: '홍길동2',
+          userComent: '코멘트22',
+          userMaster: false,
+        
+        },
+        {
+            username: '홍길동3',
+            userComent: '코멘트33',
+            userMaster: false,
+          
+        },
+        {
+            username: '홍길동4',
+            userComent: '코멘트44',
+            userMaster: false,
+          
+        },
+        {
+            username: '홍길동5',
+            userComent: '코멘트55',
+            userMaster: true,
+          
+        },
+    ];
 
-        /* 검색창 */
 
-        let input = document.getElementById("input");
-        let ProBT = document.getElementById("ProBT");
+    function DOWNPro(user){
+        let Proli = document.createElement("li")
+        Proli.className = "Proli"
+        let ProDImg = document.createElement("img");
+        ProDImg.className = "ProDImg"
+        ProDImg.src = "../img/profile-igm.png"
+        let ProDBT = document.createElement("button");
+        ProDBT.className = "ProDBT"
+        let ProPlImg = document.createElement("img");
+        ProPlImg.className = "ProPlImg"
+        ProPlImg.src = "../img/plusbtn.png"
+        let balloon = document.createElement("div");
+        balloon.className = "balloon"
+        let ProDCm = document.createElement("h3");
+        ProDCm.className = "ProDCm"
+        ProDCm.textContent = user.userId + "/" + user.userComent
+        let ProDNAME = document.createElement("h3");
+        ProDNAME.className = "ProDNAME"
+        ProDNAME.textContent = user.username
 
+        ProDBT.onclick = function(){
+            UPPro(user);
 
+        }
 
-        ProBT.onclick = function(){
-            var ProSr = input.value
-            
-            TESTBOX1.style.display = "none";
-            TESTBOX2.style.display = "none";
-            TESTBOX3.style.display = "none";
-            TESTBOX4.style.display = "none";
-            TESTBOX6.style.display = "none";
-            TESTBOX7.style.display = "none";
-            TESTBOX8.style.display = "none";
-            TESTBOX9.style.display = "none";
+        Proli.appendChild(ProDImg);
+        Proli.appendChild(ProDBT);
+        ProDBT.appendChild(ProPlImg);
+        Proli.appendChild(balloon);
+        Proli.appendChild(ProDNAME);
 
-            switch(ProSr){
-                case ProNAME[0]:
-                    if(ProCdi1=='DOWN'){
-                        TESTBOX1.style.display = "";
-                    }
-                    break
-                case ProNAME[1]:
-                        if(ProCdi2=='DOWN'){
-                            TESTBOX2.style.display = "";
-                        }
-                        break
-                case ProNAME[2]:
-                        if(ProCdi3=='DOWN'){
-                            TESTBOX3.style.display = "";
-                        }
-                        break
-                case ProNAME[3]:
-                    if(ProCdi4=='DOWN'){
-                        TESTBOX4.style.display = "";
-                    }
-                    break                
-                case ProNAME[5]:
-                    if(ProCdi6=='DOWN'){
-                        TESTBOX6.style.display = "";
-                    }
-                    break
-                case ProNAME[6]:
-                    if(ProCdi7=='DOWN'){
-                        TESTBOX7.style.display = "";
-                    }
-                    break
-                case ProNAME[7]:
-                    if(ProCdi8=='DOWN'){
-                        TESTBOX8.style.display = "";
-                    }
-                    break
-                case ProNAME[8]:
-                    if(ProCdi9=='DOWN'){
-                        TESTBOX9.style.display = "";
-                    }
-                    break
-                case 'ㅁ','a':
-                    prompt("테스트");
-                    TESTBOX1.style.display="";
-                default:
-                    TESTBOX1.style.display = "";
-                    TESTBOX2.style.display = "";
-                    TESTBOX3.style.display = "";
-                    TESTBOX4.style.display = "";
-                    TESTBOX6.style.display = "";
-                    TESTBOX7.style.display = "";
-                    TESTBOX8.style.display = "";
-                    TESTBOX9.style.display = ""; 
-                    break
-            }
+        let Profile = document.getElementById("Profile");
+
+        Profile.appendChild(Proli);
+
+    }
+
+    function UPPro(user){
+        let ProUdiv = document.createElement("div");
+        ProUdiv.className = "ProUdiv"
+        let PrUImg = document.createElement("img");
+        PrUImg.className = "PrUImg"
+        PrUImg.src = "../img/profile-igm.png "
+        PrUImg.width = "60px"
+        PrUImg.height = "60px"
+        let PrUBT = document.createElement("button");
+        PrUBT.className = "PrUBT"
+        let ProMiImg = document.createElement("img");
+        ProMiImg.className = "ProMiImg"
+        ProMiImg.src = "../img/minusbtn.png"
+        let ProUNAME = document.createElement("h3");
+        ProUNAME.className = "ProUNAME"
+        ProUNAME.textContent = user.username
+
+        PrUBT.onclick = function(){
+            let miBT = this;
+            parent = miBT.parentNode;
+            grandparent = parent.parentNode;
+            grandparent.removeChild(parent);
+
         }
 
 
-   
+        ProUdiv.appendChild(PrUImg);
+        ProUdiv.appendChild(PrUBT);
+        PrUBT.appendChild(ProMiImg);
+        ProUdiv.appendChild(ProUNAME);
+
+        let ProfileD = document.getElementById("ProfileD");
+
+        ProfileD.appendChild(ProUdiv);
+    }
+
+    function removeElement(targetId){
+        target = document.getElementById(targetId);
+        while(target.hasChildNodes){
+            target.removechild(target.firstChild)
+        }
+
+    }
+
+    function addElement(){
+
+    }
 
 
+    for(let i = 0; i < teamuser.length; i++) {
+        //username, userComent, userMaster
+        DOWNPro(teamuser[i])
+    }
+    for(let i = 0; i < users.length; i++) {
+        //username, userComent, userMaster
+        UPPro(users[i])
+    }
 }
