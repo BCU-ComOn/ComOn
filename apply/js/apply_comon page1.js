@@ -4,6 +4,8 @@ comeon.onclick = function() {
     location.href=link;
 }
 
+
+
 function handleOnChange(e){
   //선택된 데이터 가져오기
   const value = e.value;
