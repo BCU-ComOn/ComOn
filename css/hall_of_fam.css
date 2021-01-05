@@ -128,7 +128,7 @@ ul {
   align-items: center;
 }
 
-.memo-img{
+.memo-img {
   margin-left: 15px;
   margin-right: 5px;
 }
@@ -253,7 +253,7 @@ ul {
   margin-right: 5px;
   margin-left: 15px;
 }
-.github-img{
+.github-img {
   margin-left: 30px;
   margin-right: 5px;
   /* margin-top: 500px; */
@@ -266,4 +266,8 @@ ul {
 
 .person-img-figure {
   margin: 0px;
+}
+
+#github-img {
+  border-radius: 30px;
 }
