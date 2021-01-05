@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
 .together {
     width: 700px;
+    padding-top: 150px;
 }
 h3 {
     font-size: 32px;
