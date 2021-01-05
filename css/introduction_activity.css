@@ -1,6 +1,8 @@
 
 /*활동과정 + 중간제목 리스트*/
-
+.Activity_Process {
+    padding-top: 200px;
+}
 .Activity_Process h3 {
     font-size: 32px;
     margin-bottom: 30px;
