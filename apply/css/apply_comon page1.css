@@ -75,10 +75,11 @@
   font-size: 40px;
   text-align: center;
   line-height: 120px;
+  cursor: pointer;
 }
 
 /* Message (하고 싶은 말) */
-.input-message {
+.textarea-message {
   width: 1000px;
   height: 250px;
   font-size: 14px;

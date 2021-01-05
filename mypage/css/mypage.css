@@ -435,3 +435,13 @@ textarea {
   position: absolute;
   right: 0;
 }
+
+.settingwheel{
+  float: right;
+  margin: 10px;
+}
+
+.settingwheel:hover{
+  cursor: pointer;
+  
+}
