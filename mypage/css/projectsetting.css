@@ -502,6 +502,14 @@ ul {
 
 }
 
+.ProCrImg{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    bottom: 50px;
+    left: 40px;
+}
+
 .ProUNAME{
     float: center;
     font-size: 16px;

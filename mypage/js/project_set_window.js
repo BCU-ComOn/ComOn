@@ -162,7 +162,6 @@ window.onload = function() {
     
     
     /* 프로필 (+)(-) */
-    var Profcount = 5;
     
     var users =[
         {
@@ -263,7 +262,7 @@ window.onload = function() {
     
     var Sruser =[
         {
-            username: "홍길동1",
+            username: "홍길동33",
             userComent: "코멘트11",
             userMaster: false,
         },
@@ -315,8 +314,13 @@ window.onload = function() {
         ProDNAME.textContent = user.username
 
         ProDBT.onclick = function(){
-            UPPro(user);
-
+            if(teamuser.length<5){
+                UPPro(user);
+                teamuser.push(user)
+            }
+            else{
+                prompt("인원 초과");
+            }
         }
 
         Proli.appendChild(ProDImg);
@@ -338,27 +342,39 @@ window.onload = function() {
         let PrUImg = document.createElement("img");
         PrUImg.className = "PrUImg"
         PrUImg.src = "../img/profile-igm.png"
+        if(user.userMaster==true){
+            let ProCrImg = document.createElement("img");
+            ProCrImg.className = "ProCrImg"
+            ProCrImg.src = "../img/Crown.png"
+            ProUdiv.appendChild(ProCrImg);
+        }
+        else{
         let PrUBT = document.createElement("button");
         PrUBT.className = "PrUBT"
+        ProUdiv.appendChild(PrUBT);
         let ProMiImg = document.createElement("img");
         ProMiImg.className = "ProMiImg"
         ProMiImg.src = "../img/minusbtn.png"
-        let ProUNAME = document.createElement("h3");
-        ProUNAME.className = "ProUNAME"
-        ProUNAME.textContent = user.username
+        PrUBT.appendChild(ProMiImg);
 
         PrUBT.onclick = function(){
             let miBT = this;
             parent = miBT.parentNode;
             grandparent = parent.parentNode;
             grandparent.removeChild(parent);
-
+            
+            const removeElement = teamuser.indexOf(user);
+            if(removeElement>-1){
+                teamuser.splice(removeElement,1);
+            }
         }
+        }
+        let ProUNAME = document.createElement("h3");
+        ProUNAME.className = "ProUNAME"
+        ProUNAME.textContent = user.username
 
 
         ProUdiv.appendChild(PrUImg);
-        ProUdiv.appendChild(PrUBT);
-        PrUBT.appendChild(ProMiImg);
         ProUdiv.appendChild(ProUNAME);
 
         let Profile = document.getElementById("Profile");
@@ -367,9 +383,14 @@ window.onload = function() {
     }
 
     function removeElement(targetId){
+        console.log("AAAAA");
         target = document.getElementById(targetId);
         while(target.hasChildNodes){
-            target.removechild(target.firstChild)
+            if(target.firstChild==null){
+                break;
+            }
+            target.removeChild(target.firstChild)
+            console.log(target.firstChild);
         }
 
     }
@@ -378,6 +399,13 @@ window.onload = function() {
 
     }
 
+    for(let i = 0; i < teamuser.length; i++){
+        if(teamuser[i].userMaster==true){
+            teamuser.unshift(teamuser[i]);
+            teamuser.pop(teamuser[i]);
+            break;
+        }
+    }
 
     for(let i = 0; i < teamuser.length; i++) {
         //username, userComent, userMaster
@@ -391,9 +419,10 @@ window.onload = function() {
     let ProSrBT = document.getElementById("ProSrBT")
 
     ProSrBT.onclick = function(){
-        for(let i = 0; i < users.length; i++) {
+        removeElement("ProfileD");
+        for(let i = 0; i < Sruser.length; i++) {
             //username, userComent, userMaster
-            DOWNPro(users[i])
+            DOWNPro(Sruser[i])
         }
     }
 }
