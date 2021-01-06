@@ -248,7 +248,7 @@
 }
 
 /* 페이지 수 */
-#project .page {
+#project #page {
   display: flex;
   justify-content: space-between;
 
@@ -256,7 +256,7 @@
   margin: 30px 0;
 }
 
-#project .page > .circle {
+#project #page > .circle {
   background-color: #b8b8b8;
   width: 10px;
   height: 10px;
@@ -264,6 +264,6 @@
 }
 
 /* 현재 페이지 */
-#project .page > .page-now {
+#project #page > .page-now {
   background-color: skyblue;
 }
