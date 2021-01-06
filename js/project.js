@@ -26,6 +26,12 @@ function setPage(pageNow) {
     .children[pageNow].classList.add("page-now");
 }
 
+function circle(page){
+  let circle = document.createElement("div");
+  circle.className = "circle";
+  page.appendChild(circle);
+}
+
 class Project {
   generation;
   teamName;
@@ -238,9 +244,7 @@ window.onload = function () {
     projectList.push(new Array());
 
     //<div class="circle"></div>
-    let circle = document.createElement("div");
-    circle.className = "circle";
-    page.appendChild(circle);
+    circle(page);
     setPage(pageNow);
   }
 
