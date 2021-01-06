@@ -323,6 +323,7 @@ window.onload = function() {
         Proli.appendChild(ProDBT);
         ProDBT.appendChild(ProPlImg);
         Proli.appendChild(balloon);
+        balloon.appendChild(ProDCm);
         Proli.appendChild(ProDNAME);
 
         let ProfileD = document.getElementById("ProfileD");
@@ -380,10 +381,19 @@ window.onload = function() {
 
     for(let i = 0; i < teamuser.length; i++) {
         //username, userComent, userMaster
-        DOWNPro(teamuser[i])
+        UPPro(teamuser[i])
     }
     for(let i = 0; i < users.length; i++) {
         //username, userComent, userMaster
-        UPPro(users[i])
+        DOWNPro(users[i])
+    }
+
+    let ProSrBT = document.getElementById("ProSrBT")
+
+    ProSrBT.onclick = function(){
+        for(let i = 0; i < users.length; i++) {
+            //username, userComent, userMaster
+            DOWNPro(users[i])
+        }
     }
 }
