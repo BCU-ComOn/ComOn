@@ -12,18 +12,10 @@ function appendAllElement(targetId) {
 }
 
 function setPage(pageNow) {
-  for (
-    let i = 0;
-    i < document.getElementsByClassName("page")[0].childNodes.length;
-    i++
-  ) {
-    document
-      .getElementsByClassName("page")[0]
-      .children[i].classList.remove("page-now");
+  for (let i = 0; i < document.getElementById("page").childNodes.length; i++) {
+    document.getElementById("page").children[i].classList.remove("page-now");
   }
-  document
-    .getElementsByClassName("page")[0]
-    .children[pageNow].classList.add("page-now");
+  document.getElementById("page").children[pageNow].classList.add("page-now");
 }
 
 function circle(page){
@@ -221,9 +213,9 @@ window.onload = function () {
   //<div id="project-list"></div>
   let projectPage = document.getElementById("project-list");
   
-  //<div class="page"></div>
+  //<div id="page"></div>
   let page = document.createElement("div");
-  page.className = "page";
+  page.id = "page";
   projectSection.appendChild(page);
   
   let pageNow = 0;
