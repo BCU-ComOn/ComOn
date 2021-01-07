@@ -1,6 +1,6 @@
 let second_onload = window.onload;
 window.onload = function() {
-    second_onload();
+    //second_onload();
     let scroll_fixed = window.scrollY;
     let mainHeader = document.getElementsByTagName('header')[0];
     
@@ -15,5 +15,10 @@ window.onload = function() {
                 mainHeader.classList.toggle('HeaderBackground-none');
             }
         }
+    }
+    let comeon = document.getElementById('comeOn');
+
+    comeon.onclick = function() {
+        location.href = "../apply/apply_comon page1.html";
     }
 }
