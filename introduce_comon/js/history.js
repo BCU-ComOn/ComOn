@@ -47,9 +47,13 @@ window.onload = function() {
         listed_li.classList.add("listed-li");
         
         listed_ul.appendChild(listed_li);
-
+        
         listed_li.textContent = table_list[i].list_items[j]; 
-      } 
+      }
+      
+      for (let k = 0; k < list_items.length; k++) {
+        listed_bar.style.height = `${47 + 19 * k}px`;
+      }
 
       if (i % 2 == 0) { 
         let history_top = document.getElementsByClassName("history-top")[0];
