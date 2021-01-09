@@ -6,10 +6,6 @@ window.onload = function() {
   }
 }
 
-
-
-
-
 //관심 분야 시작//
 function handleOnChange(e){
 //선택된 데이터 가져오기
@@ -20,7 +16,7 @@ if(value == 'Dropdown') { // Dropdown을 선택했을때, 생성 안되도록 �
   return false;
 }
 //데이터 출력
-let checkbox = document.getElementsByClassName('interest');
+let checkbox = document.getElementsByClassName('interests');
 
 // 생성전, 중복 되었는가를 판단. 
 for(var i = 0; i < checkbox.length; i++) {
@@ -29,15 +25,27 @@ for(var i = 0; i < checkbox.length; i++) {
     return false;
   }
 }
+
+//3개 이상은 선택 불가
+let b = document.getElementsByClassName('content')[0];
+let a = b.getElementsByClassName('interests');
+if(a.length >= 4){
+  alert('3개까지 선택이 가능합니다!');
+  return false;
+}
+
+
 // 위의 for문을 정상적으로 끝내고 나면 생성함.
 let new_box = document.createElement('div');
-new_box.className = 'interest';
+new_box.className = 'interests';
 new_box.textContent = value;
+
 
 let minus = document.createElement('div');
 minus.innerHTML = '<div class="minus" onclick="orangeBoxDelete(this);"><hr class="line"></div>';
 //minus.className = 'minus';
 new_box.appendChild(minus);
+
 
 /*let line = document.createElement('hr');
 line.className = 'line';
@@ -52,10 +60,9 @@ function orangeBoxDelete(umm){
   let orangebox = umm.parentNode;
   orangebox.parentNode.parentNode.removeChild(orangebox.parentNode);
 }
+
+
 //관심 분야 끝//
-
-
-
 
 //관심 언어 시작//
 function handleOnChang(th){
@@ -76,6 +83,15 @@ for(var i = 0; i < checkbox.length; i++) {
     return false;
   }
 }
+
+//3개 이상 선택 불가
+let c = document.getElementsByClassName('content')[1];
+let j = document.getElementsByClassName('interest');
+if(j.length >=4){
+  alert('3개까지 선택이 가능합니다!');
+  return false;
+}
+
 // 위의 for문을 정상적으로 끝내고 나면 생성함.
 let new_box = document.createElement('div');
 new_box.className = 'interest';
