@@ -1,34 +1,32 @@
-@import url("https://fonts.google.com/specimen/Noto+Sans+KR"); /* 기본 폰트 */
-
-.crewSize {
-  height: 1200px;
+.crew {
+  height: auto;
 }
 
-.crew {
+.crew_text {
   text-align: center;
   font-size: 18px;
 }
 
-.crew-header {
+.crew_header {
   display: block;
   margin: 30px;
 }
 
-.crew-header h3 {
+.crew_header h3 {
   font-size: 32px;
   margin: 30px;
 } /* 헤더 css 끝 */
 
-.crewPlan {
+.crew_plan {
   text-align: center;
 }
 
-.crewPlan > div {
+.crew_plan > div {
   display: flex;
   justify-content: center;
 }
 
-.crewPlan article {
+.crew_plan article {
   width: 250px;
   height: 250px;
   background-repeat: no-repeat;
@@ -37,38 +35,39 @@
   margin: 20px 37.5px 0px 37.5px; /* 왼쪽과 오른쪽에 37.5만큼 줌으로써 사진 사이가 75px만큼 벌어지게 했습니다. */
 }
 
-.crewPlan article:first-child {
+.crew_plan article:first-child {
   background-image: url("../img/bg_comee_\ distinction_01.jpg");
 }
 
-.crewPlan article:nth-last-child(1) {
+.crew_plan article:nth-last-child(1) {
   background-image: url("../img/bg_comee_\ distinction_03.jpg");
 }
 
-.crewPlan article:nth-last-child(2) {
+.crew_plan article:nth-last-child(2) {
   background-image: url("../img/bg_comee_\ distinction_02.jpg");
 }
 
-.crewPlan-info {
+.plan_box {
   height: 100%;
   padding: 30px;
   box-sizing: border-box;
   flex-direction: column;
   color: #fff;
   background: rgba(0, 0, 0, 0.5);
+  line-height: 25px;
 }
 
-.crewPlan-info strong {
+.plan_box strong {
   font-size: 24px;
 }
 
-.crewPlan-info p {
+.plan_box p {
   font-size: 16px;
   text-align: left;
   margin-top: 35px;
 } /* 계획 섹션 css 끝 */
 
-.theYear-box {
+.year_box {
   display: block;
   position: relative;
   width: 300px;
@@ -79,7 +78,7 @@
   background-color: #00bbff;
 }
 
-.theYear-box:after {
+.year_box:after {
   content: "";
   position: absolute;
   width: 0;
@@ -92,7 +91,7 @@
   border-color: #00bbff transparent transparent transparent;
 }
 
-.theYear-box span {
+.year_box span {
   display: block;
   padding-top: 15px;
   font-size: 16px;
@@ -100,35 +99,41 @@
   text-align: center;
 } /* 기수 섹션 css 끝*/
 
-.imgCM-table,
-.imgCrew-table {
-  width: 100%;
-}
-
-.imgCM,
-.imgCrew {
+.admin_profile,
+.crew_profile {
   font-size: 28px;
-  text-align: center;
   width: 725px;
-  margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
 }
 
-.imgCM h4,
-.imgCrew h4 {
+.crew_profile {
+  margin-bottom: 40px;
+}
+
+.admin_profile h4,
+.crew_profile h4 {
   text-align: center;
   margin: 30px;
 }
 
-.imgCrew h4 {
+.crew_profile h4 {
   margin-top: 21px; /* 하나로 묶는 바람에 위 공백 44px이 생기게 되서 나머지 21px을 더 늘려줌으로써 총 공백 65px 생성 */
   margin-bottom: 30px;
 }
 
-.imgCrew-img {
+.admin_table {
+  text-align: center;
+}
+
+.admin_table,
+.crew_table {
+  width: 100%;
+}
+
+.profile_img {
   display: inline-block;
-  background: url("../img/profile-igm.png") no-repeat;
+  background: url("../img/profile_img.png") no-repeat;
   background-size: contain;
   width: 60px;
   height: 60px;
@@ -136,13 +141,13 @@
   padding: 0;
 }
 
-.img-text {
+.profile_name {
   font-size: 16px;
   padding-top: 60px;
   text-align: center;
 }
 
-.theInformation-box {
+.profile_box {
   width: 300px;
   display: none;
   position: relative;
@@ -155,14 +160,14 @@
   background-color: #808080;
 }
 
-.theInformation-box p {
+.profile_box p {
   font-size: 14px;
   line-height: 20px;
   margin-top: 5px;
   margin-bottom: 0;
 }
 
-.theInformation-box:after {
+.profile_box:after {
   content: "";
   position: absolute;
   width: 0;
@@ -175,15 +180,15 @@
   border-color: transparent transparent #808080;
 }
 
-.imgCrew-img {
+.profile_img {
   margin-bottom: 61px; /* 글자 h 사이즈 21px과 이미지 사이의 40px를 합한 61로 넣었습니다.*/
 } /* 크루 섹션 css 끝 */
 
-.imgCrew-img div:hover {
+.profile_img div:hover {
   background-color: #ffff00;
   opacity: 30%;
 }
 
-.imgCrew-img div:hover + span {
+.profile_img div:hover + span {
   display: block;
 } /* 마우스에 따른 배경 색과 display on/off 기능 */

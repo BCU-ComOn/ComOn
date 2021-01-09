@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>동아리원 소개</title>
     <link rel="stylesheet" href="./css/crew.css">
+    <link rel="stylesheet" href="./css/crew_reset.css">
+    <script src="js/crew.js"></script>
 </head>
 <body>
-    <div class="crewSize">
-        <div class="crew">
-            <div class="crew-header">
+    <div class="crew">
+        <div class="crew_text">
+            <div class="crew_header">
                 <h3>컴온들</h3>
                 <caption>컴온들은 이런 사람들이에요!</caption>
             </div> <!--헤더 html 끝-->
         </div>
-        <section class="crewPlan">
+        <section class="crew_plan">
             <div>
                 <article>
-                    <div class="crewPlan-info">
+                    <div class="plan_box">
                         <strong>열정</strong>
                         <p>
                             버퍼들은 열정이 가득한 사람들입니다.
@@ -26,7 +28,7 @@
                     </div>
                 </article>
                 <article>
-                    <div class="crewPlan-info">
+                    <div class="plan_box">
                         <strong>협업</strong>
                         <p>
                             버퍼들은 협업 중심의 과제로 활동이 이루어집니다.
@@ -35,7 +37,7 @@
                     </div>
                 </article>
                 <article>
-                    <div class="crewPlan-info">
+                    <div class="plan_box">
                         <strong>공유</strong>
                         <p>
                             버퍼들은 자신의 지식을 공유합니다.
@@ -45,243 +47,178 @@
                 </article>
             </div>
         </section> <!--계획 섹션 html 끝-->
-        <section class="theYear-box">
-            <div>
-                <span>1기</span>
-            </div>
+        <section class="year_box">
+            <span>1기</span>
         </section> <!--기수 섹션 html 끝-->
-        <section class="imgCManage">
-            <div class="imgCM">
-                <div>
-                    <h4>운영진</h4>
-                </div>  
-                <table class="imgCM-table">
-                    <tr>
-                        <td class="imgCrew-img">
-                            <div class="img-text">운영진1</div>
-                            <span class="theInformation-box">
-                                부장 :
-                                <p>
-                                    관심사: 어쩌구, 저쩌구<br />
-                                    동아리 활동이 도움이 되길 바랍니다!
-                                </p>
-                            </span>
-                        </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">운영진2</div>
-                            <span class="theInformation-box">
-                                부장 :
-                                <p>
-                                    관심사: 어쩌구, 저쩌구<br />
-                                    동아리 활동이 도움이 되길 바랍니다!
-                                </p>
-                            </span>
-                        </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">운영진3</div>
-                            <span class="theInformation-box">
-                                부장 :
-                                <p>
-                                    관심사: 어쩌구, 저쩌구<br />
-                                    동아리 활동이 도움이 되길 바랍니다!
-                                </p>
-                            </span>
-                        </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">운영진4</div>
-                            <span class="theInformation-box">
-                                부장 :
-                                <p>
-                                    관심사: 어쩌구, 저쩌구<br />
-                                    동아리 활동이 도움이 되길 바랍니다!
-                                </p>
-                            </span>
-                        </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">운영진5</div>
-                            <span class="theInformation-box">
-                                부장 :
-                                <p>
-                                    관심사: 어쩌구, 저쩌구<br />
-                                    동아리 활동이 도움이 되길 바랍니다!
-                                </p>
-                            </span>
-                        </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">운영진6</div>
-                            <span class="theInformation-box">
-                                부장 :
-                                <p>
-                                    관심사: 어쩌구, 저쩌구<br />
-                                    동아리 활동이 도움이 되길 바랍니다!
-                                </p>
-                            </span>
-                        </td>
+        <section id="profile">
+            <div class="admin_profile">
+                <h4>운영진</h4>
+                <table class="admin_table">
+                    <tr id="profile_table">
+                        
                     </tr>
                 </table>
             </div> <!--크루 (운영진) 섹션 html 끝-->
-            <div class="imgCrew">
-                <div>
-                    <h4>부원</h4>
-                </div>
-                <table class="imgCrew-table">
+            <div class="crew_profile">
+                <h4>부원</h4>
+                <table class="crew_table">
                     <tr>
-                        <td class="imgCrew-img">
-                            <div class="img-text">부원1</div>
-                            <span class="theInformation-box">
+                        <td class="profile_img">
+                            <div class="profile_name">부원1</div>
+                            <span class="profile_box">
                                 팀명 :
                                 <p>
                                     관심사: 어쩌구, 저쩌구
                                 </p>
                             </span>
                         </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">부원2</div>
-                            <span class="theInformation-box">
+                        <td class="profile_img">
+                            <div class="profile_name">부원2</div>
+                            <span class="profile_box">
                                 팀명 :
                                 <p>
                                     관심사: 어쩌구, 저쩌구
                                 </p>
                             </span>
                         </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">부원3</div>
-                            <span class="theInformation-box">
+                        <td class="profile_img">
+                            <div class="profile_name">부원3</div>
+                            <span class="profile_box">
                                 팀명 :
                                 <p>
                                     관심사: 어쩌구, 저쩌구
                                 </p>
                             </span>
                         </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">부원4</div>
-                            <span class="theInformation-box">
+                        <td class="profile_img">
+                            <div class="profile_name">부원4</div>
+                            <span class="profile_box">
                                 팀명 :
                                 <p>
                                     관심사: 어쩌구, 저쩌구
                                 </p>
                             </span>
                         </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">부원5</div>
-                            <span class="theInformation-box">
+                        <td class="profile_img">
+                            <div class="profile_name">부원5</div>
+                            <span class="profile_box">
                                 팀명 :
                                 <p>
                                     관심사: 어쩌구, 저쩌구
                                 </p>
                             </span>
                         </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">부원6</div>
-                            <span class="theInformation-box">
+                        <td class="profile_img">
+                            <div class="profile_name">부원6</div>
+                            <span class="profile_box">
                                 팀명 :
                                 <p>
                                     관심사: 어쩌구, 저쩌구
                                 </p>
                             </span>
                         </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">부원7</div>
-                            <span class="theInformation-box">
+                        <td class="profile_img">
+                            <div class="profile_name">부원7</div>
+                            <span class="profile_box">
                                 팀명 :
                                 <p>
                                     관심사: 어쩌구, 저쩌구
                                 </p>
                             </span>
                         </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">부원8</div>
-                            <span class="theInformation-box">
+                        <td class="profile_img">
+                            <div class="profile_name">부원8</div>
+                            <span class="profile_box">
                                 팀명 :
                                 <p>
                                     관심사: 어쩌구, 저쩌구
                                 </p>
                             </span>
                         </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">부원9</div>
-                            <span class="theInformation-box">
+                        <td class="profile_img">
+                            <div class="profile_name">부원9</div>
+                            <span class="profile_box">
                                 팀명 :
                                 <p>
                                     관심사: 어쩌구, 저쩌구
                                 </p>
                             </span>
                         </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">부원10</div>
-                            <span class="theInformation-box">
+                        <td class="profile_img">
+                            <div class="profile_name">부원10</div>
+                            <span class="profile_box">
                                 팀명 :
                                 <p>
                                     관심사: 어쩌구, 저쩌구
                                 </p>
                             </span>
                         </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">부원11</div>
-                            <span class="theInformation-box">
+                        <td class="profile_img">
+                            <div class="profile_name">부원11</div>
+                            <span class="profile_box">
                                 팀명 :
                                 <p>
                                     관심사: 어쩌구, 저쩌구
                                 </p>
                             </span>
                         </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">부원12</div>
-                            <span class="theInformation-box">
+                        <td class="profile_img">
+                            <div class="profile_name">부원12</div>
+                            <span class="profile_box">
                                 팀명 :
                                 <p>
                                     관심사: 어쩌구, 저쩌구
                                 </p>
                             </span>
                         </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">부원13</div>
-                            <span class="theInformation-box">
+                        <td class="profile_img">
+                            <div class="profile_name">부원13</div>
+                            <span class="profile_box">
                                 팀명 :
                                 <p>
                                     관심사: 어쩌구, 저쩌구
                                 </p>
                             </span>
                         </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">부원14</div>
-                            <span class="theInformation-box">
+                        <td class="profile_img">
+                            <div class="profile_name">부원14</div>
+                            <span class="profile_box">
                                 팀명 :
                                 <p>
                                     관심사: 어쩌구, 저쩌구
                                 </p>
                             </span>
                         </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">부원15</div>
-                            <span class="theInformation-box">
+                        <td class="profile_img">
+                            <div class="profile_name">부원15</div>
+                            <span class="profile_box">
                                 팀명 :
                                 <p>
                                     관심사: 어쩌구, 저쩌구
                                 </p>
                             </span>
                         </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">부원16</div>
-                            <span class="theInformation-box">
+                        <td class="profile_img">
+                            <div class="profile_name">부원16</div>
+                            <span class="profile_box">
                                 팀명 :
                                 <p>
                                     관심사: 어쩌구, 저쩌구
                                 </p>
                             </span>
                         </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">부원17</div>
-                            <span class="theInformation-box">
+                        <td class="profile_img">
+                            <div class="profile_name">부원17</div>
+                            <span class="profile_box">
                                 팀명 :
                                 <p>
                                     관심사: 어쩌구, 저쩌구
                                 </p>
                             </span>
                         </td>
-                        <td class="imgCrew-img">
-                            <div class="img-text">부원18</div>
-                            <span class="theInformation-box">
+                        <td class="profile_img">
+                            <div class="profile_name">부원18</div>
+                            <span class="profile_box">
                                 팀명 :
                                 <p>
                                     관심사: 어쩌구, 저쩌구
