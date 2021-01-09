@@ -96,21 +96,20 @@ window.onload = function () {
 
   let profileTd = document.createElement("td");
   profileTd.className = "profile_img";
-  profileTable.appendChild(profileTd);
+  for (var i = 0; i < db.length; i++) {
+    profileTable.appendChild(profileTd);
+  }
 
   var crewList = new Array();
 
-  index = 0;
-
   for (var i = 0; i < db.length; i++) {
     crewList[i] = new Crew(
-        db[index].profileName,
-        db[index].imageName,
-        db[index].position,
-        db[index].interests,  
-        db[index].word,
+        db[i].profileName,
+        db[i].imageName,
+        db[i].position,
+        db[i].interests,  
+        db[i].word,
     );
-    index += 1;
-};
+    };
   
 };
