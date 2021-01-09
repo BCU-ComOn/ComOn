@@ -1,6 +1,70 @@
-function Combobox {
-    
+class Plan {
+    imageName = "./img/";
+    planName;
+    planText;
+    constructor(
+        imageName,
+        planName,
+        planText
+    ) {
+        this.imageName += imageName;
+        this.planName = planName;
+        this.planText = planText;
+    }
+    getElement = function () {
+        let planboxArticle = document.createElement("article");
+        let planboxDiv = document.createElement("div");
+        let planboxStrong = document.createElement("strong");
+        let planboxP = document.createElement("p");
+
+        planboxArticle.className = "crew_plan";
+        planboxArticle.style.backgroundImage = "url('" + this.imageName + "')";
+        planboxArticle.style.backgroundPosition = "center";
+        planboxArticle.style.backgroundSize = "cover";
+        planboxDiv.className = "plan_box";
+
+        planboxStrong.textContent = this.planName;
+        planboxP.textContent = this.planText;
+
+        planboxDiv.appendChild(planboxStrong);
+        planboxDiv.appendChild(planboxP);
+
+        planboxArticle.appendChild(planboxDiv);
+
+        return planboxArticle;
+    }
 }
+
+class Year {
+    yearPeer;
+    constructor(
+        yearPeer
+    ) {
+        this.yearPeer = yearPeer;
+    }
+    getElement = function () {
+        let comboboxSelect = document.createElement("select");
+        let comboboxChoice = document.createElement("option");
+        let comboboxOption = document.createElement("option");
+
+        comboboxSelect.id = "select_id"; /*???*/
+        comboboxSelect.className = "select_class";
+
+        comboboxChoice.value = "";
+        comboboxOption.value = this.yearPeer;
+        /* selected, disabled, hidden 기능들을 어떻게 넣을 수 있을까? */
+        /* 콤보 박스 옵션창 가운데 정렬 방법 */
+
+        comboboxChoice.textContent = "선택하세요";
+        comboboxOption.textContent = this.yearPeer + " 기";
+        
+        comboboxSelect.appendChild(comboboxChoice);
+        comboboxSelect.appendChild(comboboxOption);
+
+        return comboboxSelect;
+    }
+}
+/* 콤보 박스 js로 구현하기 */
 
 class Crew {
     crewName;
@@ -30,8 +94,9 @@ class Crew {
         let profileAddplus = document.createElement("p");
 
         profileTd.className = "profile_img";
-        profileTd.style.background = "url('" + this.imageName + "')";
-        profileTd.style.backgroundSize = "contain";
+        profileTd.style.backgroundImage = "url('" + this.imageName + "')";
+        profileTd.style.backgroundPosition = "center";
+        profileTd.style.backgroundSize = "cover";
         profileName.className = "profile_name";
         profileBox.className = "profile_box";
         profilePosition.className = "position_name";
@@ -63,6 +128,23 @@ class Crew {
 }
 
 window.onload = function () {
+    dbPlan = [
+        {
+            imageName: "bg_comee_\ distinction_01.jpg",
+            planName: "열정",
+            planText: "버퍼들은 열정이 가득한 사람들입니다. 과제를 수행하면서 열정이 중요한 역할을 합니다.",
+        },
+        {
+            imageName: "bg_comee_\ distinction_03.jpg",
+            planName: "협업",
+            planText: "버퍼들은 협업 중심의 과제로 활동이 이루어집니다. 함께 고민하고 협업으로 결과물을 만들어보세요.",
+        },
+        {
+            imageName: "bg_comee_\ distinction_02.jpg",
+            planName: "공유",
+            planText: "버퍼들은 자신의 지식을 공유합니다. 배움에서 멈추는 것이 아닌, 서로의 퍼즐을 맞춰주는 역할을 합니다.",
+        },
+    ]
     dbAdmin = [
         {
             crewName: "운영진1",
@@ -236,6 +318,22 @@ window.onload = function () {
         },
     ];
 
+    planBox = document.getElementById("plan_box");
+
+    var planList = new Array();
+
+    for (var i = 0; i < dbPlan.length; i++) {
+        planList[i] = new Plan(
+            dbPlan[i].imageName,
+            dbPlan[i].planName,
+            dbPlan[i].planText,   
+        )
+    };
+
+    for (var i = 0; i < dbPlan.length; i++) {
+        planBox.appendChild(planList[i].getElement());
+    } /* 동아리 계획 js 완료 */
+
     adminTable = document.getElementById("admin_table");
     crewTable = document.getElementById("crew_table");
 
@@ -266,8 +364,7 @@ window.onload = function () {
         )
     };
 
-    for (var i = 0; i < crewList.length; i++) {
-        console.log(crewList[i]);
+    for (var i = 0; i < crewList.length; i++) { 
         crewTable.appendChild(crewList[i].getElement());
-    }
+    } /* 운영진, 부원 js 완료 */
 };

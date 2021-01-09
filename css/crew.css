@@ -17,35 +17,22 @@
   margin: 30px;
 } /* 헤더 css 끝 */
 
-.crew_plan {
+.plan {
   margin-top: 20px;
   text-align: center;
 }
 
-.crew_plan > div {
+.plan > div {
   display: flex;
   justify-content: center;
 }
 
-.crew_plan article {
+.crew_plan {
   width: 250px;
   height: 250px;
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin: 20px 37.5px 0px 37.5px; /* 왼쪽과 오른쪽에 37.5만큼 줌으로써 사진 사이가 75px만큼 벌어지게 했습니다. */
-}
-
-.crew_plan article:first-child {
-  background-image: url("../img/bg_comee_\ distinction_01.jpg");
-}
-
-.crew_plan article:nth-last-child(1) {
-  background-image: url("../img/bg_comee_\ distinction_03.jpg");
-}
-
-.crew_plan article:nth-last-child(2) {
-  background-image: url("../img/bg_comee_\ distinction_02.jpg");
 }
 
 .plan_box {
@@ -92,38 +79,20 @@
   border-color: #00bbff transparent transparent transparent;
 }
 
-.combobox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 16px;
-  text-align: center;
-  color: #fff;
-}
-
-.combobox form {
-  width: 300px;
+.yearBox form {
   height: 50px;
-  background-color: #00bbff;
 }
 
-.combobox select {
-  /* ie 에서는 화살표가 계속 나옴 */
+.select_class {
   appearance: none;
   width: 100%;
   height: 100%;
-  text-align: center;
-  border: none;
+  border-style: none;
   color: #fff;
   background-color: #00bbff;
-}
-
-.select_combobox {
   text-align-last: center;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-/* 기수 css 끝*/
+} /* 기수 css 끝*/
+
 .admin_profile,
 .crew_profile {
   font-size: 28px;
