@@ -1,6 +1,6 @@
 class Crew {
     crewName;
-    imageName = "../img/";
+    imageName = "./img/";
     position = "직위: ";
     interests = "관심사: ";
     word = "한마디: ";
@@ -26,6 +26,7 @@ class Crew {
 
         profileTd.className = "profile_img";
         profileTd.style.background = "url('" + this.imageName + "')";
+        profileTd.style.backgroundSize = "contain";
         profileName.className = "profile_name";
         profileBox.className = "profile_box";
 
@@ -45,7 +46,7 @@ class Crew {
 }
 
 window.onload = function () {
-    db = [
+    dbAdmin = [
         {
             crewName: "운영진1",
             imageName: "profile_img.png",
@@ -92,25 +93,22 @@ window.onload = function () {
 
     profileTable = document.getElementById("profile_table");
 
-    let profileTd = document.createElement("td");
-    profileTd.className = "profile_img";
+    var adminList = new Array();
 
-    var crewList = new Array();
+    var adminElement = new Array();
 
-    var crewElement = new Array();
-
-    for (var i = 0; i < db.length; i++) {
-        crewList[i] = new Crew(
-            db[i].profileName,
-            db[i].imageName,
-            db[i].position,
-            db[i].interests,  
-            db[i].word,
+    for (var i = 0; i < dbAdmin.length; i++) {
+        adminList[i] = new Crew(
+            dbAdmin[i].crewName,
+            dbAdmin[i].imageName,
+            dbAdmin[i].position,
+            dbAdmin[i].interests,  
+            dbAdmin[i].word,
         );
-        crewElement.push(crewList[i].getElement());
+        adminElement.push(adminList[i].getElement());
     };
 
-    for (var i = 0; i < crewList.length; i++) {
-        profileTable.appendChild(crewElement[i]);
+    for (var i = 0; i < adminList.length; i++) {
+        profileTable.appendChild(adminElement[i]);
     }
 };
