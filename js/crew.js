@@ -70,21 +70,21 @@ window.onload = function () {
       word: "동아리 활동이 도움이 되길 바랍니다!",
     },
     {
-      profileName: "운영진1",
+      profileName: "운영진4",
       imageName: "profile_img.png",
       position: "부장",
       interests: "어쩌구, 저쩌구",
       word: "동아리 활동이 도움이 되길 바랍니다!",
     },
     {
-      profileName: "운영진2",
+      profileName: "운영진5",
       imageName: "profile_img.png",
       position: "부장",
       interests: "어쩌구, 저쩌구",
       word: "동아리 활동이 도움이 되길 바랍니다!",
     },
     {
-      profileName: "운영진3",
+      profileName: "운영진6",
       imageName: "profile_img.png",
       position: "부장",
       interests: "어쩌구, 저쩌구",
@@ -103,17 +103,14 @@ window.onload = function () {
   index = 0;
 
   for (var i = 0; i < db.length; i++) {
-    index = 0;
-    for () {
-      crewList[i][index] = new Crew(
+    crewList[i] = new Crew(
         db[index].profileName,
         db[index].imageName,
         db[index].position,
         db[index].interests,  
         db[index].word,
-      );
-      index += 1;
-    };
-  };
+    );
+    index += 1;
+};
   
 };
