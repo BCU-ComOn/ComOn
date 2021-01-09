@@ -22,7 +22,6 @@ class Crew {
         let profileName = document.createElement("div");
         let profileBox = document.createElement("span");
         let interests = document.createElement("p");
-        let nextBr = document.createElement("br");
         let word = document.createElement("p");
 
         profileTd.className = "profile_img";
@@ -36,7 +35,6 @@ class Crew {
         word.textContent = this.word;
 
         profileBox.appendChild(interests);
-        profileBox.appendChild(nextBr);
         profileBox.appendChild(word);
 
         profileTd.appendChild(profileName);
@@ -90,29 +88,29 @@ window.onload = function () {
             interests: "어쩌구, 저쩌구",
             word: "동아리 활동이 도움이 되길 바랍니다!",
         },
-  ];
+    ];
 
-  profileTable = document.getElementById("profile_table");
+    profileTable = document.getElementById("profile_table");
 
-  let profileTd = document.createElement("td");
-  profileTd.className = "profile_img";
-  for (var i = 0; i < db.length; i++) {
-    profileTable.appendChild(profileTd);
-  }
+    let profileTd = document.createElement("td");
+    profileTd.className = "profile_img";
 
-  var crewList = new Array();
+    var crewList = new Array();
 
-  var crewElement = new Array();
+    var crewElement = new Array();
 
-  for (var i = 0; i < db.length; i++) {
-    crewList[i] = new Crew(
-        db[i].profileName,
-        db[i].imageName,
-        db[i].position,
-        db[i].interests,  
-        db[i].word,
-    );
-    crewElement.push(crewList[i].getElement());
+    for (var i = 0; i < db.length; i++) {
+        crewList[i] = new Crew(
+            db[i].profileName,
+            db[i].imageName,
+            db[i].position,
+            db[i].interests,  
+            db[i].word,
+        );
+        crewElement.push(crewList[i].getElement());
     };
-  
+
+    for (var i = 0; i < crewList.length; i++) {
+        profileTable.appendChild(crewElement[i]);
+    }
 };
