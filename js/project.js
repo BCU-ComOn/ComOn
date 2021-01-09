@@ -30,7 +30,7 @@ class Project {
   generation;
   teamName;
   projectType;
-  imageName = "../img/";
+  imageName = "./img/";
   pjTitle;
   progressBar;
   constructor(
