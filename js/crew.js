@@ -1,95 +1,95 @@
 class Crew {
-    profileName;
+    crewName;
     imageName = "../img/";
     position = "직위: ";
     interests = "관심사: ";
     word = "한마디: ";
     constructor(
-      profileName,
+      crewName,
       imageName,
       position,
       interests,
       word
     ) {
-      this.profileName = profileName;
+      this.crewName = crewName;
       this.imageName += imageName;
       this.position += position;
       this.interests += interests;
       this.word += word;
     }
     getElement = function () {
-      let profileTd = document.createElement("td");
-      let profileName = document.createElement("div");
-      let profileBox = document.createElement("span");
-      let interests = document.createElement("p");
-      let nextBr = document.createElement("br /");
-      let word = document.createElement("p");
+        let profileTd = document.createElement("td");
+        let profileName = document.createElement("div");
+        let profileBox = document.createElement("span");
+        let interests = document.createElement("p");
+        let nextBr = document.createElement("br");
+        let word = document.createElement("p");
 
-      profileTd.className = "profile_img";
-      profileTd.style.background = "url('" + this.imageName + "')";
-      profileName.className = "profile_name";
-      profileBox.className = "profile_box";
+        profileTd.className = "profile_img";
+        profileTd.style.background = "url('" + this.imageName + "')";
+        profileName.className = "profile_name";
+        profileBox.className = "profile_box";
 
-      profileName.textContent = this.profileName;
-      position.textContent = this.position;
-      interests.textContent = this.interests;
-      word.textContent = this.word;
+        profileName.textContent = this.crewName;
+        profileBox.textContent = this.position;
+        interests.textContent = this.interests;
+        word.textContent = this.word;
 
-      profileBox.appendChild(interests);
-      profileBox.appendChild(nextBr);
-      profileBox.appendChild(word);
+        profileBox.appendChild(interests);
+        profileBox.appendChild(nextBr);
+        profileBox.appendChild(word);
 
-      profileTd.appendChild(profileName);
-      profileTd.appendChild(profileBox);
+        profileTd.appendChild(profileName);
+        profileTd.appendChild(profileBox);
 
-      return profileTd;
+        return profileTd;
     };
-  }
+}
 
 window.onload = function () {
-  db = [
-    {
-      profileName: "운영진1",
-      imageName: "profile_img.png",
-      position: "부장",
-      interests: "어쩌구, 저쩌구",
-      word: "동아리 활동이 도움이 되길 바랍니다!",
-    },
-    {
-      profileName: "운영진2",
-      imageName: "profile_img.png",
-      position: "부장",
-      interests: "어쩌구, 저쩌구",
-      word: "동아리 활동이 도움이 되길 바랍니다!",
-    },
-    {
-      profileName: "운영진3",
-      imageName: "profile_img.png",
-      position: "부장",
-      interests: "어쩌구, 저쩌구",
-      word: "동아리 활동이 도움이 되길 바랍니다!",
-    },
-    {
-      profileName: "운영진4",
-      imageName: "profile_img.png",
-      position: "부장",
-      interests: "어쩌구, 저쩌구",
-      word: "동아리 활동이 도움이 되길 바랍니다!",
-    },
-    {
-      profileName: "운영진5",
-      imageName: "profile_img.png",
-      position: "부장",
-      interests: "어쩌구, 저쩌구",
-      word: "동아리 활동이 도움이 되길 바랍니다!",
-    },
-    {
-      profileName: "운영진6",
-      imageName: "profile_img.png",
-      position: "부장",
-      interests: "어쩌구, 저쩌구",
-      word: "동아리 활동이 도움이 되길 바랍니다!",
-    },
+    db = [
+        {
+            crewName: "운영진1",
+            imageName: "profile_img.png",
+            position: "부장",
+            interests: "어쩌구, 저쩌구",
+            word: "동아리 활동이 도움이 되길 바랍니다!",
+        },
+        {
+            crewName: "운영진2",
+            imageName: "profile_img.png",
+            position: "부장",
+            interests: "어쩌구, 저쩌구",
+            word: "동아리 활동이 도움이 되길 바랍니다!",
+        },
+        {
+            crewName: "운영진3",
+            imageName: "profile_img.png",
+            position: "부장",
+            interests: "어쩌구, 저쩌구",
+            word: "동아리 활동이 도움이 되길 바랍니다!",
+        },
+        {
+            crewName: "운영진4",
+            imageName: "profile_img.png",
+            position: "부장",
+            interests: "어쩌구, 저쩌구",
+            word: "동아리 활동이 도움이 되길 바랍니다!",
+        },
+        {
+            crewName: "운영진5",
+            imageName: "profile_img.png",
+            position: "부장",
+            interests: "어쩌구, 저쩌구",
+            word: "동아리 활동이 도움이 되길 바랍니다!",
+        },
+        {
+            crewName: "운영진6",
+            imageName: "profile_img.png",
+            position: "부장",
+            interests: "어쩌구, 저쩌구",
+            word: "동아리 활동이 도움이 되길 바랍니다!",
+        },
   ];
 
   profileTable = document.getElementById("profile_table");
@@ -102,6 +102,8 @@ window.onload = function () {
 
   var crewList = new Array();
 
+  var crewElement = new Array();
+
   for (var i = 0; i < db.length; i++) {
     crewList[i] = new Crew(
         db[i].profileName,
@@ -110,6 +112,7 @@ window.onload = function () {
         db[i].interests,  
         db[i].word,
     );
+    crewElement.push(crewList[i].getElement());
     };
   
 };
