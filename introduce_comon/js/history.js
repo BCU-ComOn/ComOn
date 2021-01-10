@@ -58,7 +58,7 @@ window.onload = function() {
         listed_bar.style.height = `${90 + 17.5 * k}px`;
       }
       
-      if (3 < table_list.length) {
+      if (2 < table_list.length) {
         if (table_list.length % 2 == 0) {
           evenfunction();
         }
