@@ -429,10 +429,10 @@ window.onload = function () {
     for (var i = 0; i < dbYear.length; i++) {
         if (selectId.options[selectId.selectedIndex].value == "") {
             totalProfile.style.display = "none";
-        };
+        }
         else if (selectId.options[selectId.selectedIndex].value == dbYear.yearPeer) {
             totalProfile.style.display = "block";
-        };
+        }
     };
 };
 
