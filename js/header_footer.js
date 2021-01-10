@@ -33,23 +33,23 @@ window.addEventListener('DOMContentLoaded', function() {
     li4.innerHTML = [
         '<a href="">',
             '<span>Comeest</span>',
-            '<img src="/img/comeest_basic.png" alt="트로피"></img>',
+            '<img src="img/comeest_basic.png" alt="트로피"></img>',
         '</a>',
         '<a href="">',
             '<span>명예의전당</span>',
-            '<img src="/img/comeest_basic.png" alt="트로피"></img>',
+            '<img src="img/comeest_basic.png" alt="트로피"></img>',
         '</a>'
     ].join("");
     li5.innerHTML = [
         '<a href="#" class="login-user" onclick="clickLogin(this); return false;">',
-            '<img src="/img/profile-igm.png" alt="유저" id="header-user">',
+            '<img src="img/profile-igm.png" alt="유저" id="header-user">',
             '<span class="profile-text">Login</span>',
         '</a>',
         '<div class="comoff">',
             '<span id="comoff-font">Com;Off</span>',
         '</div>',
         '<a href="#" class="profile-user" onclick="clickUser(this); return false;">',
-            '<img src="/img/profile-igm.png" alt="유저" id="header-user">',
+            '<img src="img/profile-igm.png" alt="유저" id="header-user">',
             '<span class="profile-text">홍길동</span>',
         '</a>'
     ].join("");
@@ -267,22 +267,38 @@ window.addEventListener('DOMContentLoaded', function() {
         clickComOff(this);
     }
 
-    let imgTrophy = document.getElementsByTagName('img')[0];
+    let Allimg = docuHeader.getElementsByTagName('img');
+    for(let i = 0; i < Allimg.length; i++) {
+        findImage(Allimg[i]);
+    }
     //findImage(imgTrophy.src);
 })
 
+function findImage(img) {
+    for(var i = 0; i < 5; i++) {
+        if(img.naturalHeight == 0) {
+            img.src = "../" + img.getAttribute('src');
+        } else {
+            return false;
+        }
+    }
+}
+/*
 function findImage(imgsrc) {
-    console.log('앙!');
+    console.log(imgsrc);
     let files = new Image;
     files.src = imgsrc;
-    if(!files.complete) {
-        files.src = "../" + files.src;
-    } else {
-        return false;
-    }
     console.log(files.src);
+    for(var i = 0; i < 5; i++) {
+        if(!files.complete) {
+            files.src = "../" + imgsrc;
+            console.log(files.src);
+        } else {
+            return false;
+        }
+    }
 }
-
+*/
 function mouseoverNav(parent) {
     let noneChild = parent.getElementsByTagName('a')[0];
     let displayChild = parent.getElementsByTagName('a')[1];
