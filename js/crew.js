@@ -808,6 +808,7 @@ window.onload = function () {
     let crewTable = document.createElement("table");
     let adminTr = document.createElement("tr");
     let crewTr = document.createElement("tr");
+    let dummyTd = document.createElement("td");
 
     adminDiv.className = "admin_profile";
     crewDiv.className = "crew_profile";
@@ -819,6 +820,8 @@ window.onload = function () {
     adminHfour.textContent = "운영진";
     crewHfour.textContent = "부원";
 
+    adminTr.appendChild(dummyTd);
+    crewTr.appendChild(dummyTd);
     adminTable.appendChild(adminTr);
     crewTable.appendChild(crewTr);
     adminDiv.appendChild(adminHfour);
@@ -848,8 +851,8 @@ window.onload = function () {
         selectId = document.getElementById("select_id");
         for (var i = 0; i < dbYear.length; i++) {
             if (selectId.options[selectId.selectedIndex].value == dbYear[i].yearStage) {
-                removeAllElement("adminTr");
-                removeAllElement("crewTr");
+                removeAllElement("admin_tr");
+                removeAllElement("crew_tr");
                 for (var j = 0; j < dbAdmin.length; j++) {
                     if (dbYear[i].yearStage == dbAdmin[j].yearNum) {
                         adminList[j] = new Crew(
