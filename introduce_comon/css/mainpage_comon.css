@@ -71,6 +71,10 @@ html, body {
 }
 
 #mainPage-iframe {
-    height: 100vh;
+    height: 800px;
     width: 100vw;
+}
+
+#footer {
+    margin: 0;
 }
