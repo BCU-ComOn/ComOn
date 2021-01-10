@@ -43,25 +43,13 @@ class Year {
         this.yearPeer = yearPeer;
     }
     getElement = function () {
-        let comboboxSelect = document.createElement("select");
-        let comboboxChoice = document.createElement("option");
         let comboboxOption = document.createElement("option");
 
-        comboboxSelect.id = "select_id"; /*???*/
-        comboboxSelect.className = "select_class";
-
-        comboboxChoice.value = "";
         comboboxOption.value = this.yearPeer;
-        /* selected, disabled, hidden 기능들을 어떻게 넣을 수 있을까? */
-        /* 콤보 박스 옵션창 가운데 정렬 방법 */
 
-        comboboxChoice.textContent = "선택하세요";
         comboboxOption.textContent = this.yearPeer + " 기";
-        
-        comboboxSelect.appendChild(comboboxChoice);
-        comboboxSelect.appendChild(comboboxOption);
 
-        return comboboxSelect;
+        return comboboxOption;
     }
 }
 /* 콤보 박스 js로 구현하기 */
@@ -124,6 +112,17 @@ class Crew {
 }
 
 window.onload = function () {
+    dbYear = [
+        {
+            yearPeer: "1",
+        },
+        {
+            yearPeer: "2",
+        },
+        {
+            yearPeer: "3",
+        },
+    ]
     dbPlan = [
         {
             imageName: "bg_comee_\ distinction_01.jpg",
@@ -322,15 +321,38 @@ window.onload = function () {
         planList[i] = new Plan(
             dbPlan[i].imageName,
             dbPlan[i].planName,
-            dbPlan[i].planText,   
+            dbPlan[i].planText,
         )
     };
-
-    
 
     for (var i = 0; i < dbPlan.length; i++) {
         planBox.appendChild(planList[i].getElement());
     } /* 동아리 계획 js 완료 */
+
+    yearSelect = document.getElementById("select_id");
+
+    let comboboxChoice = document.createElement("option");
+
+    comboboxChoice.value = "";
+    comboboxChoice.selected = true;
+    comboboxChoice.disabled = true;
+    comboboxChoice.hidden = true;
+
+    comboboxChoice.textContent = "선택하세요";
+
+    yearSelect.appendChild(comboboxChoice);
+
+    var yearList = new Array();
+
+    for (var i = 0; i < dbYear.length; i++) {
+        yearList[i] = new Year(
+            dbYear[i].yearPeer,
+        )
+    };
+
+    for (var i = 0; i < dbYear.length; i++) {
+        yearSelect.appendChild(yearList[i].getElement());
+    } /* 동아리 기수 js 완료 */
 
     let totalProfile = document.getElementById("profile");
     let adminDiv = document.createElement("div");
