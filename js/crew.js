@@ -423,6 +423,17 @@ window.onload = function () {
             mouseoutImg(this);
         }
     }
+
+    selectId = document.getElementById("select_id");
+
+    for (var i = 0; i < dbYear.length; i++) {
+        if (selectId.options[selectId.selectedIndex].value == "") {
+            totalProfile.style.display = "none";
+        };
+        else if (selectId.options[selectId.selectedIndex].value == dbYear.yearPeer) {
+            totalProfile.style.display = "block";
+        };
+    };
 };
 
 function mouseoverImg(parent){ //마우스 오버시 >> 어두워보임
