@@ -448,7 +448,6 @@ window.onload = function () {
     document.getElementById("select_id").onchange = function () {
         
         selectId = document.getElementById("select_id");
-
         for (var i = 0; i < dbYear.length; i++) {
             if (selectId.options[selectId.selectedIndex].value == dbYear[i].yearStage) {  
                 for (var j = 0; j < dbAdmin.length; j++) {
@@ -463,7 +462,7 @@ window.onload = function () {
                     };
                     adminTr.appendChild(adminList[j].getElement());
                 };
-                for (var j = 0; j < dbAdmin.length; j++) {
+                for (var j = 0; j < dbCrew.length; j++) {
                     if (dbYear[i].yearStage == dbCrew[j].yearNum) {
                         crewList[j] = new Crew(
                             dbCrew[j].crewName,
