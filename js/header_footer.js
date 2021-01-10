@@ -206,7 +206,7 @@ window.addEventListener('DOMContentLoaded', function() {
             'font-size: 14px;',
             'color: #ffffff;',
             'justify-content: center;',
-            'border-radius: 8px;',
+            'border-radius: 0px 0px 8px 8px;',
         '}',
         '#comoff-font {',
             'cursor: pointer;',
