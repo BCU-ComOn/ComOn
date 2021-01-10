@@ -415,18 +415,40 @@ window.onload = function () {
         yearSelect.appendChild(yearList[i].getElement());
     } /* 동아리 기수 js 완료 */
 
-    let profile = document.getElementById("profile");
+    let totalProfile = document.getElementById("profile");
+    let adminDiv = document.createElement("div");
+    let crewDiv = document.createElement("div");
+    let adminHfour = document.createElement("h4");
+    let crewHfour = document.createElement("h4");
+    let adminTable = document.createElement("table");
+    let crewTable = document.createElement("table");
+    let adminTr = document.createElement("tr");
+    let crewTr = document.createElement("tr");
 
-    let adminTr = document.getElementById("admin_tr");
-    let crewTr = document.getElementById("crew_tr");
+    adminDiv.className = "admin_profile";
+    crewDiv.className = "crew_profile";
+    adminTable.className = "admin_table";
+    crewTable.className = "crew_table";
 
-    let adminList = new Array();
-    let crewList = new Array();
+    adminHfour.textContent = "운영진";
+    crewHfour.textContent = "부원";
+
+    adminTable.appendChild(adminTr);
+    crewTable.appendChild(crewTr);
+    adminDiv.appendChild(adminHfour);
+    crewDiv.appendChild(crewHfour);
+    adminDiv.appendChild(adminTable);
+    crewDiv.appendChild(crewTable);
+    totalProfile.appendChild(adminDiv);
+    totalProfile.appendChild(crewDiv);
+
+    var adminList = new Array();
+    var crewList = new Array();
 
     document.getElementById("select_id").onchange = function () {
         
         selectId = document.getElementById("select_id");
-        removeAllElement("profile");
+        appendAllElement("profile");
         for (var i = 0; i < dbYear.length; i++) {
             if (selectId.options[selectId.selectedIndex].value == dbYear[i].yearStage) {  
                 for (var j = 0; j < dbAdmin.length - 1; j++) {
@@ -453,7 +475,6 @@ window.onload = function () {
                     };
                     crewTr.appendChild(crewList[j].getElement());
                 };
-                appendAllElement("profile");
             };
         };
     }; /* 운영진, 부원 js 완료 */
