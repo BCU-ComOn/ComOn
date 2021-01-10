@@ -813,6 +813,8 @@ window.onload = function () {
     crewDiv.className = "crew_profile";
     adminTable.className = "admin_table";
     crewTable.className = "crew_table";
+    adminTr.id = "admin_tr";
+    crewTr.id = "crew_tr";
 
     adminHfour.textContent = "운영진";
     crewHfour.textContent = "부원";
@@ -845,7 +847,9 @@ window.onload = function () {
         
         selectId = document.getElementById("select_id");
         for (var i = 0; i < dbYear.length; i++) {
-            if (selectId.options[selectId.selectedIndex].value == dbYear[i].yearStage) {  
+            if (selectId.options[selectId.selectedIndex].value == dbYear[i].yearStage) {
+                removeAllElement("adminTr");
+                removeAllElement("crewTr");
                 for (var j = 0; j < dbAdmin.length; j++) {
                     if (dbYear[i].yearStage == dbAdmin[j].yearNum) {
                         adminList[j] = new Crew(
@@ -856,7 +860,7 @@ window.onload = function () {
                             dbAdmin[j].addplus,
                         )
                         adminTr.appendChild(adminList[j].getElement());
-                    };  
+                    };
                 };
                 for (var j = 0; j < dbCrew.length; j++) {
                     if (dbYear[i].yearStage == dbCrew[j].yearNum) {
@@ -868,7 +872,7 @@ window.onload = function () {
                             dbCrew[j].addplus,
                         )
                         crewTr.appendChild(crewList[j].getElement());
-                    };
+                    };  
                 };
             };
         };
