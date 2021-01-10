@@ -412,6 +412,20 @@ window.onload = function () {
         crewTr.appendChild(crewList[i].getElement());
     } /* 운영진, 부원 js 완료 */
 
+    document.getElementById("select_id").onchange = function () {
+
+        selectId = document.getElementById("select_id");
+
+        for (var i = 0; i < dbYear.length; i++) {
+            if (selectId.options[selectId.selectedIndex].value == "") {
+                totalProfile.style.display = "none";
+            }
+            else if (selectId.options[selectId.selectedIndex].value == dbYear.yearPeer) {
+                totalProfile.style.display = "block";
+            };
+        };
+    };
+
     let allTd = document.getElementsByTagName("td");
 
     for(var i = 0; i < allTd.length; i++){
@@ -424,16 +438,6 @@ window.onload = function () {
         }
     }
 
-    selectId = document.getElementById("select_id");
-
-    for (var i = 0; i < dbYear.length; i++) {
-        if (selectId.options[selectId.selectedIndex].value == "") {
-            totalProfile.style.display = "none";
-        }
-        else if (selectId.options[selectId.selectedIndex].value == dbYear.yearPeer) {
-            totalProfile.style.display = "block";
-        }
-    };
 };
 
 function mouseoverImg(parent){ //마우스 오버시 >> 어두워보임
