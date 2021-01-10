@@ -227,12 +227,60 @@ window.onload = function () {
             yearNum: 1,
         },
         {
+            crewName: "1운영진",
+            imageName: "profile_img.png",
+            position: "부장",
+            interests: "어쩌구, 저쩌구",
+            addplus: "동아리 활동이 도움이 되길 바랍니다!",
+            yearNum: 2,
+        },
+        {
+            crewName: "2운영진",
+            imageName: "profile_img.png",
+            position: "부장",
+            interests: "어쩌구, 저쩌구",
+            addplus: "동아리 활동이 도움이 되길 바랍니다!",
+            yearNum: 2,
+        },
+        {
+            crewName: "3운영진",
+            imageName: "profile_img.png",
+            position: "부장",
+            interests: "어쩌구, 저쩌구",
+            addplus: "동아리 활동이 도움이 되길 바랍니다!",
+            yearNum: 2,
+        },
+        {
+            crewName: "4운영진",
+            imageName: "profile_img.png",
+            position: "부장",
+            interests: "어쩌구, 저쩌구",
+            addplus: "동아리 활동이 도움이 되길 바랍니다!",
+            yearNum: 2,
+        },
+        {
+            crewName: "5운영진",
+            imageName: "profile_img.png",
+            position: "부장",
+            interests: "어쩌구, 저쩌구",
+            addplus: "동아리 활동이 도움이 되길 바랍니다!",
+            yearNum: 2,
+        },
+        {
+            crewName: "6운영진",
+            imageName: "profile_img.png",
+            position: "부장",
+            interests: "어쩌구, 저쩌구",
+            addplus: "동아리 활동이 도움이 되길 바랍니다!",
+            yearNum: 2,
+        },
+        {
             crewName: "1운영진1",
             imageName: "profile_img.png",
             position: "부장",
             interests: "어쩌구, 저쩌구",
             addplus: "동아리 활동이 도움이 되길 바랍니다!",
-            yearNum: 2
+            yearNum: 3,
         },
         {
             crewName: "2운영진2",
@@ -240,7 +288,7 @@ window.onload = function () {
             position: "부장",
             interests: "어쩌구, 저쩌구",
             addplus: "동아리 활동이 도움이 되길 바랍니다!",
-            yearNum: 2
+            yearNum: 3,
         },
         {
             crewName: "3운영진3",
@@ -248,7 +296,7 @@ window.onload = function () {
             position: "부장",
             interests: "어쩌구, 저쩌구",
             addplus: "동아리 활동이 도움이 되길 바랍니다!",
-            yearNum: 2
+            yearNum: 3,
         },
         {
             crewName: "4운영진4",
@@ -256,7 +304,7 @@ window.onload = function () {
             position: "부장",
             interests: "어쩌구, 저쩌구",
             addplus: "동아리 활동이 도움이 되길 바랍니다!",
-            yearNum: 2
+            yearNum: 3,
         },
         {
             crewName: "5운영진5",
@@ -264,7 +312,7 @@ window.onload = function () {
             position: "부장",
             interests: "어쩌구, 저쩌구",
             addplus: "동아리 활동이 도움이 되길 바랍니다!",
-            yearNum: 2
+            yearNum: 3,
         },
         {
             crewName: "6운영진6",
@@ -272,7 +320,7 @@ window.onload = function () {
             position: "부장",
             interests: "어쩌구, 저쩌구",
             addplus: "동아리 활동이 도움이 되길 바랍니다!",
-            yearNum: 2
+            yearNum: 3,
         },
     ];
     dbCrew = [
@@ -421,12 +469,156 @@ window.onload = function () {
             yearNum: 1,
         },
         {
-            crewName: "1부원1",
+            crewName: "1부원",
             imageName: "profile_img.png",
             position: "팀장",
             interests: "어쩌구, 저쩌구",
             addplus: "1",
             yearNum: 2,
+        },
+        {
+            crewName: "2부원",
+            imageName: "profile_img.png",
+            position: "팀장",
+            interests: "어쩌구, 저쩌구",
+            addplus: "1",
+            yearNum: 2,
+        },
+        {
+            crewName: "3부원",
+            imageName: "profile_img.png",
+            position: "팀장",
+            interests: "어쩌구, 저쩌구",
+            addplus: "1",
+            yearNum: 2,
+        },
+        {
+            crewName: "4부원",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "1",
+            yearNum: 2,
+        },
+        {
+            crewName: "5부원",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "1",
+            yearNum: 2,
+        },
+        {
+            crewName: "6부원",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "1",
+            yearNum: 2,
+        },
+        {
+            crewName: "7부원",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "2",
+            yearNum: 2,
+        },
+        {
+            crewName: "8부원",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "2",
+            yearNum: 2,
+        },
+        {
+            crewName: "9부원",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "2",
+            yearNum: 2,
+        },
+        {
+            crewName: "10부원",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "2",
+            yearNum: 2,
+        },
+        {
+            crewName: "11부원",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "2",
+            yearNum: 2,
+        },
+        {
+            crewName: "12부원",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "2",
+            yearNum: 2,
+        },
+        {
+            crewName: "13부원",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "3",
+            yearNum: 2,
+        },
+        {
+            crewName: "14부원",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "3",
+            yearNum: 2,
+        },
+        {
+            crewName: "15부원",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "3",
+            yearNum: 2,
+        },
+        {
+            crewName: "16부원",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "3",
+            yearNum: 2,
+        },
+        {
+            crewName: "17부원",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "3",
+            yearNum: 2,
+        },
+        {
+            crewName: "18부원",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "3",
+            yearNum: 2,
+        },
+        {
+            crewName: "1부원1",
+            imageName: "profile_img.png",
+            position: "팀장",
+            interests: "어쩌구, 저쩌구",
+            addplus: "1",
+            yearNum: 3,
         },
         {
             crewName: "2부원2",
@@ -434,7 +626,7 @@ window.onload = function () {
             position: "팀장",
             interests: "어쩌구, 저쩌구",
             addplus: "1",
-            yearNum: 2,
+            yearNum: 3,
         },
         {
             crewName: "3부원3",
@@ -442,7 +634,7 @@ window.onload = function () {
             position: "팀장",
             interests: "어쩌구, 저쩌구",
             addplus: "1",
-            yearNum: 2,
+            yearNum: 3,
         },
         {
             crewName: "4부원4",
@@ -450,7 +642,7 @@ window.onload = function () {
             position: "조원",
             interests: "어쩌구, 저쩌구",
             addplus: "1",
-            yearNum: 2,
+            yearNum: 3,
         },
         {
             crewName: "5부원5",
@@ -458,7 +650,7 @@ window.onload = function () {
             position: "조원",
             interests: "어쩌구, 저쩌구",
             addplus: "1",
-            yearNum: 2,
+            yearNum: 3,
         },
         {
             crewName: "6부원6",
@@ -466,7 +658,7 @@ window.onload = function () {
             position: "조원",
             interests: "어쩌구, 저쩌구",
             addplus: "1",
-            yearNum: 2,
+            yearNum: 3,
         },
         {
             crewName: "7부원7",
@@ -474,7 +666,7 @@ window.onload = function () {
             position: "조원",
             interests: "어쩌구, 저쩌구",
             addplus: "2",
-            yearNum: 2,
+            yearNum: 3,
         },
         {
             crewName: "부원8",
@@ -482,7 +674,7 @@ window.onload = function () {
             position: "조원",
             interests: "어쩌구, 저쩌구",
             addplus: "2",
-            yearNum: 2,
+            yearNum: 3,
         },
         {
             crewName: "9부원9",
@@ -490,7 +682,7 @@ window.onload = function () {
             position: "조원",
             interests: "어쩌구, 저쩌구",
             addplus: "2",
-            yearNum: 2,
+            yearNum: 3,
         },
         {
             crewName: "10부원10",
@@ -498,7 +690,7 @@ window.onload = function () {
             position: "조원",
             interests: "어쩌구, 저쩌구",
             addplus: "2",
-            yearNum: 2,
+            yearNum: 3,
         },
         {
             crewName: "11부원11",
@@ -506,7 +698,7 @@ window.onload = function () {
             position: "조원",
             interests: "어쩌구, 저쩌구",
             addplus: "2",
-            yearNum: 2,
+            yearNum: 3,
         },
         {
             crewName: "12부원12",
@@ -514,7 +706,7 @@ window.onload = function () {
             position: "조원",
             interests: "어쩌구, 저쩌구",
             addplus: "2",
-            yearNum: 2,
+            yearNum: 3,
         },
         {
             crewName: "13부원13",
@@ -522,7 +714,7 @@ window.onload = function () {
             position: "조원",
             interests: "어쩌구, 저쩌구",
             addplus: "3",
-            yearNum: 2,
+            yearNum: 3,
         },
         {
             crewName: "14부원14",
@@ -530,7 +722,7 @@ window.onload = function () {
             position: "조원",
             interests: "어쩌구, 저쩌구",
             addplus: "3",
-            yearNum: 2,
+            yearNum: 3,
         },
         {
             crewName: "15부원15",
@@ -538,7 +730,7 @@ window.onload = function () {
             position: "조원",
             interests: "어쩌구, 저쩌구",
             addplus: "3",
-            yearNum: 2,
+            yearNum: 3,
         },
         {
             crewName: "16부원16",
@@ -546,7 +738,7 @@ window.onload = function () {
             position: "조원",
             interests: "어쩌구, 저쩌구",
             addplus: "3",
-            yearNum: 2,
+            yearNum: 3,
         },
         {
             crewName: "17부원17",
@@ -554,7 +746,7 @@ window.onload = function () {
             position: "조원",
             interests: "어쩌구, 저쩌구",
             addplus: "3",
-            yearNum: 2,
+            yearNum: 3,
         },
         {
             crewName: "18부원18",
@@ -562,7 +754,7 @@ window.onload = function () {
             position: "조원",
             interests: "어쩌구, 저쩌구",
             addplus: "3",
-            yearNum: 2,
+            yearNum: 3,
         },
     ];
 
@@ -634,6 +826,18 @@ window.onload = function () {
     totalProfile.appendChild(adminDiv);
     totalProfile.appendChild(crewDiv);
 
+    let allTd = document.getElementsByTagName("td");
+
+    for(var i = 0; i < allTd.length; i++){
+
+        allTd[i].onmouseover = function() {
+            mouseoverImg(this);
+        }
+        allTd[i].onmouseout = function() {
+            mouseoutImg(this);
+        }
+    }
+
     var adminList = new Array();
     var crewList = new Array();
 
@@ -669,17 +873,4 @@ window.onload = function () {
             };
         };
     }; /* 운영진, 부원 js 완료 */
-
-    let allTd = document.getElementsByTagName("td");
-
-    for(var i = 0; i < allTd.length; i++){
-
-        allTd[i].onmouseover = function() {
-            mouseoverImg(this);
-        }
-        allTd[i].onmouseout = function() {
-            mouseoutImg(this);
-        }
-    }
-
 };
