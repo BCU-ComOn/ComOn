@@ -1,6 +1,18 @@
 window.addEventListener('DOMContentLoaded', function() {
+    // html 파일의 body에 header, footer 자동 생성
+    let docuBody = document.getElementsByTagName('body')[0];
+    let docuHeader = document.createElement('header');
+    let docuFooter = document.createElement('footer');
+
+    docuHeader.className = "mainPage-Header";
+    docuHeader.id = 'header';
+    docuFooter.className = "mainPage-footer";
+    docuFooter.id = 'footer';
+
+    docuBody.prepend(docuHeader);
+    docuBody.appendChild(docuFooter);
+
     // <body>안의 <header>와 <footer>에 코드 생성.
-    let docuHeader = document.getElementById('header');
 
     let headerNav = document.createElement('nav');
     let headerUl = document.createElement('ul');
@@ -21,27 +33,26 @@ window.addEventListener('DOMContentLoaded', function() {
     li4.innerHTML = [
         '<a href="">',
             '<span>Comeest</span>',
-            '<img src="img/comeest_basic.png" alt="트로피"></img>',
+            '<img src="/img/comeest_basic.png" alt="트로피"></img>',
         '</a>',
         '<a href="">',
             '<span>명예의전당</span>',
-            '<img src="img/comeest_basic.png" alt="트로피"></img>',
+            '<img src="/img/comeest_basic.png" alt="트로피"></img>',
         '</a>'
     ].join("");
     li5.innerHTML = [
         '<a href="#" class="login-user" onclick="clickLogin(this); return false;">',
-            '<img src="img/profile-igm.png" alt="유저" id="header-user">',
+            '<img src="/img/profile-igm.png" alt="유저" id="header-user">',
             '<span class="profile-text">Login</span>',
         '</a>',
         '<div class="comoff">',
             '<span id="comoff-font">Com;Off</span>',
         '</div>',
         '<a href="#" class="profile-user" onclick="clickUser(this); return false;">',
-            '<img src="img/profile-igm.png" alt="유저" id="header-user">',
+            '<img src="/img/profile-igm.png" alt="유저" id="header-user">',
             '<span class="profile-text">홍길동</span>',
         '</a>'
     ].join("");
-    docuHeader.className = "mainPage-Header";
     headerNav.className = "mainPage-nav";
     headerUl.id = "mainNav";
 
@@ -54,7 +65,6 @@ window.addEventListener('DOMContentLoaded', function() {
     headerUl.appendChild(li5);
 
     // <body> 안에 footer의 id 값을 받아와, footer생성.
-    let docuFooter = document.getElementById('footer');
 
     let footerSpan = document.createElement('span');
     let footerUl = document.createElement('ul');
@@ -62,7 +72,6 @@ window.addEventListener('DOMContentLoaded', function() {
     let footli2 = document.createElement('li');
     let footli3 = document.createElement('li');
 
-    docuFooter.className = 'mainPage-footer';
     footerSpan.className = 'footer-font';
     footerSpan.textContent = '부천대학교 컴퓨터소프트웨어과 전공동아리';
     footerUl.className = 'footer-list';
@@ -258,8 +267,21 @@ window.addEventListener('DOMContentLoaded', function() {
         clickComOff(this);
     }
 
+    let imgTrophy = document.getElementsByTagName('img')[0];
+    //findImage(imgTrophy.src);
 })
 
+function findImage(imgsrc) {
+    console.log('앙!');
+    let files = new Image;
+    files.src = imgsrc;
+    if(!files.complete) {
+        files.src = "../" + files.src;
+    } else {
+        return false;
+    }
+    console.log(files.src);
+}
 
 function mouseoverNav(parent) {
     let noneChild = parent.getElementsByTagName('a')[0];
