@@ -877,6 +877,15 @@ window.onload = function () {
                         crewTr.appendChild(crewList[j].getElement());
                     };  
                 };
+                for(var j = 0; j < allTd.length; j++){
+
+                    allTd[j].onmouseover = function() {
+                        mouseoverImg(this);
+                    }
+                    allTd[j].onmouseout = function() {
+                        mouseoutImg(this);
+                    }
+                }
             };
         };
     }; /* 운영진, 부원 js 완료 */
