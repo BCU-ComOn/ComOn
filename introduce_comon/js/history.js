@@ -18,8 +18,11 @@ window.onload = function() {
     let history_table1 = {listed_title: "2020.07 - 어쩌구", list_items:["어쩌구 저쩌구 어쩌구 저쩌구","어쩌구 저쩌구 어쩌구 저쩌구","어쩌구 저쩌구 어쩌구 저쩌구"]};
     let history_table2 = {listed_title: "2020.10 - 어쩌구", list_items:["어쩌구 저쩌구 어쩌구 저쩌구","어쩌구 저쩌구 어쩌구 저쩌구","어쩌구 저쩌구 어쩌구 저쩌구","어쩌구 저쩌구 어쩌구 저쩌구","어쩌구 저쩌구 어쩌구 저쩌구"]};
     let history_table3 = {listed_title: "2020.11 - 어쩌구", list_items:["어쩌구 저쩌구 어쩌구 저쩌구"]};
+    let history_table4 = {listed_title: "2020.12 - 어쩌구", list_items:["어쩌구 저쩌구 어쩌구 저쩌구"]};
+    let history_table5 = {listed_title: "2020.12 - 어쩌구", list_items:["어쩌구 저쩌구 어쩌구 저쩌구"]};
+    let history_table6 = {listed_title: "2020.12 - 어쩌구", list_items:["어쩌구 저쩌구 어쩌구 저쩌구"]};
 
-    let table_list = [history_table1, history_table2, history_table3];
+    let table_list = [history_table1,history_table2,history_table3,history_table4,history_table5,history_table6];
     
     for (let i = 0; i < table_list.length; i++) {
       let listed_box = document.createElement("div");
@@ -52,9 +55,18 @@ window.onload = function() {
       }
       
       for (let k = 0; k < list_items.length; k++) {
-        listed_bar.style.height = `${47 + 19 * k}px`;
+        listed_bar.style.height = `${90 + 17.5 * k}px`;
       }
-
+      
+      if (3 < table_list.length) {
+        if (table_list.length % 2 == 0) {
+          evenfunction();
+        }
+        else {
+          oddfunction();
+        }
+      }
+      
       if (i % 2 == 0) { 
         let history_top = document.getElementsByClassName("history-top")[0];
         history_top.appendChild(listed_box);
@@ -62,6 +74,30 @@ window.onload = function() {
       else {
         let history_bottom = document.getElementsByClassName("history-bottom")[0];
         history_bottom.appendChild(listed_box);
+      }    
+
+      // 함수
+      function evenfunction() {
+        let middle_bar = document.getElementsByClassName("middle-bar")[0];
+        let history_top = document.getElementsByClassName("history-top")[0];
+        let history_bottom = document.getElementsByClassName("history-bottom")[0];
+        let history_table = document.getElementsByClassName("history-table")[0];
+  
+        history_table.style.width = `${700 + 173 * (table_list.length - 3)}px`;
+        middle_bar.style.width = `${700 + 173 * (table_list.length - 3)}px`;
+        history_top.style.paddingRight = `${243}px`;
+        history_bottom.style.paddingRight = `${70}px`;
+      }
+      function oddfunction() {
+        let middle_bar = document.getElementsByClassName("middle-bar")[0];
+        let history_top = document.getElementsByClassName("history-top")[0];
+        let history_bottom = document.getElementsByClassName("history-bottom")[0];
+        let history_table = document.getElementsByClassName("history-table")[0];
+  
+        history_table.style.width = `${700 + 173 * (table_list.length - 3)}px`;
+        middle_bar.style.width = `${700 + 173 * (table_list.length - 3)}px`;
+        history_top.style.paddingRight = `${70}px`;
+        history_bottom.style.paddingRight = `${243}px`;
       }
     }
 }
