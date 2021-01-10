@@ -33,23 +33,23 @@ window.addEventListener('DOMContentLoaded', function() {
     li4.innerHTML = [
         '<a href="">',
             '<span>Comeest</span>',
-            '<img src="img/comeest_basic.png" alt="트로피"></img>',
+            '<img src="img/comeest_basic.png" alt="트로피" onerror="imgError(this)"></img>',
         '</a>',
         '<a href="">',
             '<span>명예의전당</span>',
-            '<img src="img/comeest_basic.png" alt="트로피"></img>',
+            '<img src="img/comeest_basic.png" alt="트로피" onerror="imgError(this)"></img>',
         '</a>'
     ].join("");
     li5.innerHTML = [
         '<a href="#" class="login-user" onclick="clickLogin(this); return false;">',
-            '<img src="img/profile-igm.png" alt="유저" id="header-user">',
+            '<img src="img/profile-igm.png" alt="유저" id="header-user" onerror="imgError(this)">',
             '<span class="profile-text">Login</span>',
         '</a>',
         '<div class="comoff">',
             '<span id="comoff-font">Com;Off</span>',
         '</div>',
         '<a href="#" class="profile-user" onclick="clickUser(this); return false;">',
-            '<img src="img/profile-igm.png" alt="유저" id="header-user">',
+            '<img src="img/profile-igm.png" alt="유저" id="header-user" onerror="imgError(this)">',
             '<span class="profile-text">홍길동</span>',
         '</a>'
     ].join("");
@@ -268,22 +268,19 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     let Allimg = docuHeader.getElementsByTagName('img');
-    for(let i = 0; i < Allimg.length; i++) {
-        findImage(Allimg[i]);
-    }
+    
     //findImage(imgTrophy.src);
 })
-
-function findImage(img) {
-    for(var i = 0; i < 5; i++) {
-        if(img.naturalHeight == 0) {
-            img.src = "../" + img.getAttribute('src');
-        } else {
-            return false;
-        }
+/*
+function findImage(img, imgHeight) {
+    if(imgHeight == 0) {
+        img.src = "../" + img.getAttribute('src');
+        console.log(img.width);
+    } else {
+        return false;
     }
 }
-/*
+
 function findImage(imgsrc) {
     console.log(imgsrc);
     let files = new Image;
@@ -299,6 +296,11 @@ function findImage(imgsrc) {
     }
 }
 */
+// 사진이 나오지 않을 시, 상위의 폴더로 넘어가서 검색한다.
+function imgError(img) {
+    img.src = "../"+ img.getAttribute('src');
+}
+
 function mouseoverNav(parent) {
     let noneChild = parent.getElementsByTagName('a')[0];
     let displayChild = parent.getElementsByTagName('a')[1];
