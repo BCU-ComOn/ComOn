@@ -1,3 +1,35 @@
+function removeAllElement(targetId) { //지움
+    target = document.getElementById(targetId);
+    while (target.hasChildNodes()) {
+        target.removeChild(target.firstChild);
+    }
+}
+function appendAllElement(targetId) { //생성
+    target = document.getElementById(targetId);
+    while (target.hasChildNodes()) {
+        target.appendChild(target.firstChild);
+    }
+}
+
+function mouseoverImg(parent){ //마우스 오버시 >> 어두워보임
+    
+    let imgChild = parent.getElementsByTagName('div')[0];
+    let spanChild = parent.getElementsByTagName("span")[0];
+
+    imgChild.classList.toggle("yellow_layer");
+    spanChild.style.display = "block";
+}
+    
+function mouseoutImg(parent){ //마우스 빠져나올시 >> 어두워 보이지 않음
+    
+    let imgChild = parent.getElementsByTagName('div')[0];
+
+    let spanChild = parent.getElementsByTagName("span")[0];
+
+    imgChild.classList.toggle("yellow_layer");
+    spanChild.style.display = "none";
+}
+
 class Plan {
     imageName = "./img/";
     planName;
@@ -36,18 +68,18 @@ class Plan {
 }
 
 class Year {
-    yearPeer;
+    yearStage;
     constructor(
-        yearPeer
+        yearStage
     ) {
-        this.yearPeer = yearPeer;
+        this.yearStage = yearStage;
     }
     getElement = function () {
         let comboboxOption = document.createElement("option");
 
-        comboboxOption.value = this.yearPeer;
+        comboboxOption.value = this.yearStage;
 
-        comboboxOption.textContent = this.yearPeer + " 기";
+        comboboxOption.textContent = this.yearStage + " 기";
 
         return comboboxOption;
     }
@@ -60,18 +92,21 @@ class Crew {
     position = " 직위: ";
     interests = "관심사: ";
     addplus;
+    yearNum;
     constructor(
         crewName,
         imageName,
         position,
         interests,
-        addplus
+        addplus,
+        yearNum
     ) {
         this.crewName = crewName;
         this.imageName += imageName;
         this.position += position;
         this.interests += interests;
         this.addplus = addplus;
+        this.yearNum = yearNum;
     }
     getElement = function () {
         let profileTd = document.createElement("td");
@@ -90,10 +125,12 @@ class Crew {
         profilePosition.className = "position_name";
 
         profileName.textContent = this.crewName;
-        if (this.crewName.includes("부원")) {
-            profilePosition.textContent = "팀명: " + this.addplus + ",";
+        if (this.crewName.includes("운영진")) {
+            profilePosition.textContent = this.position;
         }
-        profilePosition.textContent = this.position;
+        if (this.crewName.includes("부원")) {
+            profilePosition.textContent = "팀명: " + this.addplus + "," + this.position;
+        }
         profileInterests.textContent = this.interests;
         if (this.crewName.includes("운영진")) {
             profileAddplus.textContent = "한마디: " + this.addplus;
@@ -112,17 +149,6 @@ class Crew {
 }
 
 window.onload = function () {
-    dbYear = [
-        {
-            yearPeer: "1",
-        },
-        {
-            yearPeer: "2",
-        },
-        {
-            yearPeer: "3",
-        },
-    ]
     dbPlan = [
         {
             imageName: "bg_comee_\ distinction_01.jpg",
@@ -140,6 +166,17 @@ window.onload = function () {
             planText: "버퍼들은 자신의 지식을 공유합니다. 배움에서 멈추는 것이 아닌, 서로의 퍼즐을 맞춰주는 역할을 합니다.",
         },
     ]
+    dbYear = [
+        {
+            yearStage: "1",
+        },
+        {
+            yearStage: "2",
+        },
+        {
+            yearStage: "3",
+        },
+    ]
     dbAdmin = [
         {
             crewName: "운영진1",
@@ -147,6 +184,7 @@ window.onload = function () {
             position: "부장",
             interests: "어쩌구, 저쩌구",
             addplus: "동아리 활동이 도움이 되길 바랍니다!",
+            yearNum: 1,
         },
         {
             crewName: "운영진2",
@@ -154,6 +192,7 @@ window.onload = function () {
             position: "부장",
             interests: "어쩌구, 저쩌구",
             addplus: "동아리 활동이 도움이 되길 바랍니다!",
+            yearNum: 1,
         },
         {
             crewName: "운영진3",
@@ -161,6 +200,7 @@ window.onload = function () {
             position: "부장",
             interests: "어쩌구, 저쩌구",
             addplus: "동아리 활동이 도움이 되길 바랍니다!",
+            yearNum: 1,
         },
         {
             crewName: "운영진4",
@@ -168,6 +208,7 @@ window.onload = function () {
             position: "부장",
             interests: "어쩌구, 저쩌구",
             addplus: "동아리 활동이 도움이 되길 바랍니다!",
+            yearNum: 1,
         },
         {
             crewName: "운영진5",
@@ -175,6 +216,7 @@ window.onload = function () {
             position: "부장",
             interests: "어쩌구, 저쩌구",
             addplus: "동아리 활동이 도움이 되길 바랍니다!",
+            yearNum: 1,
         },
         {
             crewName: "운영진6",
@@ -182,6 +224,7 @@ window.onload = function () {
             position: "부장",
             interests: "어쩌구, 저쩌구",
             addplus: "동아리 활동이 도움이 되길 바랍니다!",
+            yearNum: 1,
         },
     ];
     dbCrew = [
@@ -190,126 +233,144 @@ window.onload = function () {
             imageName: "profile_img.png",
             position: "팀장",
             interests: "어쩌구, 저쩌구",
-            addplus: 1,
+            addplus: "1",
+            yearNum: 1,
         },
         {
             crewName: "부원2",
             imageName: "profile_img.png",
             position: "팀장",
             interests: "어쩌구, 저쩌구",
-            addplus: 1,
+            addplus: "1",
+            yearNum: 1,
         },
         {
             crewName: "부원3",
             imageName: "profile_img.png",
             position: "팀장",
             interests: "어쩌구, 저쩌구",
-            addplus: 1,
+            addplus: "1",
+            yearNum: 1,
         },
         {
             crewName: "부원4",
             imageName: "profile_img.png",
             position: "조원",
             interests: "어쩌구, 저쩌구",
-            addplus: 1,
+            addplus: "1",
+            yearNum: 1,
         },
         {
             crewName: "부원5",
             imageName: "profile_img.png",
             position: "조원",
             interests: "어쩌구, 저쩌구",
-            addplus: 1,
+            addplus: "1",
+            yearNum: 1,
         },
         {
             crewName: "부원6",
             imageName: "profile_img.png",
             position: "조원",
             interests: "어쩌구, 저쩌구",
-            addplus: 1,
+            addplus: "1",
+            yearNum: 1,
         },
         {
             crewName: "부원7",
             imageName: "profile_img.png",
             position: "조원",
             interests: "어쩌구, 저쩌구",
-            addplus: 2,
+            addplus: "2",
+            yearNum: 1,
         },
         {
             crewName: "부원8",
             imageName: "profile_img.png",
             position: "조원",
             interests: "어쩌구, 저쩌구",
-            addplus: 2,
+            addplus: "2",
+            yearNum: 1,
         },
         {
             crewName: "부원9",
             imageName: "profile_img.png",
             position: "조원",
             interests: "어쩌구, 저쩌구",
-            addplus: 2,
+            addplus: "2",
+            yearNum: 1,
         },
         {
             crewName: "부원10",
             imageName: "profile_img.png",
             position: "조원",
             interests: "어쩌구, 저쩌구",
-            addplus: 2,
+            addplus: "2",
+            yearNum: 1,
         },
         {
             crewName: "부원11",
             imageName: "profile_img.png",
             position: "조원",
             interests: "어쩌구, 저쩌구",
-            addplus: 2,
+            addplus: "2",
+            yearNum: 1,
         },
         {
             crewName: "부원12",
             imageName: "profile_img.png",
             position: "조원",
             interests: "어쩌구, 저쩌구",
-            addplus: 2,
+            addplus: "2",
+            yearNum: 1,
         },
         {
             crewName: "부원13",
             imageName: "profile_img.png",
             position: "조원",
             interests: "어쩌구, 저쩌구",
-            addplus: 3,
+            addplus: "3",
+            yearNum: 1,
         },
         {
             crewName: "부원14",
             imageName: "profile_img.png",
             position: "조원",
             interests: "어쩌구, 저쩌구",
-            addplus: 3,
+            addplus: "3",
+            yearNum: 1,
         },
         {
             crewName: "부원15",
             imageName: "profile_img.png",
             position: "조원",
             interests: "어쩌구, 저쩌구",
-            addplus: 3,
+            addplus: "3",
+            yearNum: 1,
         },
         {
             crewName: "부원16",
             imageName: "profile_img.png",
             position: "조원",
             interests: "어쩌구, 저쩌구",
-            addplus: 3,
+            addplus: "3",
+            yearNum: 1,
         },
         {
             crewName: "부원17",
             imageName: "profile_img.png",
             position: "조원",
             interests: "어쩌구, 저쩌구",
-            addplus: 3,
+            addplus: "3",
+            yearNum: 1,
         },
         {
             crewName: "부원18",
             imageName: "profile_img.png",
             position: "조원",
             interests: "어쩌구, 저쩌구",
-            addplus: 3,
+            addplus: "3",
+            yearNum: 1,
         },
     ];
 
@@ -333,7 +394,7 @@ window.onload = function () {
 
     let comboboxChoice = document.createElement("option");
 
-    comboboxChoice.value = "";
+    comboboxChoice.value = "Nothing";
     comboboxChoice.selected = true;
     comboboxChoice.disabled = true;
     comboboxChoice.hidden = true;
@@ -346,7 +407,7 @@ window.onload = function () {
 
     for (var i = 0; i < dbYear.length; i++) {
         yearList[i] = new Year(
-            dbYear[i].yearPeer,
+            dbYear[i].yearStage,
         )
     };
 
@@ -354,77 +415,48 @@ window.onload = function () {
         yearSelect.appendChild(yearList[i].getElement());
     } /* 동아리 기수 js 완료 */
 
-    let totalProfile = document.getElementById("profile");
-    let adminDiv = document.createElement("div");
-    let crewDiv = document.createElement("div");
-    let adminHfour = document.createElement("h4");
-    let crewHfour = document.createElement("h4");
-    let adminTable = document.createElement("table");
-    let crewTable = document.createElement("table");
-    let adminTr = document.createElement("tr");
-    let crewTr = document.createElement("tr");
+    let profile = document.getElementById("profile");
 
-    adminDiv.className = "admin_profile";
-    crewDiv.className = "crew_profile";
-    adminTable.className = "admin_table";
-    crewTable.className = "crew_table";
+    let adminTr = document.getElementById("admin_tr");
+    let crewTr = document.getElementById("crew_tr");
 
-    adminHfour.textContent = "운영진";
-    crewHfour.textContent = "부원";
-
-    adminTable.appendChild(adminTr);
-    crewTable.appendChild(crewTr);
-    adminDiv.appendChild(adminHfour);
-    crewDiv.appendChild(crewHfour);
-    adminDiv.appendChild(adminTable);
-    crewDiv.appendChild(crewTable);
-    totalProfile.appendChild(adminDiv);
-    totalProfile.appendChild(crewDiv);
-
-    var adminList = new Array();
-    var crewList = new Array();
-
-    for (var i = 0; i < dbAdmin.length; i++) {
-        adminList[i] = new Crew(
-            dbAdmin[i].crewName,
-            dbAdmin[i].imageName,
-            dbAdmin[i].position,
-            dbAdmin[i].interests,
-            dbAdmin[i].addplus,
-        )
-    };
-
-    for (var i = 0; i < adminList.length; i++) {
-        adminTr.appendChild(adminList[i].getElement());
-    }
-
-    for (var i = 0; i < dbCrew.length; i++) {
-        crewList[i] = new Crew(
-            dbCrew[i].crewName,
-            dbCrew[i].imageName,
-            dbCrew[i].position,
-            dbCrew[i].interests,
-            dbCrew[i].addplus,
-        )
-    };
-
-    for (var i = 0; i < crewList.length; i++) { 
-        crewTr.appendChild(crewList[i].getElement());
-    } /* 운영진, 부원 js 완료 */
+    let adminList = new Array();
+    let crewList = new Array();
 
     document.getElementById("select_id").onchange = function () {
-
+        
         selectId = document.getElementById("select_id");
-
+        removeAllElement("profile");
         for (var i = 0; i < dbYear.length; i++) {
-            if (selectId.options[selectId.selectedIndex].value == "") {
-                totalProfile.style.display = "none";
-            }
-            else if (selectId.options[selectId.selectedIndex].value == dbYear.yearPeer) {
-                totalProfile.style.display = "block";
+            if (selectId.options[selectId.selectedIndex].value == dbYear[i].yearStage) {  
+                for (var j = 0; j < dbAdmin.length - 1; j++) {
+                    if (dbYear[i].yearStage == dbAdmin[j].yearNum) {
+                        adminList[j] = new Crew(
+                            dbAdmin[j].crewName,
+                            dbAdmin[j].imageName,
+                            dbAdmin[j].position,
+                            dbAdmin[j].interests,
+                            dbAdmin[j].addplus,
+                        )
+                    };
+                    adminTr.appendChild(adminList[j].getElement());
+                };
+                for (var j = 0; j < dbAdmin.length - 1; j++) {
+                    if (dbYear[i].yearStage == dbCrew[j].yearNum) {
+                        crewList[j] = new Crew(
+                            dbCrew[j].crewName,
+                            dbCrew[j].imageName,
+                            dbCrew[j].position,
+                            dbCrew[j].interests,
+                            dbCrew[j].addplus,
+                        )
+                    };
+                    crewTr.appendChild(crewList[j].getElement());
+                };
+                appendAllElement("profile");
             };
         };
-    };
+    }; /* 운영진, 부원 js 완료 */
 
     let allTd = document.getElementsByTagName("td");
 
@@ -439,22 +471,3 @@ window.onload = function () {
     }
 
 };
-
-function mouseoverImg(parent){ //마우스 오버시 >> 어두워보임
-    
-    let imgChild = parent.getElementsByTagName('div')[0];
-    let spanChild = parent.getElementsByTagName("span")[0];
-
-    imgChild.classList.toggle("yellow_layer");
-    spanChild.style.display = "block";
-}
-    
-function mouseoutImg(parent){ //마우스 빠져나올시 >> 어두워 보이지 않음
-    
-    let imgChild = parent.getElementsByTagName('div')[0];
-
-    let spanChild = parent.getElementsByTagName("span")[0];
-
-    imgChild.classList.toggle("yellow_layer");
-    spanChild.style.display = "none";
-}
