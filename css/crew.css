@@ -1,5 +1,10 @@
 .crew {
   height: auto;
+  margin: 0 0;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 .crew_text {
@@ -14,6 +19,11 @@
 
 .crew_header h3 {
   font-size: 32px;
+  margin: 30px;
+}
+
+.crew_header p {
+  font-size: 18px;
   margin: 30px;
 } /* 헤더 css 끝 */
 
@@ -102,22 +112,27 @@
 }
 
 .crew_profile {
-  margin-bottom: 40px;
+  height: 430px;
 }
 
 .admin_profile h4,
 .crew_profile h4 {
   text-align: center;
   margin: 30px;
+  margin-bottom: 10px;
 }
 
 .crew_profile h4 {
-  margin-top: 21px; /* 하나로 묶는 바람에 위 공백 44px이 생기게 되서 나머지 21px을 더 늘려줌으로써 총 공백 65px 생성 */
-  margin-bottom: 30px;
+  margin-top: 45px; /* 하나로 묶는 바람에 위 공백 20px이 생기게 되서 나머지 45px을 더 늘려줌으로써 총 공백 65px 생성 */
 }
 
 .admin_table {
   text-align: center;
+  padding-bottom: 20px;
+}
+
+.crew_table {
+  height: 380px;
 }
 
 .admin_table,
@@ -129,7 +144,7 @@
   display: inline-block;
   width: 60px;
   height: 60px;
-  margin: 40px 30px;
+  margin: 0 30px;
   margin-top: 0;
   padding: 0;
 }
@@ -178,14 +193,10 @@
 }
 
 .profile_img {
-  margin-bottom: 61px; /* 글자 h 사이즈 21px과 이미지 사이의 40px를 합한 61로 넣었습니다.*/
+  margin-top: 20px;
+  margin-bottom: 51px; /* 글자 h 사이즈 31px과 이미지 아래 20px를 합한 51로 넣었습니다.*/
 } /* 크루 섹션 css 끝 */
 
-.profile_img div:hover {
-  background-color: #ffff00;
-  opacity: 30%;
-}
-
-.profile_img div:hover + span {
-  display: block;
+.yellow_layer {
+  background-color: rgba(250, 250, 0, 0.5);
 } /* 마우스에 따른 배경 색과 display on/off 기능 */

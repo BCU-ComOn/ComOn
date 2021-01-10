@@ -102,28 +102,24 @@ class Crew {
         profilePosition.className = "position_name";
 
         profileName.textContent = this.crewName;
+        if (this.crewName.includes("부원")) {
+            profilePosition.textContent = "팀명: " + this.addplus + ",";
+        }
+        profilePosition.textContent = this.position;
+        profileInterests.textContent = this.interests;
         if (this.crewName.includes("운영진")) {
-            profilePosition.textContent = this.position;
-            profileInterests.textContent = this.interests;
             profileAddplus.textContent = "한마디: " + this.addplus;
+        }
 
-            profileBox.appendChild(profilePosition);
-            profileBox.appendChild(profileInterests);
+        profileBox.appendChild(profilePosition);
+        profileBox.appendChild(profileInterests);
+        if (this.crewName.includes("운영진")) {
             profileBox.appendChild(profileAddplus);
         }
-        else if (this.crewName.includes("부원")) {
-            profilePosition.textContent = "팀명: " + this.addplus + ",";
-            profilePosition.textContent += this.position;
-            profileInterests.textContent = this.interests;
-
-            profileBox.appendChild(profilePosition);
-            profileBox.appendChild(profileInterests);
-        }
-
         profileTd.appendChild(profileName);
         profileTd.appendChild(profileBox);
-
         return profileTd;
+        
     };
 }
 
@@ -135,12 +131,12 @@ window.onload = function () {
             planText: "버퍼들은 열정이 가득한 사람들입니다. 과제를 수행하면서 열정이 중요한 역할을 합니다.",
         },
         {
-            imageName: "bg_comee_\ distinction_03.jpg",
+            imageName: "bg_comee_\ distinction_02.jpg",
             planName: "협업",
             planText: "버퍼들은 협업 중심의 과제로 활동이 이루어집니다. 함께 고민하고 협업으로 결과물을 만들어보세요.",
         },
         {
-            imageName: "bg_comee_\ distinction_02.jpg",
+            imageName: "bg_comee_\ distinction_03.jpg",
             planName: "공유",
             planText: "버퍼들은 자신의 지식을 공유합니다. 배움에서 멈추는 것이 아닌, 서로의 퍼즐을 맞춰주는 역할을 합니다.",
         },
@@ -330,12 +326,38 @@ window.onload = function () {
         )
     };
 
+    
+
     for (var i = 0; i < dbPlan.length; i++) {
         planBox.appendChild(planList[i].getElement());
     } /* 동아리 계획 js 완료 */
 
-    adminTable = document.getElementById("admin_table");
-    crewTable = document.getElementById("crew_table");
+    let totalProfile = document.getElementById("profile");
+    let adminDiv = document.createElement("div");
+    let crewDiv = document.createElement("div");
+    let adminHfour = document.createElement("h4");
+    let crewHfour = document.createElement("h4");
+    let adminTable = document.createElement("table");
+    let crewTable = document.createElement("table");
+    let adminTr = document.createElement("tr");
+    let crewTr = document.createElement("tr");
+
+    adminDiv.className = "admin_profile";
+    crewDiv.className = "crew_profile";
+    adminTable.className = "admin_table";
+    crewTable.className = "crew_table";
+
+    adminHfour.textContent = "운영진";
+    crewHfour.textContent = "부원";
+
+    adminTable.appendChild(adminTr);
+    crewTable.appendChild(crewTr);
+    adminDiv.appendChild(adminHfour);
+    crewDiv.appendChild(crewHfour);
+    adminDiv.appendChild(adminTable);
+    crewDiv.appendChild(crewTable);
+    totalProfile.appendChild(adminDiv);
+    totalProfile.appendChild(crewDiv);
 
     var adminList = new Array();
     var crewList = new Array();
@@ -351,7 +373,7 @@ window.onload = function () {
     };
 
     for (var i = 0; i < adminList.length; i++) {
-        adminTable.appendChild(adminList[i].getElement());
+        adminTr.appendChild(adminList[i].getElement());
     }
 
     for (var i = 0; i < dbCrew.length; i++) {
@@ -365,6 +387,37 @@ window.onload = function () {
     };
 
     for (var i = 0; i < crewList.length; i++) { 
-        crewTable.appendChild(crewList[i].getElement());
+        crewTr.appendChild(crewList[i].getElement());
     } /* 운영진, 부원 js 완료 */
+
+    let allTd = document.getElementsByTagName("td");
+
+    for(var i = 0; i < allTd.length; i++){
+
+        allTd[i].onmouseover = function() {
+            mouseoverImg(this);
+        }
+        allTd[i].onmouseout = function() {
+            mouseoutImg(this);
+        }
+    }
 };
+
+function mouseoverImg(parent){ //마우스 오버시 >> 어두워보임
+    
+    let imgChild = parent.getElementsByTagName('div')[0];
+    let spanChild = parent.getElementsByTagName("span")[0];
+
+    imgChild.classList.toggle("yellow_layer");
+    spanChild.style.display = "block";
+}
+    
+function mouseoutImg(parent){ //마우스 빠져나올시 >> 어두워 보이지 않음
+    
+    let imgChild = parent.getElementsByTagName('div')[0];
+
+    let spanChild = parent.getElementsByTagName("span")[0];
+
+    imgChild.classList.toggle("yellow_layer");
+    spanChild.style.display = "none";
+}
