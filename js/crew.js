@@ -226,6 +226,54 @@ window.onload = function () {
             addplus: "동아리 활동이 도움이 되길 바랍니다!",
             yearNum: 1,
         },
+        {
+            crewName: "1운영진1",
+            imageName: "profile_img.png",
+            position: "부장",
+            interests: "어쩌구, 저쩌구",
+            addplus: "동아리 활동이 도움이 되길 바랍니다!",
+            yearNum: 2
+        },
+        {
+            crewName: "2운영진2",
+            imageName: "profile_img.png",
+            position: "부장",
+            interests: "어쩌구, 저쩌구",
+            addplus: "동아리 활동이 도움이 되길 바랍니다!",
+            yearNum: 2
+        },
+        {
+            crewName: "3운영진3",
+            imageName: "profile_img.png",
+            position: "부장",
+            interests: "어쩌구, 저쩌구",
+            addplus: "동아리 활동이 도움이 되길 바랍니다!",
+            yearNum: 2
+        },
+        {
+            crewName: "4운영진4",
+            imageName: "profile_img.png",
+            position: "부장",
+            interests: "어쩌구, 저쩌구",
+            addplus: "동아리 활동이 도움이 되길 바랍니다!",
+            yearNum: 2
+        },
+        {
+            crewName: "5운영진5",
+            imageName: "profile_img.png",
+            position: "부장",
+            interests: "어쩌구, 저쩌구",
+            addplus: "동아리 활동이 도움이 되길 바랍니다!",
+            yearNum: 2
+        },
+        {
+            crewName: "6운영진6",
+            imageName: "profile_img.png",
+            position: "부장",
+            interests: "어쩌구, 저쩌구",
+            addplus: "동아리 활동이 도움이 되길 바랍니다!",
+            yearNum: 2
+        },
     ];
     dbCrew = [
         {
@@ -372,6 +420,150 @@ window.onload = function () {
             addplus: "3",
             yearNum: 1,
         },
+        {
+            crewName: "1부원1",
+            imageName: "profile_img.png",
+            position: "팀장",
+            interests: "어쩌구, 저쩌구",
+            addplus: "1",
+            yearNum: 2,
+        },
+        {
+            crewName: "2부원2",
+            imageName: "profile_img.png",
+            position: "팀장",
+            interests: "어쩌구, 저쩌구",
+            addplus: "1",
+            yearNum: 2,
+        },
+        {
+            crewName: "3부원3",
+            imageName: "profile_img.png",
+            position: "팀장",
+            interests: "어쩌구, 저쩌구",
+            addplus: "1",
+            yearNum: 2,
+        },
+        {
+            crewName: "4부원4",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "1",
+            yearNum: 2,
+        },
+        {
+            crewName: "5부원5",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "1",
+            yearNum: 2,
+        },
+        {
+            crewName: "6부원6",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "1",
+            yearNum: 2,
+        },
+        {
+            crewName: "7부원7",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "2",
+            yearNum: 2,
+        },
+        {
+            crewName: "부원8",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "2",
+            yearNum: 2,
+        },
+        {
+            crewName: "9부원9",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "2",
+            yearNum: 2,
+        },
+        {
+            crewName: "10부원10",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "2",
+            yearNum: 2,
+        },
+        {
+            crewName: "11부원11",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "2",
+            yearNum: 2,
+        },
+        {
+            crewName: "12부원12",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "2",
+            yearNum: 2,
+        },
+        {
+            crewName: "13부원13",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "3",
+            yearNum: 2,
+        },
+        {
+            crewName: "14부원14",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "3",
+            yearNum: 2,
+        },
+        {
+            crewName: "15부원15",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "3",
+            yearNum: 2,
+        },
+        {
+            crewName: "16부원16",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "3",
+            yearNum: 2,
+        },
+        {
+            crewName: "17부원17",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "3",
+            yearNum: 2,
+        },
+        {
+            crewName: "18부원18",
+            imageName: "profile_img.png",
+            position: "조원",
+            interests: "어쩌구, 저쩌구",
+            addplus: "3",
+            yearNum: 2,
+        },
     ];
 
     planBox = document.getElementById("plan_box");
@@ -459,8 +651,8 @@ window.onload = function () {
                             dbAdmin[j].interests,
                             dbAdmin[j].addplus,
                         )
-                    };
-                    adminTr.appendChild(adminList[j].getElement());
+                        adminTr.appendChild(adminList[j].getElement());
+                    };  
                 };
                 for (var j = 0; j < dbCrew.length; j++) {
                     if (dbYear[i].yearStage == dbCrew[j].yearNum) {
@@ -471,8 +663,8 @@ window.onload = function () {
                             dbCrew[j].interests,
                             dbCrew[j].addplus,
                         )
+                        crewTr.appendChild(crewList[j].getElement());
                     };
-                    crewTr.appendChild(crewList[j].getElement());
                 };
             };
         };
