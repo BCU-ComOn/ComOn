@@ -1,21 +1,24 @@
 let second_onload = window.onload;
 window.onload = function() {
     //second_onload();
+    
     let scroll_fixed = window.scrollY;
-    let mainHeader = document.getElementsByTagName('header')[0];
+    let mainHeader = document.getElementById('header');
+    mainHeader.style.backgroundColor = "rgba(0,0,0,0)";
     
     document.onscroll = function() {
         scroll_fixed = window.scrollY;
-        if(mainHeader.classList[1] == 'HeaderBackground-none') {
+        if(mainHeader.style.backgroundColor == "rgba(0, 0, 0, 0)") {
             if(scroll_fixed > 0) {
-                mainHeader.classList.toggle('HeaderBackground-none');
+                mainHeader.style.backgroundColor = "rgb(48, 156, 228)";
             }
         } else {
             if(scroll_fixed == 0) {
-                mainHeader.classList.toggle('HeaderBackground-none');
+                mainHeader.style.backgroundColor = 'rgba(0,0,0,0)';
             }
         }
     }
+
     let comeon = document.getElementById('comeOn');
 
     comeon.onclick = function() {
