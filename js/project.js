@@ -282,26 +282,36 @@ window.onload = function () {
   setPage(pageNow);
 
   //왼쪽 콤보박스에 맞는 이벤트, 해당하는 모든 항목이 한 페이지에 나타남
+  //프로젝트List를 빈 배열로 만들고
+  // db에 저장되어있는ㄱ밧을 프로젝트List에 넣고
+  // 전체를 클릭하면 전체ㅏ 보이게 1기가 보이면 1기만 보이게
+  //화면에 뿌려준다.
   document.getElementById("select_generation").onchange = function () {
+    projectList = new Array(pageAll + 1);
     newList = new Array();
     removeAllElement("project-list");
     select = document.getElementById("select_generation");
-    for (let i = 0; i < projectList.length; i++) {
-      for (j of projectList[i]) {
-        if (select.options[select.selectedIndex].value == "전체") {
-          projectList[i] = j;
-          newList.push(projectList[i]);
-        } else if (select.options[select.selectedIndex].value == j.generation) {
-          projectList[i] = j;
+    for (let i = 0; i <= pageAll; i++) {
+      projectList[i] = new Array(6);
+    }
 
-          newList.push(projectList[i]);
+    let q = 0;
+
+    for (let i = 0; i < projectList.length; i++) {
+      for (let j = 0; j < projectList[i].length; j++) {
+        if (q < db.length) {
+          if (select.options[select.selectedIndex].value == "전체") {
+            projectList[i][j] = db[q];
+          } else if (
+            db[q].generation == select.options[select.selectedIndex].value
+          ) {
+            projectList[i][j] = db[q];
+            
+            }
+          }
+          q++;
         }
       }
-    }
-    for (let i = 0; i < newList.length; i++) {
-      document
-        .getElementById("project-list")
-        .appendChild(newList[i].getElement());
     }
   };
 
@@ -319,10 +329,10 @@ window.onload = function () {
       pageNow = 0;
     }
 
-    for(let i = 0; i <= pageAll; i++){
-      projectPage.children[i].style.transform = "translateX(-" + 102 * pageNow + "%)";
+    for (let i = 0; i <= pageAll; i++) {
+      projectPage.children[i].style.transform =
+        "translateX(-" + 102 * pageNow + "%)";
     }
-
 
     // for (let i = 0; i < projectList[pageNow].length; i++) {
     //   document
@@ -340,12 +350,11 @@ window.onload = function () {
       pageNow = pageAll;
     }
 
-
     //오류 있음
-    for(let i = 0; i <= pageAll; i++){
-      projectPage.children[i].style.transform = "translateX(" + 102 * pageNow + "%)";
+    for (let i = 0; i <= pageAll; i++) {
+      projectPage.children[i].style.transform =
+        "translateX(" + 102 * pageNow + "%)";
     }
-
 
     // for (let i = 0; i < projectList[pageNow].length; i++) {
     //   document
