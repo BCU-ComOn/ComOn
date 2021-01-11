@@ -289,6 +289,7 @@ window.onload = function () {
   document.getElementById("select_generation").onchange = function () {
     projectList = new Array(pageAll + 1);
     newList = new Array();
+
     removeAllElement("project-list");
     select = document.getElementById("select_generation");
     for (let i = 0; i <= pageAll; i++) {
@@ -302,21 +303,24 @@ window.onload = function () {
         if (q < db.length) {
           if (select.options[select.selectedIndex].value == "전체") {
             projectList[i][j] = db[q];
+            newList.push(projectList[i][j]);
           } else if (
             db[q].generation == select.options[select.selectedIndex].value
           ) {
             projectList[i][j] = db[q];
+            newList.push(projectList[i][j]);
           }
         }
         q++;
       }
     }
-    console.log(projectList);
-
-    for (let i = 0; i < projectList.length; i++) {
-      document
-        .getElementById("project-list")
-        .appendChild(projectList[i].getElement());
+    console.log(newList);
+    for (let i = 0; i < newList.length; i++) {
+      for (let j = 0; j < newList[i].length; j++) {
+        document
+          .getElementById("project-list")
+          .appendChild(newList[i][j].getElement());
+      }
     }
   };
 
