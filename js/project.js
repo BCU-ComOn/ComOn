@@ -299,7 +299,7 @@ window.onload = function () {
     let q = 0;
 
     for (let i = 0; i < projectList.length; i++) {
-      for (let j = 0; j < projectList[i].length; j++) {
+      for (let j = 6 * i - 6; j <= 6 * i - 1; j++) {
         if (q < db.length) {
           if (select.options[select.selectedIndex].value == "전체") {
             projectList[i][j] = db[q];
@@ -311,7 +311,7 @@ window.onload = function () {
                 projectList[i][j].imageName,
                 projectList[i][j].projectTitle,
                 projectList[i][j].progressBar
-              )
+              ).getElement()
             );
           } else if (
             db[q].generation == select.options[select.selectedIndex].value
@@ -325,18 +325,17 @@ window.onload = function () {
                 projectList[i][j].imageName,
                 projectList[i][j].projectTitle,
                 projectList[i][j].progressBar
-              )
+              ).getElement()
             );
           }
         }
         q++;
       }
     }
-
-    for (let i = 0; i < newList.length; i++) {
-      document
-        .getElementById("project-list")
-        .appendChild(newList[i].getElement());
+    for (let i = 0; i <= pageAll; i++) {
+      for (let j = 0; j < projectList[i].length; j++) {
+        projectPage.children[i].appendChild(newList[j + 6 * i]);
+      }
     }
   };
 
