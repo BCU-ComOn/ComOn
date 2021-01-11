@@ -73,3 +73,7 @@ function clickComOff(self) {
     login_user.style.display = 'flex';
     profile_user.style.display = 'none';
 }
+
+function imgError(img) {
+    img.src = "../"+ img.getAttribute('src');
+}
