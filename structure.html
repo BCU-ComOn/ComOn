@@ -9,7 +9,7 @@
     <script type="text/javascript" src="js/header_activity.js"></script>
 </head>
 <body>
-    <header class="mainPage-Header">
+    <header class="mainPage-Header" id="header">
         <a href="">
             <h1 class="MainHeader">Com;On</h1>
         </a>
@@ -30,30 +30,30 @@
                 <li> 
                     <a href="">
                         <span>Comeest</span>
-                        <img src="img/comeest_basic.png" alt="트로피">
+                        <img src="img/comeest_basic.png" alt="트로피" onerror="imgError(this)">
                     </a>
                     <a href="">
                         <span>명예의전당</span>
-                        <img src="img/comeest_basic.png" alt="트로피">
+                        <img src="img/comeest_basic.png" alt="트로피" onerror="imgError(this)">
                     </a>
                 </li>
                 <li>
                     <a href="#" class="login-user" onclick="clickLogin(this); return false;">
-                        <img src="img/profile-igm.png" alt="유저" id="header-user">
+                        <img src="img/profile-igm.png" alt="유저" id="header-user" onerror="imgError(this)">
                         <span class="profile-text">Login</span>
                     </a>
                     <div class="comoff">
                         <span id="comoff-font">Com;Off</span>
                     </div>
                     <a href="#" class="profile-user" onclick="clickUser(this); return false;">
-                        <img src="img/profile-igm.png" alt="유저" id="header-user">
+                        <img src="img/profile-igm.png" alt="유저" id="header-user" onerror="imgError(this)">
                         <span class="profile-text">홍길동</span>
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
-    <footer class="mainPage-footer">
+    <footer class="mainPage-footer" id="footer">
         <span class="footer-font">부천대학교 컴퓨터소프트웨어과 전공동아리</span>
         <ul class="footer-list">
             <li>@2020-2020 Com;On</li>
