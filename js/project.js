@@ -306,12 +306,17 @@ window.onload = function () {
             db[q].generation == select.options[select.selectedIndex].value
           ) {
             projectList[i][j] = db[q];
-            
-            }
           }
-          q++;
         }
+        q++;
       }
+    }
+    console.log(projectList);
+
+    for (let i = 0; i < projectList.length; i++) {
+      document
+        .getElementById("project-list")
+        .appendChild(projectList[i].getElement());
     }
   };
 
