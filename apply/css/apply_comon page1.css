@@ -46,6 +46,20 @@
   align-items: left;
 }
 /*orange box*/
+.interests {
+  font-size: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 80px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: rgb(252, 176, 46);
+  color: white;
+  text-align: center;
+  line-height: 20px;
+}
+
+
 .interest {
   font-size: 10px;
   margin-top: 10px;
@@ -55,11 +69,35 @@
   border-radius: 20px;
   background-color: rgb(252, 176, 46);
   color: white;
-
   text-align: center;
   line-height: 20px;
 }
+.minus{
+  font-size : 10px;
+  margin-top: 0.5px;
+  margin-right : 10px;
+  width : 20px;
+  height : 20px;
+  border-radius : 10px;
+  background-color :black;
+  display : flex;
+  justify-content : center;
+  align-items : center;
+  position : relative;
+  left : 66px;
+  bottom : 30px;
+  cursor : pointer;
+}
 
+.line{
+  height : 2px;
+  background-color : white;
+  width : 10px;
+  cursor : pointer;
+}
+
+
+/*끝*/
 .advice {
   text-align: center;
   font-size: 16px;
@@ -86,6 +124,3 @@
   padding: 10px;
 }
 
-.s {
-  margin: 30px;
-}
