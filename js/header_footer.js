@@ -25,11 +25,11 @@ window.addEventListener('DOMContentLoaded', function() {
         console.log(resp);
 
         //docuHeader.innerHTML = resp.split("id='header'>")[1];//.split("</header>")[0];
-        console.log(resp.split('<header class="mainPage-Header">')[1].split("</header>")[0]);
-        header.innerHTML = resp.split('<header class="mainPage-Header">')[1].split("</header>")[0];
+        console.log(resp.split('<header class="mainPage-Header" id="header">')[1].split("</header>")[0]);
+        header.innerHTML = resp.split('<header class="mainPage-Header" id="header">')[1].split("</header>")[0];
         
-        console.log(resp.split('<footer class="mainPage-footer">')[1].split('</footer>')[0]);
-        footer.innerHTML = resp.split('<footer class="mainPage-footer">')[1].split('</footer>')[0];
+        console.log(resp.split('<footer class="mainPage-footer"> id="footer"')[1].split('</footer>')[0]);
+        footer.innerHTML = resp.split('<footer class="mainPage-footer" id="footer">')[1].split('</footer>')[0];
         //document.querySelector('body').innerHTML = resp;
       }
     }
