@@ -303,24 +303,40 @@ window.onload = function () {
         if (q < db.length) {
           if (select.options[select.selectedIndex].value == "전체") {
             projectList[i][j] = db[q];
-            newList.push(projectList[i][j]);
+            newList.push(
+              new Project(
+                projectList[i][j].generation,
+                projectList[i][j].teamName,
+                projectList[i][j].projectType,
+                projectList[i][j].imageName,
+                projectList[i][j].projectTitle,
+                projectList[i][j].progressBar
+              )
+            );
           } else if (
             db[q].generation == select.options[select.selectedIndex].value
           ) {
             projectList[i][j] = db[q];
-            newList.push(projectList[i][j]);
+            newList.push(
+              new Project(
+                projectList[i][j].generation,
+                projectList[i][j].teamName,
+                projectList[i][j].projectType,
+                projectList[i][j].imageName,
+                projectList[i][j].projectTitle,
+                projectList[i][j].progressBar
+              )
+            );
           }
         }
         q++;
       }
     }
-    console.log(newList);
+
     for (let i = 0; i < newList.length; i++) {
-      for (let j = 0; j < newList[i].length; j++) {
-        document
-          .getElementById("project-list")
-          .appendChild(newList[i][j].getElement());
-      }
+      document
+        .getElementById("project-list")
+        .appendChild(newList[i].getElement());
     }
   };
 
