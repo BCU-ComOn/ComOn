@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap");
+
+.container {
+  font-family: "Noto Sans KR", sans-serif;
+  width: 1100px;
+  /*margin: 0 auto;
+  justify-content: center;*/
+}
+
+.community-main-sidebar {
+  background: #309ce4;
+  width: 270px;
+  height: 1400px;
+}
+
+.community-sidebar-search {
+  margin-left: 25px;
+}
+
+/* 사이드바 - searchbar */
+.community-sidebar-searchbar {
+  width: 170px;
+  height: 40px;
+  border: 1px solid #ededed;
+  border-radius: 0px 3px 3px 0px;
+  font-size: 16px;
+}
+
+.community-sidebar-searchbutton {
+  height: 44px;
+  width: 40px;
+  background-color: rgb(237, 237, 237);
+  border: 1px solid #ededed;
+  border-radius: 3px 0px 0px 3px;
+  cursor: pointer;
+  float: left;
+}
+
+.community-sidebar-searchbutton > img {
+  display: block;
+  margin: 0px auto;
+}
+
+/* 사이드바 연도 select box */
+.community-sidebar-year {
+  font-size: 18px;
+  color: #fff;
+  margin-top: 35px;
+  margin-left: 110px; /*이렇게 해도 ㄱㅊ?*/
+  background-color: #309ce4;
+  border-style: none;
+}
+
+select::-ms-expand {
+  display: none; /*IE 10, 11의 네이티브 화살표 숨기기*/
+}
+
+/* 사이드바 팀 모음 */
+.community-sidebar-team {
+  text-align: center;
+  margin: 45px;
+}
+
+.community-sidebar-team > ul > li {
+  margin-top: 45px;
+}
+
+.community-sidebar-team > ul > li > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 슬라이더 */
+.two-slider {
+  position: absolute;
+  margin-left: 300px;
+  margin-top: 0px;
+}
+
+.two-slider-img {
+  width: 60px;
+  height: 60px;
+  margin-left: 60px;
+  margin-right: 15px;
+}
+
+.club-president {
+  position: absolute;
+  font-size: 16px;
+  margin-top: 25px;
+}
+
+.two-slider-hashtag {
+  font-size: 14px;
+  margin-top: 25px;
+  margin-right: 50px;
+  float: right;
+  color: #9e9e9e;
+}
+
+.three-slider {
+  position: absolute;
+  margin-left: 300px;
+  margin-top: 290px;
+}
+
+.three-slider-profile {
+  margin-left: 60px;
+  margin-top: 45px;
+}
+
+.three-slider-img {
+  margin-top: 45px;
+  margin-right: 15px;
+  width: 60px;
+  height: 60px;
+}
+
+.three-slider-hashtag {
+  float: right;
+  font-size: 14px;
+  margin-top: 70px;
+  margin-right: 60px;
+  color: #9e9e9e;
+}
+
+/* 게시글 */
+
+.first-contents {
+  position: absolute;
+  margin-left: 300px;
+  margin-top: 650px;
+  padding-top: 55px;
+}
+
+.second-contents {
+  position: absolute;
+  margin-left: 300px;
+  margin-top: 980px;
+  padding-top: 45px;
+}
