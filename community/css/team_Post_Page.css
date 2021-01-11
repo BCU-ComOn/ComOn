@@ -81,7 +81,7 @@
   height: 40px;
 }
 .team_grup_side .grup_img {
-  background-image: url("http://placehold.it/60x60");
+  background-image: url("../img/profile.png");
   background-size: cover;
   width: 60px;
   height: 60px;
@@ -113,6 +113,7 @@
   word-break: break-all;
   font-size: 16px;
   margin: 10px 0;
+  text-align: left;
 }
 .team_member {
   display: flex;
@@ -122,7 +123,7 @@
   margin-bottom: 20px;
 }
 .team_member .team_img {
-  background-image: url("http://placehold.it/45x45");
+  background-image: url("../img/profile.png");
   background-size: cover;
   width: 45px;
   height: 45px;
@@ -147,10 +148,10 @@
   height: 45px;
 }
 .post_list > .btn_left {
-  background-image: url("http://placehold.it/45x45");
+  background-image: url("../img/previous_btn.png");
 }
 .post_list > .btn_rigth {
-  background-image: url("http://placehold.it/45x45");
+  background-image: url("../img/next_btn.png");
 }
 .post_Slider {
   display: flex;
@@ -188,7 +189,7 @@
 .post_Slider > article > .top_info > .user_info > .user_img {
   width: 30px;
   height: 30px;
-  background-image: url("http://placehold.it/30x30");
+  background-image: url("../img/profile.png");
   border-radius: 100%;
   margin: 5px;
 }
@@ -217,6 +218,8 @@
 .post_Slider > article > .bottom_info {
   display: flex;
   flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
 }
 .post_Slider > article > .bottom_info > title {
   margin-bottom: 8px;

@@ -1,0 +1,76 @@
+.community-main-sidebar {
+  background: #309ce4;
+  width: 270px;
+}
+.ul ul,
+ol {
+  list-style: none;
+}
+.community-sidebar-search {
+  margin-left: 25px;
+}
+
+.community-sidebar-searchbar {
+  width: 170px;
+  height: 40px;
+  border: 1px solid #ededed;
+  border-radius: 0px 3px 3px 0px;
+  font-size: 16px;
+}
+
+.community-sidebar-searchbutton {
+  height: 44px;
+  width: 40px;
+  background-color: rgb(237, 237, 237);
+  border: 1px solid #ededed;
+  border-radius: 3px 0px 0px 3px;
+  cursor: pointer;
+  float: left;
+}
+
+.community-sidebar-searchbutton > img {
+  display: block;
+  margin: 0px auto;
+}
+
+.community-sidebar-year {
+  font-size: 18px;
+  color: #fff;
+  margin-top: 35px;
+  margin-left: 110px;
+  background-color: #309ce4;
+  border-style: none;
+}
+
+select::-ms-expand {
+  /*IE 10, 11의 네이티브 화살표 숨기기*/
+  display: none;
+}
+
+.community-sidebar-team {
+  text-align: center;
+  margin: 45px;
+  color: #fff;
+}
+.community-sidebar-team > ul {
+  list-style: none;
+}
+.community-sidebar-team > ul > li {
+  margin-top: 45px;
+}
+.community-sidebar-team > ul > li > a {
+  color: #fff;
+  text-decoration: none;
+}
+A:link {
+  text-decoration: none;
+  color: white;
+}
+A:visited {
+  text-decoration: none;
+  color: white;
+}
+A:hover {
+  text-decoration: none;
+  color: white;
+}

@@ -7,7 +7,7 @@ window.onload = () => {
         post_day: "2020-00-00",
         post_maker: {
           user_name: "이영재",
-          user_img: "http://placehold.it/30x30",
+          user_img: "./img/profile.png",
         },
         post_img: "http://placehold.it/220x120",
         post_title: "1111",
@@ -18,7 +18,7 @@ window.onload = () => {
         post_day: "2020-00-00",
         post_maker: {
           user_name: "김수진",
-          user_img: "http://placehold.it/30x30",
+          user_img: "./img/profile.png",
         },
         post_img: "http://placehold.it/220x120",
         post_title: "1111",
@@ -29,7 +29,7 @@ window.onload = () => {
         post_day: "2020-00-00",
         post_maker: {
           user_name: "신정기",
-          user_img: "http://placehold.it/30x30",
+          user_img: "./img/profile.png",
         },
         post_img: "http://placehold.it/220x120",
         post_title: "1111",
@@ -40,7 +40,7 @@ window.onload = () => {
         post_day: "2020-00-00",
         post_maker: {
           user_name: "최지연",
-          user_img: "http://placehold.it/30x30",
+          user_img: "./img/profile.png",
         },
         post_img: "http://placehold.it/220x120",
         post_title: "1111",
@@ -51,7 +51,7 @@ window.onload = () => {
         post_day: "2020-00-00",
         post_maker: {
           user_name: "이영재",
-          user_img: "http://placehold.it/30x30",
+          user_img: "./img/profile.png",
         },
         post_img: "http://placehold.it/220x120",
         post_title: "1111",
@@ -62,7 +62,7 @@ window.onload = () => {
         post_day: "2020-00-00",
         post_maker: {
           user_name: "김수진",
-          user_img: "http://placehold.it/30x30",
+          user_img: "./img/profile.png",
         },
         post_img: "http://placehold.it/220x120",
         post_title: "1111",
@@ -73,7 +73,7 @@ window.onload = () => {
         post_day: "2020-00-00",
         post_maker: {
           user_name: "신정기",
-          user_img: "http://placehold.it/30x30",
+          user_img: "./img/profile.png",
         },
         post_img: "http://placehold.it/220x120",
         post_title: "1111",
@@ -84,7 +84,7 @@ window.onload = () => {
         post_day: "2020-00-00",
         post_maker: {
           user_name: "최지연",
-          user_img: "http://placehold.it/30x30",
+          user_img: "./img/profile.png",
         },
         post_img: "http://placehold.it/220x120",
         post_title: "1111",
@@ -125,6 +125,7 @@ const createSlider = (GiveMeElementId, data) => {
     let user_img = document.createElement("div");
     user_img.className = "user_img";
     user_img.style.background = `url("${data[i].post_maker.user_img}")`;
+    user_img.style.backgroundSize = `cover`;
     let user_name = document.createElement("span");
     user_name.className = "user_name";
     user_name.textContent = data[i].post_maker.user_name;

@@ -81,7 +81,7 @@
   height: 40px;
 }
 .post_user_side .user_img {
-  background-image: url("http://placehold.it/60x60");
+  background-image: url("../img/profile.png");
   background-size: cover;
   width: 60px;
   height: 60px;
@@ -110,6 +110,7 @@
   width: 1070px;
 }
 .post_main_content > p {
+  text-align: left;
   word-break: break-all;
   font-size: 16px;
   margin: 10px 0;
@@ -129,10 +130,10 @@
   height: 45px;
 }
 .post_list > .btn_left {
-  background-image: url("http://placehold.it/45x45");
+  background-image: url("../img/previous_btn.png");
 }
 .post_list > .btn_rigth {
-  background-image: url("http://placehold.it/45x45");
+  background-image: url("../img/next_btn.png");
 }
 .post_Slider {
   display: flex;
@@ -199,6 +200,8 @@
 .post_Slider > article > .bottom_info {
   display: flex;
   flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
 }
 .post_Slider > article > .bottom_info > title {
   margin-bottom: 8px;

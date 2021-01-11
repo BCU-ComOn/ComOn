@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap");
+
+body {
+  width: 1070px;
+  margin: 0 auto;
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+/*메뉴 목록*/
+#topMenu ul li {
+  list-style: none;
+  color: rgb(48, 156, 228);
+  float: left;
+  height: 100px;
+  line-height: 100px;
+  vertical-align: middle;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#topMenu .topMenuNoticeBoard {
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255); /*게시판 다른 색이면 바꾸기*/
+  display: block;
+  width: 230px;
+  font-size: 32px;
+}
+#topMenu .menuLink {
+  text-decoration: none;
+  color: rgb(48, 156, 228);
+  display: block;
+  width: 180px;
+  font-size: 18px;
+}
+#topMenu .writingButton {
+  display: block;
+  text-decoration: none;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100px;
+  height: 45px;
+  line-height: 45px;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  background-color: rgb(248, 155, 0);
+  border-radius: 0.2rem;
+}
+/*제목 프로필 팀명 작성*/
+.input_box {
+  width: 1020px;
+  margin: 0 auto;
+  text-align: left;
+}
+input:focus {
+  outline: none;
+}
+#title_box {
+  width: 100%;
+}
+.titleWrite {
+  font-size: 32px;
+  border: none;
+  margin-left: 10px;
+  color: black;
+}
+.profile_team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 40px;
+  float: right;
+}
+.profile {
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  margin-right: 15px;
+}
+.team {
+  font-size: 16px;
+  color: #333;
+}
+.content_box {
+  width: 1000px;
+  height: 600px;
+}
+hr {
+  width: 1020px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/*선택 항목 작성*/
+.select_box {
+  text-align: left;
+  justify-content: left;
+  width: 1020px;
+  margin: 0 auto;
+}
+.tag_arrayal {
+  display: flex;
+}
+.project_text {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.in_select_box {
+  margin-bottom: 30px;
+  margin-right: 5px;
+  width: 150px;
+  height: 40px;
+}
+.list_tag li {
+  display: inline-block;
+  width: 80px;
+  height: 20px;
+  line-height: 20px;
+  background-color: rgb(248, 155, 0);
+  font-size: 12px;
+  margin-left: 15px;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 2rem;
+  color: rgb(255, 255, 255);
+}
+.bottom_writingButton {
+  text-decoration: none;
+  text-align: center;
+  width: 100px;
+  height: 45px;
+  line-height: 45px;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  background-color: rgb(248, 155, 0);
+  border-radius: 0.2rem;
+  display: block;
+  float: right;
+  position: relative;
+  bottom: 70px;
+  right: 20px;
+}

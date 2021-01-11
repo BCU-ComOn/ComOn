@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/community_main.css">
+    <link rel="stylesheet" href="css/community_menubar.css">
+    <link rel="stylesheet" href="css/community_reset.css">
+    <link rel="stylesheet" href="css/community_slider.css">
+    <script src="js/community_slider.js"></script>
+</head>
+    <body>
+        <div class = "container">
+            <div class = header></div>
+            <nav id="topMenu">
+                <ul>
+                    <li><a class="topMenuNoticeBoard" href="#"><h2>게시판</h2></a></li>
+                    <li><a class="menuLink" href="#"><h3>활동내역</h3></li></a>
+                    <li><a class="menuLink" href="#"><h3>정보공유</h3></li></a>
+                    <li><a class="menuLink" href="#"><h3>포트폴리오</h3></li></a>
+                    <li><a class="menuLink" href="#"><h3>오류잡기</h3></li></a>
+                    <li><a class="writingButton" href="#"><h3>글쓰기</h3></a></li>
+                </ul>
+            </nav>
+
+                <div class = "community-main">
+                    <div class = "community-main-content">
+                        <div class = "two-slider">
+                            <div class = "two-slider-profile">
+                                <img src = "img/profile.png" class = "two-slider-img">
+                                <span class = "club-president">부장</span>
+                                
+                                <div class = "two-slider-hashtag">
+                                    <span>#활동내역 #개발지식 주차별 활동내역과 요약본을 확인해보세요!</span>
+                                </div>
+                            </div>
+
+                            <div class = "two-slider-contents">
+                                <div class="post_list2" id="slider1"></div>
+                            </div>
+                        </div>
+
+                        <div class = "three-slider">
+                            <div class = "three-slider-profile">
+                                <img src = "img/profile.png" class = "three-slider-img">
+                                <img src = "img/profile.png" class = "three-slider-img">
+                                <img src = "img/profile.png" class = "three-slider-img">
+                                <img src = "img/profile.png" class = "three-slider-img">
+                                <img src = "img/profile.png" class = "three-slider-img">
+        
+                                <div class = "three-slider-hashtag">
+                                    <span>#운영진 #정보공유 #정기포스팅</span>
+                                </div>
+                            </div>
+                            <div class = "three-slider-contents">
+                                <div class="post_list" id="slider2"></div>
+                            </div>
+                        </div>
+
+                        <div class = "article-contents">
+                            <div class = "first-contents">
+                                <div class="post_list3" id="slider3"></div>
+                            </div>
+                            <div class = "second-contents">
+                                <div class="post_list3" id="slider4"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "community-main-sidebar">
+                        <div class = "community-sidebar-search">
+                            <input type = "text" class = "community-sidebar-searchbar">
+                            <button type = "button" class ="community-sidebar-searchbutton">
+                                <img src = "img/search_btn.png">
+                            </button>
+                        </div>
+
+                        <br>
+                        
+                        <select class = "community-sidebar-year" name = "community-year">
+                            <option selected>2020</option>
+                            <option>2021</option>
+                        </select>
+
+                        <div class = "community-sidebar-team">
+                            <ul>
+                                <li><a href ="#">1 팀명</a></li>
+                                <li><a href ="#">2 팀명</a></li>
+                                <li><a href ="#">3 팀명</a></li>
+                                <li><a href ="#">4 팀명</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </body>
+    </html>
