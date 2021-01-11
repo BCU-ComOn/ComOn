@@ -100,4 +100,6 @@ window.onload = function() {
         history_bottom.style.paddingRight = `${243}px`;
       }
     }
+  // 스크롤 
+  // let scroll = document.getElementsByClassName("scroll")[0];
 }
