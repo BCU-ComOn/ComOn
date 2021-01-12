@@ -7,11 +7,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-header {
-  height: 100px;
-  background-color: #309ce4;
-  weight: 1110px;
-}
+
 nav {
   font-size: 18px;
 }
@@ -243,6 +239,7 @@ progress::-webkit-progress-bar {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 50px;
 }
 .post_Slider > li > .top_info > .post_day {
   font-size: 12px;
@@ -301,4 +298,12 @@ progress::-webkit-progress-bar {
 }
 .main-all {
   display: flex;
+}
+.post_bottom {
+  margin-bottom: 50px;
+}
+.all-contents {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
 }

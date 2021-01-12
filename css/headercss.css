@@ -1,85 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
-body {
-    margin: 0px;
-}
-
-ul {
-    margin: 0px;
-    padding: 0px;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 a {
-    text-decoration: none;
-    outline: 0;
+  text-decoration: none;
+  outline: 0;
+}
+
+body {
+  font-family: "Noto Sans KR";
+}
+footer {
+  width: 100%;
+}
+header {
+  width: 100%;
+}
+.mainPage-Header {
+  display: flex;
+  height: 100px;
+  background-color: #309ce4;
+  justify-content: center;
+  align-items: center;
+}
+
+.MainHeader {
+  font-family: "Fredoka One";
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 3px 3px 3px black;
+  letter-spacing: 2px;
 }
 
 #mainNav {
-    display: flex;
-    justify-content: space-evenly;
-    background-color: #309ce4;
-    height: 100px;
-    list-style: none;
+  display: flex;
+  height: 100px;
+  list-style: none;
+  justify-content: space-evenly;
 }
 
 #mainNav li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  margin: 0px 15px;
 }
 
 #mainNav li a {
-    font-size: 20px;
-    color: #ffffff;
-}
-
-#mainNav li:first-child a {
-    font-size: 36px;
-    font-weight: bold;
-    text-shadow: 3px 3px 3px black;
+  display: flex;
+  font-size: 20px;
+  color: #ffffff;
 }
 
 #mainNav li:last-child a {
-    font-size: 18px;
-    text-shadow: 2px 2px 3px black;
+  font-size: 18px;
+  text-shadow: 2px 2px 3px black;
 }
 
 #mainNav li a:last-child {
-    display: none;
+  display: none;
 }
 
-#mainNav li:last-child a {
-    display: flex;
-}
-
-#mainNav li:nth-child(5) a:last-child {
-    display: none;
-}
-
-#mainNav li:nth-child(5) a{
-    display: flex;
-}
-
-#mainNav li:last-child a:last-child {
-    display: none;
+#mainNav li:nth-child(4) img {
+  width: 40px;
+  height: 40px;
 }
 
 #mainNav li:nth-child(5) img {
-    width: 40px;
-    height: 40px;
-}
-
-#mainNav li:nth-child(6) img {
-    width: 45px;
-    height: 45px;
+  width: 45px;
+  height: 45px;
 }
 
 #mainNav span {
-    display: flex;
-    justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.comeest-text {
+  margin: auto 0;
+  width: 100px;
+}
+
+.comeest-text span {
+  justify-content: center;
 }
 
 .profile-text {
-    margin: auto 0;
-    margin-left: 10px;
+  margin: auto 0;
+  margin-left: 10px;
+  width: 85px;
+}
+
+.mainPage-footer {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  background-color: #e0e0e0;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.footer-list {
+  margin: 20px 0px;
+  line-height: 18px;
+  text-align: center;
+  list-style: none;
+}
+
+.email-contact {
+  width: 60px;
+  height: 25px;
+  background-color: #309ce4;
+  color: #ffffff;
+  border: #309ce4;
+  border-radius: 4px;
+}
+
+.comoff {
+  display: none;
+  background-color: #309ce4;
+  position: absolute;
+  top: 100px;
+  width: 100px;
+  height: 50px;
+  font-size: 14px;
+  color: #ffffff;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+#comoff-font {
+  cursor: pointer;
 }
