@@ -287,49 +287,50 @@ window.onload = function () {
   // 전체를 클릭하면 전체ㅏ 보이게 1기가 보이면 1기만 보이게
   //화면에 뿌려준다.
   document.getElementById("select_generation").onchange = function () {
-    projectList = new Array(pageAll + 1);
+    projectList = new Array();
     newList = new Array();
 
     removeAllElement("project-list");
-    select = document.getElementById("select_generation");
+    select_generation = document.getElementById("select_generation");
     for (let i = 0; i <= pageAll; i++) {
       projectList[i] = new Array(6);
     }
+    for (let i = 0; i <= pageAll; i++) {
+      let pjpage = document.createElement("div");
+      pjpage.className = "pjpage";
+      projectPage.appendChild(pjpage);
 
-    let q = 0;
+      projectList.push(new Array());
+    }
 
-    for (let i = 0; i < projectList.length; i++) {
+    index = 0;
+    for (let i = 0; i <= pageAll; i++) {
+      num = 0;
       for (let j = 6 * i - 6; j <= 6 * i - 1; j++) {
-        if (q < db.length) {
-          if (select.options[select.selectedIndex].value == "전체") {
-            projectList[i][j] = db[q];
-            newList.push(
-              new Project(
-                projectList[i][j].generation,
-                projectList[i][j].teamName,
-                projectList[i][j].projectType,
-                projectList[i][j].imageName,
-                projectList[i][j].projectTitle,
-                projectList[i][j].progressBar
-              ).getElement()
-            );
-          } else if (
-            db[q].generation == select.options[select.selectedIndex].value
-          ) {
-            projectList[i][j] = db[q];
-            newList.push(
-              new Project(
-                projectList[i][j].generation,
-                projectList[i][j].teamName,
-                projectList[i][j].projectType,
-                projectList[i][j].imageName,
-                projectList[i][j].projectTitle,
-                projectList[i][j].progressBar
-              ).getElement()
-            );
-          }
+        if (db.length <= index) {
+          break;
         }
-        q++;
+        projectList[i][num] = new Project(
+          db[index].generation,
+          db[index].teamName,
+          db[index].projectType,
+          db[index].imageName,
+          db[index].projectTitle,
+          db[index].progressBar
+        );
+        if (
+          select_generation.options[select_generation.selectedIndex].value ==
+          "전체"
+        ) {
+          newList.push(projectList[i][num].getElement());
+        } else if (
+          db[index].generation ==
+          select_generation.options[select_generation.selectedIndex].value
+        ) {
+          newList.push(projectList[i][num].getElement());
+        }
+        num += 1;
+        index += 1;
       }
     }
     for (let i = 0; i <= pageAll; i++) {
@@ -338,7 +339,115 @@ window.onload = function () {
       }
     }
   };
+  document.getElementById("select_type").onchange = function () {
+    projectList = new Array();
+    newList = new Array();
 
+    removeAllElement("project-list");
+    select_type = document.getElementById("select_type");
+    for (let i = 0; i <= pageAll; i++) {
+      projectList[i] = new Array(6);
+    }
+    for (let i = 0; i <= pageAll; i++) {
+      let pjpage = document.createElement("div");
+      pjpage.className = "pjpage";
+      projectPage.appendChild(pjpage);
+
+      projectList.push(new Array());
+    }
+
+    index = 0;
+    for (let i = 0; i <= pageAll; i++) {
+      num = 0;
+      for (let j = 6 * i - 6; j <= 6 * i - 1; j++) {
+        if (db.length <= index) {
+          break;
+        }
+        projectList[i][num] = new Project(
+          db[index].generation,
+          db[index].teamName,
+          db[index].projectType,
+          db[index].imageName,
+          db[index].projectTitle,
+          db[index].progressBar
+        );
+        if (select_type.options[select_type.selectedIndex].value == "전체") {
+          newList.push(projectList[i][num].getElement());
+        } else if (
+          db[index].projectType ==
+          select_type.options[select_type.selectedIndex].value
+        ) {
+          newList.push(projectList[i][num].getElement());
+        }
+        num += 1;
+        index += 1;
+      }
+    }
+
+    for (let i = 0; i <= pageAll; i++) {
+      for (let j = 0; j < projectList[i].length; j++) {
+        projectPage.children[i].appendChild(newList[j + 6 * i]);
+      }
+    }
+  };
+  /*document.getElementById("select_generation").onchange = function () {
+    document.getElementById("select_type").onchange = function () {
+      projectList = new Array();
+      newList = new Array();
+
+      removeAllElement("project-list");
+      select_generation = document.getElementById("select_generation");
+      select_type = document.getElementById("select_type");
+      for (let i = 0; i <= pageAll; i++) {
+        projectList[i] = new Array(6);
+      }
+      for (let i = 0; i <= pageAll; i++) {
+        let pjpage = document.createElement("div");
+        pjpage.className = "pjpage";
+        projectPage.appendChild(pjpage);
+
+        projectList.push(new Array());
+      }
+
+      index = 0;
+      for (let i = 0; i <= pageAll; i++) {
+        num = 0;
+        for (let j = 6 * i - 6; j <= 6 * i - 1; j++) {
+          if (db.length <= index) {
+            break;
+          }
+          projectList[i][num] = new Project(
+            db[index].generation,
+            db[index].teamName,
+            db[index].projectType,
+            db[index].imageName,
+            db[index].projectTitle,
+            db[index].progressBar
+          );
+          if (
+            select_generation.options[select_generation.selectedIndex].value ==
+              "전체" &&
+            db[index].projectType ==
+              select_type.options[select_type.selectedIndex].value
+          ) {
+            newList.push(projectList[i][num].getElement());
+          } else if (
+            db[index].projectType == select.options[select.selectedIndex].value
+          ) {
+            newList.push(projectList[i][num].getElement());
+          }
+          num += 1;
+          index += 1;
+        }
+      }
+
+      for (let i = 0; i <= pageAll; i++) {
+        for (let j = 0; j < projectList[i].length; j++) {
+          projectPage.children[i].appendChild(newList[j + 6 * i]);
+        }
+      }
+    };
+  };*/
   // for (let i = 0; i < pageAll; i++){
 
   // }
