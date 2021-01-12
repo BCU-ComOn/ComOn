@@ -127,7 +127,7 @@ window.onload = function () {
     {
       generation: "2기",
       teamName: "회운3",
-      projectType: "Winform",
+      projectType: "WEB",
       imageName: "human.png",
       projectTitle: "어떤거 진행중",
       progressBar: 90,
@@ -292,9 +292,7 @@ window.onload = function () {
 
     removeAllElement("project-list");
     select_generation = document.getElementById("select_generation");
-    for (let i = 0; i <= pageAll; i++) {
-      projectList[i] = new Array(6);
-    }
+
     for (let i = 0; i <= pageAll; i++) {
       let pjpage = document.createElement("div");
       pjpage.className = "pjpage";
@@ -345,9 +343,7 @@ window.onload = function () {
 
     removeAllElement("project-list");
     select_type = document.getElementById("select_type");
-    for (let i = 0; i <= pageAll; i++) {
-      projectList[i] = new Array(6);
-    }
+
     for (let i = 0; i <= pageAll; i++) {
       let pjpage = document.createElement("div");
       pjpage.className = "pjpage";
